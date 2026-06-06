@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEC 商务英语每日晨读</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--accent:#6D4AFF;--accent-light:rgba(109,74,255,0.08);--sidebar-w:260px;--sidebar-collapsed:56px;--bg:#F8F7FC}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;display:flex;height:100vh;overflow:hidden;background:var(--bg)}
+.sidebar{width:var(--sidebar-w);min-width:var(--sidebar-w);background:#fff;border-right:1px solid rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:width .3s ease,min-width .3s ease;z-index:100;position:relative;overflow:hidden}
+.sidebar.collapsed{width:var(--sidebar-collapsed);min-width:var(--sidebar-collapsed)}
+.sidebar-header{display:flex;align-items:center;gap:.75rem;padding:1.25rem 1rem;border-bottom:1px solid rgba(0,0,0,0.04);min-height:64px}
+.sidebar-logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--accent),rgba(109,74,255,0.6));display:flex;align-items:center;justify-content:center;color:#fff;font-size:.85rem;font-weight:900;flex-shrink:0}
+.sidebar-title{font-size:.9rem;font-weight:800;color:#1a1a2e;white-space:nowrap;overflow:hidden;transition:opacity .2s}
+.sidebar.collapsed .sidebar-title{opacity:0}
+.sidebar-toggle{position:absolute;top:1rem;right:.5rem;width:28px;height:28px;border-radius:6px;border:1px solid rgba(0,0,0,0.08);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#6b7280;transition:all .2s;font-size:.75rem;z-index:10}
+.sidebar-toggle:hover{background:var(--accent-light);color:var(--accent);border-color:var(--accent)}
+.sidebar.collapsed .sidebar-toggle{right:-14px}
+.sidebar-nav{flex:1;padding:.75rem .5rem;overflow-y:auto;overflow-x:hidden}
+.nav-section{margin-bottom:.5rem}
+.nav-section-label{font-size:.6rem;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.1em;padding:.5rem .75rem .25rem;white-space:nowrap;overflow:hidden}
+.sidebar.collapsed .nav-section-label{opacity:0}
+.nav-item{display:flex;align-items:center;gap:.7rem;padding:.65rem .75rem;border-radius:.6rem;cursor:pointer;color:#4b5563;font-size:.82rem;font-weight:500;transition:all .2s;white-space:nowrap;overflow:hidden;user-select:none;text-decoration:none}
+.nav-item:hover{background:var(--accent-light);color:var(--accent)}
+.nav-item.active{background:var(--accent-light);color:var(--accent);font-weight:700}
+.nav-item-icon{width:22px;height:22px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;background:rgba(0,0,0,0.03)}
+.nav-item.active .nav-item-icon{background:rgba(109,74,255,0.12)}
+.nav-item-text{overflow:hidden;transition:opacity .2s}
+.sidebar.collapsed .nav-item-text{opacity:0;width:0}
+.sidebar-footer{padding:.75rem;border-top:1px solid rgba(0,0,0,0.04);font-size:.65rem;color:#d1d5db;text-align:center;white-space:nowrap;overflow:hidden}
+.sidebar.collapsed .sidebar-footer{opacity:0}
+.main{flex:1;display:flex;flex-direction:column;min-width:0}
+.content-frame{flex:1;width:100%;border:none;background:#fff}
+.mobile-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.4);z-index:99}
+@media(max-width:768px){
+  .sidebar{position:fixed;left:0;top:0;bottom:0;transform:translateX(-100%);width:var(--sidebar-w)!important;min-width:var(--sidebar-w)!important;transition:transform .3s ease}
+  .sidebar.open{transform:translateX(0)}
+  .mobile-overlay.show{display:block}
+  .sidebar .nav-item-text,.sidebar .sidebar-title,.sidebar .nav-section-label,.sidebar .sidebar-footer{opacity:1!important}
+  .hamburger{display:flex!important;position:fixed;top:.75rem;left:.75rem;z-index:101;width:36px;height:36px;border-radius:8px;background:#fff;border:1px solid rgba(0,0,0,0.08);cursor:pointer;align-items:center;justify-content:center;font-size:1.1rem;color:#4b5563;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+}
+.hamburger{display:none}
+</style>
+</head>
+<body>
+<button class="hamburger" onclick="toggleMobileSidebar()">☰</button>
+<div class="mobile-overlay" onclick="closeMobileSidebar()"></div>
+<aside class="sidebar" id="sidebar">
+  <button class="sidebar-toggle" onclick="toggleSidebar()" title="折叠/展开菜单">◀</button>
+  <div class="sidebar-header">
+    <div class="sidebar-logo">B</div>
+    <span class="sidebar-title">BEC 每日晨读</span>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <div class="nav-section-label">📖 每日任务</div>
+      <a class="nav-item active" data-page="2026-06-06-price-negotiation.html" onclick="switchPage(this,'2026-06-06-price-negotiation.html')">
+        <span class="nav-item-icon">💼</span>
+        <span class="nav-item-text">价格谈判</span>
+      </a>
+    </div>
+    <div class="nav-section">
+      <div class="nav-section-label">📚 关于</div>
+      <a class="nav-item" href="https://f9sxf3h1nl.feishu.cn/wiki/I9yMw9qQKiCywckkDXlcdK4snoe" target="_blank">
+        <span class="nav-item-icon">📋</span>
+        <span class="nav-item-text">飞书知识库</span>
+      </a>
+    </div>
+  </nav>
+  <div class="sidebar-footer">BEC 商务英语 · 每日晨读 · 2026</div>
+</aside>
+<main class="main">
+  <iframe class="content-frame" id="contentFrame" src="pages/2026-06-06-price-negotiation.html" title="内容区"></iframe>
+</main>
+<script>
+let sidebarCollapsed = false;
+function toggleSidebar() {
+  sidebarCollapsed = !sidebarCollapsed;
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('collapsed', sidebarCollapsed);
+  const toggleBtn = sidebar.querySelector('.sidebar-toggle');
+  toggleBtn.textContent = sidebarCollapsed ? '▶' : '◀';
+}
+function switchPage(el, page) {
+  document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('contentFrame').src = 'pages/' + page;
+  closeMobileSidebar();
+}
+function toggleMobileSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.querySelector('.mobile-overlay');
+  sidebar.classList.toggle('open');
+  overlay.classList.toggle('show');
+}
+function closeMobileSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.querySelector('.mobile-overlay');
+  sidebar.classList.remove('open');
+  overlay.classList.remove('show');
+}
+</script>
+</body>
+</html>
