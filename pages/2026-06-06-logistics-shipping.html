@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>物流运输 Logistics & Shipping - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>物流运输 Logistics & Shipping</h1>
+<div class="date">📅 2026年6月6日 · 星期六</div>
+
+<div class="roles">
+  <strong>A (Linda Zhou)</strong> — Supply Chain Director, Pacific Retail Group<br>
+  <strong>B (Tom Barrow)</strong> — Operations Manager, OceanLink Logistics
+</div>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Tom, I've been going through the quarterly shipping report and I'm concerned — three of our last five container shipments arrived with significant delays. The one from Shanghai to Rotterdam was fourteen days behind schedule.</span></div>
+    <div class="dialogue-cn">Tom，我一直在看季度运输报告，很担心——我们最近五票集装箱有三票到货严重延误。从上海到鹿特丹那票晚了十四天。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Linda, I won't sugarcoat it. The Red Sea rerouting has been brutal on our <span class="vocab-highlight">lead times</span>. Vessels are taking the Cape of Good Hope detour, which adds roughly ten to twelve days per voyage. We've been absorbing the extra fuel costs, but the schedule disruption is industry-wide.</span></div>
+    <div class="dialogue-cn">Linda，我就不粉饰了。红海绕行对我们的交付周期冲击很大。船只需要绕道好望角，每趟航程大约增加十到十二天。我们一直在承担额外的燃油成本，但船期延误是全行业的问题。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I understand the geopolitical factors, but our stockouts at the Rotterdam distribution centre cost us nearly €80,000 in lost sales last month alone. What's your contingency plan to mitigate this?</span></div>
+    <div class="dialogue-cn">我理解地缘政治因素，但我们鹿特丹配送中心的缺货仅上个月就造成了近八万欧元的销售损失。贵方有什么应急方案来缓解这一问题？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We've diversified our carrier network. For your next three shipments, we're splitting the <span class="vocab-highlight">consignment</span> across two vessels on different routes — one through the Cape and another via rail freight from China to Europe. Rail takes eighteen days door-to-door versus the current forty-plus by sea.</span></div>
+    <div class="dialogue-cn">我们已经多元化承运商网络。贵方接下来三票货，我们将把货物分到两条不同航线的船上——一艘走好望角，另一艘走中欧铁路。铁路门到门只要十八天，而目前海运要四十多天。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Rail freight sounds promising. What are we looking at in terms of freight charges compared to the sea route?</span></div>
+    <div class="dialogue-cn">铁路运输听起来不错。与海运相比，运费大概是什么水平？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">It's roughly thirty percent higher per <span class="vocab-highlight">TEU</span>, but when you factor in the reduced inventory holding costs and the elimination of <span class="vocab-highlight">demurrage</span> charges from port congestion, the total landed cost is actually comparable. I've put together a cost-benefit analysis — I'll send it over.</span></div>
+    <div class="dialogue-cn">每标准箱大约高百分之三十，但如果把降低的库存持有成本和港口拥堵免除的滞港费算进去，总到岸成本其实是差不多的。我做了一份成本效益分析——稍后发给您。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Please do. Also, our <span class="vocab-highlight">customs broker</span> flagged that two shipments were held up because the <span class="vocab-highlight">bill of lading</span> had discrepancies in the HS codes. That's the second time this quarter. Can we tighten the documentation process?</span></div>
+    <div class="dialogue-cn">请务必发来。另外，我们报关行报告说有两票货因为提单上的HS编码有出入被扣了。这已经是本季度第二次了。我们能收紧一下单证流程吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely. I've already assigned a dedicated documentation specialist to your account. They'll cross-check every shipping document — <span class="vocab-highlight">bill of lading</span>, packing list, certificate of origin — before dispatch. No more surprises at the port of entry.</span></div>
+    <div class="dialogue-cn">当然。我已经为贵司账户指派了一名专职单证专员。他们会在发运前逐项核对所有运输文件——提单、装箱单、原产地证书。不会再在入境口岸出现意外了。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's exactly what we need. One more thing — our insurance only covers <span class="vocab-highlight">CIF</span> terms. Given the current volatility, should we consider switching to an <span class="vocab-highlight">all-risk policy</span>?</span></div>
+    <div class="dialogue-cn">这正是我们需要的。还有一件事——我们的保险只覆盖到岸价格条款。鉴于目前的波动性，我们是否应该考虑换成综合险？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'd recommend it. <span class="vocab-highlight">All-risk</span> covers general average, which has become more relevant with these route deviations. Premiums are up about twelve percent, but the coverage gap is real. I can have our insurance partner quote you directly.</span></div>
+    <div class="dialogue-cn">我建议如此。综合险覆盖共同海损，随着航线偏离，这一点变得更为相关了。保费大约上涨了百分之十二，但保障缺口是真实存在的。我可以让我们的保险合作方直接给您报价。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Let's do that. In the meantime, can you confirm that our next <span class="vocab-highlight">consignment</span> — the one for the Melbourne stores — is on track?</span></div>
+    <div class="dialogue-cn">那就这么办。与此同时，你能确认一下我们下一票——发往墨尔本门店的那批——进度正常吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Confirmed. The vessel departed Shenzhen yesterday. The container tracking shows an <span class="vocab-highlight">ETA</span> of June 22nd. I've set up automated alerts so you'll get notified at every milestone — departure, transshipment, and final arrival. We're back on track for that one.</span></div>
+    <div class="dialogue-cn">已确认。船舶昨天从深圳启航。集装箱追踪显示预计到达时间是6月22日。我设置了自动提醒，每个节点——启航、中转和最终到达——您都会收到通知。那一票我们已经重回正轨了。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>lead time</strong> — 交付周期 | 从下单到收货的总时间，供应链管理核心术语</div>
+<div class="vocab-item"><strong>consignment</strong> — 货物/托运批次 | 一次运输中的整批货物，BEC 阅读高频词</div>
+<div class="vocab-item"><strong>TEU (Twenty-foot Equivalent Unit)</strong> — 标准箱 | 集装箱运力的标准计量单位（20英尺标准集装箱）</div>
+<div class="vocab-item"><strong>bill of lading</strong> — 提单 | 承运人签发的货物收据和运输合同，国际贸易基础文件</div>
+<div class="vocab-item"><strong>demurrage</strong> — 滞港费/滞箱费 | 集装箱在港口超期占用产生的费用</div>
+<div class="vocab-item"><strong>customs broker</strong> — 报关行/报关代理 | 协助办理海关申报的专业机构</div>
+<div class="vocab-item"><strong>CIF (Cost, Insurance, Freight)</strong> — 到岸价格 | 国际贸易术语，卖方承担成本、保险和运费</div>
+<div class="vocab-item"><strong>all-risk policy</strong> — 综合险/一切险 | 覆盖范围最广的海运保险类型</div>
+<div class="vocab-item"><strong>ETA (Estimated Time of Arrival)</strong> — 预计到达时间 | 物流和运输中的标准缩写</div>
+
+<hr>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>I won't sugarcoat it.</code> → 我就不粉饰了/实话实说 | 用于坦率地承认问题或困难局面</div>
+<div class="pattern-item"><code>What's your contingency plan to mitigate this?</code> → 贵方有什么应急方案来缓解这一问题？ | 供应链和项目管理中的经典追问</div>
+<div class="pattern-item"><code>When you factor in..., the total landed cost is actually comparable.</code> → 当你把……考虑进来时，总到岸成本其实是差不多的 | 用于引导对方从总成本角度评估</div>
+<div class="pattern-item"><code>Can we tighten the documentation process?</code> → 我们能收紧一下单证流程吗？ | 委婉要求改进流程的商务表达</div>
+<div class="pattern-item"><code>I'd recommend it.</code> → 我建议如此 | 简短有力的商务建议表达，BEC 口语高频句</div>
+<div class="pattern-item"><code>We're back on track for that one.</code> → 那个我们已经重回正轨了 | 表示问题已解决、进度已恢复正常</div>
+
+<hr>
+
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Tom，我一直在看季度运输报告，很担心——我们最近五票集装箱有三票到货严重延误。从上海到鹿特丹那票晚了十四天。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>Linda，我就不粉饰了。红海绕行对我们的交付周期冲击很大。船只需要绕道好望角，每趟航程大约增加十到十二天。我们一直在承担额外的燃油成本，但船期延误是全行业的问题。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我理解地缘政治因素，但我们鹿特丹配送中心的缺货仅上个月就造成了近八万欧元的销售损失。贵方有什么应急方案来缓解这一问题？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我们已经多元化承运商网络。贵方接下来三票货，我们将把货物分到两条不同航线的船上——一艘走好望角，另一艘走中欧铁路。铁路门到门只要十八天，而目前海运要四十多天。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>铁路运输听起来不错。与海运相比，运费大概是什么水平？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>每标准箱大约高百分之三十，但如果把降低的库存持有成本和港口拥堵免除的滞港费算进去，总到岸成本其实是差不多的。我做了一份成本效益分析——稍后发给您。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>请务必发来。另外，我们报关行报告说有两票货因为提单上的HS编码有出入被扣了。这已经是本季度第二次了。我们能收紧一下单证流程吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>当然。我已经为贵司账户指派了一名专职单证专员。他们会在发运前逐项核对所有运输文件——提单、装箱单、原产地证书。不会再在入境口岸出现意外了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这正是我们需要的。还有一件事——我们的保险只覆盖到岸价格条款。鉴于目前的波动性，我们是否应该考虑换成综合险？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我建议如此。综合险覆盖共同海损，随着航线偏离，这一点变得更为相关了。保费大约上涨了百分之十二，但保障缺口是真实存在的。我可以让我们的保险合作方直接给您报价。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>那就这么办。与此同时，你能确认一下我们下一票——发往墨尔本门店的那批——进度正常吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>已确认。船舶昨天从深圳启航。集装箱追踪显示预计到达时间是6月22日。我设置了自动提醒，每个节点——启航、中转和最终到达——您都会收到通知。那一票我们已经重回正轨了。</span></div>
+</div>
+</div>
+
+<hr>
+
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>物流运输（Logistics & Shipping）是BEC中级听力和阅读的高频主题，尤其常见于Part 3的长对话和阅读理解中的邮件往来。建议重点掌握国际贸易术语（Incoterms）的缩写和含义（如CIF、FOB、EXW），以及运输文件类词汇（bill of lading、packing list、certificate of origin）。练习时可以尝试将物流流程按照"订舱→发运→跟踪→清关→到货"的顺序串联记忆，这样在考试中遇到相关场景时可以快速调取。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

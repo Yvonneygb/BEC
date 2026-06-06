@@ -1,0 +1,6 @@
+<a class="nav-item" data-page="2026-06-06-logistics-shipping.html" onclick="switchPage(this,'2026-06-06-logistics-shipping.html')"><span class="nav-item-icon">🚚</span><span class="nav-item-text">物流运输</span></a>
+<a class="nav-item" data-page="2026-06-06-human-resources.html" onclick="switchPage(this,'2026-06-06-human-resources.html')"><span class="nav-item-icon">👥</span><span class="nav-item-text">人力资源</span></a>
+<a class="nav-item" data-page="2026-06-06-budget-planning.html" onclick="switchPage(this,'2026-06-06-budget-planning.html')"><span class="nav-item-icon">💰</span><span class="nav-item-text">预算规划</span></a>
+<a class="nav-item" data-page="2026-06-06-crisis-management.html" onclick="switchPage(this,'2026-06-06-crisis-management.html')"><span class="nav-item-icon">🚨</span><span class="nav-item-text">危机公关</span></a>
+<a class="nav-item" data-page="2026-06-06-innovation-rd.html" onclick="switchPage(this,'2026-06-06-innovation-rd.html')"><span class="nav-item-icon">💡</span><span class="nav-item-text">创新研发</span></a>
+<a class="nav-item" data-page="2026-06-06-outsourcing.html" onclick="switchPage(this,'2026-06-06-outsourcing.html')"><span class="nav-item-icon">🔄</span><span class="nav-item-text">外包管理</span></a>

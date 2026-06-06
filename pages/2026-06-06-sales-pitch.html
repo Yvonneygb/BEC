@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>销售推销 Sales Pitch - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+/* 标题行：icon + 文字 + 右侧操作 */
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+/* 中文切换按钮 */
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+/* 词汇高亮 */
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>销售推销 Sales Pitch</h1>
+<div class="date">📅 2026年6月6日 · 星期六</div>
+
+<div class="roles">
+  <strong>A (Chris Henderson) — Business Development Manager, EcoOffice Solutions</strong><br>
+  <strong>B (Dr. Maria Santos) — Procurement Director, Verde University</strong>
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Dr. Santos, thank you for making time today. I know Verde University has ambitious sustainability targets for 2027. Our research shows your campus procurement generates roughly 12 tonnes of single-use plastic waste annually. What if I told you we could cut that by 80% without increasing your budget?</span></div>
+    <div class="dialogue-cn">Santos博士，感谢你今天抽出时间。我知道Verde大学有雄心勃勃的2027年可持续发展目标。我们的调查显示，贵校采购每年产生约12吨一次性塑料垃圾。如果我告诉你们，我们可以在不增加预算的情况下削减80%，你怎么看？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's quite a claim, Mr. Henderson. I'm naturally sceptical — we've looked at eco-friendly alternatives before, and they typically come with a 20 to 30% cost premium. Our procurement budget is already allocated through the next academic year. Show me the numbers.</span></div>
+    <div class="dialogue-cn">口气不小啊，Henderson先生。我天生持怀疑态度——我们之前考察过环保替代品，通常都有20%到30%的成本溢价。我们的采购预算已经分配到下一学年了。用数据说话。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Happy to. Our <span class="vocab-highlight">value proposition</span> is built on three pillars. First, our compostable packaging is manufactured domestically, which strips out the import markup. Second, we offer a <span class="vocab-highlight">subscription model</span> with volume-based tiered pricing — the more you commit, the lower the per-unit cost. And third, switching eliminates your plastic waste disposal fees entirely, which currently run about €8,400 per year.</span></div>
+    <div class="dialogue-cn">很高兴为你展示。我们的价值主张建立在三大支柱上。第一，我们的可降解包装在国内生产，省去了进口加价。第二，我们提供订阅模式，按量阶梯定价——承诺量越大，单价越低。第三，更换后完全省去你们的塑料垃圾处理费，目前每年约8400欧元。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The disposal fee elimination is a concrete saving I hadn't factored in. And the subscription model sounds interesting — but what's the minimum commitment? We can't lock into a multi-year contract without testing the products first.</span></div>
+    <div class="dialogue-cn">垃圾处理费的取消是我之前没有纳入计算的具体节省。订阅模式听起来很有趣——但最低承诺额是多少？我们不可能在不先测试产品的情况下锁定多年合同。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I completely understand the need for a <span class="vocab-highlight">trial period</span>. Here's what I'm proposing — a three-month <span class="vocab-highlight">pilot programme</span> covering two of your largest departments, at no cost. We'll provide the full product range, usage analytics, and a sustainability impact report. If the pilot meets your benchmarks, we then move to a 12-month rolling contract with a 60-day <span class="vocab-highlight">opt-out clause</span>.</span></div>
+    <div class="dialogue-cn">我完全理解试用的必要性。我的提议是这样的——一个为期三个月的试点项目，覆盖你们最大的两个院系，完全免费。我们会提供全线产品、使用数据分析以及可持续发展影响报告。如果试点达到你们的基准，我们再转到12个月的滚动合同，含60天的退出条款。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A no-cost pilot is hard to refuse. But I want to be upfront about our <span class="vocab-highlight">pain point</span> — we tried a similar switch two years ago with another vendor, and the product quality was inconsistent. Compostable cups leaked. Bin liners tore. My department heads are still wary.</span></div>
+    <div class="dialogue-cn">零成本的试点难以拒绝。但我想坦率地说明我们的痛点——我们两年前和另一家供应商尝试过类似的更换，产品质量不稳定。可降解杯子漏水，垃圾袋撕裂。我的部门负责人至今仍心有余悸。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I appreciate you sharing that, and I've heard that story from several universities. That's precisely why we offer a <span class="vocab-highlight">performance guarantee</span> — if any product doesn't meet the durability standards we specify in the pilot agreement, we'll replace the entire batch within 48 hours and extend the pilot by an extra month at our cost.</span></div>
+    <div class="dialogue-cn">感谢你分享这些，我在好几所大学都听过类似的故事。这正是我们提供性能保证的原因——如果任何产品不符合我们在试点协议中规定的耐用标准，我们会在48小时内更换整批产品，并由我们出资将试点延长一个月。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That level of accountability is reassuring. One more question — do you have <span class="vocab-highlight">references</span> from other universities we could speak to? I'd like to verify that the savings and quality claims hold up in a comparable environment.</span></div>
+    <div class="dialogue-cn">这种程度的问责让人放心。还有一个问题——你们有没有其他大学的参考客户可以让我们联系？我想确认在类似环境中，节省和质量的承诺是否能兑现。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Absolutely. We've been supplying City University and Northbridge College for over two years. I can put you in touch with both procurement leads. And here's a <span class="vocab-highlight">case study</span> on City University — they reduced plastic waste by 83% and saved €22,000 in the first year through a combination of reduced disposal costs and <span class="vocab-highlight">consolidated purchasing</span>.</span></div>
+    <div class="dialogue-cn">当然有。我们为City University和Northbridge College供货已经超过两年。我可以让你联系两校的采购负责人。这里还有一份City University的案例研究——他们第一年就减少了83%的塑料垃圾，通过降低处理成本和集中采购节省了22000欧元。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The City University comparison is relevant — they're similar in size and structure to us. Alright, Chris, I'm interested. Send me the pilot agreement and the case studies, and I'll take it to the procurement committee next week.</span></div>
+    <div class="dialogue-cn">City University的对比很有参考价值——他们的规模和结构和我们相似。好吧，Chris，我有兴趣。把试点协议和案例研究发给我，我下周提交给采购委员会。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll have everything in your inbox by tomorrow morning. Thank you for the candid conversation, Dr. Santos. I'm confident we can deliver real value for Verde University.</span></div>
+    <div class="dialogue-cn">明早之前所有文件都会发到你邮箱。感谢这次坦诚的交流，Santos博士。我相信我们能为Verde大学带来真正的价值。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>value proposition</strong> — 价值主张 | 产品/服务能为客户带来的核心利益和差异化优势</div>
+<div class="vocab-item"><strong>subscription model</strong> — 订阅模式 | 按周期付费的商业模式，BEC新兴话题</div>
+<div class="vocab-item"><strong>trial period</strong> — 试用期 | 允许客户在正式承诺前免费或低价测试产品的阶段</div>
+<div class="vocab-item"><strong>pilot programme</strong> — 试点项目 | 小规模测试以评估可行性和效果</div>
+<div class="vocab-item"><strong>opt-out clause</strong> — 退出条款 | 允许在特定条件下终止合同的条款，降低客户风险</div>
+<div class="vocab-item"><strong>pain point</strong> — 痛点 | 客户面临的具体问题或挑战，销售的核心突破口</div>
+<div class="vocab-item"><strong>performance guarantee</strong> — 性能保证/品质承诺 | 对产品效果或质量的正式担保</div>
+<div class="vocab-item"><strong>reference</strong> — 参考客户/推荐人 | 可为销售方产品背书的现有客户</div>
+<div class="vocab-item"><strong>case study</strong> — 案例研究/成功案例 | 详述客户使用产品取得成功的正式文件</div>
+<div class="vocab-item"><strong>consolidated purchasing</strong> — 集中采购 | 统一采购以获取更好价格和条款的策略</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>What if I told you...?</code> → 如果我告诉你...会怎样？ | 销售中引发好奇心、制造悬念的经典开场</div>
+<div class="pattern-item"><code>That's quite a claim.</code> → 口气不小/这个说法很惊人 | 对大胆声明持审慎态度的回应，暗示"请证明"</div>
+<div class="pattern-item"><code>Show me the numbers.</code> → 用数据说话/给我看数据 | 要求对方提供量化证据，体现买方的理性决策风格</div>
+<div class="pattern-item"><code>A no-cost pilot is hard to refuse.</code> → 零成本的试点难以拒绝 | 认可对方降低风险的做法，表示倾向接受</div>
+<div class="pattern-item"><code>That level of accountability is reassuring.</code> → 这种程度的问责让人放心 | 对供应商承诺和保障的肯定</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Santos博士，感谢你今天抽出时间。我知道Verde大学有雄心勃勃的2027年可持续发展目标。我们的调查显示，贵校采购每年产生约12吨一次性塑料垃圾。如果我告诉你们，我们可以在不增加预算的情况下削减80%，你怎么看？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>口气不小啊，Henderson先生。我天生持怀疑态度——我们之前考察过环保替代品，通常都有20%到30%的成本溢价。我们的采购预算已经分配到下一学年了。用数据说话。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>很高兴为你展示。我们的价值主张建立在三大支柱上。第一，我们的可降解包装在国内生产，省去了进口加价。第二，我们提供订阅模式，按量阶梯定价——承诺量越大，单价越低。第三，更换后完全省去你们的塑料垃圾处理费，目前每年约8400欧元。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>垃圾处理费的取消是我之前没有纳入计算的具体节省。订阅模式听起来很有趣——但最低承诺额是多少？我们不可能在不先测试产品的情况下锁定多年合同。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我完全理解试用的必要性。我的提议是这样的——一个为期三个月的试点项目，覆盖你们最大的两个院系，完全免费。我们会提供全线产品、使用数据分析以及可持续发展影响报告。如果试点达到你们的基准，我们再转到12个月的滚动合同，含60天的退出条款。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>零成本的试点难以拒绝。但我想坦率地说明我们的痛点——我们两年前和另一家供应商尝试过类似的更换，产品质量不稳定。可降解杯子漏水，垃圾袋撕裂。我的部门负责人至今仍心有余悸。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>感谢你分享这些，我在好几所大学都听过类似的故事。这正是我们提供性能保证的原因——如果任何产品不符合我们在试点协议中规定的耐用标准，我们会在48小时内更换整批产品，并由我们出资将试点延长一个月。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这种程度的问责让人放心。还有一个问题——你们有没有其他大学的参考客户可以让我们联系？我想确认在类似环境中，节省和质量的承诺是否能兑现。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>当然有。我们为City University和Northbridge College供货已经超过两年。我可以让你联系两校的采购负责人。这里还有一份City University的案例研究——他们第一年就减少了83%的塑料垃圾，通过降低处理成本和集中采购节省了22000欧元。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>City University的对比很有参考价值——他们的规模和结构和我们相似。好吧，Chris，我有兴趣。把试点协议和案例研究发给我，我下周提交给采购委员会。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>明早之前所有文件都会发到你邮箱。感谢这次坦诚的交流，Santos博士。我相信我们能为Verde大学带来真正的价值。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>销售推销（Sales Pitch）是BEC口语Part 2和写作的核心场景。成功的推销对话遵循"引起兴趣→阐述价值主张→回应异议→提供证据→提出下一步"的结构。建议重点练习如何用数据支撑论点（quantify your claims），以及如何处理客户的"Scepticism"（怀疑态度）——这是BEC考试中的常见考点。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Interview - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>求职面试 Job Interview</h1>
+<div class="date">📅 2026年6月6日 · 星期六</div>
+
+<div class="roles">
+  <strong>A (Rebecca Tan)</strong> — HR Manager, BrightPath Consulting<br>
+  <strong>B (James Park)</strong> — Senior Marketing Candidate, (Interviewee)
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">James, welcome. Thanks for coming in today. I've read through your CV and your <span class="vocab-highlight">track record</span> in B2B marketing is impressive. To start, could you walk me through why you're looking to leave your current role at Horizon Media?</span></div>
+    <div class="dialogue-cn">James，欢迎。感谢你今天过来。我看了你的简历，你在B2B市场营销方面的履历令人印象深刻。首先，能否谈谈你为什么要离开目前在Horizon Media的职位？</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Thank you, Rebecca. It's a fair question. I've been with Horizon for four years and I've learned a tremendous amount, but I feel I've <span class="vocab-highlight">plateaued</span> in terms of growth. I'm looking for a role with more strategic ownership — your job description mentioned leading <span class="vocab-highlight">cross-functional</span> campaigns, and that's exactly the kind of challenge I'm seeking at this stage of my career.</span></div>
+    <div class="dialogue-cn">谢谢你，Rebecca。这是个很好的问题。我在Horizon工作了四年，学到了很多，但在成长方面我感觉自己遇到了瓶颈。我在寻找一个更具战略主导权的职位——你们的职位描述提到要领导跨部门营销活动，这正是我在职业现阶段所追求的挑战。</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's refreshingly candid. Speaking of <span class="vocab-highlight">cross-functional</span> campaigns — can you give me a concrete example of a campaign you led that involved multiple departments, and what the outcome was in terms of measurable KPIs?</span></div>
+    <div class="dialogue-cn">很高兴你这么坦率。说到跨部门营销活动——你能给我一个具体的例子，说明你领导过一个涉及多个部门的活动，以及从可衡量的KPI角度来看结果如何吗？</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely. Last year, I <span class="vocab-highlight">spearheaded</span> a product launch campaign that required close coordination between our product, sales, and creative teams. We were targeting a 15% increase in qualified leads within the first quarter. I set up a shared dashboard, established weekly checkpoints, and by the end of Q2 we'd actually achieved a 22% uplift. The key was aligning everyone around a single North Star metric from day one.</span></div>
+    <div class="dialogue-cn">当然。去年，我主导了一个产品上市营销活动，需要产品、销售和创意团队紧密协作。我们的目标是第一季度的合格线索增加15%。我建立了共享仪表盘，设立了每周检查点，到第二季度末，我们实际上实现了22%的增长。关键在于从一开始就让所有人围绕同一个北极星指标对齐。</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Impressive. Let me pivot to a behavioural question. Tell me about a time you had a significant disagreement with a colleague on campaign strategy. How did you handle it, and what was the resolution?</span></div>
+    <div class="dialogue-cn">令人印象深刻。让我转向一个行为问题。请告诉我你有一次与同事在营销策略上产生重大分歧的经历。你是如何处理的？结果如何？</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a great question. About 18 months ago, our creative director wanted to allocate 70% of the budget to a brand awareness push, while I was advocating for a performance marketing approach with measurable ROI. Rather than going head-to-head, I suggested we run an A/B split test for one month with a modest budget on each approach. The data spoke for itself — the performance channel delivered 3x the conversion rate, and we ended up adopting a hybrid model that satisfied both sides. I learned that data is always the best mediator.</span></div>
+    <div class="dialogue-cn">很好的问题。大约18个月前，我们的创意总监想把70%的预算用于品牌知名度推广，而我主张采用可衡量ROI的效果营销方式。我没有正面冲突，而是建议用适度的预算对两种方式各进行一个月的A/B对比测试。数据自己说了话——效果渠道的转化率是品牌渠道的3倍，最终我们采用了满足双方需求的混合模式。我学到的是，数据永远是最好的调解者。</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Data as a mediator — I like that. Here's a more forward-looking question. If you were to join us, what would your first 90 days look like? I'm interested in your onboarding strategy and how you'd prioritise.</span></div>
+    <div class="dialogue-cn">数据作为调解者——这个说法我很欣赏。这里有一个更具前瞻性的问题。如果你加入我们，前90天会是什么样的？我对你的入职策略和优先级排序很感兴趣。</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'd structure it in three phases. The first 30 days would be all about listening — meeting key <span class="vocab-highlight">stakeholders</span> across departments, understanding the existing campaign architecture, and conducting a <span class="vocab-highlight">gap analysis</span> of current versus desired performance. Days 31 through 60, I'd formulate a strategic roadmap with clear quarterly objectives and present it to leadership for <span class="vocab-highlight">buy-in</span>. The final 30 days, I'd kick off one high-impact <span class="vocab-highlight">pilot campaign</span> to demonstrate early traction, while building the team relationships that make long-term execution sustainable.</span></div>
+    <div class="dialogue-cn">我会分三个阶段来规划。前30天全部用于倾听——与各部门关键利益相关者会面，了解现有的营销活动架构，并对当前表现与目标表现进行差距分析。第31到60天，我会制定一份有明确季度目标的战略路线图，并提交给领导层以获得支持。最后30天，我会启动一个高影响力的试点活动以展示早期成果，同时建立使长期执行可持续的团队关系。</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's very well thought through, James. One final question — we're a fast-paced environment where priorities can shift overnight. How do you stay organised and manage competing deadlines when everything is marked 'urgent'?</span></div>
+    <div class="dialogue-cn">考虑得非常周全，James。最后一个问题——我们是一个快节奏的环境，优先级可能一夜之间就变了。当所有事情都被标为"紧急"时，你如何保持条理并管理相互冲突的截止日期？</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm a big believer in the <span class="vocab-highlight">Eisenhower Matrix</span> — I categorise tasks by urgency and importance, not by who's shouting the loudest. I also block out 'deep work' time on my calendar every morning to tackle high-cognitive-load tasks before the fire drills start. And I'm not afraid to push back respectfully when I see a team member overcommitting — sustainable pace is something I actively advocate for.</span></div>
+    <div class="dialogue-cn">我非常推崇艾森豪威尔矩阵——我按紧急性和重要性来分类任务，而不是按谁嗓门最大。我还会每天早上在日历上锁定"深度工作"时间，在救火式任务开始前处理高认知负荷的工作。当看到团队成员过度承诺时，我也不怕尊重地提出异议——可持续的工作节奏是我积极倡导的理念。</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">James, this has been an excellent conversation. We're interviewing through the end of this week and aim to make a decision by next Tuesday. Do you have any questions for me before we wrap up?</span></div>
+    <div class="dialogue-cn">James，这是一次非常棒的对话。我们本周会完成面试流程，目标在下周二前做出决定。在结束之前你有什么问题要问我吗？</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Yes, actually — two quick ones. First, what does success look like for this role at the 12-month mark from your perspective? And second, I've noticed BrightPath has been expanding into the APAC market — how would this role contribute to that regional strategy?</span></div>
+    <div class="dialogue-cn">是的，有两个简短的问题。第一，从你的角度看，这个职位在12个月时成功的标志是什么？第二，我注意到BrightPath一直在拓展亚太市场——这个职位将如何为这一区域战略做出贡献？</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Great questions. At 12 months, I'd expect this person to have built a scalable campaign framework that can be localised across three markets, and to have established themselves as a trusted strategic partner to our regional directors. As for APAC, this role sits at the intersection of global strategy and local execution — you'd be instrumental in tailoring our <span class="vocab-highlight">value proposition</span> for markets like Singapore and Tokyo. Thanks again for your time, James, and we'll be in touch shortly.</span></div>
+    <div class="dialogue-cn">很好的问题。到12个月时，我希望这个人建立一个可在三个市场本地化的可扩展活动框架，并成为我们区域总监信赖的战略合作伙伴。至于亚太地区，这个职位位于全球战略与本地执行的交汇点——你将在为新加坡和东京等市场定制我们的价值主张方面发挥关键作用。再次感谢你的时间，James，我们会很快联系你。</div>
+  </div>
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>track record</strong> — 过往业绩/履历 | 面试中描述候选人历史成就的核心词汇，BEC高频</div>
+<div class="vocab-item"><strong>plateaued</strong> — 达到瓶颈/停滞 | 委婉表达职业发展遇到天花板的动词，比stuck更专业</div>
+<div class="vocab-item"><strong>cross-functional</strong> — 跨部门的 | 描述涉及多个部门协作的场景，现代企业高频词</div>
+<div class="vocab-item"><strong>KPIs (Key Performance Indicators)</strong> — 关键绩效指标 | 衡量业务成果的核心指标，BEC听力和写作必考词</div>
+<div class="vocab-item"><strong>spearheaded</strong> — 主导/领导 | 简历和面试中描述领导角色的强力动词</div>
+<div class="vocab-item"><strong>stakeholders</strong> — 利益相关者 | 与项目有关联的各方，面试和商务场景通用词汇</div>
+<div class="vocab-item"><strong>gap analysis</strong> — 差距分析 | 比较当前状态与目标状态以找出改进空间的分析方法</div>
+<div class="vocab-item"><strong>buy-in</strong> — 支持/认可 | 获取关键人物或团队对计划的支持，管理层面试高频词</div>
+<div class="vocab-item"><strong>pilot campaign</strong> — 试点活动 | 在全面推出前小范围测试的活动，市场营销核心术语</div>
+<div class="vocab-item"><strong>Eisenhower Matrix</strong> — 艾森豪威尔矩阵 | 按紧急性和重要性对任务分类的时间管理工具</div>
+<div class="vocab-item"><strong>value proposition</strong> — 价值主张 | 企业向客户传递的核心价值描述，市场营销和面试中常用</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>I feel I've plateaued in terms of growth.</code> → 我在成长方面感觉自己遇到了瓶颈 | 面试中委婉表达离职原因的经典句式，比直接说"no promotion"更专业</div>
+<div class="pattern-item"><code>I spearheaded a... campaign that required close coordination between...</code> → 我主导了一个需要……之间紧密协作的营销活动 | 用STAR法则描述工作成果的开场句型</div>
+<div class="pattern-item"><code>Rather than going head-to-head, I suggested...</code> → 我没有正面冲突，而是建议…… | 描述处理分歧时展现情商的实用句式</div>
+<div class="pattern-item"><code>If you were to join us, what would your first 90 days look like?</code> → 如果你加入我们，前90天会是什么样的？ | 面试官评估候选人规划能力的经典问题句式</div>
+<div class="pattern-item"><code>I'd structure it in three phases.</code> → 我会分三个阶段来规划 | 面试中展示结构化思维的强力开场白</div>
+<div class="pattern-item"><code>What does success look like for this role at the 12-month mark?</code> → 这个职位在12个月时成功的标志是什么？ | 候选人向面试官提出的高价值反问，展现战略思维</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>James，欢迎。感谢你今天过来。我看了你的简历，你在B2B市场营销方面的履历令人印象深刻。首先，能否谈谈你为什么要离开目前在Horizon Media的职位？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>谢谢你，Rebecca。这是个很好的问题。我在Horizon工作了四年，学到了很多，但在成长方面我感觉自己遇到了瓶颈。我在寻找一个更具战略主导权的职位——你们的职位描述提到要领导跨部门营销活动，这正是我在职业现阶段所追求的挑战。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>很高兴你这么坦率。说到跨部门营销活动——你能给我一个具体的例子，说明你领导过一个涉及多个部门的活动，以及从可衡量的KPI角度来看结果如何吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>当然。去年，我主导了一个产品上市营销活动，需要产品、销售和创意团队紧密协作。我们的目标是第一季度的合格线索增加15%。我建立了共享仪表盘，设立了每周检查点，到第二季度末，我们实际上实现了22%的增长。关键在于从一开始就让所有人围绕同一个北极星指标对齐。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>令人印象深刻。让我转向一个行为问题。请告诉我你有一次与同事在营销策略上产生重大分歧的经历。你是如何处理的？结果如何？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>很好的问题。大约18个月前，我们的创意总监想把70%的预算用于品牌知名度推广，而我主张采用可衡量ROI的效果营销方式。我没有正面冲突，而是建议用适度的预算对两种方式各进行一个月的A/B对比测试。数据自己说了话——效果渠道的转化率是品牌渠道的3倍，最终我们采用了满足双方需求的混合模式。我学到的是，数据永远是最好的调解者。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>数据作为调解者——这个说法我很欣赏。这里有一个更具前瞻性的问题。如果你加入我们，前90天会是什么样的？我对你的入职策略和优先级排序很感兴趣。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我会分三个阶段来规划。前30天全部用于倾听——与各部门关键利益相关者会面，了解现有的营销活动架构，并对当前表现与目标表现进行差距分析。第31到60天，我会制定一份有明确季度目标的战略路线图，并提交给领导层以获得支持。最后30天，我会启动一个高影响力的试点活动以展示早期成果，同时建立使长期执行可持续的团队关系。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>考虑得非常周全，James。最后一个问题——我们是一个快节奏的环境，优先级可能一夜之间就变了。当所有事情都被标为"紧急"时，你如何保持条理并管理相互冲突的截止日期？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我非常推崇艾森豪威尔矩阵——我按紧急性和重要性来分类任务，而不是按谁嗓门最大。我还会每天早上在日历上锁定"深度工作"时间，在救火式任务开始前处理高认知负荷的工作。当看到团队成员过度承诺时，我也不怕尊重地提出异议——可持续的工作节奏是我积极倡导的理念。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>James，这是一次非常棒的对话。我们本周会完成面试流程，目标在下周二前做出决定。在结束之前你有什么问题要问我吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>是的，有两个简短的问题。第一，从你的角度看，这个职位在12个月时成功的标志是什么？第二，我注意到BrightPath一直在拓展亚太市场——这个职位将如何为这一区域战略做出贡献？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>很好的问题。到12个月时，我希望这个人建立一个可在三个市场本地化的可扩展活动框架，并成为我们区域总监信赖的战略合作伙伴。至于亚太地区，这个职位位于全球战略与本地执行的交汇点——你将在为新加坡和东京等市场定制我们的价值主张方面发挥关键作用。再次感谢你的时间，James，我们会很快联系你。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>求职面试（Job Interview）是BEC口语Part 2和Part 3的高频场景。重点掌握STAR法则（Situation-Task-Action-Result）来结构化作答，避免流水账式回答。同时注意区分英式英语和美式英语的差异——例如"CV"(英) vs "résumé"(美)。练习中多准备行为面试（behavioural questions）的回答模板，这在BEC考试中越来越常见。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+</script>
+
+</body>
+</html>

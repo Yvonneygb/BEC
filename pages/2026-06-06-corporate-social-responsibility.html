@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>企业社会责任 Corporate Social Responsibility - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>企业社会责任 Corporate Social Responsibility</h1>
+<div class="date">📅 2026年6月6日 · 星期六</div>
+
+<div class="roles">
+  <strong>A (Maria Gonzalez)</strong> — Head of CSR, Verde Retail Group<br>
+  <strong>B (David Okonkwo)</strong> — Sustainability Consultant, EcoVantage Advisory
+</div>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">David, our annual sustainability report is due in eight weeks, and frankly, the draft I've seen reads like a marketing brochure. We need substance — measurable metrics, not feel-good anecdotes.</span></div>
+    <div class="dialogue-cn">David，我们的年度可持续发展报告还有八周就要提交了，坦白说，我看到的草案读起来像市场营销手册。我们需要实在内容——可量化的指标，而不是感动人心的轶事。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a common pitfall, Maria. Most CSR reports fail the <span class="vocab-highlight">materiality assessment</span>. Let's start with the basics — have you conducted a <span class="vocab-highlight">double materiality</span> assessment yet? The EU's CSRD will require it from next fiscal year anyway.</span></div>
+    <div class="dialogue-cn">这是常见误区，Maria。大多数CSR报告都通不过实质性检验。让我们从基础开始——你们做过双重实质性评估吗？不管怎样，欧盟的CSRD从下一个财年起都会要求这样做。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We haven't, and that's exactly the kind of gap I need you to help us close. Our board has committed to <span class="vocab-highlight">carbon neutrality</span> by 2030, but our <span class="vocab-highlight">Scope 3 emissions</span> — which account for an estimated 78% of our total carbon footprint — are still unaudited.</span></div>
+    <div class="dialogue-cn">我们还没做，这正是我需要你帮我们弥补的差距。董事会已承诺在2030年前实现碳中和，但我们的范围三排放——估计占我们总碳足迹的78%——至今未经审计。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Scope 3 is always the elephant in the room. Let me propose a phased approach: month one, we map your entire <span class="vocab-highlight">value chain</span> emissions, starting with Tier-1 suppliers. Month two, we engage your top 20 suppliers by spend to collect primary data — replacing the industry-average estimates you're currently using. That alone could shift your reported footprint by ±15%.</span></div>
+    <div class="dialogue-cn">范围三始终是房间里的大象。让我提出一个分阶段方案：第一个月，我们绘制整个价值链排放图，从一级供应商开始。第二个月，我们联系按采购额排名的前20家供应商收集一手数据——替代你们目前使用的行业平均值。仅这一项就可能让你们报告的碳足迹数据浮动±15%。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's ambitious but necessary. On the social side, our supply chain audits in Southeast Asia flagged three factories with systemic overtime violations. Our initial instinct was to terminate the contracts, but our local NGO partner argues that disengagement would punish the workers more than the factory owners.</span></div>
+    <div class="dialogue-cn">这很有雄心但确实必要。在社会责任方面，我们在东南亚的供应链审计发现三家工厂存在系统性超时违规。我们的最初反应是终止合同，但合作的本地NGO认为，终止合作对工人的伤害比对工厂老板更大。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's the <span class="vocab-highlight">responsible sourcing</span> dilemma in a nutshell. The UN Guiding Principles on Business and Human Rights are clear — ceasing the business relationship should be a last resort. Have you considered a <span class="vocab-highlight">corrective action plan</span> with a six-month remediation window, tied to contract renewal?</span></div>
+    <div class="dialogue-cn">这就是负责任采购困境的缩影。联合国工商业与人权指导原则很明确——终止业务关系应是最后手段。你们是否考虑过六个月的纠正行动计划，与合同续签挂钩？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We've drafted one, but enforcement is the challenge. Our local team is two people covering 47 factories across three countries. Without third-party verification, a CAP is just a piece of paper. What's your recommendation on audit frequency?</span></div>
+    <div class="dialogue-cn">我们已经起草了一份，但执行是挑战。我们本地团队只有两人，覆盖三个国家的47家工厂。没有第三方验证，纠正行动计划只是一纸空文。你对审计频率有什么建议？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">For high-risk facilities, I'd recommend unannounced audits quarterly, supplemented by <span class="vocab-highlight">worker voice technology</span> — mobile-based anonymous surveys that bypass management filtering. It's not cheap — roughly €45,000 per facility per annum — but compared to the reputational damage of a exposé, it's a rounding error.</span></div>
+    <div class="dialogue-cn">对于高风险工厂，我建议每季度进行不预先通知的审计，辅以工人心声技术——绕过管理层过滤的手机匿名调查。这不便宜——每个工厂每年大约45000欧元——但与媒体曝光的声誉损失相比，这只是个零头。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. I'll build that into next year's CSR budget. Now, the positive story — our community investment programme in Ghana has funded 12 schools over five years. But we've never measured the <span class="vocab-highlight">social return on investment</span>. Can you help us quantify it?</span></div>
+    <div class="dialogue-cn">同意。我会把这个纳入明年的CSR预算。现在说说积极的信息——我们在加纳的社区投资计划五年内资助了12所学校。但我们从未衡量过社会投资回报率。你能帮我们量化吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely. We use the SROI framework, which monetises outcomes like improved literacy rates against your input costs. For a programme of your scale, I'd estimate a 12-week engagement to produce a credible SROI ratio. Expect something in the range of 1:3 to 1:5 — meaning every euro invested generates three to five euros of social value.</span></div>
+    <div class="dialogue-cn">当然。我们采用社会投资回报率框架，将识字率提升等成果货币化，与你的投入成本做对比。对于你们这个规模的项目，我估计需要12周的调研来得出一个可信的SROI比率。预计在1:3到1:5的范围内——也就是说每投入一欧元，产生三到五欧元的社会价值。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's the kind of data that transforms a CSR report from a cost centre narrative into a value creation story. Let's scope the engagement. I'd like a proposal on my desk by Friday.</span></div>
+    <div class="dialogue-cn">这种数据能把CSR报告从成本中心叙事转变为价值创造故事。让我们明确合作范围。我希望周五前看到提案放在我桌上。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">You'll have it by Thursday. Maria, it's refreshing to work with a company that treats CSR as core strategy rather than compliance box-ticking.</span></div>
+    <div class="dialogue-cn">周四前你就能拿到。Maria，能和一家把CSR当作核心战略而非合规打勾的公司合作，让人耳目一新。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>materiality assessment</strong> — 实质性评估 | 判断哪些ESG议题对公司最为关键的评估流程</div>
+<div class="vocab-item"><strong>double materiality</strong> — 双重实质性 | 既考虑公司对环境社会的影响，也考虑ESG议题对公司财务的影响</div>
+<div class="vocab-item"><strong>Scope 3 emissions</strong> — 范围三排放 | 企业价值链上下游产生的间接碳排放，CSR核心指标</div>
+<div class="vocab-item"><strong>carbon neutrality</strong> — 碳中和 | 通过减排和抵消实现净零碳排放</div>
+<div class="vocab-item"><strong>corrective action plan (CAP)</strong> — 纠正行动计划 | 供应商违规后制定的限期整改方案</div>
+<div class="vocab-item"><strong>responsible sourcing</strong> — 负责任采购 | 确保供应链符合道德和可持续发展标准的采购方式</div>
+<div class="vocab-item"><strong>social return on investment (SROI)</strong> — 社会投资回报率 | 量化社会项目产生社会价值的框架</div>
+<div class="vocab-item"><strong>worker voice technology</strong> — 工人心声技术 | 通过手机匿名调查收集一线员工反馈的工具</div>
+<div class="vocab-item"><strong>value chain</strong> — 价值链 | 从原材料到终端消费者的全链条活动</div>
+
+<hr>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>That's a common pitfall.</code> → 这是一个常见误区 | 用于温和指出对方的问题</div>
+<div class="pattern-item"><code>...is always the elephant in the room.</code> → ……始终是房间里的大象 | 指出众所周知但被回避的关键问题</div>
+<div class="pattern-item"><code>Let me propose a phased approach.</code> → 让我提出一个分阶段方案 | 用于提出结构化的解决路径</div>
+<div class="pattern-item"><code>In a nutshell, ...</code> → 简而言之…… | 用简洁方式总结复杂问题的表达</div>
+<div class="pattern-item"><code>Ceasing the business relationship should be a last resort.</code> → 终止业务关系应是最后手段 | 表达负责任的商业立场</div>
+<div class="pattern-item"><code>Compared to..., it's a rounding error.</code> → 与……相比，这只是个零头 | 用对比强调成本合理性</div>
+
+<hr>
+
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>David，我们的年度可持续发展报告还有八周就要提交了，坦白说，我看到的草案读起来像市场营销手册。我们需要实在内容——可量化的指标，而不是感动人心的轶事。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是常见误区，Maria。大多数CSR报告都通不过实质性检验。让我们从基础开始——你们做过双重实质性评估吗？不管怎样，欧盟的CSRD从下一个财年起都会要求这样做。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我们还没做，这正是我需要你帮我们弥补的差距。董事会已承诺在2030年前实现碳中和，但我们的范围三排放——估计占我们总碳足迹的78%——至今未经审计。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>范围三始终是房间里的大象。让我提出一个分阶段方案：第一个月，我们绘制整个价值链排放图，从一级供应商开始。第二个月，我们联系按采购额排名的前20家供应商收集一手数据——替代你们目前使用的行业平均值。仅这一项就可能让你们报告的碳足迹数据浮动±15%。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这很有雄心但确实必要。在社会责任方面，我们在东南亚的供应链审计发现三家工厂存在系统性超时违规。我们的最初反应是终止合同，但合作的本地NGO认为，终止合作对工人的伤害比对工厂老板更大。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这就是负责任采购困境的缩影。联合国工商业与人权指导原则很明确——终止业务关系应是最后手段。你们是否考虑过六个月的纠正行动计划，与合同续签挂钩？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我们已经起草了一份，但执行是挑战。我们本地团队只有两人，覆盖三个国家的47家工厂。没有第三方验证，纠正行动计划只是一纸空文。你对审计频率有什么建议？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>对于高风险工厂，我建议每季度进行不预先通知的审计，辅以工人心声技术——绕过管理层过滤的手机匿名调查。这不便宜——每个工厂每年大约45000欧元——但与媒体曝光的声誉损失相比，这只是个零头。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>同意。我会把这个纳入明年的CSR预算。现在说说积极的信息——我们在加纳的社区投资计划五年内资助了12所学校。但我们从未衡量过社会投资回报率。你能帮我们量化吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>当然。我们采用社会投资回报率框架，将识字率提升等成果货币化，与你的投入成本做对比。对于你们这个规模的项目，我估计需要12周的调研来得出一个可信的SROI比率。预计在1:3到1:5的范围内——也就是说每投入一欧元，产生三到五欧元的社会价值。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这种数据能把CSR报告从成本中心叙事转变为价值创造故事。让我们明确合作范围。我希望周五前看到提案放在我桌上。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>周四前你就能拿到。Maria，能和一家把CSR当作核心战略而非合规打勾的公司合作，让人耳目一新。</span></div>
+</div>
+</div>
+
+<hr>
+
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>企业社会责任（CSR）是BEC考试中阅读Part 3（长篇文章理解）和写作Part 1（图表描述）的常客。建议重点掌握排放分类术语（Scope 1/2/3）和ESG报告框架词汇。在写作中，用数据驱动的论述方式（如"accounts for 78%"、"in the range of 1:3 to 1:5"）比泛泛而谈更能拿分。注意：CSRD等法规缩写经常出现在阅读材料中，需要熟悉其全称和含义。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

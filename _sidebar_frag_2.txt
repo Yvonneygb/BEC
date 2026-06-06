@@ -1,0 +1,24 @@
+<a class="nav-item" data-page="2026-06-06-project-management.html" onclick="switchPage(this,'2026-06-06-project-management.html')">
+  <span class="nav-item-icon">📊</span>
+  <span class="nav-item-text">项目管理</span>
+</a>
+<a class="nav-item" data-page="2026-06-06-job-interview.html" onclick="switchPage(this,'2026-06-06-job-interview.html')">
+  <span class="nav-item-icon">💼</span>
+  <span class="nav-item-text">求职面试</span>
+</a>
+<a class="nav-item" data-page="2026-06-06-business-travel.html" onclick="switchPage(this,'2026-06-06-business-travel.html')">
+  <span class="nav-item-icon">✈️</span>
+  <span class="nav-item-text">出差安排</span>
+</a>
+<a class="nav-item" data-page="2026-06-06-contract-terms.html" onclick="switchPage(this,'2026-06-06-contract-terms.html')">
+  <span class="nav-item-icon">📝</span>
+  <span class="nav-item-text">合同条款</span>
+</a>
+<a class="nav-item" data-page="2026-06-06-financial-report.html" onclick="switchPage(this,'2026-06-06-financial-report.html')">
+  <span class="nav-item-icon">📈</span>
+  <span class="nav-item-text">财务报告</span>
+</a>
+<a class="nav-item" data-page="2026-06-06-marketing-strategy.html" onclick="switchPage(this,'2026-06-06-marketing-strategy.html')">
+  <span class="nav-item-icon">🎯</span>
+  <span class="nav-item-text">营销策略</span>
+</a>

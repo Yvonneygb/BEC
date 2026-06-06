@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Travel - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>出差安排 Business Travel</h1>
+<div class="date">📅 2026年6月6日 · 星期六</div>
+
+<div class="roles">
+  <strong>A (Linda Zhao)</strong> — Executive Assistant, Meridian International<br>
+  <strong>B (Tom Crawford)</strong> — VP of Business Development, Meridian International
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Tom, I've received confirmation for your trip to Frankfurt next week. I've <span class="vocab-highlight">tentatively booked</span> your flights, but I need your input on a few <span class="vocab-highlight">logistics</span> before I finalise everything. Do you have five minutes?</span></div>
+    <div class="dialogue-cn">Tom，我收到了你下周去法兰克福的确认函。我已经暂时预订了你的航班，但在最终确认前有几个后勤事项需要你定一下。你有五分钟吗？</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Of course, Linda. Fire away. I know this is going to be a packed trip — three client meetings, the trade fair, and a site visit. Let's make sure we've got all our ducks in a row.</span></div>
+    <div class="dialogue-cn">当然，Linda。说吧。我知道这次出差会很紧凑——三场客户会议、贸易展、还有一次实地考察。我们确保万无一失。</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Right. For the <span class="vocab-highlight">outbound leg</span>, there's a direct Lufthansa flight departing Monday 7:30 AM, arriving Frankfurt 11:20 AM local time — business class, <span class="vocab-highlight">fully refundable</span>. The alternative is a connecting flight via Amsterdam that's €400 cheaper but adds three hours to the journey. Which would you prefer?</span></div>
+    <div class="dialogue-cn">好的。去程方面，有一班汉莎航空直飞航班，周一早上7:30出发，当地时间11:20到达法兰克福——商务舱，全额可退。另一个选择是经阿姆斯特丹转机，便宜400欧元但多花三小时。你更倾向哪个？</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Definitely the direct flight. Time is the one resource I can't buy more of on this trip. What about accommodation — have you looked into hotels near the Messe Frankfurt exhibition centre?</span></div>
+    <div class="dialogue-cn">毫无疑问选直飞。时间是我这次出差中无法买到更多的资源。住宿方面呢——你查过法兰克福展览中心附近的酒店了吗？</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I have. There are three options within walking distance. The Marriott is the closest but they're nearly fully booked — only a standard room available. The NH Collection has executive suites with a proper workspace, and they're offering a <span class="vocab-highlight">corporate rate</span> of €195 per night including breakfast. The third is a boutique hotel, slightly further out but well-reviewed. I'd lean towards the NH Collection given the workspace.</span></div>
+    <div class="dialogue-cn">查过了。步行距离内有三家选择。万豪最近但几乎订满——只剩标准间了。NH Collection有带正经工作区的行政套房，企业价每晚195欧元含早餐。第三家是个精品酒店，稍微远一点但评价很好。考虑到工作空间，我倾向于NH Collection。</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Good call. Book the NH Collection for four nights — Monday through Thursday. And please make sure they have reliable Wi-Fi. I'll be presenting to the board remotely on Tuesday evening, so I can't afford any connectivity issues. Also, can you arrange a rental car? I'll need to drive to the site visit in Mannheim on Wednesday.</span></div>
+    <div class="dialogue-cn">选得好。订NH Collection四晚——周一到周四。请确保他们有可靠的Wi-Fi。周二晚上我要远程向董事会做演示，不能出任何连接问题。另外，能安排租车吗？周三我需要开车去曼海姆做实地考察。</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Absolutely. I'll reserve a mid-size automatic through Sixt — they have a desk at the airport. For the board presentation on Tuesday, would you like me to prepare a <span class="vocab-highlight">briefing pack</span> with the latest quarterly figures? I can have that ready by Friday afternoon.</span></div>
+    <div class="dialogue-cn">没问题。我通过Sixt预订一辆中型自动挡——他们在机场有柜台。周二董事会演示方面，需要我准备一份包含最新季度数据的简报材料吗？我可以周五下午前准备好。</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Yes, please. And include the <span class="vocab-highlight">competitive landscape</span> analysis from the Munich office — they sent it over last week. One more thing — the dinner with the Klüber Group on Wednesday. Have you confirmed the reservation?</span></div>
+    <div class="dialogue-cn">好的，拜托了。把慕尼黑办公室发来的竞争格局分析也加进去——他们上周发过来的。还有一件事——周三与Klüber集团的晚宴。你确认预订了吗？</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I booked Zenzakan, which came highly recommended for business dining. Private dining room, seating for eight, pre-selected menu to avoid any dietary complications. I've also arranged a car service for the evening so you don't have to navigate after what I'm sure will be a long day.</span></div>
+    <div class="dialogue-cn">我订了Zenzakan，这家很受商务宴请推荐。包间、八人座、预选菜单以避免饮食方面的麻烦。我也安排了当晚的专车服务，这样在漫长的一天后你就不用自己开车了。</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">You've thought of everything. What about the expense report — I'll be using the corporate card, but I want to make sure I'm staying within the <span class="vocab-highlight">per diem</span> limits for meals and incidentals. Can you send me a quick summary of the travel policy highlights?</span></div>
+    <div class="dialogue-cn">你想得太周到了。费用报告方面——我会用公司卡，但想确保餐饮和杂费的每日额度不超标。能给我发一份差旅政策重点摘要吗？</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Already in your inbox, along with a digital copy of your <span class="vocab-highlight">itinerary</span>, hotel confirmation, car rental voucher, and a scanned copy of your travel insurance card. I've also set calendar reminders for each meeting with the local addresses in the notes. Anything else you need before I finalise?</span></div>
+    <div class="dialogue-cn">已经发到你邮箱了，附上了电子版行程单、酒店确认函、租车券和旅行保险卡扫描件。我也在日历上为每个会议设置了提醒，备注里加了当地地址。最终确认前还有别的需要吗？</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's incredibly thorough, Linda. Just one last thing — if anything changes with the Klüber meeting, flag it immediately. They're our largest potential account in the <span class="vocab-highlight">DACH region</span>, so there's no room for error. Otherwise, go ahead and finalise everything.</span></div>
+    <div class="dialogue-cn">太周全了，Linda。最后一件事——如果Klüber的会议有任何变动，立即提醒我。他们是我们DACH地区潜在的最大客户，容不得任何差错。除此之外，可以全部确认了。</div>
+  </div>
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Understood. I'll finalise all bookings this afternoon and send you a consolidated trip folder. I'll also set up a brief pre-trip briefing for Friday at 4 PM to run through any last-minute changes. Have a productive trip, Tom!</span></div>
+    <div class="dialogue-cn">明白。我今天下午确认所有预订并发给你一个整合的出差文件夹。我也安排周五下午4点做个简短的出差前简报，梳理最后的变化。祝你出差顺利，Tom！</div>
+  </div>
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>logistics</strong> — 后勤/统筹安排 | 出差安排中的核心词汇，涵盖交通、住宿、行程等所有组织工作</div>
+<div class="vocab-item"><strong>tentatively booked</strong> — 暂时预订 | 在最终确认前的预留操作，商务出差场景高频表达</div>
+<div class="vocab-item"><strong>outbound leg</strong> — 去程 | 旅程的第一段，与其对应的是return leg（回程），差旅标准术语</div>
+<div class="vocab-item"><strong>fully refundable</strong> — 全额可退 | 机票和酒店预订的灵活条款，商务差旅中的常见要求</div>
+<div class="vocab-item"><strong>corporate rate</strong> — 企业价/协议价 | 公司与酒店/航空公司协商的优惠价格</div>
+<div class="vocab-item"><strong>briefing pack</strong> — 简报材料 | 为会议准备的背景资料包，BEC写作和口语常见</div>
+<div class="vocab-item"><strong>competitive landscape</strong> — 竞争格局 | 行业竞争态势的分析报告，商务会议高频词</div>
+<div class="vocab-item"><strong>per diem</strong> — 每日额度 | 出差期间每天可报销的餐饮和杂费上限，源自拉丁语</div>
+<div class="vocab-item"><strong>itinerary</strong> — 行程单 | 包含所有交通、住宿和会议安排的详细行程表</div>
+<div class="vocab-item"><strong>DACH region</strong> — DACH地区 | 德国(Germany)、奥地利(Austria)、瑞士(Switzerland)的经济区域缩写</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>I've tentatively booked... but I need your input before I finalise.</code> → 我已暂时预订了……但在最终确认前需要你定一下 | 助理向主管汇报差旅安排的标准开场句式</div>
+<div class="pattern-item"><code>Let's make sure we've got all our ducks in a row.</code> → 我们确保万无一失 | 确保一切井井有条的口语表达，适合非正式商务场合</div>
+<div class="pattern-item"><code>I'd lean towards... given the...</code> → 考虑到……我倾向于…… | 给出建议并说明理由的实用句式，BEC口语Part 3常用</div>
+<div class="pattern-item"><code>Time is the one resource I can't buy more of.</code> → 时间是唯一无法买到更多的资源 | 表达时间宝贵的商务金句</div>
+<div class="pattern-item"><code>There's no room for error.</code> → 容不得任何差错 | 强调事情重要性的强力表达</div>
+<div class="pattern-item"><code>Can you arrange... I'll need to...</code> → 能安排……吗？我需要…… | 需求说明+理由的实用组合句型</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Tom，我收到了你下周去法兰克福的确认函。我已经暂时预订了你的航班，但在最终确认前有几个后勤事项需要你定一下。你有五分钟吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>当然，Linda。说吧。我知道这次出差会很紧凑——三场客户会议、贸易展、还有一次实地考察。我们确保万无一失。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>好的。去程方面，有一班汉莎航空直飞航班，周一早上7:30出发，当地时间11:20到达法兰克福——商务舱，全额可退。另一个选择是经阿姆斯特丹转机，便宜400欧元但多花三小时。你更倾向哪个？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>毫无疑问选直飞。时间是我这次出差中无法买到更多的资源。住宿方面呢——你查过法兰克福展览中心附近的酒店了吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>查过了。步行距离内有三家选择。万豪最近但几乎订满——只剩标准间了。NH Collection有带正经工作区的行政套房，企业价每晚195欧元含早餐。第三家是个精品酒店，稍微远一点但评价很好。考虑到工作空间，我倾向于NH Collection。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>选得好。订NH Collection四晚——周一到周四。请确保他们有可靠的Wi-Fi。周二晚上我要远程向董事会做演示，不能出任何连接问题。另外，能安排租车吗？周三我需要开车去曼海姆做实地考察。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>没问题。我通过Sixt预订一辆中型自动挡——他们在机场有柜台。周二董事会演示方面，需要我准备一份包含最新季度数据的简报材料吗？我可以周五下午前准备好。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>好的，拜托了。把慕尼黑办公室发来的竞争格局分析也加进去——他们上周发过来的。还有一件事——周三与Klüber集团的晚宴。你确认预订了吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我订了Zenzakan，这家很受商务宴请推荐。包间、八人座、预选菜单以避免饮食方面的麻烦。我也安排了当晚的专车服务，这样在漫长的一天后你就不用自己开车了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>你想得太周到了。费用报告方面——我会用公司卡，但想确保餐饮和杂费的每日额度不超标。能给我发一份差旅政策重点摘要吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>已经发到你邮箱了，附上了电子版行程单、酒店确认函、租车券和旅行保险卡扫描件。我也在日历上为每个会议设置了提醒，备注里加了当地地址。最终确认前还有别的需要吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>太周全了，Linda。最后一件事——如果Klüber的会议有任何变动，立即提醒我。他们是我们DACH地区潜在的最大客户，容不得任何差错。除此之外，可以全部确认了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>明白。我今天下午确认所有预订并发给你一个整合的出差文件夹。我也安排周五下午4点做个简短的出差前简报，梳理最后的变化。祝你出差顺利，Tom！</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>出差安排（Business Travel）是BEC听力和口语的经典场景。重点掌握时间表达（local time, GMT等）、航班术语（direct flight, connecting flight, layover）、住宿词汇（corporate rate, amenities）和行程安排句型。建议模拟完整的出差预订电话对话练习——包括询问时间、价格、取消政策等，这些在BEC听力Part 2中经常出现。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+</script>
+
+</body>
+</html>

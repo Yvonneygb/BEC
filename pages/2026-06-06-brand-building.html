@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>品牌建设 Brand Building - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>品牌建设 Brand Building</h1>
+<div class="date">📅 2026年6月6日 · 星期六</div>
+
+<div class="roles">
+  <strong>A (Sophie Lindström)</strong> — Chief Marketing Officer, Fjord & Pine Outdoor<br>
+  <strong>B (Daniel Kim)</strong> — Brand Strategy Director, Northlight Agency
+</div>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Daniel, our <span class="vocab-highlight">brand awareness</span> tracking study came back, and the numbers are sobering. Unaided brand awareness in our target demographic — 25 to 40-year-old outdoor enthusiasts — is at 14%. Our nearest competitor, TrailMaster, is at 38%.</span></div>
+    <div class="dialogue-cn">Daniel，我们的品牌追踪研究报告出来了，数据令人清醒。在目标人群——25到40岁户外爱好者中——我们的无提示品牌知名度是14%。最大的竞争对手TrailMaster是38%。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a significant gap, Sophie. But awareness alone is a vanity metric. What does your brand perception data say? Are the people who do know you showing strong affinity?</span></div>
+    <div class="dialogue-cn">这个差距不小，Sophie。但知名度本身是个虚荣指标。品牌认知数据怎么说？了解你们的人是否表现出强烈的品牌好感？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's the silver lining. Our <span class="vocab-highlight">net promoter score</span> among existing customers is 72, versus TrailMaster's 54. The problem is the top of the funnel — we're simply not reaching enough people. Our current media mix is 70% <span class="vocab-highlight">performance marketing</span> and only 30% brand-building spend.</span></div>
+    <div class="dialogue-cn">这就是一线希望。我们在现有客户中的净推荐值是72，而TrailMaster是54。问题在于销售漏斗的顶部——我们就是触达不到足够多的人。目前的媒体组合是70%效果营销，只有30%品牌建设支出。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That ratio is upside down for a <span class="vocab-highlight">challenger brand</span> in the growth phase. The Ehrenberg-Bass research is unequivocal — brand building drives long-term growth through <span class="vocab-highlight">mental availability</span>. I'd recommend flipping to at least 60% brand spend, with a heavy emphasis on distinctive <span class="vocab-highlight">brand assets</span>. What's your current brand codes audit look like?</span></div>
+    <div class="dialogue-cn">对于处于增长阶段的挑战者品牌来说，这个比例是颠倒的。Ehrenberg-Bass的研究结论很明确——品牌建设通过心理可得性驱动长期增长。我建议至少将品牌支出翻转到60%，重点放在独特的品牌资产上。你们的品牌编码审计目前是什么情况？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We've never done one formally. We have a logo and a colour palette, but I suspect our distinctive assets are weaker than we think. Our social media template changes every quarter because the content team gets bored.</span></div>
+    <div class="dialogue-cn">我们从未正式做过。我们有logo和色板，但我怀疑我们的独特资产比我们想象的弱。我们的社交媒体模板每个季度都换，因为内容团队觉得无聊了。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a classic mistake — confusing distinctiveness with differentiation. Distinctive assets — think Intel's five-note sonic logo or Mastercard's overlapping circles — create memory structures that trigger brand recall at the point of purchase. They don't need to communicate a brand promise; they just need to be consistently linked to your brand. Let's lock in three to five distinctive assets and commit to a minimum of 18 months without modification.</span></div>
+    <div class="dialogue-cn">这是个经典误区——混淆了独特性和差异化。独特资产——想想Intel的五音符声音logo或Mastercard的重叠圆圈——创造的是在购买时刻触发品牌回忆的记忆结构。它们不需要传达品牌承诺，只需要持续地与你的品牌关联。让我们锁定三到五个独特资产，承诺至少18个月不做修改。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's going to be a tough sell internally — our creative director prides herself on constant reinvention. How do I frame this without stifling creativity?</span></div>
+    <div class="dialogue-cn">这在内部很难推动——我们的创意总监以不断重塑为傲。我怎么表达才不会压制创造力？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Frame it as creative consistency within constraints. Give the team a clear sandbox — these three assets are sacred, everything else is fair game for experimentation. The most awarded campaigns historically come from agencies that maintain brand consistency over years. Look at O2's "Be More Dog" — same territory for seven years, infinitely adaptable.</span></div>
+    <div class="dialogue-cn">把它表述为限制条件下的创意一致性。给团队一个明确的范围——这三个资产是神圣不可更改的，其他所有东西都可以自由实验。历史上获奖最多的广告作品都来自于那些多年保持品牌一致性的公司。看看O2的"Be More Dog"——七年深耕同一领域，无限可延展。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That framing helps. On the media side, we're considering a sponsorship of the European Trail Running Championships. The rights fee is €2.2 million for three years. Is that efficient brand-building spend, or would we get more reach through digital video?</span></div>
+    <div class="dialogue-cn">这种表述有帮助。在媒体方面，我们正在考虑赞助欧洲越野跑锦标赛。三年的权利费是220万欧元。这是高效的品牌建设投入，还是通过数字视频能获得更广的触达？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Do both, but sequence them. Use the sponsorship as a content engine — behind-the-scenes footage, athlete stories, course previews — and distribute it through targeted digital video. The sponsorship gives you authentic credibility in the outdoor community that paid media can't buy. The digital layer amplifies the reach. I've seen this hybrid model deliver a 3.4x <span class="vocab-highlight">earned-to-paid media multiplier</span>.</span></div>
+    <div class="dialogue-cn">两者都做，但要分阶段。把赞助当作内容引擎——幕后花絮、运动员故事、赛道预告——通过定向数字视频分发。赞助给你的是户外社区中真实的信誉，这是付费媒体买不到的。数字层面放大触达范围。我见过这种混合模式实现3.4倍的自然传播与付费传播倍数。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I like that layered approach. One last thing — our <span class="vocab-highlight">brand purpose</span> statement is currently "We make great outdoor gear." That's not a purpose; it's a product description. We need something that galvanises the organisation and resonates with the outdoor community.</span></div>
+    <div class="dialogue-cn">我喜欢这种分层方法。最后一件事——我们目前的品牌使命宣言是"我们做很棒的户外装备"。这不是使命，这是产品描述。我们需要一种能够激励组织、引起户外社区共鸣的东西。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Your NPS of 72 tells you something important — your customers already believe in you. Let's run a brand purpose workshop with your most loyal customers and frontline staff. The purpose shouldn't be invented in a boardroom; it should be discovered from the people who already love your brand. I've seen this <span class="vocab-highlight">co-creation</span> approach produce statements with real emotional pull.</span></div>
+    <div class="dialogue-cn">72的NPS告诉你一件重要的事——你的客户已经信任你了。我们和最忠诚的客户以及一线员工一起做一场品牌使命研讨会。使命不应该在会议室中凭空杜撰，应该从那些已经热爱你品牌的人身上发现。我见过这种共创方式产出具有真实情感感召力的使命宣言。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Let's do it. Can you put together a timeline and budget for the full engagement — brand codes audit, media strategy overhaul, and the purpose workshop?</span></div>
+    <div class="dialogue-cn">就这么办。你能为完整的合作内容——品牌编码审计、媒体策略改革和使命研讨会——排一个时间表和预算吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'll have a comprehensive proposal within five working days. Sophie, you have a rare combination — strong product love but weak mental availability. That's much easier to fix than the reverse.</span></div>
+    <div class="dialogue-cn">五个工作日内给你综合提案。Sophie，你们有一种罕见的组合——强大的产品热爱但较弱的心理可得性。这比反过来要好修补得多。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>brand awareness</strong> — 品牌知名度 | 消费者对品牌的认知程度，分为提示后和未经提示</div>
+<div class="vocab-item"><strong>net promoter score (NPS)</strong> — 净推荐值 | 衡量客户忠诚度的核心指标</div>
+<div class="vocab-item"><strong>brand assets / brand codes</strong> — 品牌资产/品牌编码 | 能触发品牌识别的独特视觉或听觉元素</div>
+<div class="vocab-item"><strong>mental availability</strong> — 心理可得性 | 消费者在购买场景中想到某品牌的概率</div>
+<div class="vocab-item"><strong>performance marketing</strong> — 效果营销 | 以直接转化为导向的营销方式</div>
+<div class="vocab-item"><strong>brand purpose</strong> — 品牌使命 | 品牌存在的根本理由，超越产品功能</div>
+<div class="vocab-item"><strong>earned-to-paid media multiplier</strong> — 自然传播与付费传播的倍数比 | 衡量品牌内容传播效率的指标</div>
+<div class="vocab-item"><strong>co-creation</strong> — 共创 | 与消费者或员工共同参与品牌建设的方法</div>
+<div class="vocab-item"><strong>challenger brand</strong> — 挑战者品牌 | 市场份额较小但企图挑战领先者的品牌</div>
+
+<hr>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>The numbers are sobering.</code> → 数据令人清醒/发人深省 | 用于引出不理想的调研结果</div>
+<div class="pattern-item"><code>That's the silver lining.</code> → 这是一线希望 | 在困境中指出积极的一面</div>
+<div class="pattern-item"><code>That ratio is upside down for...</code> → 这个比例对……来说是颠倒的 | 指出资源配置不当</div>
+<div class="pattern-item"><code>Frame it as...</code> → 把它表述为…… | 建议改变沟通角度以获得认同</div>
+<div class="pattern-item"><code>Give the team a clear sandbox.</code> → 给团队一个明确的范围 | 在限制中给予创意自由的表达</div>
+<div class="pattern-item"><code>The purpose shouldn't be invented in a boardroom.</code> → 使命不应在会议室里凭空杜撰 | 强调品牌应该从真实用户中发掘</div>
+
+<hr>
+
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Daniel，我们的品牌追踪研究报告出来了，数据令人清醒。在目标人群——25到40岁户外爱好者中——我们的无提示品牌知名度是14%。最大的竞争对手TrailMaster是38%。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这个差距不小，Sophie。但知名度本身是个虚荣指标。品牌认知数据怎么说？了解你们的人是否表现出强烈的品牌好感？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这就是一线希望。我们在现有客户中的净推荐值是72，而TrailMaster是54。问题在于销售漏斗的顶部——我们就是触达不到足够多的人。目前的媒体组合是70%效果营销，只有30%品牌建设支出。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>对于处于增长阶段的挑战者品牌来说，这个比例是颠倒的。Ehrenberg-Bass的研究结论很明确——品牌建设通过心理可得性驱动长期增长。我建议至少将品牌支出翻转到60%，重点放在独特的品牌资产上。你们的品牌编码审计目前是什么情况？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我们从未正式做过。我们有logo和色板，但我怀疑我们的独特资产比我们想象的弱。我们的社交媒体模板每个季度都换，因为内容团队觉得无聊了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是个经典误区——混淆了独特性和差异化。独特资产——想想Intel的五音符声音logo或Mastercard的重叠圆圈——创造的是在购买时刻触发品牌回忆的记忆结构。它们不需要传达品牌承诺，只需要持续地与你的品牌关联。让我们锁定三到五个独特资产，承诺至少18个月不做修改。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这在内部很难推动——我们的创意总监以不断重塑为傲。我怎么表达才不会压制创造力？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>把它表述为限制条件下的创意一致性。给团队一个明确的范围——这三个资产是神圣不可更改的，其他所有东西都可以自由实验。历史上获奖最多的广告作品都来自于那些多年保持品牌一致性的公司。看看O2的"Be More Dog"——七年深耕同一领域，无限可延展。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这种表述有帮助。在媒体方面，我们正在考虑赞助欧洲越野跑锦标赛。三年的权利费是220万欧元。这是高效的品牌建设投入，还是通过数字视频能获得更广的触达？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>两者都做，但要分阶段。把赞助当作内容引擎——幕后花絮、运动员故事、赛道预告——通过定向数字视频分发。赞助给你的是户外社区中真实的信誉，这是付费媒体买不到的。数字层面放大触达范围。我见过这种混合模式实现3.4倍的自然传播与付费传播倍数。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我喜欢这种分层方法。最后一件事——我们目前的品牌使命宣言是"我们做很棒的户外装备"。这不是使命，这是产品描述。我们需要一种能够激励组织、引起户外社区共鸣的东西。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>72的NPS告诉你一件重要的事——你的客户已经信任你了。我们和最忠诚的客户以及一线员工一起做一场品牌使命研讨会。使命不应该在会议室中凭空杜撰，应该从那些已经热爱你品牌的人身上发现。我见过这种共创方式产出具有真实情感感召力的使命宣言。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>就这么办。你能为完整的合作内容——品牌编码审计、媒体策略改革和使命研讨会——排一个时间表和预算吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>五个工作日内给你综合提案。Sophie，你们有一种罕见的组合——强大的产品热爱但较弱的心理可得性。这比反过来要好修补得多。</span></div>
+</div>
+</div>
+
+<hr>
+
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>品牌建设是BEC考试中写作Part 2（proposal/report）和口语Part 3（collaborative discussion）的常见话题。重点掌握品牌衡量指标（NPS、brand awareness、mental availability）和品牌战略术语（brand purpose、distinctive assets）。在写作建议类题目时，用"数据+归因+建议"的三段式结构；在口语讨论中，善于用"silver lining"这类转折表达来平衡正反观点，会给考官留下深刻印象。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

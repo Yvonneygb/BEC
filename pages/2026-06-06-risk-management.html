@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>风险管理 Risk Management - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>风险管理 Risk Management</h1>
+<div class="date">📅 2026年6月6日 · 星期六</div>
+
+<div class="roles">
+  <strong>A (Elena Rossi)</strong> — Chief Risk Officer, Meridian Bank<br>
+  <strong>B (James Thornton)</strong> — Operations Director, Pacifica Shipping Ltd.
+</div>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">James, your quarterly <span class="vocab-highlight">risk register</span> shows the South China Sea route contingency has been upgraded from amber to red. Walk me through the trigger event.</span></div>
+    <div class="dialogue-cn">James，你们的季度风险登记册显示南海航线应急方案已从黄色升级为红色。带我了解一下触发事件。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Last Tuesday we received intelligence from our maritime security consultant that piracy incidents in the Malacca Strait are up 47% quarter-on-quarter. Three of our vessels pass through that corridor weekly. We had to escalate the risk rating.</span></div>
+    <div class="dialogue-cn">上周二我们从海事安全顾问那里得到情报，马六甲海峡的海盗事件同比增长了47%。我们每周有三艘船经过那条走廊。我们不得不升级风险评级。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Understood. What <span class="vocab-highlight">mitigation measures</span> have you activated so far? The board will want to see a proactive response, not just a flag on a dashboard.</span></div>
+    <div class="dialogue-cn">理解。目前你们启动了哪些缓释措施？董事会希望看到主动应对，而不只是仪表盘上的一面旗。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We've rerouted two vessels to the Lombok Strait, which adds 2.3 days of sailing time but eliminates the exposure. For the remaining vessel — the Pacific Star — we've contracted an armed security detail at €18,000 per transit. The cost is significant, but it's within the <span class="vocab-highlight">risk appetite</span> threshold we agreed on in Q1.</span></div>
+    <div class="dialogue-cn">我们将两艘船改道龙目海峡，这增加了2.3天的航行时间，但消除了风险暴露。对于剩下那艘——太平洋之星号——我们以每次航行18000欧元的价格请了武装安保。成本不低，但在我们Q1约定的风险偏好阈值之内。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">The Lombok reroute is sensible. On the armed security, I'd like to see a cost-benefit analysis against the alternative — what's the premium for war-risk insurance on that route versus the €18,000 per transit fee?</span></div>
+    <div class="dialogue-cn">龙目海峡改道是合理的。关于武装安保，我想看看与替代方案的成本收益对比——那条航线的战争险保费与每次18000欧元的安保费相比如何？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Good question. Our broker quoted an additional war-risk premium of €142,000 annually for that specific corridor coverage, which amortises to roughly €2,730 per transit across 52 sailings. The insurance route is cheaper on paper, but — and this is the catch — the policy excludes loss of hire if the vessel is detained. A single six-day detention would cost us €420,000 in lost charter revenue.</span></div>
+    <div class="dialogue-cn">好问题。我们的经纪人报价是全年额外战争险保费142000欧元，按52次航行摊销大约每次2730欧元。走保险在账面上更便宜，但——问题在这里——保单不覆盖船舶被扣押时的租金损失。一次六天的扣押将造成420000欧元的租金收入损失。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That tilts the equation decisively. Document this analysis in the risk register as the justification. Now, shifting gears — your supply chain concentration risk with that <span class="vocab-highlight">single-source</span> semiconductor supplier in Hsinchu. The earthquake exposure needs quantification. What's the business continuity plan?</span></div>
+    <div class="dialogue-cn">这使权衡结果明确倾斜了。把这个分析记录在风险登记册中作为依据。现在换个话题——你们在新竹那家单一来源半导体供应商的供应链集中风险。地震风险需要量化。业务连续性计划是什么？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We've been working on <span class="vocab-highlight">dual-sourcing</span>. We qualified a secondary supplier in Penang last month, and we've pre-positioned eight weeks of <span class="vocab-highlight">buffer inventory</span> at our Rotterdam hub. The total risk transfer cost — including the buffer stock carrying cost — is about €340,000. But it reduces our <span class="vocab-highlight">single-point-of-failure</span> exposure by an estimated 82%.</span></div>
+    <div class="dialogue-cn">我们一直在推进双重采购。上个月我们在槟城认证了一家二级供应商，并在鹿特丹枢纽预置了八周的缓冲库存。总风险转移成本——包括缓冲库存的持有成本——大约340000欧元。但这将我们的单点故障风险估计降低了82%。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Those metrics are exactly what the audit committee needs. One more item — have you stress-tested the cyber risk scenario since the Maersk-type ransomware incident hit the industry?</span></div>
+    <div class="dialogue-cn">这些指标正是审计委员会需要的。还有一件事——自Maersk类型的勒索软件事件冲击行业以来，你们对网络风险进行了压力测试吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We ran a full <span class="vocab-highlight">penetration test</span> last month. The good news: our OT systems are <span class="vocab-highlight">air-gapped</span>. The bad news: our back-office ERP has three medium-severity vulnerabilities. Our CISO has a remediation timeline of six weeks. I've flagged it in the risk register as amber — controlled but requiring monitoring.</span></div>
+    <div class="dialogue-cn">我们上个月做了一次全面渗透测试。好消息：我们的OT系统是物理隔离的。坏消息：我们后台的ERP系统有三个中等严重程度的漏洞。我们的CISO给出的修复时间表是六周。我已经在风险登记册中将其标为黄色——可控但需要监控。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Keep that timeline tight. I'll present the consolidated risk dashboard to the board on Thursday. Your shipping and supply chain risks are well-documented. Just ensure the cyber remediation doesn't slip past that six-week mark — regulators are showing zero tolerance on disclosures now.</span></div>
+    <div class="dialogue-cn">严格把控这个时间表。周四我将向董事会呈报综合风险仪表盘。你们的航运和供应链风险记录得很好。只要确保网络修复不要超过六周这个期限——监管机构现在对信息披露持零容忍态度。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Understood. I'll have the CISO provide weekly progress updates copied to your office. We're also scheduling a <span class="vocab-highlight">tabletop exercise</span> for a simulated ransomware attack in three weeks — you're welcome to observe.</span></div>
+    <div class="dialogue-cn">明白。我会让CISO每周提供进展更新，抄送你的办公室。我们也计划在三周后进行一场模拟勒索软件攻击的桌面演练——欢迎你来观摩。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll be there. That's exactly the kind of proactive governance we need to demonstrate.</span></div>
+    <div class="dialogue-cn">我一定来。这正是我们需要展现的主动治理。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>risk register</strong> — 风险登记册 | 系统记录和追踪各类企业风险的文件，BEC高频词</div>
+<div class="vocab-item"><strong>mitigation measures</strong> — 缓释措施 | 降低风险影响或发生概率的行动方案</div>
+<div class="vocab-item"><strong>risk appetite</strong> — 风险偏好 | 组织愿意承担的风险水平，董事会治理核心术语</div>
+<div class="vocab-item"><strong>single-point-of-failure</strong> — 单点故障 | 供应链和IT领域的关键风险概念</div>
+<div class="vocab-item"><strong>dual-sourcing</strong> — 双重采购 | 通过两个供应商分散供应链风险的策略</div>
+<div class="vocab-item"><strong>buffer inventory</strong> — 缓冲库存 | 为应对供应中断而储备的额外库存</div>
+<div class="vocab-item"><strong>penetration test</strong> — 渗透测试 | 模拟攻击以评估系统安全性的测试</div>
+<div class="vocab-item"><strong>air-gapped</strong> — 物理隔离的 | 未连接外部网络的系统，最高安全级别措施</div>
+<div class="vocab-item"><strong>tabletop exercise</strong> — 桌面演练 | 模拟危机情景的讨论式演练</div>
+
+<hr>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>Walk me through the trigger event.</code> → 带我把触发事件过一遍 | 要求对方详细解释某事起因</div>
+<div class="pattern-item"><code>We had to escalate the risk rating.</code> → 我们不得不升级风险评级 | 描述风险等级上升</div>
+<div class="pattern-item"><code>What's the business continuity plan?</code> → 业务连续性计划是什么？ | 询问危机应对方案的标准问法</div>
+<div class="pattern-item"><code>That tilts the equation decisively.</code> → 这使权衡结果明确倾斜 | 用于表达某一因素彻底改变了决策方向</div>
+<div class="pattern-item"><code>The good news... The bad news...</code> → 好消息是……坏消息是…… | 用于平衡地呈现风险评估结果</div>
+<div class="pattern-item"><code>Regulators are showing zero tolerance on...</code> → 监管机构对……持零容忍态度 | 强调合规要求紧迫性</div>
+
+<hr>
+
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>James，你们的季度风险登记册显示南海航线应急方案已从黄色升级为红色。带我了解一下触发事件。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>上周二我们从海事安全顾问那里得到情报，马六甲海峡的海盗事件同比增长了47%。我们每周有三艘船经过那条走廊。我们不得不升级风险评级。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>理解。目前你们启动了哪些缓释措施？董事会希望看到主动应对，而不只是仪表盘上的一面旗。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我们将两艘船改道龙目海峡，这增加了2.3天的航行时间，但消除了风险暴露。对于剩下那艘——太平洋之星号——我们以每次航行18000欧元的价格请了武装安保。成本不低，但在我们Q1约定的风险偏好阈值之内。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>龙目海峡改道是合理的。关于武装安保，我想看看与替代方案的成本收益对比——那条航线的战争险保费与每次18000欧元的安保费相比如何？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>好问题。我们的经纪人报价是全年额外战争险保费142000欧元，按52次航行摊销大约每次2730欧元。走保险在账面上更便宜，但——问题在这里——保单不覆盖船舶被扣押时的租金损失。一次六天的扣押将造成420000欧元的租金收入损失。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这使权衡结果明确倾斜了。把这个分析记录在风险登记册中作为依据。现在换个话题——你们在新竹那家单一来源半导体供应商的供应链集中风险。地震风险需要量化。业务连续性计划是什么？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我们一直在推进双重采购。上个月我们在槟城认证了一家二级供应商，并在鹿特丹枢纽预置了八周的缓冲库存。总风险转移成本——包括缓冲库存的持有成本——大约340000欧元。但这将我们的单点故障风险估计降低了82%。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这些指标正是审计委员会需要的。还有一件事——自Maersk类型的勒索软件事件冲击行业以来，你们对网络风险进行了压力测试吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我们上个月做了一次全面渗透测试。好消息：我们的OT系统是物理隔离的。坏消息：我们后台的ERP系统有三个中等严重程度的漏洞。我们的CISO给出的修复时间表是六周。我已经在风险登记册中将其标为黄色——可控但需要监控。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>严格把控这个时间表。周四我将向董事会呈报综合风险仪表盘。你们的航运和供应链风险记录得很好。只要确保网络修复不要超过六周这个期限——监管机构现在对信息披露持零容忍态度。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>明白。我会让CISO每周提供进展更新，抄送你的办公室。我们也计划在三周后进行一场模拟勒索软件攻击的桌面演练——欢迎你来观摩。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我一定来。这正是我们需要展现的主动治理。</span></div>
+</div>
+</div>
+
+<hr>
+
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>风险管理是BEC考试中口语Part 2（mini-presentation）和写作Part 2（report）的高频话题。建议重点掌握风险等级描述（amber/red/escalate）和缓释措施相关词汇。练习小演讲时，可以用"识别风险→量化影响→描述措施→评估效果"的框架。桌面演练（tabletop exercise）和渗透测试（penetration test）是近年BEC阅读新增的术语，需要特别关注。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

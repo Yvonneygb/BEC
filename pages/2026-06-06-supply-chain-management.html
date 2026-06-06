@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>供应链管理 Supply Chain Management - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+/* 标题行：icon + 文字 + 右侧操作 */
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+/* 中文切换按钮 */
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+/* 词汇高亮 */
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>供应链管理 Supply Chain Management</h1>
+<div class="date">📅 2026年6月6日 · 星期六</div>
+
+<div class="roles">
+  <strong>A (David Liu) — Supply Chain Director, AsiaTech Manufacturing</strong><br>
+  <strong>B (Rachel Kim) — Logistics Manager, GlobalFreight Solutions</strong>
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Rachel, I'm glad we could connect on short notice. The situation at Port Rotterdam is getting worse — our latest shipment has been sitting there for eleven days now. What's your assessment?</span></div>
+    <div class="dialogue-cn">Rachel，很高兴我们能临时约上通话。鹿特丹港的情况越来越糟——我们最新一批货已经在那里滞留了11天。你的评估是什么？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Unfortunately, David, it's not looking promising. The <span class="vocab-highlight">backlog</span> at Rotterdam has piled up to over 40 vessels. We're anticipating at least another five to seven days before your containers can clear customs.</span></div>
+    <div class="dialogue-cn">很不幸，David，情况不容乐观。鹿特丹港的积压已经堆积了超过40艘船。我们预计你的集装箱至少还需要五到七天才能通关。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Five to seven more days? That puts our production line at serious risk. Our <span class="vocab-highlight">just-in-time</span> model means we keep only a three-day <span class="vocab-highlight">inventory buffer</span>. Any longer and we'll face a complete line stoppage.</span></div>
+    <div class="dialogue-cn">还要五到七天？这让我们的生产线面临严重风险。我们的准时制生产模式只保留三天的库存缓冲。再拖下去，我们将面临全面停产。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I understand the urgency. Let me propose a workaround — we can reroute the next three shipments through the Port of Antwerp. The <span class="vocab-highlight">lead time</span> extends by roughly two days, but it avoids the Rotterdam <span class="vocab-highlight">bottleneck</span> entirely. Your <span class="vocab-highlight">freight forwarder</span> can handle the documentation switch.</span></div>
+    <div class="dialogue-cn">我理解这个紧急情况。让我提出一个变通方案——我们可以将接下来三批货物改道经安特卫普港。交货周期大约延长两天，但完全避开了鹿特丹港的瓶颈。你们的货运代理可以处理单证变更。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Antwerp could work as a short-term fix, but what about the cost? Rerouting always comes with additional <span class="vocab-highlight">surcharges</span>, and our quarterly logistics budget is already stretched thin.</span></div>
+    <div class="dialogue-cn">安特卫普作为短期方案可能可行，但成本呢？改道总是伴随附加费，而我们季度的物流预算已经很紧张了。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">You're right — there's a €1,850 rerouting fee per container. But weigh that against the cost of a production shutdown. I'd estimate the surcharge is roughly 3% of what you'd lose in a two-day stoppage. It's the lesser of two evils.</span></div>
+    <div class="dialogue-cn">你说得对——每个集装箱有1850欧元的改道费。但要权衡一下停产的损失。我估计附加费大约只有两天停产损失的3%。两害相权取其轻。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Fair analysis. Let's activate the Antwerp reroute for the next three shipments. While we're at it, I think we need to seriously discuss <span class="vocab-highlight">supplier diversification</span>. Relying on a single European port route has proven far too vulnerable.</span></div>
+    <div class="dialogue-cn">分析得有道理。那就启动接下来三批货的安特卫普改道方案。顺便说一下，我觉得我们需要认真讨论供应商多元化的问题。依赖单一的欧洲港口路线已经证明太脆弱了。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a strategic conversation worth having. I can put together a <span class="vocab-highlight">risk assessment</span> report comparing alternative routes through Southern Europe and even direct rail from China. Would next Tuesday work for a deeper dive?</span></div>
+    <div class="dialogue-cn">这是一个值得深入探讨的战略话题。我可以准备一份风险评估报告，比较经南欧甚至中国直达铁路的替代路线。下周二做一次深入讨论怎么样？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Next Tuesday at 10 AM works. In the meantime, please expedite the Antwerp paperwork. I'll brief our production team so they can adjust their scheduling accordingly.</span></div>
+    <div class="dialogue-cn">下周二上午10点可以。同时，请加快安特卫普的单证手续。我会向生产团队做简报，让他们相应调整排产。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Consider it done. I'll send you the revised shipping schedule and the reroute confirmation by end of business today. And David — these disruptions are likely to persist through Q3, so building a more resilient supply chain now will pay dividends later.</span></div>
+    <div class="dialogue-cn">放心吧，交给我了。今天下班前我会发给你修订后的船期表和改道确认书。还有，David——这些中断很可能持续到第三季度，所以现在建立一个更具韧性的供应链，将来会带来回报。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>backlog</strong> — 积压/待处理的工作量 | 供应链中断时的核心术语，BEC阅读高频词</div>
+<div class="vocab-item"><strong>just-in-time (JIT)</strong> — 准时制生产 | 精益制造的核心概念，追求最小化库存</div>
+<div class="vocab-item"><strong>inventory buffer</strong> — 库存缓冲/安全库存 | 应对供应链波动的基础策略</div>
+<div class="vocab-item"><strong>lead time</strong> — 交货周期/前置时间 | 从下单到收货的总时长，供应链管理核心指标</div>
+<div class="vocab-item"><strong>bottleneck</strong> — 瓶颈 | 限制整个流程效率的关键节点</div>
+<div class="vocab-item"><strong>freight forwarder</strong> — 货运代理 | 国际物流中负责安排运输的关键中介</div>
+<div class="vocab-item"><strong>surcharge</strong> — 附加费 | 运输中的额外费用，如燃油附加费、改道费等</div>
+<div class="vocab-item"><strong>supplier diversification</strong> — 供应商多元化 | 供应链风险管理的核心策略</div>
+<div class="vocab-item"><strong>risk assessment</strong> — 风险评估 | 商务决策前的标准分析和预判流程</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>I'm glad we could connect on short notice.</code> → 很高兴我们能临时约上 | 紧急情况下的高效开场白</div>
+<div class="pattern-item"><code>What's your assessment?</code> → 你的评估是什么？ | 向专业人士征求判断的标准商务问法</div>
+<div class="pattern-item"><code>...puts our production line at serious risk.</code> → ...让我们的生产线面临严重风险 | 表达紧急性和后果严重性</div>
+<div class="pattern-item"><code>Weigh that against...</code> → 把这个与...权衡一下 | 引导对方做成本收益比较的经典表达</div>
+<div class="pattern-item"><code>Consider it done.</code> → 放心吧，交给我了 | 表示立即执行、让对方放心的商务承诺</div>
+<div class="pattern-item"><code>...will pay dividends later.</code> → ...将来会带来回报 | 用投资比喻强调长期战略价值</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Rachel，很高兴我们能临时约上通话。鹿特丹港的情况越来越糟——我们最新一批货已经在那里滞留了11天。你的评估是什么？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>很不幸，David，情况不容乐观。鹿特丹港的积压已经堆积了超过40艘船。我们预计你的集装箱至少还需要五到七天才能通关。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>还要五到七天？这让我们的生产线面临严重风险。我们的准时制生产模式只保留三天的库存缓冲。再拖下去，我们将面临全面停产。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我理解这个紧急情况。让我提出一个变通方案——我们可以将接下来三批货物改道经安特卫普港。交货周期大约延长两天，但完全避开了鹿特丹港的瓶颈。你们的货运代理可以处理单证变更。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>安特卫普作为短期方案可能可行，但成本呢？改道总是伴随附加费，而我们季度的物流预算已经很紧张了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>你说得对——每个集装箱有1850欧元的改道费。但要权衡一下停产的损失。我估计附加费大约只有两天停产损失的3%。两害相权取其轻。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>分析得有道理。那就启动接下来三批货的安特卫普改道方案。顺便说一下，我觉得我们需要认真讨论供应商多元化的问题。依赖单一的欧洲港口路线已经证明太脆弱了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是一个值得深入探讨的战略话题。我可以准备一份风险评估报告，比较经南欧甚至中国直达铁路的替代路线。下周二做一次深入讨论怎么样？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>下周二上午10点可以。同时，请加快安特卫普的单证手续。我会向生产团队做简报，让他们相应调整排产。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>放心吧，交给我了。今天下班前我会发给你修订后的船期表和改道确认书。还有，David——这些中断很可能持续到第三季度，所以现在建立一个更具韧性的供应链，将来会带来回报。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>供应链管理（Supply Chain Management）是BEC中级听力和阅读的常见主题。建议重点掌握 JIT、lead time、bottleneck 等高频术语，同时注意谈判中"问题→分析→替代方案→权衡成本→达成共识"的逻辑推进结构。多做供应链中断场景的角色扮演练习，对口语Part 3尤其有帮助。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

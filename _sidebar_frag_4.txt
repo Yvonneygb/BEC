@@ -1,0 +1,6 @@
+<a class="nav-item" data-page="2026-06-06-complaint-handling.html" onclick="switchPage(this,'2026-06-06-complaint-handling.html')"><span class="nav-item-icon">📋</span><span class="nav-item-text">投诉处理</span></a>
+<a class="nav-item" data-page="2026-06-06-cross-cultural-communication.html" onclick="switchPage(this,'2026-06-06-cross-cultural-communication.html')"><span class="nav-item-icon">🌍</span><span class="nav-item-text">跨文化沟通</span></a>
+<a class="nav-item" data-page="2026-06-06-e-commerce.html" onclick="switchPage(this,'2026-06-06-e-commerce.html')"><span class="nav-item-icon">🛒</span><span class="nav-item-text">电子商务</span></a>
+<a class="nav-item" data-page="2026-06-06-innovation-rd.html" onclick="switchPage(this,'2026-06-06-innovation-rd.html')"><span class="nav-item-icon">💡</span><span class="nav-item-text">创新研发</span></a>
+<a class="nav-item" data-page="2026-06-06-outsourcing.html" onclick="switchPage(this,'2026-06-06-outsourcing.html')"><span class="nav-item-icon">🔄</span><span class="nav-item-text">外包管理</span></a>
+<a class="nav-item" data-page="2026-06-06-product-presentation.html" onclick="switchPage(this,'2026-06-06-product-presentation.html')"><span class="nav-item-icon">🎯</span><span class="nav-item-text">产品推介</span></a>

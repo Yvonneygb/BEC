@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>投诉处理 Complaint Handling - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+/* 标题行：icon + 文字 + 右侧操作 */
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+/* 中文切换按钮 */
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+/* 词汇高亮 */
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>投诉处理 Complaint Handling</h1>
+<div class="date">📅 2026年6月6日 · 星期六</div>
+
+<div class="roles">
+  <strong>A (Karen Walsh)</strong> — Operations Manager, Grand Hotel Group<br>
+  <strong>B (Daniel Fisher)</strong> — Regional Sales Head, FineLinens Supply Co.
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Daniel, I'm going to be direct. I'm raising a formal <span class="vocab-highlight">complaint</span> regarding the last three linen deliveries. The quality has been <span class="vocab-highlight">substandard</span> — we're seeing frayed edges, inconsistent thread counts, and in the most recent batch, what appears to be chemical staining on roughly forty pillowcases. This is unacceptable for a five-star establishment.</span></div>
+    <div class="dialogue-cn">Daniel，我就直说了。我就最近三次布草配送提出正式投诉。质量一直不达标——我们看到毛边、线数不一致，最近一批中大约四十个枕套上还有疑似化学污渍。这对一家五星级酒店来说是不可接受的。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Karen, I hear you — and I want to start by sincerely apologising. This is not the standard FineLinens is known for, and I take full responsibility. Let me <span class="vocab-highlight">investigate</span> this immediately. Can you share the batch numbers of the affected deliveries so I can trace them back to the production run?</span></div>
+    <div class="dialogue-cn">Karen，我听到了——首先我想真诚道歉。这不是FineLinens一贯的标准，我承担全部责任。我立刻着手调查。能否分享受影响批次的批号，以便我追溯到生产批次？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll send those over right after this call. But Daniel, this isn't an isolated incident — it's a pattern over six weeks. We've had to pull items from our housekeeping inventory mid-week, and our guest satisfaction scores in the "room comfort" category have dipped by twelve points. I need to understand what's going wrong at your end before I can justify continuing this contract.</span></div>
+    <div class="dialogue-cn">这通电话后我马上发给你。但Daniel，这不是孤立事件——已是六周的持续问题了。我们不得不在周中从客房库存中撤回用品，客人在"房间舒适度"方面的满意度评分下降了12分。在我能合理延续这份合同之前，我需要了解你们那边到底出了什么问题。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Completely fair. I want to get to the bottom of this as much as you do. My initial hunch — and I'll confirm this — is that one of our finishing lines was recalibrated last month and may be operating below spec. If that's the root cause, we'll <span class="vocab-highlight">rectify</span> it within seventy-two hours and I'll personally <span class="vocab-highlight">oversee</span> the quality check on your next three shipments.</span></div>
+    <div class="dialogue-cn">完全合理。我和你一样想彻底查清此事。我的初步推测——我会确认——是我们一条后整理产线上月重新校准后可能在低于标准下运行。如果这是根本原因，我们将在72小时内纠正，并且我将亲自监督接下来三次配送的质量检查。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I appreciate that, but rectification alone isn't enough. We need <span class="vocab-highlight">compensation</span> for the disruption caused. We've incurred extra laundry costs outsourcing emergency replacements, not to mention the reputational risk. I expect FineLinens to credit us for the defective batches and cover the outsourcing expense.</span></div>
+    <div class="dialogue-cn">感谢，但仅纠正是不够的。我们需要对造成的影响加以赔偿。我们为应急替换外包了额外洗衣成本，还不说声誉风险。我希望FineLinens对缺陷批次做全额抵扣，并承担外包费用。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm authorised to offer a full credit for the three affected deliveries — that's roughly £4,800 — and I'll <span class="vocab-highlight">absorb</span> the emergency outsourcing costs up to £2,000 upon receipt of your invoices. Does that address your concerns on the financial side?</span></div>
+    <div class="dialogue-cn">我有权对受影响的三个批次做全额抵扣——约4800英镑——并且我将在收到贵方发票后承担最高2000英镑的应急外包费用。这在财务方面能解决您的关切吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a reasonable starting point. I'll have our accounts team compile the invoices by tomorrow afternoon. Now, more importantly — what <span class="vocab-highlight">corrective measures</span> are you putting in place to prevent recurrence? I can't keep explaining to my general manager why our pillowcases look like they belong in a two-star motel.</span></div>
+    <div class="dialogue-cn">这是合理的起点。明天下午前我会让财务团队整理好发票。现在，更重要的是——你们采取了什么纠正措施来防止问题再次发生？我无法不断向总经理解释为什么我们的枕套看起来像是二星级汽车旅馆的水平。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Here's what I'm committing to: first, an immediate quality audit of the finishing line in question, with results shared transparently with you. Second, we'll assign a dedicated QA inspector to every Grand Hotel consignment for the next three months. Third, I'll schedule bi-weekly quality review calls with your housekeeping manager. I want this fixed as much as you do — your account represents fifteen percent of our hospitality revenue.</span></div>
+    <div class="dialogue-cn">以下是我承诺的措施：第一，立即对相关后整理产线进行质量审核，结果透明地与您分享。第二，我们将为未来三个月每一批Grand Hotel的货物指派专职QA检验员。第三，我将与贵方客房经理安排每两周一次的质量回顾通话。我和你一样想解决问题——贵方在我们酒店业务的收入中占比百分之十五。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Those are concrete steps, and I'm willing to give this a chance. But Daniel, I need you to understand this is a <span class="vocab-highlight">last resort</span> conversation. If the next delivery doesn't meet spec, I'll have to trigger the early termination clause and source an alternative supplier.</span></div>
+    <div class="dialogue-cn">这些是具体的步骤，我愿意给予机会。但Daniel，我需要你明白这是最后一次机会的谈话。如果下一次配送仍不达标，我将不得不启动提前终止条款并寻求替代供应商。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I fully understand the gravity, Karen. I'll send you a written <span class="vocab-highlight">confirmation</span> of everything we've discussed — the credit, the compensation, the QA measures, and the review schedule — within the hour. If anything falls short, you have my direct line. I'm not going to let this slip.</span></div>
+    <div class="dialogue-cn">我完全理解严重性，Karen。一小时内我会将今天讨论的所有内容——抵扣、赔偿、质保措施和审查安排——以书面确认发送给您。如有任何不到位之处，您有我的直线电话。我不会让此事滑过去。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">All right. I'll look out for your email. Let's touch base again on Friday after you've completed the audit. And Daniel — I want this to work. We've had a solid partnership for four years. Let's get it back on track.</span></div>
+    <div class="dialogue-cn">好吧。我会留意你的邮件。周五审计完成后我们再碰一下。还有Daniel——我希望这能行。我们已经合作了四年。让我们把它拉回正轨。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We will, Karen. You have my word. I'll speak to you on Friday with good news.</span></div>
+    <div class="dialogue-cn">我们会的，Karen。我向你保证。周五我会带来好消息。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>complaint</strong> — 投诉 | 正式商务场景中表达不满的起点词汇，注意与"feedback"的语气体量差异</div>
+<div class="vocab-item"><strong>substandard</strong> — 不达标的/不合格的 | 质量投诉中的正式用语，比"poor quality"更专业</div>
+<div class="vocab-item"><strong>investigate</strong> — 调查 | 投诉处理流程的第一步，表示将追查问题根源</div>
+<div class="vocab-item"><strong>rectify</strong> — 纠正/整改 | 比"fix"更正式的商务用语，常用于承诺解决问题</div>
+<div class="vocab-item"><strong>compensation</strong> — 赔偿/补偿 | 投诉处理中涉及经济损失弥补的核心概念</div>
+<div class="vocab-item"><strong>corrective measures</strong> — 纠正措施 | 不仅解决当前问题，更防止未来再次发生的系统性措施</div>
+<div class="vocab-item"><strong>oversee</strong> — 监督/把关 | 表示亲自监管确保质量达标</div>
+<div class="vocab-item"><strong>absorb</strong> — 承担（费用） | 商务场景中表示公司主动承担某项成本</div>
+<div class="vocab-item"><strong>last resort</strong> — 最后手段/最后通牒 | 表达情况的严重性和紧迫感</div>
+<div class="vocab-item"><strong>confirmation</strong> — 书面确认 | 将口头承诺转化为书面记录，商务沟通的基本功</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>I'm going to be direct.</code> → 我就直说了 | 投诉开场白，表明接下来是严肃话题</div>
+<div class="pattern-item"><code>I want to start by sincerely apologising.</code> → 首先我真诚道歉 | 投诉处理中表达诚恳态度的开门句式</div>
+<div class="pattern-item"><code>I want to get to the bottom of this as much as you do.</code> → 我和你一样想彻底查清此事 | 表明供应商与客户站在同一立场</div>
+<div class="pattern-item"><code>What corrective measures are you putting in place to prevent recurrence?</code> → 你们采取了什么纠正措施来防止问题再发生？ | 投诉跟进的核心追问，BEC考试高频句型</div>
+<div class="pattern-item"><code>I need you to understand this is a last resort conversation.</code> → 我需要你明白这是最后一次机会的谈话 | 表达严重性的最终警告句式</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Daniel，我就直说了。我就最近三次布草配送提出正式投诉。质量一直不达标——我们看到毛边、线数不一致，最近一批中大约四十个枕套上还有疑似化学污渍。这对一家五星级酒店来说是不可接受的。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>Karen，我听到了——首先我想真诚道歉。这不是FineLinens一贯的标准，我承担全部责任。我立刻着手调查。能否分享受影响批次的批号，以便我追溯到生产批次？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这通电话后我马上发给你。但Daniel，这不是孤立事件——已是六周的持续问题了。我们不得不在周中从客房库存中撤回用品，客人在"房间舒适度"方面的满意度评分下降了12分。在我能合理延续这份合同之前，我需要了解你们那边到底出了什么问题。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>完全合理。我和你一样想彻底查清此事。我的初步推测——我会确认——是我们一条后整理产线上月重新校准后可能在低于标准下运行。如果这是根本原因，我们将在72小时内纠正，并且我将亲自监督接下来三次配送的质量检查。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>感谢，但仅纠正是不够的。我们需要对造成的影响加以赔偿。我们为应急替换外包了额外洗衣成本，还不说声誉风险。我希望FineLinens对缺陷批次做全额抵扣，并承担外包费用。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我有权对受影响的三个批次做全额抵扣——约4800英镑——并且我将在收到贵方发票后承担最高2000英镑的应急外包费用。这在财务方面能解决您的关切吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这是合理的起点。明天下午前我会让财务团队整理好发票。现在，更重要的是——你们采取了什么纠正措施来防止问题再次发生？我无法不断向总经理解释为什么我们的枕套看起来像是二星级汽车旅馆的水平。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>以下是我承诺的措施：第一，立即对相关后整理产线进行质量审核，结果透明地与您分享。第二，我们将为未来三个月每一批Grand Hotel的货物指派专职QA检验员。第三，我将与贵方客房经理安排每两周一次的质量回顾通话。我和你一样想解决问题——贵方在我们酒店业务的收入中占比百分之十五。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这些是具体的步骤，我愿意给予机会。但Daniel，我需要你明白这是最后一次机会的谈话。如果下一次配送仍不达标，我将不得不启动提前终止条款并寻求替代供应商。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我完全理解严重性，Karen。一小时内我会将今天讨论的所有内容——抵扣、赔偿、质保措施和审查安排——以书面确认发送给您。如有任何不到位之处，您有我的直线电话。我不会让此事滑过去。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>好吧。我会留意你的邮件。周五审计完成后我们再碰一下。还有Daniel——我希望这能行。我们已经合作了四年。让我们把它拉回正轨。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我们会的，Karen。我向你保证。周五我会带来好消息。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>投诉处理是BEC中级写作Part 1（邮件/备忘录）和口语Part 3的高频场景。关键学习点：投诉方需掌握"事实陈述→影响量化→明确要求"的三步框架（本对话中Karen的substandard→scores dipped→compensation）；处理方需掌握"道歉→调查→纠正→补偿→预防"的五步闭环（本对话中Daniel的apologise→investigate→rectify→compensation→corrective measures）。这不仅是BEC考点，更是真实职场中最常用的冲突解决能力。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

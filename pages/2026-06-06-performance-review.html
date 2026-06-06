@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>绩效评估 Performance Review - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+/* 标题行：icon + 文字 + 右侧操作 */
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+/* 中文切换按钮 */
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+/* 词汇高亮 */
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>绩效评估 Performance Review</h1>
+<div class="date">📅 2026年6月6日 · 星期六</div>
+
+<div class="roles">
+  <strong>A (Rebecca Mills) — Department Manager, Sterling Financial</strong><br>
+  <strong>B (Daniel Park) — Senior Analyst, Risk Assessment Team</strong>
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Daniel, welcome to your annual performance review. Before we dive into the formal <span class="vocab-highlight">appraisal</span>, I want to say that overall, your contributions this year have been strong. How do you feel the year has gone from your perspective?</span></div>
+    <div class="dialogue-cn">Daniel，欢迎参加年度绩效评估。在我们深入正式考核之前，我想先说，总体而言，你今年的贡献表现强劲。从你的角度看，这一年过得怎么样？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Thank you, Rebecca. Honestly, I think it's been a year of significant growth. The Q2 risk modelling project was particularly demanding, but I feel I delivered quality results under a tight deadline. That said, I know there are areas where I could have performed better, and I'm keen to hear your <span class="vocab-highlight">constructive feedback</span>.</span></div>
+    <div class="dialogue-cn">谢谢你，Rebecca。老实说，我认为这是显著成长的一年。第二季度的风险建模项目特别具有挑战性，但我感觉在紧张的时间表下交出了高质量的结果。话虽如此，我知道有些方面我本可以做得更好，我很想听取你的建设性反馈。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I appreciate that self-awareness. Let's start with the positives. You exceeded your <span class="vocab-highlight">key performance indicators</span> in three of five categories — your risk assessment accuracy rate hit 97%, which is the highest in the department. Your stakeholder feedback from the compliance team has been consistently excellent.</span></div>
+    <div class="dialogue-cn">我很欣赏你的自我认知。先说好的方面。你在五项关键绩效指标中的三项超出了预期——你的风险评估准确率达到97%，是部门最高的。合规团队对你的反馈一直非常出色。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's encouraging to hear. The compliance team was a pleasure to work with. However, I'm aware that my <span class="vocab-highlight">quarterly reporting</span> was late twice this year. That's something I want to address head-on — it wasn't due to workload, but rather to poor time management on my part.</span></div>
+    <div class="dialogue-cn">这很鼓舞人心。与合规团队合作非常愉快。不过，我知道我今年的季度报告迟交了两次。这是我想正面应对的问题——不是因为工作量，而是我个人的时间管理不足。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'm glad you brought that up, because it's the one area where you're clearly <span class="vocab-highlight">underperforming</span>. Timely reporting is non-negotiable at this level. But your willingness to own it tells me you're ready to improve. What do you think the solution looks like?</span></div>
+    <div class="dialogue-cn">我很高兴你提出来了，因为这是你明显表现不佳的方面。在这个级别，准时提交报告是不可妥协的。但你愿意承担责任的态度告诉我你准备好改进了。你认为解决方案是什么？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I've been thinking about this. I'd like to <span class="vocab-highlight">upskill</span> in project management — specifically, taking a PRINCE2 Foundation course. Better workflow structuring would help me manage concurrent deadlines without dropping the ball. Would the company consider supporting the training cost?</span></div>
+    <div class="dialogue-cn">我一直在思考这个问题。我想在项目管理方面提升技能——具体来说，参加PRINCE2基础课程。更好的工作流结构能帮助我在不丢三落四的情况下管理并行截止日期。公司会考虑支持培训费用吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a very reasonable request, and it aligns well with your <span class="vocab-highlight">career trajectory</span>. I can approve up to €2,000 for professional development this cycle. The PRINCE2 course falls well within that. I'd also like to set a specific <span class="vocab-highlight">goal</span> — 100% on-time report submission for the next two quarters, with a review checkpoint at the six-month mark.</span></div>
+    <div class="dialogue-cn">这个请求非常合理，而且与你的职业发展轨迹高度一致。这个周期我可以批准最多2000欧元的职业发展经费。PRINCE2课程完全在这个范围内。我还想设定一个具体目标——未来两个季度100%准时提交报告，六个月时做一个进度检查。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's fair and measurable. I'm fully committed to that goal. Longer term, I'm interested in stepping into a team lead role within the next 18 to 24 months. What competencies would you want to see me develop to be considered for that?</span></div>
+    <div class="dialogue-cn">这个目标公平且可衡量。我完全承诺达成。从长远来看，我有兴趣在未来18到24个月内晋升为团队负责人。你希望看到我发展哪些能力才能被考虑？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's ambitious — I like it. Beyond the project management skills, I'd want to see you take on more mentoring responsibilities. We have two junior analysts joining next month. I'd like you to act as their <span class="vocab-highlight">buddy</span> during their <span class="vocab-highlight">probation</span> period. It's a low-risk way to test your leadership abilities.</span></div>
+    <div class="dialogue-cn">很有野心——我喜欢。除了项目管理技能，我希望看到你承担更多的导师职责。下个月有两位初级分析师加入。我希望你在他们的试用期内担任他们的入职导师。这是测试你领导能力的低风险方式。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'd welcome that opportunity. Mentoring is something I've wanted to do but haven't had a formal channel for. And it'll give me practical experience before pursuing a formal leadership position.</span></div>
+    <div class="dialogue-cn">我很乐意接受这个机会。导师工作是我一直想做但没有正式渠道的。而且在追求正式领导职位之前，这会给我实操经验。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Perfect. I'll document all of this in your development plan. To summarise — your overall rating is 'exceeds expectations' with one area for improvement. The PRINCE2 course is approved, and we'll check in formally in six months. Any final thoughts before we wrap up?</span></div>
+    <div class="dialogue-cn">很好。我会把所有这些写进你的发展计划。总结一下——你的总体评级是"超出预期"，有一个需要改进的方面。PRINCE2课程已获批，我们六个月后做正式回顾。收尾前还有什么想说的吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Just that I'm grateful for the honest conversation, Rebecca. It gives me a clear roadmap for the year ahead and I'm motivated to close that performance gap.</span></div>
+    <div class="dialogue-cn">只是感谢这次坦诚的交流，Rebecca。这给我未来一年提供了清晰的路线图，也让我有动力去弥合那个绩效差距。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>appraisal</strong> — 评估/考核 | 绩效评估的正式说法，比review更正式</div>
+<div class="vocab-item"><strong>constructive feedback</strong> — 建设性反馈 | 旨在帮助对方改进的批评意见</div>
+<div class="vocab-item"><strong>key performance indicator (KPI)</strong> — 关键绩效指标 | 绩效评估的核心衡量标准，BEC高频词</div>
+<div class="vocab-item"><strong>quarterly reporting</strong> — 季度报告 | 定期的业务汇报义务</div>
+<div class="vocab-item"><strong>underperform</strong> — 表现不佳/未达标 | 未达到预期标准的工作表现</div>
+<div class="vocab-item"><strong>upskill</strong> — 提升技能 | 通过学习或培训提升专业能力</div>
+<div class="vocab-item"><strong>career trajectory</strong> — 职业发展轨迹 | 长期的职业发展方向和路径</div>
+<div class="vocab-item"><strong>goal</strong> — 目标 | 具体的、可衡量的工作绩效目标</div>
+<div class="vocab-item"><strong>probation</strong> — 试用期 | 新员工的考察和评估阶段</div>
+<div class="vocab-item"><strong>buddy</strong> — 伙伴/入门导师 | 帮助新员工融入公司文化的老员工</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>Before we dive into..., I want to say...</code> → 在深入...之前，我想先说... | 评估会议中缓和气氛、定调的开场句式</div>
+<div class="pattern-item"><code>I want to address this head-on.</code> → 我想正面应对这个问题 | 主动承认不足、不回避问题的坦率表达</div>
+<div class="pattern-item"><code>Your willingness to own it tells me you're ready to improve.</code> → 你愿意承担责任的态度告诉我你准备好改进了 | 管理者对员工坦诚态度的积极回馈</div>
+<div class="pattern-item"><code>That aligns well with...</code> → 这与...高度一致/吻合 | 肯定某项提议与更大方向或目标契合</div>
+<div class="pattern-item"><code>It gives me a clear roadmap for the year ahead.</code> → 这给我未来一年提供了清晰的路线图 | 评估收尾时表达方向感和动力的积极总结</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Daniel，欢迎参加年度绩效评估。在我们深入正式考核之前，我想先说，总体而言，你今年的贡献表现强劲。从你的角度看，这一年过得怎么样？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>谢谢你，Rebecca。老实说，我认为这是显著成长的一年。第二季度的风险建模项目特别具有挑战性，但我感觉在紧张的时间表下交出了高质量的结果。话虽如此，我知道有些方面我本可以做得更好，我很想听取你的建设性反馈。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我很欣赏你的自我认知。先说好的方面。你在五项关键绩效指标中的三项超出了预期——你的风险评估准确率达到97%，是部门最高的。合规团队对你的反馈一直非常出色。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这很鼓舞人心。与合规团队合作非常愉快。不过，我知道我今年的季度报告迟交了两次。这是我想正面应对的问题——不是因为工作量，而是我个人的时间管理不足。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我很高兴你提出来了，因为这是你明显表现不佳的方面。在这个级别，准时提交报告是不可妥协的。但你愿意承担责任的态度告诉我你准备好改进了。你认为解决方案是什么？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我一直在思考这个问题。我想在项目管理方面提升技能——具体来说，参加PRINCE2基础课程。更好的工作流结构能帮助我在不丢三落四的情况下管理并行截止日期。公司会考虑支持培训费用吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这个请求非常合理，而且与你的职业发展轨迹高度一致。这个周期我可以批准最多2000欧元的职业发展经费。PRINCE2课程完全在这个范围内。我还想设定一个具体目标——未来两个季度100%准时提交报告，六个月时做一个进度检查。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这个目标公平且可衡量。我完全承诺达成。从长远来看，我有兴趣在未来18到24个月内晋升为团队负责人。你希望看到我发展哪些能力才能被考虑？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>很有野心——我喜欢。除了项目管理技能，我希望看到你承担更多的导师职责。下个月有两位初级分析师加入。我希望你在他们的试用期内担任他们的入职导师。这是测试你领导能力的低风险方式。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我很乐意接受这个机会。导师工作是我一直想做但没有正式渠道的。而且在追求正式领导职位之前，这会给我实操经验。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>很好。我会把所有这些写进你的发展计划。总结一下——你的总体评级是"超出预期"，有一个需要改进的方面。PRINCE2课程已获批，我们六个月后做正式回顾。收尾前还有什么想说的吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>只是感谢这次坦诚的交流，Rebecca。这给我未来一年提供了清晰的路线图，也让我有动力去弥合那个绩效差距。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>绩效评估（Performance Review）是BEC听力Part 3和口语Part 3的核心场景。评估对话通常遵循"总体印象→肯定成绩→指出不足→制定改进计划→设定目标→总结"的结构。建议掌握 KPI、appraisal、underperform 等核心词汇，并练习如何用商务英语委婉地表达批评意见和接受反馈。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

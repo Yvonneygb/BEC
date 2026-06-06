@@ -1,0 +1,6 @@
+<a class="nav-item" data-page="2026-06-06-supply-chain-management.html" onclick="switchPage(this,'2026-06-06-supply-chain-management.html')"><span class="nav-item-icon">🚚</span><span class="nav-item-text">供应链管理</span></a>
+<a class="nav-item" data-page="2026-06-06-customer-service.html" onclick="switchPage(this,'2026-06-06-customer-service.html')"><span class="nav-item-icon">🎧</span><span class="nav-item-text">客户服务</span></a>
+<a class="nav-item" data-page="2026-06-06-team-building.html" onclick="switchPage(this,'2026-06-06-team-building.html')"><span class="nav-item-icon">🤝</span><span class="nav-item-text">团队建设</span></a>
+<a class="nav-item" data-page="2026-06-06-performance-review.html" onclick="switchPage(this,'2026-06-06-performance-review.html')"><span class="nav-item-icon">📊</span><span class="nav-item-text">绩效评估</span></a>
+<a class="nav-item" data-page="2026-06-06-sales-pitch.html" onclick="switchPage(this,'2026-06-06-sales-pitch.html')"><span class="nav-item-icon">💼</span><span class="nav-item-text">销售推销</span></a>
+<a class="nav-item" data-page="2026-06-06-trade-fair.html" onclick="switchPage(this,'2026-06-06-trade-fair.html')"><span class="nav-item-icon">🎪</span><span class="nav-item-text">展会参展</span></a>

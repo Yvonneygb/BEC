@@ -1,0 +1,6 @@
+<a class="nav-item" data-page="2026-06-06-business-meeting.html" onclick="switchPage(this,'2026-06-06-business-meeting.html')"><span class="nav-item-icon">💼</span><span class="nav-item-text">商务会议</span></a>
+<a class="nav-item" data-page="2026-06-06-email-writing.html" onclick="switchPage(this,'2026-06-06-email-writing.html')"><span class="nav-item-icon">✉️</span><span class="nav-item-text">邮件写作</span></a>
+<a class="nav-item" data-page="2026-06-06-telephone-communication.html" onclick="switchPage(this,'2026-06-06-telephone-communication.html')"><span class="nav-item-icon">📞</span><span class="nav-item-text">电话沟通</span></a>
+<a class="nav-item" data-page="2026-06-06-business-reception.html" onclick="switchPage(this,'2026-06-06-business-reception.html')"><span class="nav-item-icon">🤝</span><span class="nav-item-text">商务接待</span></a>
+<a class="nav-item" data-page="2026-06-06-product-presentation.html" onclick="switchPage(this,'2026-06-06-product-presentation.html')"><span class="nav-item-icon">🎤</span><span class="nav-item-text">产品推介</span></a>
+<a class="nav-item" data-page="2026-06-06-complaint-handling.html" onclick="switchPage(this,'2026-06-06-complaint-handling.html')"><span class="nav-item-icon">📋</span><span class="nav-item-text">投诉处理</span></a>

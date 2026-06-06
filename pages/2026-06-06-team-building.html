@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>团队建设 Team Building - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+/* 标题行：icon + 文字 + 右侧操作 */
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+/* 中文切换按钮 */
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+/* 词汇高亮 */
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>团队建设 Team Building</h1>
+<div class="date">📅 2026年6月6日 · 星期六</div>
+
+<div class="roles">
+  <strong>A (Linda Zhao) — HR Director, NovaTech Solutions</strong><br>
+  <strong>B (Tom Whitfield) — Senior Team Lead, Engineering Department</strong>
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Tom, thanks for coming in. We've got the green light for the Q3 <span class="vocab-highlight">offsite retreat</span>. Budget's approved at €15,000 for a two-day event. I'd love your input since your engineering team was the most vocal about needing better <span class="vocab-highlight">cross-functional</span> collaboration.</span></div>
+    <div class="dialogue-cn">Tom，感谢你来一趟。第三季度的外出团建已经获批了。预算批准了15000欧元，为期两天的活动。我需要你的意见，因为你的工程团队在要求更好的跨职能协作方面呼声最高。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's great news, Linda. Honestly, the tension between engineering and product has been building for months. We're shipping features, but no one feels like they're on the same side. A proper offsite could really reset the dynamic.</span></div>
+    <div class="dialogue-cn">这是个好消息，Linda。说实话，工程和产品之间的紧张关系已经累积了好几个月。我们在交付功能，但没有人觉得大家站在同一边。一次好的团建真的可以重新调整这种动态。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Exactly my thinking. I've shortlisted three venues — a lakeside conference centre with outdoor activities, a city hotel with workshop facilities, and a countryside retreat focused on <span class="vocab-highlight">bonding</span> activities. What's your instinct?</span></div>
+    <div class="dialogue-cn">我正是这么想的。我筛选了三个场地——一个有户外活动的湖边会议中心，一个有工作坊设施的城市酒店，还有一个专注于团建活动的乡村度假村。你的直觉是什么？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'd lean towards the countryside retreat. The engineering team spends enough time in conference rooms. Getting people outdoors, maybe with some structured <span class="vocab-highlight">icebreakers</span> followed by collaborative problem-solving challenges — that's where real <span class="vocab-highlight">synergy</span> happens. But we need to be careful not to make it feel forced.</span></div>
+    <div class="dialogue-cn">我倾向于乡村度假村。工程团队在会议室里待得够多了。让大家走出去，做一些有结构的破冰活动，然后是协作解决问题的挑战——这才是真正产生协同效应的地方。但我们得注意不要让人觉得是强制性的。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. Nothing kills <span class="vocab-highlight">team morale</span> faster than mandatory fun. Here's what I'm thinking — a half-day workshop on communication styles in the morning, then outdoor team challenges in the afternoon, and an informal dinner where people from different departments actually sit together.</span></div>
+    <div class="dialogue-cn">同意。没有什么比强制性的娱乐活动更快打击团队士气了。我的想法是这样的——上午半天做沟通风格的工作坊，下午做户外团队挑战，晚上安排非正式晚宴，让不同部门的人真正坐在一起。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I like that structure. Can we build in a <span class="vocab-highlight">kick-off</span> session where the leadership team openly acknowledges the friction? If people feel like leadership is brushing problems under the carpet, the retreat won't achieve anything meaningful.</span></div>
+    <div class="dialogue-cn">我喜欢这个结构。能不能加上一个领导团队公开承认存在摩擦的开场环节？如果大家觉得领导层在掩盖问题，这次团建就不会取得任何有意义的成果。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a bold but necessary idea. I'll brief the management team and get their <span class="vocab-highlight">buy-in</span> before we finalise the agenda. One more thing — can you identify two or three people from engineering who'd be willing to help <span class="vocab-highlight">facilitate</span> some of the sessions?</span></div>
+    <div class="dialogue-cn">这个想法很大胆但有必要。我会向管理层做简报，在敲定议程之前争取他们的认可。还有一件事——你能从工程部找两三个愿意帮忙引导部分环节的人吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely. I have a couple of senior devs in mind who are natural connectors — they're well-respected across departments. I'll sound them out this week. When are you targeting for the retreat?</span></div>
+    <div class="dialogue-cn">当然。我想到几位资深开发，他们是天然的连接者——在跨部门都很有威望。我这周就去探探他们的口风。你计划什么时候做这个团建？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">The third week of September, ideally. That gives us six weeks to organise and avoids the summer holiday crunch. I'll send you the venue shortlist and a draft agenda by Friday. Let's aim to lock in the details by next Wednesday.</span></div>
+    <div class="dialogue-cn">理想情况是九月第三周。这样我们有六周时间筹备，也避开了夏季假期的高峰。我周五前发给你场地备选清单和议程草案。争取下周三前敲定所有细节。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Sounds like a plan. I'm genuinely optimistic about this, Linda. If we get the <span class="vocab-highlight">tone</span> right from the start, this could be a real turning point for how our teams work together.</span></div>
+    <div class="dialogue-cn">就这么定了。Linda，我对此真心乐观。如果我们从一开始就把基调把握好，这次活动可能成为我们团队协作方式的真正转折点。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's exactly what I'm aiming for. Let's catch up early next week once I have the management feedback.</span></div>
+    <div class="dialogue-cn">这正是我的目标。等我拿到管理层的反馈后，下周初我们再碰一次。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>offsite retreat</strong> — 外出团建/务虚会 | 离开办公场所进行的团队建设活动</div>
+<div class="vocab-item"><strong>cross-functional</strong> — 跨职能的 | 涉及不同部门或职能之间的协作</div>
+<div class="vocab-item"><strong>bonding</strong> — 建立情感纽带/团建活动 | 增进团队成员关系和信任的活动</div>
+<div class="vocab-item"><strong>icebreaker</strong> — 破冰活动 | 帮助陌生人快速熟悉的引导性活动</div>
+<div class="vocab-item"><strong>synergy</strong> — 协同效应 | 团队合作中1+1>2的效果，BEC高频词</div>
+<div class="vocab-item"><strong>team morale</strong> — 团队士气 | 衡量团队精神状态和工作热情的核心指标</div>
+<div class="vocab-item"><strong>kick-off</strong> — 启动/开场环节 | 活动或项目的正式开始部分</div>
+<div class="vocab-item"><strong>buy-in</strong> — 认同/支持 | 关键利益相关方对计划的支持与认可</div>
+<div class="vocab-item"><strong>facilitate</strong> — 引导/主持 | 在会议或活动中推进讨论、协调进程</div>
+<div class="vocab-item"><strong>tone</strong> — 基调/氛围 | 活动或沟通的整体风格与感觉</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>We've got the green light for...</code> → ...已获批/放行 | 表示项目或计划被正式批准的常见商务表达</div>
+<div class="pattern-item"><code>What's your instinct?</code> → 你的直觉是什么？ | 征询对方直观判断的友好、开放问法</div>
+<div class="pattern-item"><code>Nothing kills team morale faster than...</code> → 没有什么比...更快打击团队士气 | 强调负面因素严重性的强力表达</div>
+<div class="pattern-item"><code>That's a bold but necessary idea.</code> → 这个想法很大胆但有必要 | 对建设性提议的积极肯定，既认可勇气也认可价值</div>
+<div class="pattern-item"><code>I'm genuinely optimistic about this.</code> → 我对此真心乐观 | 表达对计划的信心和支持</div>
+<div class="pattern-item"><code>Let's aim to lock in the details by...</code> → 我们争取在...之前敲定细节 | 设定明确决策节点的推进句式</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Tom，感谢你来一趟。第三季度的外出团建已经获批了。预算批准了15000欧元，为期两天的活动。我需要你的意见，因为你的工程团队在要求更好的跨职能协作方面呼声最高。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是个好消息，Linda。说实话，工程和产品之间的紧张关系已经累积了好几个月。我们在交付功能，但没有人觉得大家站在同一边。一次好的团建真的可以重新调整这种动态。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我正是这么想的。我筛选了三个场地——一个有户外活动的湖边会议中心，一个有工作坊设施的城市酒店，还有一个专注于团建活动的乡村度假村。你的直觉是什么？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我倾向于乡村度假村。工程团队在会议室里待得够多了。让大家走出去，做一些有结构的破冰活动，然后是协作解决问题的挑战——这才是真正产生协同效应的地方。但我们得注意不要让人觉得是强制性的。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>同意。没有什么比强制性的娱乐活动更快打击团队士气了。我的想法是这样的——上午半天做沟通风格的工作坊，下午做户外团队挑战，晚上安排非正式晚宴，让不同部门的人真正坐在一起。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我喜欢这个结构。能不能加上一个领导团队公开承认存在摩擦的开场环节？如果大家觉得领导层在掩盖问题，这次团建就不会取得任何有意义的成果。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这个想法很大胆但有必要。我会向管理层做简报，在敲定议程之前争取他们的认可。还有一件事——你能从工程部找两三个愿意帮忙引导部分环节的人吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>当然。我想到几位资深开发，他们是天然的连接者——在跨部门都很有威望。我这周就去探探他们的口风。你计划什么时候做这个团建？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>理想情况是九月第三周。这样我们有六周时间筹备，也避开了夏季假期的高峰。我周五前发给你场地备选清单和议程草案。争取下周三前敲定所有细节。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>就这么定了。Linda，我对此真心乐观。如果我们从一开始就把基调把握好，这次活动可能成为我们团队协作方式的真正转折点。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这正是我的目标。等我拿到管理层的反馈后，下周初我们再碰一次。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>团队建设（Team Building）是BEC口语Part 3的常见讨论主题。建议掌握"规划→选址→活动设计→获取支持→执行跟进"的完整逻辑链。注意区分 outdoor activities（户外活动）、workshop（工作坊）、icebreaker（破冰）等不同活动类型的适用场景，以及如何用商务英语表达"营造氛围"、"提升士气"这类抽象概念。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

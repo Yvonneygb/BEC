@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>跨文化沟通 Cross-cultural Communication - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>跨文化沟通 Cross-cultural Communication</h1>
+<div class="date">📅 2026年6月6日 · 星期六</div>
+
+<div class="roles">
+  <strong>A (Yuki Tanaka)</strong> — Regional Director APAC, Lindström Engineering<br>
+  <strong>B (Henrik Johansson)</strong> — Global Project Lead, Lindström Engineering, Stockholm HQ
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Henrik, I received the project kickoff deck for the Tokyo-Shanghai-Seoul integration. I need to flag something before it goes to the local teams — the timeline assumes all three offices will openly challenge assumptions in the first workshop. That's not how it works here.</span></div>
+    <div class="dialogue-cn">Henrik，我收到了东京-上海-首尔整合项目的启动文件包。在发给本地团队之前我需要提出一个问题——时间表假设三家办公室都会在第一次研讨会上公开质疑方案假设。在这里不是这样的。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm surprised to hear that, Yuki. In Stockholm, we pride ourselves on <span class="vocab-highlight">flat hierarchies</span> and direct feedback. If someone sees a flaw in the plan, we expect them to speak up immediately. What's the dynamic in Tokyo?</span></div>
+    <div class="dialogue-cn">这让我很意外，Yuki。在斯德哥尔摩，我们以扁平化层级和直接反馈为傲。如果有人发现计划有缺陷，我们期望他们立刻提出。东京这边是什么情况？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">It's fundamentally different. In Japan, publicly questioning a senior colleague's proposal — especially from headquarters — would be perceived as a <span class="vocab-highlight">loss of face</span> for both parties. Our team will sit silently through the workshop, appear to agree, and then raise all their concerns through <span class="vocab-highlight">back-channel</span> conversations over the following weeks. If you interpret the silence as <span class="vocab-highlight">consensus</span>, you'll be blindsided later.</span></div>
+    <div class="dialogue-cn">根本性不同。在日本，公开质疑一位资深同事的提议——尤其是来自总部的提议——会被视为双方都丢面子。我们的团队会在研讨会上安静坐着，看似同意，然后在接下来的几周里通过私下渠道提出所有顾虑。如果你把沉默理解为共识，后面会措手不及。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a critical cultural insight I completely missed. So the Stockholm approach of "say it like it is" could actually suppress honest feedback in Tokyo. How do we design a process that works for all three offices?</span></div>
+    <div class="dialogue-cn">这是一个我完全忽略的关键文化洞察。所以斯德哥尔摩的"有话直说"方式实际上可能压制了东京的诚实反馈。我们怎么设计一个适用于三家办公室的流程？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'd suggest a two-phase approach. Phase one: distribute the deck a week in advance and collect anonymous written feedback through a digital platform. That removes the face-to-face pressure. Phase two: structure the workshop as small-group discussions of pre-surfaced themes, rather than asking individuals to critique in <span class="vocab-highlight">plenary</span>. The Seoul team operates somewhere between Tokyo and Stockholm — they'll adapt to either format, but they'll appreciate the structured approach.</span></div>
+    <div class="dialogue-cn">我建议采用两阶段方式。第一阶段：提前一周发放文件包，通过数字平台收集匿名书面反馈。这消除了面对面表达的压力。第二阶段：将研讨会设计为围绕预先提炼主题的小组讨论，而不是要求个人在全体会议上发表批评意见。首尔团队的文化风格介于东京和斯德哥尔摩之间——他们能适应两种形式，但会欣赏这种结构化方法。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">This is incredibly helpful. I've been managing global projects for eight years, and I still fall into the trap of assuming what works in Northern Europe is universal. On the <span class="vocab-highlight">communication cadence</span> — we currently have a weekly all-hands video call at 9 AM CET. That's 5 PM in Tokyo and 4 PM in Shanghai. Is that sustainable?</span></div>
+    <div class="dialogue-cn">这非常有帮助。我管理全球项目八年了，但仍然会掉入"在北欧有效的就是普适的"这种陷阱。关于沟通节奏——目前我们每周有一次全体视频会议，中欧时间上午9点。在东京是下午5点，上海是下午4点。这对你们来说可持续吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Frankly, no. Our team has been dialling in but it's the end of their workday, and they're mentally depleted. And there's a subtler issue — in East Asian business culture, the junior members are expected to remain <span class="vocab-highlight">deferential</span>, so in those calls you're essentially hearing from the same two senior people every week. The real operational insights stay in the room.</span></div>
+    <div class="dialogue-cn">坦白说，不。我们的团队虽然一直在接入，但那是他们工作日的末尾，精神上已经耗尽了。还有一个更微妙的问题——在东亚商业文化中，初级成员被期望保持恭敬态度，所以在那些电话会议中你基本上每周听到的都是同样的两位资深人士在发言。真正的业务洞察留在了房间里。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Then let's rotate the timing — one week Europe-friendly, one week Asia-friendly. And I want to introduce a rotating "local host" role where each office takes turns facilitating in their preferred style. The Tokyo-led sessions could be more structured with pre-circulated written briefs; the Stockholm-led ones more open and spontaneous. Would that signal genuine inclusiveness?</span></div>
+    <div class="dialogue-cn">那么我们轮换时间——一周欧洲友好时间，一周亚洲友好时间。而且我想引入一个轮值"当地主持"角色，每个办公室轮流用自己偏好的风格主持。东京主导的会议可以更结构化，有预先分发的书面简报；斯德哥尔摩主导的则更开放随性。这样会传达真正的包容性吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That would make a tremendous difference. The gesture of rotating the host alone signals respect for <span class="vocab-highlight">cultural pluralism</span>, which matters enormously in this region. One more consideration — when we discuss timelines, please avoid the phrase "ASAP." In the Nordic context, it conveys urgency. In Japan and Korea, it's perceived as poor planning on the requester's part. Provide specific deadlines with buffer time instead.</span></div>
+    <div class="dialogue-cn">这将产生巨大不同。光是轮值主持这个姿态本身就传达了对文化多元主义的尊重，在这个地区这非常重要。还有一个考虑——当我们讨论时间表时，请避免使用"ASAP"这个词。在北欧语境中，它传达的是紧迫性。在日本和韩国，它被认为反映出提出者方计划不周。请提供带缓冲时间的具体截止日期。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Noted. I'll brief the Stockholm team on these nuances before we launch. Yuki, I wish I'd had this conversation six months ago — it would have saved a lot of head-scratching over why some projects seemed to stall without any visible friction.</span></div>
+    <div class="dialogue-cn">记下了。我会在项目启动前向斯德哥尔摩团队介绍这些细微差别。Yuki，我真希望半年前就和你有了这次对话——这会省去很多"为什么有些项目表面没有摩擦却停滞不前"的挠头时刻。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's exactly why I wanted to have it now. <span class="vocab-highlight">Cross-cultural competence</span> isn't about memorising dos and don'ts — it's about building processes that accommodate different communication styles without forcing everyone into a single mould. When it works, the diversity of thought is our greatest asset.</span></div>
+    <div class="dialogue-cn">这正是我现在想做这次沟通的原因。跨文化能力不是关于记住该做什么不该做什么——而是建立能够包容不同沟通风格的流程，不强迫所有人套进单一模式。能做到这一点时，思想多样性就是我们最大的资产。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>flat hierarchy</strong> — 扁平化层级 | 组织内部等级较少的结构，北欧企业常见</div>
+<div class="vocab-item"><strong>loss of face</strong> — 丢面子 | 东亚文化中公开场合损害他人尊严的概念</div>
+<div class="vocab-item"><strong>back-channel</strong> — 私下/非正式渠道 | 通过非正式途径进行的沟通</div>
+<div class="vocab-item"><strong>consensus</strong> — 共识 | 各方达成一致意见，跨国项目核心概念</div>
+<div class="vocab-item"><strong>plenary</strong> — 全体会议 | 所有参与者同时出席的会议形式</div>
+<div class="vocab-item"><strong>communication cadence</strong> — 沟通节奏 | 团队间定期交流的频率和方式</div>
+<div class="vocab-item"><strong>cultural pluralism</strong> — 文化多元主义 | 尊重并包容不同文化差异的理念</div>
+<div class="vocab-item"><strong>cross-cultural competence</strong> — 跨文化能力 | 在多元文化环境中有效运作的能力</div>
+<div class="vocab-item"><strong>deferential</strong> — 恭敬的/遵从的 | 在层级文化中对上级表现出尊重的态度</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>I need to flag something before...</code> → 在……之前我需要提出一个问题 | 用于礼貌地在行动前提请注意事项</div>
+<div class="pattern-item"><code>If you interpret the silence as consensus, you'll be blindsided later.</code> → 如果你把沉默理解为共识，后面会措手不及 | 警示文化差异可能带来的沟通误解</div>
+<div class="pattern-item"><code>I still fall into the trap of assuming...</code> → 我仍然会掉入……的陷阱 | 坦诚承认自己的认知偏差</div>
+<div class="pattern-item"><code>Would that signal genuine inclusiveness?</code> → 这会传达真正的包容性吗？ | 用于确认某一举措的文化效果</div>
+<div class="pattern-item"><code>The gesture alone signals...</code> → 光是这个姿态本身就传达了…… | 强调象征性行为在跨文化场景中的重要性</div>
+<div class="pattern-item"><code>It's about building processes that accommodate...</code> → 关键在于建立能包容……的流程 | 总结跨文化管理的核心理念</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Henrik，我收到了东京-上海-首尔整合项目的启动文件包。在发给本地团队之前我需要提出一个问题——时间表假设三家办公室都会在第一次研讨会上公开质疑方案假设。在这里不是这样的。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这让我很意外，Yuki。在斯德哥尔摩，我们以扁平化层级和直接反馈为傲。如果有人发现计划有缺陷，我们期望他们立刻提出。东京这边是什么情况？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>根本性不同。在日本，公开质疑一位资深同事的提议——尤其是来自总部的提议——会被视为双方都丢面子。我们的团队会在研讨会上安静坐着，看似同意，然后在接下来的几周里通过私下渠道提出所有顾虑。如果你把沉默理解为共识，后面会措手不及。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是一个我完全忽略的关键文化洞察。所以斯德哥尔摩的"有话直说"方式实际上可能压制了东京的诚实反馈。我们怎么设计一个适用于三家办公室的流程？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我建议采用两阶段方式。第一阶段：提前一周发放文件包，通过数字平台收集匿名书面反馈。这消除了面对面表达的压力。第二阶段：将研讨会设计为围绕预先提炼主题的小组讨论，而不是要求个人在全体会议上发表批评意见。首尔团队的文化风格介于东京和斯德哥尔摩之间——他们能适应两种形式，但会欣赏这种结构化方法。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这非常有帮助。我管理全球项目八年了，但仍然会掉入"在北欧有效的就是普适的"这种陷阱。关于沟通节奏——目前我们每周有一次全体视频会议，中欧时间上午9点。在东京是下午5点，上海是下午4点。这对你们来说可持续吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>坦白说，不。我们的团队虽然一直在接入，但那是他们工作日的末尾，精神上已经耗尽了。还有一个更微妙的问题——在东亚商业文化中，初级成员被期望保持恭敬态度，所以在那些电话会议中你基本上每周听到的都是同样的两位资深人士在发言。真正的业务洞察留在了房间里。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>那么我们轮换时间——一周欧洲友好时间，一周亚洲友好时间。而且我想引入一个轮值"当地主持"角色，每个办公室轮流用自己偏好的风格主持。东京主导的会议可以更结构化，有预先分发的书面简报；斯德哥尔摩主导的则更开放随性。这样会传达真正的包容性吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这将产生巨大不同。光是轮值主持这个姿态本身就传达了对文化多元主义的尊重，在这个地区这非常重要。还有一个考虑——当我们讨论时间表时，请避免使用"ASAP"这个词。在北欧语境中，它传达的是紧迫性。在日本和韩国，它被认为反映出提出者方计划不周。请提供带缓冲时间的具体截止日期。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>记下了。我会在项目启动前向斯德哥尔摩团队介绍这些细微差别。Yuki，我真希望半年前就和你有了这次对话——这会省去很多"为什么有些项目表面没有摩擦却停滞不前"的挠头时刻。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这正是我现在想做这次沟通的原因。跨文化能力不是关于记住该做什么不该做什么——而是建立能够包容不同沟通风格的流程，不强迫所有人套进单一模式。能做到这一点时，思想多样性就是我们最大的资产。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>跨文化沟通是BEC考试中听力Part 2和口语Part 3的常见主题。重点掌握文化维度词汇（hierarchy、consensus、face）和会议/工作流程相关术语。在口语讨论中，避免给出"一刀切"的跨文化建议——考官更青睐能够针对具体文化差异提出分层解决方案的回答。Hofstede的文化维度理论和Hall的高/低语境文化理论是BEC阅读的常客，值得提前了解。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>
