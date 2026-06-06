@@ -10,16 +10,41 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 .date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
-h2{font-size:1.3rem;font-weight:700;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15);color:#6D4AFF}
+
+/* 标题行：icon + 文字 + 右侧操作 */
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+/* 中文切换按钮 */
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
 .dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
 .dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
-.dialogue-row{display:flex;gap:.75rem}
-.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
-.dialogue-text{flex:1}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
 .dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
 body.show-cn .dialogue-cn{display:block}
+
+/* 词汇高亮 */
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+/* 试听按钮 */
+.listen-btn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1.5px solid rgba(109,74,255,0.2);background:#fff;cursor:pointer;margin-left:.5rem;flex-shrink:0;transition:all .15s;color:#6D4AFF;vertical-align:middle;position:relative;top:-1px}
+.listen-btn:hover{background:rgba(109,74,255,0.08);border-color:#6D4AFF}
+.listen-btn:active{transform:scale(.92)}
+.listen-btn svg{width:14px;height:14px;display:block}
+.listen-btn.playing{background:#6D4AFF;border-color:#6D4AFF;color:#fff;animation:pulse 1s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(109,74,255,0.3)}50%{box-shadow:0 0 0 8px rgba(109,74,255,0)}}
+
 .roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
 .roles strong{color:#6D4AFF}
 .vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
@@ -32,7 +57,7 @@ body.show-cn .translation-section{display:none}
 .translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
 .translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
 .tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
-.tip h2{border:none;margin-top:0;padding-bottom:0}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
 hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 </style>
 </head>
@@ -47,62 +72,71 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <strong>B (Marcus Weber)</strong> — Sales Director, Schneider Components GmbH
 </div>
 
-<h2>💬 Dialogue</h2>
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
 
 <div class="dialogue">
 
   <div class="dialogue-line">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Marcus, thanks for making time. We've reviewed your revised quote, and while we're impressed with the component quality, I have to be frank — your unit price of €47.50 is still significantly above our budget ceiling.</span></div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Marcus, thanks for making time. We've reviewed your revised quote, and while we're impressed with the component quality, I have to be frank — your unit price of €47.50 is still significantly above our budget ceiling.</span><button class="listen-btn" onclick="speak(this)" title="试听"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg></button></div>
     <div class="dialogue-cn">Marcus，感谢你抽出时间。我们已审阅了贵方修改后的报价，虽然对组件质量印象深刻，但我必须坦率地说——47.50欧元的单价仍然远高于我们的预算上限。</div>
   </div>
 
   <div class="dialogue-line">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I appreciate the directness, Sarah. Let me walk you through our cost breakdown. The €47.50 reflects the upgraded thermal management module you specifically requested, plus the extended warranty from 18 to 36 months. That alone accounts for roughly €4.20 per unit.</span></div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I appreciate the directness, Sarah. Let me walk you through our cost breakdown. The €47.50 reflects the upgraded thermal management module you specifically requested, plus the extended warranty from 18 to 36 months. That alone accounts for roughly €4.20 per unit.</span><button class="listen-btn" onclick="speak(this)" title="试听"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg></button></div>
     <div class="dialogue-cn">我欣赏你的直接，Sarah。让我为你梳理一下成本明细。47.50欧元包含了贵方特别要求的升级版热管理模块，以及从18个月延长到36个月的质保期。仅这一项就大约占到了每件4.20欧元。</div>
   </div>
 
   <div class="dialogue-line">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Granted, and we do value the extended warranty. However, we're placing a blanket order of 15,000 units over 12 months — surely that volume warrants a more competitive tier. Our alternative supplier in Taiwan is quoting €41.80 with comparable specs.</span></div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Granted, and we do value the extended warranty. However, we're placing a <span class="vocab-highlight">blanket order</span> of 15,000 units over 12 months — surely that volume warrants a more competitive tier. Our alternative supplier in Taiwan is quoting €41.80 with comparable specs.</span><button class="listen-btn" onclick="speak(this)" title="试听"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg></button></div>
     <div class="dialogue-cn">这点我认可，我们也确实看重延长质保。不过，我们下的是12个月内15000件的一揽子订单——这样的量理应享有更有竞争力的价格档位。我们在台湾的替代供应商报价是41.80欧元，规格相当。</div>
   </div>
 
   <div class="dialogue-line">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm aware of the competitive landscape, but I'd caution against comparing on price alone. Our defect rate is 0.03% — industry-leading. Theirs, from what our QA team has gathered, hovers around 0.7%. Factor in rework and field returns, and that gap narrows considerably.</span></div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm aware of the competitive landscape, but I'd caution against comparing on price alone. Our <span class="vocab-highlight">defect rate</span> is 0.03% — industry-leading. Theirs, from what our QA team has gathered, hovers around 0.7%. Factor in rework and field returns, and that gap narrows considerably.</span><button class="listen-btn" onclick="speak(this)" title="试听"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg></button></div>
     <div class="dialogue-cn">我了解竞争格局，但我建议不要仅凭价格做比较。我们的不良率是0.03%——行业领先。根据我方品控团队的数据，他们的不良率大约在0.7%。把返工和售后退换货的成本算进去，这个差距就大大缩小了。</div>
   </div>
 
   <div class="dialogue-line">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Fair point, but you're also asking us to commit to a two-year exclusivity clause, which limits our sourcing flexibility. If we're locking ourselves in, we need that reflected in the pricing. I'm authorised to go to €43.20 if you drop the exclusivity requirement.</span></div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Fair point, but you're also asking us to commit to a two-year <span class="vocab-highlight">exclusivity clause</span>, which limits our sourcing flexibility. If we're locking ourselves in, we need that reflected in the pricing. I'm authorised to go to €43.20 if you drop the exclusivity requirement.</span><button class="listen-btn" onclick="speak(this)" title="试听"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg></button></div>
     <div class="dialogue-cn">说得有道理，但贵方还要求我们签署两年的排他性条款，这限制了我们的采购灵活度。如果要锁定我们，价格上需要有所体现。如果取消排他性要求，我有权给出43.20欧元。</div>
   </div>
 
   <div class="dialogue-line">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The exclusivity clause is non-negotiable from our legal side — it protects our IP on the custom firmware integration. But here's what I can do: €45.80 per unit, and I'll throw in free technical training for your assembly team, which normally runs €6,000. That's concrete value without touching the unit price further.</span></div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The <span class="vocab-highlight">exclusivity clause</span> is non-negotiable from our legal side — it protects our <span class="vocab-highlight">IP</span> on the custom firmware integration. But here's what I can do: €45.80 per unit, and I'll throw in free technical training for your assembly team, which normally runs €6,000. That's concrete value without touching the unit price further.</span><button class="listen-btn" onclick="speak(this)" title="试听"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg></button></div>
     <div class="dialogue-cn">排他性条款在我方法务层面是不可协商的——它保护的是我们定制固件集成的知识产权。不过我可以做的是：45.80欧元每件，并附赠贵方装配团队的免费技术培训，这项培训通常收费6000欧元。这是实实在在的价值，不触及单价的进一步调整。</div>
   </div>
 
   <div class="dialogue-line">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That training package is appealing — we've had onboarding issues with our last three hires. If we split the difference at €44.50 and you include payment terms of net-60 instead of net-30, I think we can sell this internally.</span></div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That training package is appealing — we've had onboarding issues with our last three hires. If we split the difference at €44.50 and you include <span class="vocab-highlight">payment terms</span> of net-60 instead of net-30, I think we can sell this internally.</span><button class="listen-btn" onclick="speak(this)" title="试听"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg></button></div>
     <div class="dialogue-cn">培训套餐很有吸引力——我们最近三位新员工确实遇到了上手问题。如果我们在44.50欧元各让一步，并且付款条件从货到30天改为货到60天，我想内部可以推动通过。</div>
   </div>
 
   <div class="dialogue-line">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Net-60 puts pressure on our cash flow, but for a commitment of 15,000 units... alright. €44.80, net-60, plus the training package, and I'll need sign-off from our CFO by end of week. That's as far as I can stretch.</span></div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Net-60 puts pressure on our <span class="vocab-highlight">cash flow</span>, but for a commitment of 15,000 units... alright. €44.80, net-60, plus the training package, and I'll need <span class="vocab-highlight">sign-off</span> from our CFO by end of week. That's as far as I can stretch.</span><button class="listen-btn" onclick="speak(this)" title="试听"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg></button></div>
     <div class="dialogue-cn">货到60天对我们的现金流有压力，但对于15000件的承诺量……好吧。44.80欧元，货到60天，加上培训套餐，我需要在本周末前获得CFO的签批。这已是我能做出的最大让步了。</div>
   </div>
 
   <div class="dialogue-line">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">€44.80 with net-60 and the training — I can work with that. Let me draft the term sheet this afternoon. We'll aim for a full contract review by next Wednesday. Deal?</span></div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">€44.80 with net-60 and the training — I can work with that. Let me draft the <span class="vocab-highlight">term sheet</span> this afternoon. We'll aim for a full contract review by next Wednesday. Deal?</span><button class="listen-btn" onclick="speak(this)" title="试听"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg></button></div>
     <div class="dialogue-cn">44.80欧元，货到60天，附培训——我可以接受。我今天下午准备条款清单，下周三前完成完整合同的审阅。成交？</div>
   </div>
 
   <div class="dialogue-line">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Deal. I'll loop in our legal team first thing tomorrow. It's been a constructive negotiation, Sarah — I'm confident this partnership will deliver real value on both sides.</span></div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Deal. I'll <span class="vocab-highlight">loop in</span> our legal team first thing tomorrow. It's been a constructive negotiation, Sarah — I'm confident this partnership will deliver real value on both sides.</span><button class="listen-btn" onclick="speak(this)" title="试听"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg></button></div>
     <div class="dialogue-cn">成交。明早第一件事我就拉法务团队进来。这是一次富有建设性的谈判，Sarah——我相信这次合作将为双方带来真正的价值。</div>
   </div>
 
   <div class="dialogue-line">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Likewise, Marcus. This sets a solid foundation. I'll have the term sheet in your inbox by 5 PM.</span></div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Likewise, Marcus. This sets a solid foundation. I'll have the <span class="vocab-highlight">term sheet</span> in your inbox by 5 PM.</span><button class="listen-btn" onclick="speak(this)" title="试听"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6,4 18,12 6,20"/></svg></button></div>
     <div class="dialogue-cn">彼此彼此，Marcus。这为合作打下了坚实基础。条款清单下午5点前发到你邮箱。</div>
   </div>
 
@@ -110,7 +144,11 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <hr>
 
-<h2>📝 Key Vocabulary</h2>
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
 
 <div class="vocab-item"><strong>blanket order</strong> — 一揽子订单 | 长期大批量采购协议，BEC 阅读和听力高频词</div>
 <div class="vocab-item"><strong>defect rate</strong> — 不良率/次品率 | 制造业和质量控制场景核心术语</div>
@@ -124,7 +162,11 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <hr>
 
-<h2>🔤 Sentence Patterns</h2>
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
 
 <div class="pattern-item"><code>I have to be frank — ...</code> → 坦白说…… | 用于引出敏感或困难话题，比 "to be honest" 更商务化</div>
 <div class="pattern-item"><code>That alone accounts for roughly...</code> → 仅这一项就大约占到…… | 用于分解成本、解释价格构成</div>
@@ -135,8 +177,12 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <hr>
 
+<!-- Chinese Translation -->
 <div class="translation-section">
-<h2>🇨🇳 Chinese Translation</h2>
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
 
 <div class="translation">
   <div class="translation-line"><span class="translation-speaker">A:</span><span>Marcus，感谢你抽出时间。我们已审阅了贵方修改后的报价，虽然对组件质量印象深刻，但我必须坦率地说——47.50欧元的单价仍然远高于我们的预算上限。</span></div>
@@ -155,18 +201,65 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <hr>
 
+<!-- Learning Tip -->
 <div class="tip">
-  <h2>💡 Learning Tip</h2>
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
   <p>在BEC商务英语考试中，价格谈判（Price Negotiation）是听力Part 3和口语Part 3的高频场景。建议练习时重点关注"让步阶梯"的表达方式——从表达底线（bottom line）、提出替代方案（alternative proposal）到最终成交（close the deal），每一步都有固定的商务话术。可以通过角色扮演（role-play）反复练习，同时注意数字和百分比的听力辨识能力，这在考试中尤为关键。</p>
 </div>
 
 <script>
-// 监听父窗口的中文切换指令
+var showChinese = false;
+var synth = window.speechSynthesis;
+var currentBtn = null;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+// 监听父窗口切换指令
 window.addEventListener('message', function(e) {
   if (e.data && e.data.action === 'toggleChinese') {
-    document.body.classList.toggle('show-cn', e.data.show);
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
   }
 });
+
+function speak(btn) {
+  if (synth.speaking && currentBtn === btn) {
+    synth.cancel();
+    btn.classList.remove('playing');
+    currentBtn = null;
+    return;
+  }
+  if (synth.speaking) {
+    synth.cancel();
+    if (currentBtn) currentBtn.classList.remove('playing');
+  }
+  var textEl = btn.parentElement.querySelector('.dialogue-text');
+  var text = textEl ? textEl.textContent.trim() : '';
+  if (!text) return;
+  var utter = new SpeechSynthesisUtterance(text);
+  utter.lang = 'en-US';
+  utter.rate = 0.9;
+  utter.onstart = function() { btn.classList.add('playing'); currentBtn = btn; };
+  utter.onend = function() { btn.classList.remove('playing'); currentBtn = null; };
+  utter.onerror = function() { btn.classList.remove('playing'); currentBtn = null; };
+  synth.speak(utter);
+}
 </script>
 
 </body>
