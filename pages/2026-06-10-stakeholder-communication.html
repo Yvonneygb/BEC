@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>利益相关者沟通 Stakeholder Communication - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+/* 标题行：icon + 文字 + 右侧操作 */
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+/* 中文切换按钮 */
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+/* 试听按钮 */
+.listen-btn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:6px;border:1px solid rgba(109,74,255,0.2);background:#fff;color:#6D4AFF;cursor:pointer;font-size:.7rem;flex-shrink:0;transition:all .2s;margin-left:.3rem;align-self:flex-start;margin-top:1px}
+.listen-btn:hover{background:rgba(109,74,255,0.08);border-color:#6D4AFF}
+.listen-btn.playing{background:#6D4AFF;color:#fff;border-color:#6D4AFF}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+/* 词汇高亮 */
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>利益相关者沟通 Stakeholder Communication</h1>
+<div class="date">📅 2026年6月10日 · 星期三</div>
+
+<div class="roles">
+  <strong>A (Rebecca Torres)</strong> — Senior Project Manager, Apex Construction Group<br>
+  <strong>B (David Okonkwo)</strong> — Community Relations Director, MetroCity Council
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">David, I wanted to loop you in early on our Riverside Quarter redevelopment. The planning application goes in next month, and I think it's crucial that we get the local community on board from the outset.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">David，我想在Riverside Quarter重建项目的早期就让你参与进来。规划申请下个月递交，我觉得我们必须从一开始就获得当地社区的认同。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Rebecca, I'm glad you're thinking ahead. Riverside has a very vocal residents' association. If we don't manage the <span class="vocab-highlight">stakeholder</span> communication with proper <span class="vocab-highlight">transparency</span>, we could be looking at six months of objections and a PR headache.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">Rebecca，很高兴你在提前思考。Riverside的居民协会非常活跃。如果我们不以恰当的透明度来妥善处理利益相关者的沟通，可能面临六个月的反对意见和一场公关噩梦。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Exactly what I'm trying to avoid. I'd like to propose that we hold a <span class="vocab-highlight">town hall meeting</span> before the formal submission. Give people a chance to see the plans, ask questions, and feel heard. What do you think?</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">这正是我想避免的。我提议我们在正式提交前举办一次市民座谈会，让人们有机会看方案、提问，并感受到被倾听。你怎么看？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a sensible starting point, but I'd recommend something more structured — a series of focus groups with different stakeholder segments: residents, local businesses, and the school board. A one-off town hall can easily turn into a shouting match.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">这是个合理的起点，但我建议更结构化的方式——针对不同利益相关者群体做一系列焦点小组：居民、当地商户和学校董事会。一次性的市民座谈会很容易变成吵架大会。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Fair enough. Focus groups it is. We've already commissioned an <span class="vocab-highlight">impact assessment</span> covering traffic, noise, and green space preservation. The preliminary findings are quite positive — the new pedestrian zone alone would reduce rush-hour congestion by an estimated 18%.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">有道理。就做焦点小组。我们已经委托了一份影响评估，涵盖交通、噪音和绿地保护。初步结果相当积极——光是新建的行人区就能减少高峰时段约18%的拥堵。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Those figures will help build <span class="vocab-highlight">buy-in</span>, no question. But the last thing we want is for residents to feel they're being presented with a fait accompli. We need to frame this as a consultation, not a persuasion exercise.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">这些数据无疑有助于建立认同。但我们最不想看到的就是居民觉得这是个既成事实。我们必须把这定位为征询意见，而非说服活动。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I take your point. Let me put it this way — what we need is a genuine <span class="vocab-highlight">feedback loop</span>. We present the outline plans, collect concerns, feed them back into the design team, and then come back with visible adjustments. That shows we're listening.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">我理解你的意思。让我这样说——我们需要的是一个真正的反馈机制。我们展示框架方案，收集顾虑，反馈给设计团队，然后带着可见的调整回来。这证明我们在倾听。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's the way to do it. I can help you set up a dedicated project microsite with a Q&A section and a newsletter sign-up. <span class="vocab-highlight">Community outreach</span> works best when it's multi-channel — digital, face-to-face, and print. Some of our older residents still prefer a printed newsletter in their letterbox.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">就该这么做。我可以帮你建一个项目专题微型网站，有问答区和简讯订阅功能。社区外联多渠道效果最好——数字、面对面、纸质都有。我们有些年长居民还是更愿意在信箱里收到纸质简讯。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I hadn't thought of that. Alright, we'll produce a bilingual community update leaflet — English and Polish, given the local demographics. We'll issue a <span class="vocab-highlight">press release</span> to the local paper at the same time as the microsite goes live.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">这点我倒没想到。好，我们出一份双语社区更新宣传页——英语和波兰语，考虑当地的族裔构成。微型网站上线同时向当地报纸发新闻稿。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That certainly helps address the inclusivity concern. Now, on the timeline — I'd suggest a soft launch in Week 1, focus groups in Weeks 2-3, and then the formal planning submission at the end of Week 4. That gives you a full month of <span class="vocab-highlight">constructive dialogue</span> before the paperwork lands.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">这确实有助于解决包容性问题。现在关于时间线——我建议第一周软启动，第二到三周做焦点小组，第四周末正式递交规划申请。这样在文件落地前你有整整一个月的建设性对话。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Works for me. What about the council's own communications team? Should we coordinate messaging to ensure consistency?</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">我没问题。那市政厅自己的宣传团队呢？我们要不要协调口径确保信息一致？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely. I'll assign a dedicated comms officer to your project. One voice, one message — that's critical when you're dealing with a development of this scale. Any mixed signals and the rumour mill starts turning.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">绝对要。我会指定一位专门的宣传官对接你的项目。一个声音、一个信息——处理这种体量的开发项目，这很关键。任何混淆信号都会让谣言满天飞。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. I'll need a sign-off from my board on the community engagement budget, but if we present this as a risk mitigation measure — the cost of doing proper stakeholder management versus the cost of a delayed project — I don't think I'll face much <span class="vocab-highlight">pushback</span>.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">同意。我需要董事会签批社区参与预算，但如果把这作为风险缓解措施来呈现——做利益相关者管理的成本对比项目延误的成本——我认为不会遇到什么阻力。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Smart framing. The business case writes itself — every month of planning delay from unresolved objections costs you roughly 2.5% of the total project margin. Compare that to a few grand on focus groups and leaflets.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">聪明的表述。商业论证一目了然——未解决的反对意见每延误一个月，就耗费项目总利润的约2.5%。跟花几千块做焦点小组和宣传单比，差距显而易见。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Precisely. Let me draft a stakeholder communication plan this afternoon. I'll have it in your inbox by 6 PM. If we're aligned, we can present jointly to the residents' association committee next Thursday.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
+    <div class="dialogue-cn">完全正确。我今天下午草拟一份利益相关者沟通计划，6点前发到你邮箱。如果我们达成一致，下周四可以向居民协会委员会做联合汇报。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>stakeholder</strong> — 利益相关者 | 任何受项目影响或有利益关联的个人或团体，BEC 听力和阅读超高频词</div>
+<div class="vocab-item"><strong>transparency</strong> — 透明度 | 公开、诚实的信息披露，利益相关者管理的核心价值观</div>
+<div class="vocab-item"><strong>town hall meeting</strong> — 市民座谈会/公开听证会 | 企业与社区公开沟通的常见形式</div>
+<div class="vocab-item"><strong>impact assessment</strong> — 影响评估 | 项目启动前对交通、环境、噪音等方面的专业评估报告</div>
+<div class="vocab-item"><strong>buy-in</strong> — 认同/支持 | 让利益相关者从内心支持项目，而非仅仅被动接受</div>
+<div class="vocab-item"><strong>feedback loop</strong> — 反馈机制 | 收集意见→反馈给团队→调整方案→再回应的闭环流程</div>
+<div class="vocab-item"><strong>community outreach</strong> — 社区外联 | 主动与社区建立联系和沟通的系列活动</div>
+<div class="vocab-item"><strong>constructive dialogue</strong> — 建设性对话 | 双方都致力于解决问题而进行的积极沟通</div>
+<div class="vocab-item"><strong>press release</strong> — 新闻稿 | 正式向媒体发布的声明，对外沟通的标准渠道</div>
+<div class="vocab-item"><strong>pushback</strong> — 反对/阻力 | 来自内部或外部的反驳意见，非正式但非常地道的商务用语</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>It's crucial that we get... on board from the outset.</code> → 我们从一开始就必须获得……的认同 | 项目启动阶段强调利益相关者参与的重要性</div>
+<div class="pattern-item"><code>I'd like to propose that we...</code> → 我提议我们…… | 提出建议的正式但友好的表达方式，比 "I suggest" 更商务化</div>
+<div class="pattern-item"><code>The last thing we want is...</code> → 我们最不想看到的就是…… | 用于强调应当避免的风险或负面结果</div>
+<div class="pattern-item"><code>Let me put it this way — ...</code> → 让我这样说——…… | 重新组织思路、换个方式解释的常用过渡语</div>
+<div class="pattern-item"><code>What we need is a genuine...</code> → 我们需要的是一个真正的…… | 强调核心需求的简洁有力句型</div>
+<div class="pattern-item"><code>That certainly helps address...</code> → 这确实有助于解决…… | 认可对方提议并点明其解决的具体问题</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>David，我想在Riverside Quarter重建项目的早期就让你参与进来。规划申请下个月递交，我觉得我们必须从一开始就获得当地社区的认同。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>Rebecca，很高兴你在提前思考。Riverside的居民协会非常活跃。如果我们不以恰当的透明度来妥善处理利益相关者的沟通，可能面临六个月的反对意见和一场公关噩梦。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这正是我想避免的。我提议我们在正式提交前举办一次市民座谈会，让人们有机会看方案、提问，并感受到被倾听。你怎么看？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是个合理的起点，但我建议更结构化的方式——针对不同利益相关者群体做一系列焦点小组：居民、当地商户和学校董事会。一次性的市民座谈会很容易变成吵架大会。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>有道理。就做焦点小组。我们已经委托了一份影响评估，涵盖交通、噪音和绿地保护。初步结果相当积极——光是新建的行人区就能减少高峰时段约18%的拥堵。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这些数据无疑有助于建立认同。但我们最不想看到的就是居民觉得这是个既成事实。我们必须把这定位为征询意见，而非说服活动。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我理解你的意思。让我这样说——我们需要的是一个真正的反馈机制。我们展示框架方案，收集顾虑，反馈给设计团队，然后带着可见的调整回来。这证明我们在倾听。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>就该这么做。我可以帮你建一个项目专题微型网站，有问答区和简讯订阅功能。社区外联多渠道效果最好——数字、面对面、纸质都有。我们有些年长居民还是更愿意在信箱里收到纸质简讯。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这点我倒没想到。好，我们出一份双语社区更新宣传页——英语和波兰语，考虑当地的族裔构成。微型网站上线同时向当地报纸发新闻稿。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这确实有助于解决包容性问题。现在关于时间线——我建议第一周软启动，第二到三周做焦点小组，第四周末正式递交规划申请。这样在文件落地前你有整整一个月的建设性对话。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我没问题。那市政厅自己的宣传团队呢？我们要不要协调口径确保信息一致？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>绝对要。我会指定一位专门的宣传官对接你的项目。一个声音、一个信息——处理这种体量的开发项目，这很关键。任何混淆信号都会让谣言满天飞。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>同意。我需要董事会签批社区参与预算，但如果把这作为风险缓解措施来呈现——做利益相关者管理的成本对比项目延误的成本——我认为不会遇到什么阻力。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>聪明的表述。商业论证一目了然——未解决的反对意见每延误一个月，就耗费项目总利润的约2.5%。跟花几千块做焦点小组和宣传单比，差距显而易见。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>完全正确。我今天下午草拟一份利益相关者沟通计划，6点前发到你邮箱。如果我们达成一致，下周四可以向居民协会委员会做联合汇报。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>利益相关者沟通（Stakeholder Communication）是BEC中级口语Part 2（Mini-presentation）和写作Part 2（Report/Proposal）的高频话题。考试中常见的命题角度包括：如何处理项目反对意见、如何组织社区沟通活动、如何向不同类型利益相关者传达信息。建议练习时关注"倾听→回应→调整"三步法的英文表达，同时记住"transparency"、"feedback loop"、"constructive dialogue"这三个概念经常被用作评分标准中的加分关键词。可以假想自己是一个项目经理，用英语起草一份两分钟的stakeholder engagement briefing，录音后自我评估流利度和术语使用准确度。</p>
+</div>
+
+<script>
+var showChinese = false;
+var synth = window.speechSynthesis;
+var currentUtterance = null;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+function speak(btn) {
+  if (synth.speaking) {
+    synth.cancel();
+    document.querySelectorAll('.listen-btn.playing').forEach(function(b) { b.classList.remove('playing'); b.textContent = '▶'; });
+    if (currentUtterance && btn.dataset.text === currentUtterance.text) return;
+  }
+  var text = btn.parentElement.querySelector('.dialogue-text').textContent.trim();
+  var utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'en-US';
+  utterance.rate = 0.9;
+  utterance.pitch = 1;
+  currentUtterance = utterance;
+  btn.classList.add('playing');
+  btn.textContent = '⏹';
+  btn.dataset.text = text;
+  utterance.onend = function() {
+    btn.classList.remove('playing');
+    btn.textContent = '▶';
+    currentUtterance = null;
+  };
+  utterance.onerror = function() {
+    btn.classList.remove('playing');
+    btn.textContent = '▶';
+    currentUtterance = null;
+  };
+  synth.speak(utterance);
+}
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>
