@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数字化转型 Digital Transformation - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+/* 标题行：icon + 文字 + 右侧操作 */
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+/* 中文切换按钮 */
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+/* 试听按钮 */
+.listen-btn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:6px;border:1.5px solid rgba(109,74,255,0.2);background:#fff;color:#6D4AFF;font-size:.8rem;cursor:pointer;transition:all .2s;flex-shrink:0;margin-left:.5rem;align-self:flex-start;margin-top:1px}
+.listen-btn:hover{background:rgba(109,74,255,0.08);border-color:#6D4AFF}
+.listen-btn.playing{background:#6D4AFF;color:#fff;border-color:#6D4AFF;animation:pulse .8s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+/* 词汇高亮 */
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>数字化转型 Digital Transformation</h1>
+<div class="date">📅 2026年6月11日 · 星期四</div>
+
+<div class="roles">
+  <strong>A (Linda Zhao)</strong> — Chief Digital Officer, EastBridge Manufacturing<br>
+  <strong>B (David Kim)</strong> — Senior Consultant, TechVantage Solutions
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">David, thank you for coming in. As you know, EastBridge has been a traditional manufacturer for over 30 years. We're now looking to embark on a comprehensive <span class="vocab-highlight">digital transformation</span>, but I'll be honest — we're not entirely sure where to start.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
+    <div class="dialogue-cn">David，感谢你过来。如你所知，EastBridge作为传统制造企业已运营超过30年。我们现在希望开启全面的数字化转型，但说实话——我们不太确定从哪里着手。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's completely understandable, Linda. Many mid-sized manufacturers are in the same boat. The first thing I'd recommend is conducting a thorough audit of your current <span class="vocab-highlight">legacy systems</span>. Without understanding what you're working with, any transformation effort is shooting in the dark.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
+    <div class="dialogue-cn">这完全可以理解，Linda。很多中型制造商都面临同样处境。我首先建议对你们当前的遗留系统进行一次彻底的审计。不了解手头有什么，任何转型努力都是盲人摸象。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We've already identified that our ERP system from 2008 is one of the biggest bottlenecks. Order processing still involves manual data entry in three different departments. Our IT director estimates it costs us roughly 400 hours a month in redundant labour.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
+    <div class="dialogue-cn">我们已经发现，2008年上线的ERP系统是最大的瓶颈之一。订单处理仍然涉及三个不同部门的人工数据录入。我们IT总监估计每月在重复性劳动上花费大约400小时。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's substantial. And that's exactly the kind of low-hanging fruit we'd target in a <span class="vocab-highlight">pilot program</span>. I'd suggest starting with automating the order-to-cash cycle — you'd see measurable <span class="vocab-highlight">ROI</span> within the first two quarters, which helps build momentum for the broader initiative.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
+    <div class="dialogue-cn">这个数字相当可观。而这正是我们在试点项目中要瞄准的"低垂果实"。我建议从订单到现金的自动化流程入手——前两个季度就能看到可衡量的投资回报率，这有助于为更广泛的转型积累动力。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I like the sound of that. However, the biggest hurdle I anticipate isn't technical — it's cultural. Our shop floor supervisors have been doing things the same way for 15 years. <span class="vocab-highlight">Change management</span> is going to be critical.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
+    <div class="dialogue-cn">这听起来不错。但我预判最大的障碍不是技术上的——而是文化层面的。我们车间的班组长15年来一直用同样的方式做事。变革管理将至关重要。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">You've hit on the single most important factor. I've seen more digital transformations fail due to poor <span class="vocab-highlight">change management</span> than due to technology issues. I'd recommend we establish a network of digital champions across your plants — people on the ground who can demonstrate the tangible benefits.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
+    <div class="dialogue-cn">你抓住了最关键的因素。我见过更多数字化转型失败是由于变革管理不善，而非技术问题。我建议在各工厂建立一支数字化先锋网络——让一线人员展示实实在在的好处。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a clever approach. My concern, though, is <span class="vocab-highlight">scalability</span>. If we roll this out across all seven plants simultaneously, we risk overwhelming our workforce. What's your view on a <span class="vocab-highlight">phased rollout</span>?</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
+    <div class="dialogue-cn">这个方法很聪明。不过我担心的是可扩展性。如果我们同时在所有七个工厂推广，可能会让员工不堪重负。你对分阶段部署怎么看？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A <span class="vocab-highlight">phased rollout</span> is absolutely the right call. I'd suggest we pick one plant as the pilot, run it for 12 weeks, then use the data from that to make the business case to the other plant managers. The numbers speak for themselves when you can show a 20% reduction in processing time.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
+    <div class="dialogue-cn">分阶段部署绝对是正确的选择。我建议选一个工厂作为试点，运行12周，然后用数据向其他工厂经理展示商业案例。当你能够展示处理时间缩短20%，数据本身就能说明问题。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'm with you on that. But we also need to get buy-in from <span class="vocab-highlight">key stakeholders</span> at the board level. Our CFO is notoriously conservative when it comes to IT spending. How do we frame this so it doesn't just look like another expensive tech project?</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
+    <div class="dialogue-cn">我同意。但我们也需要获得董事会层面关键利益相关者的支持。我们的CFO在IT支出方面出了名的保守。我们怎么包装这个项目，让它看起来不像又一个昂贵的IT工程？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Frame it as a revenue enabler, not a cost item. <span class="vocab-highlight">Cloud migration</span>, for instance, isn't just about IT infrastructure — it's about giving your sales team real-time access to inventory data on mobile devices, which directly translates to faster quote turnaround and higher win rates.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
+    <div class="dialogue-cn">把它定位为收入增长引擎，而不是成本项目。比如云迁移，它不仅仅是IT基础设施的问题——它能让你的销售团队在移动设备上实时获取库存数据，直接转化为更快的报价周转和更高的中标率。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's exactly the framing we need. One more thing — <span class="vocab-highlight">digital literacy</span> across our workforce is uneven at best. Some of our senior technicians can barely use email. Do you offer training programmes as part of the implementation package?</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
+    <div class="dialogue-cn">这正是我们需要的定位。还有一件事——我们员工的数字素养参差不齐。有些资深技师连邮件都不太会用。你们在实施服务中提供培训项目吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We do — and it's baked into every phase. We provide role-specific training modules, from basic <span class="vocab-highlight">digital literacy</span> for the shop floor to advanced analytics for your management team. It's not an add-on; it's integral to the methodology.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
+    <div class="dialogue-cn">我们有——而且培训已经嵌入每个阶段。我们提供按岗位定制的培训模块，从面向车间的基础数字素养，到面向管理团队的高级数据分析。这不是附加项，而是方法论的核心组成部分。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>digital transformation</strong> — 数字化转型 | 企业运用数字技术重塑业务流程、文化和客户体验的战略过程</div>
+<div class="vocab-item"><strong>legacy system</strong> — 遗留系统/老旧系统 | 仍在运行但技术过时的旧IT系统，BEC阅读中常出现在企业升级改造场景</div>
+<div class="vocab-item"><strong>ROI (Return on Investment)</strong> — 投资回报率 | 衡量投资效益的核心财务指标，商务提案的必备概念</div>
+<div class="vocab-item"><strong>scalability</strong> — 可扩展性 | 系统或方案能否随着业务增长而灵活扩展的能力</div>
+<div class="vocab-item"><strong>phased rollout</strong> — 分阶段部署 | 将大型项目拆分为阶段逐步推进的实施策略，降低风险</div>
+<div class="vocab-item"><strong>change management</strong> — 变革管理 | 引导组织和个人从当前状态过渡到目标状态的结构化方法</div>
+<div class="vocab-item"><strong>key stakeholder</strong> — 关键利益相关者 | 对项目成败有重大影响的个人或群体，需优先获得其支持（buy-in）</div>
+<div class="vocab-item"><strong>pilot program</strong> — 试点项目 | 在全面推广前先在小范围测试的验证性项目</div>
+<div class="vocab-item"><strong>cloud migration</strong> — 云迁移 | 将数据、应用从本地服务器迁移到云计算平台的过程</div>
+<div class="vocab-item"><strong>digital literacy</strong> — 数字素养 | 员工使用数字工具和技术的基本能力，数字化转型的软性基础</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>The first thing I'd recommend is...</code> → 我首先建议的是…… | 咨询顾问向客户提出建议的开场句式</div>
+<div class="pattern-item"><code>The biggest hurdle I anticipate isn't... — it's...</code> → 我预判最大障碍不是……而是…… | 对比式表达，强调真正的难点</div>
+<div class="pattern-item"><code>I'd suggest we...</code> → 我建议我们…… | 提出行动方案的委婉表达方式</div>
+<div class="pattern-item"><code>The numbers speak for themselves.</code> → 数据本身就能说明问题 | 用事实/数据作为论据的有力表达</div>
+<div class="pattern-item"><code>Frame it as..., not...</code> → 将其定位为……，而不是…… | 重新包装/定义问题的话术，适用于说服场景</div>
+<div class="pattern-item"><code>It's not an add-on; it's integral to...</code> → 这不是附加项，而是……的核心组成部分 | 强调某事物不可或缺的地位</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>David，感谢你过来。如你所知，EastBridge作为传统制造企业已运营超过30年。我们现在希望开启全面的数字化转型，但说实话——我们不太确定从哪里着手。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这完全可以理解，Linda。很多中型制造商都面临同样处境。我首先建议对你们当前的遗留系统进行一次彻底的审计。不了解手头有什么，任何转型努力都是盲人摸象。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我们已经发现，2008年上线的ERP系统是最大的瓶颈之一。订单处理仍然涉及三个不同部门的人工数据录入。我们IT总监估计每月在重复性劳动上花费大约400小时。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这个数字相当可观。而这正是我们在试点项目中要瞄准的"低垂果实"。我建议从订单到现金的自动化流程入手——前两个季度就能看到可衡量的投资回报率，这有助于为更广泛的转型积累动力。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这听起来不错。但我预判最大的障碍不是技术上的——而是文化层面的。我们车间的班组长15年来一直用同样的方式做事。变革管理将至关重要。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>你抓住了最关键的因素。我见过更多数字化转型失败是由于变革管理不善，而非技术问题。我建议在各工厂建立一支数字化先锋网络——让一线人员展示实实在在的好处。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这个方法很聪明。不过我担心的是可扩展性。如果我们同时在所有七个工厂推广，可能会让员工不堪重负。你对分阶段部署怎么看？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>分阶段部署绝对是正确的选择。我建议选一个工厂作为试点，运行12周，然后用数据向其他工厂经理展示商业案例。当你能够展示处理时间缩短20%，数据本身就能说明问题。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我同意。但我们也需要获得董事会层面关键利益相关者的支持。我们的CFO在IT支出方面出了名的保守。我们怎么包装这个项目，让它看起来不像又一个昂贵的IT工程？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>把它定位为收入增长引擎，而不是成本项目。比如云迁移，它不仅仅是IT基础设施的问题——它能让你的销售团队在移动设备上实时获取库存数据，直接转化为更快的报价周转和更高的中标率。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这正是我们需要的定位。还有一件事——我们员工的数字素养参差不齐。有些资深技师连邮件都不太会用。你们在实施服务中提供培训项目吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我们有——而且培训已经嵌入每个阶段。我们提供按岗位定制的培训模块，从面向车间的基础数字素养，到面向管理团队的高级数据分析。这不是附加项，而是方法论的核心组成部分。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这让人放心。好，David——我希望你准备一份详细的提案，包含时间表、预算明细和分阶段部署路线图。如果方案扎实，我会在下个月的董事会上汇报。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我会在十个工作日内把提案交到你手上。Linda，我由衷地感到兴奋——EastBridge具备成为数字化转型教科书的全部要素。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>数字化转型（Digital Transformation）是BEC Vantage阅读Part 3和听力Part 2的高频主题。备考时建议重点掌握三组词汇链：(1) 技术类 — legacy system, cloud migration, ERP, infrastructure; (2) 管理类 — change management, phased rollout, scalability, pilot program; (3) 商业类 — ROI, stakeholder buy-in, revenue enabler, business case。建议将这组对话用SpeechSynthesis朗读跟读，特别注意"phased rollout""change management"等合成名词的重音位置——BEC听力中多词术语的出现频率极高。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+// 试听功能 - Web Speech API
+function speak(btn) {
+  if (!('speechSynthesis' in window)) {
+    alert('您的浏览器不支持语音朗读功能');
+    return;
+  }
+  // 如果正在播放，停止
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+    // 移除所有播放状态
+    document.querySelectorAll('.listen-btn.playing').forEach(function(b) {
+      b.classList.remove('playing');
+    });
+    // 如果点击的是正在播放的按钮，仅停止不重新播放
+    if (btn.classList.contains('playing')) {
+      return;
+    }
+  }
+  // 获取当前行文本
+  var row = btn.closest('.dialogue-row');
+  var text = row.querySelector('.dialogue-text').textContent;
+  var utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'en-US';
+  utterance.rate = 0.9;
+  utterance.pitch = 1;
+  // 选中英文语音
+  var voices = window.speechSynthesis.getVoices();
+  var enVoice = voices.find(function(v) { return v.lang.startsWith('en'); });
+  if (enVoice) utterance.voice = enVoice;
+
+  // 播放状态
+  btn.classList.add('playing');
+  utterance.onend = function() {
+    btn.classList.remove('playing');
+  };
+  utterance.onerror = function() {
+    btn.classList.remove('playing');
+  };
+
+  window.speechSynthesis.speak(utterance);
+}
+
+// 预加载语音列表
+if ('speechSynthesis' in window) {
+  window.speechSynthesis.getVoices();
+}
+</script>
+
+</body>
+</html>
