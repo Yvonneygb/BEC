@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESG可持续发展报告 ESG & Sustainability Reporting - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+/* 标题行：icon + 文字 + 右侧操作 */
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+/* 中文切换按钮 */
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+/* 词汇高亮 */
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+/* 试听按钮 */
+.listen-btn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid rgba(109,74,255,0.2);background:#fff;color:#6D4AFF;cursor:pointer;font-size:.7rem;transition:all .2s;flex-shrink:0;margin-left:.4rem}
+.listen-btn:hover{background:rgba(109,74,255,0.1);border-color:#6D4AFF}
+.listen-btn.playing{background:#6D4AFF;color:#fff;border-color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>ESG可持续发展报告 ESG & Sustainability Reporting</h1>
+<div class="date">&#x1F4C5; 2026年6月12日 · 星期五</div>
+
+<div class="roles">
+  <strong>A (Olivia Grant)</strong> — Chief Sustainability Officer, Nexus Manufacturing Group<br>
+  <strong>B (Daniel Park)</strong> — ESG Consultant, GreenQuant Advisory
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Daniel, thanks for coming in at such short notice. The board has just approved our first ESG report initiative, and to be honest, I'm not entirely sure where to start. We're a mid-sized manufacturer — navigating this reporting landscape feels overwhelming.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
+    <div class="dialogue-cn">Daniel，非常感谢你紧急赶来。董事会刚刚批准了我们的首个ESG报告项目，说实话，我不知道从哪里开始。作为一家中型制造企业，面对这个报告领域我感到相当无从下手。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's completely understandable, Olivia. Most companies feel the same way before their first disclosure. The good news is that Nexus already has solid operational data. The challenge is structuring it into a coherent narrative that meets <span class="vocab-highlight">GRI standards</span> while avoiding any perception of <span class="vocab-highlight">greenwashing</span>.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
+    <div class="dialogue-cn">这完全能理解，Olivia。大多数公司在首次信息披露前都有同样的感受。好消息是Nexus已经拥有扎实的运营数据。真正的挑战在于将这些数据构建成一个连贯的叙述，既符合GRI标准又能避免任何漂绿的嫌疑。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's precisely my concern — <span class="vocab-highlight">greenwashing</span>. We've made genuine progress on energy efficiency over the past three years, but I don't want to overstate our achievements. The board is also pushing for a <span class="vocab-highlight">net-zero commitment</span> by 2040, and I'm not convinced we can substantiate that with our current <span class="vocab-highlight">carbon footprint</span> data.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
+    <div class="dialogue-cn">这正是我担心的——漂绿。过去三年我们在能源效率方面确实取得了实际进步，但我不想夸大这些成绩。董事会还在推动2040年前的净零承诺，而我并不确定以我们目前的碳足迹数据能否支撑这个承诺。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Let's break this down systematically. First, we need a robust <span class="vocab-highlight">materiality assessment</span> to identify what ESG topics matter most to your stakeholders. Without that, you're essentially reporting into a void. Have you conducted any formal <span class="vocab-highlight">stakeholder engagement</span> beyond investor calls?</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
+    <div class="dialogue-cn">让我们系统性地拆解这个问题。首先，我们需要一个扎实的实质性评估来识别对利益相关方最重要的ESG议题。没有这个评估，你基本上是在无的放矢地做报告。你们在投资者电话会之外做过任何正式的利益相关方参与吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Honestly, no. We've been so heads-down on day-to-day operations that <span class="vocab-highlight">stakeholder engagement</span> has been ad hoc at best. Our <span class="vocab-highlight">board oversight</span> on ESG matters has been minimal until now — the recent shareholder resolution fundamentally changed that dynamic.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
+    <div class="dialogue-cn">老实说，没有。我们一直在埋头于日常运营，利益相关方参与充其量是临时性的。直到这次股东决议案之前，董事会对ESG事务的监督一直微乎其微——最近的股东决议从根本上改变了这个局面。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Then that's where we begin. We'll design a structured consultation survey targeting your investors, employees, key customers and community representatives. In parallel, we need to map your <span class="vocab-highlight">scope 3 emissions</span> — that's where the bulk of a manufacturer's <span class="vocab-highlight">carbon footprint</span> typically hides, and it's also the most challenging data to collect.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
+    <div class="dialogue-cn">那么我们就从这里开始。我们会设计一份面向投资者、员工、核心客户和社区代表的结构化咨询问卷。与此同时，我们需要梳理你们范围三的排放数据——这通常是一家制造企业碳足迹的大头所在，也是数据采集最具挑战的部分。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text"><span class="vocab-highlight">Scope 3 emissions</span> will be a major undertaking — our supply chain spans six countries across three continents. But I understand the necessity: if we're making a <span class="vocab-highlight">net-zero commitment</span>, we can't just account for our factory emissions and ignore the rest of the value chain.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
+    <div class="dialogue-cn">范围三排放将是一个大工程——我们的供应链横跨三大洲六个国家。但我理解其必要性：如果我们在做净零承诺，就不能只计算工厂排放而忽略价值链的其他部分。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Exactly. And this is precisely where a <span class="vocab-highlight">KPI dashboard</span> becomes indispensable. Rather than scrambling for data every reporting cycle, a live dashboard gives you real-time visibility across all emission scopes, and it makes the annual reporting workflow dramatically smoother.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
+    <div class="dialogue-cn">正是如此。而这恰恰是KPI仪表盘变得不可或缺的原因。与其在每个报告周期手忙脚乱地搜集数据，一个实时仪表盘能让你对所有排放范围开启实时可见性，也使得年度报告工作流大大顺畅。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">A <span class="vocab-highlight">KPI dashboard</span> would certainly help — the CFO has been asking for more robust ESG metrics for months. Now, regarding the reporting framework: <span class="vocab-highlight">GRI standards</span> seem to be the industry benchmark, but several of our European clients are increasingly asking about CSRD compliance. How do we reconcile the two?</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
+    <div class="dialogue-cn">KPI仪表盘肯定会很有帮助——CFO已经连续好几个月在要求更健全的ESG指标了。现在关于报告框架：GRI标准似乎是行业基准，但我们几家欧洲客户越来越多地询问CSRD合规问题。我们该如何调和两者？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Smart thinking. <span class="vocab-highlight">GRI standards</span> are globally recognised and offer considerable flexibility. We can structure the core report around GRI while including a CSRD bridging appendix. That approach satisfies both your Asian supply chain partners and your European customer base. The critical factor is presenting data that's independently auditable — that's your strongest defence against any <span class="vocab-highlight">greenwashing</span> allegations.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
+    <div class="dialogue-cn">思路很好。GRI标准是全球公认的，且提供了相当程度的灵活性。我们可以围绕GRI构建核心报告，同时加入一个CSRD过渡性附录。这种方式能同时满足你们的亚洲供应链合作伙伴和欧洲客户群。最关键的是要呈现可独立审计的数据——这是抵御任何漂绿指控的最强防线。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That makes sense. What's your assessment on the timeline? The board wants something published by Q4, and I'm concerned that's cutting it close given where we are now.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
+    <div class="dialogue-cn">说得有道理。你对时间表怎么看？董事会希望在第四季度前发布，考虑到我们目前的进展，我担心时间很紧。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Q4 is ambitious but entirely achievable if we move decisively on the <span class="vocab-highlight">materiality assessment</span>. I'd propose: complete the <span class="vocab-highlight">stakeholder engagement</span> within four weeks, finalise your <span class="vocab-highlight">scope 3 emissions</span> data by mid-Q3, and have a draft report ready for <span class="vocab-highlight">board oversight</span> and review by early Q4. Final publication by November. Approached correctly, this ESG report could genuinely become a competitive advantage rather than a mere compliance exercise.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
+    <div class="dialogue-cn">第四季度是有挑战的，但如果我们果断推进实质性评估，这完全能够实现。我的建议是：四周内完成利益相关方参与，第三季度中期前确定范围三排放数据，第四季度初期将报告草稿提交董事监督和审查。十一月最终发布。如果处理得当，这份ESG报告完全可以成为真正的竞争优势，而不仅仅是合规任务。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's precisely the kind of strategic framing I need to sell this internally. Alright, let's move forward. I'll brief my team this afternoon on launching the <span class="vocab-highlight">materiality assessment</span> and formalising our <span class="vocab-highlight">stakeholder engagement</span> process. Can you send me a detailed project plan by tomorrow?</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
+    <div class="dialogue-cn">这正是我在内部推销这个项目所需要的战略表述。好，我们推进吧。我今天下午召集团队通报启动实质性评估和规范利益相关方参与流程的情况。你明天能发给我一份详细项目计划吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely. I'll have a comprehensive scope of work in your inbox by noon, covering the survey design, <span class="vocab-highlight">KPI dashboard</span> architecture, and a phased <span class="vocab-highlight">GRI standards</span> reporting roadmap. Nexus is in a genuinely strong position — you're not starting from zero. With the right framework and honest, transparent storytelling, you can produce a sustainability report that builds real stakeholder trust.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
+    <div class="dialogue-cn">当然。明天中午之前你会收到一份详细的工作范围文档，涵盖问卷设计、KPI仪表盘架构和分阶段的GRI报告路线图。Nexus目前处于一个相当有利的位置——你们并不是从零开始。有了正确的框架和诚实透明的叙事，你们完全可以出品一份能够建立真正利益相关方信任的可持续发展报告。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>greenwashing</strong> — 漂绿/绿色粉饰 | 企业在环保表现上的夸大或虚假宣传，BEC阅读和写作高频词</div>
+<div class="vocab-item"><strong>net-zero commitment</strong> — 净零排放承诺 | 企业承诺在一定时间范围内实现温室气体净零排放</div>
+<div class="vocab-item"><strong>carbon footprint</strong> — 碳足迹 | 企业活动产生的温室气体排放总量，ESG报告核心指标</div>
+<div class="vocab-item"><strong>materiality assessment</strong> — 实质性评估 | 识别和优先排序最关键ESG议题的评估流程</div>
+<div class="vocab-item"><strong>stakeholder engagement</strong> — 利益相关方参与 | 企业就ESG议题与投资者、员工、社区等群体的沟通互动</div>
+<div class="vocab-item"><strong>board oversight</strong> — 董事会监督 | 董事会对公司ESG战略和风险管理的监管职责</div>
+<div class="vocab-item"><strong>GRI standards</strong> — 全球报告倡议组织标准 | 全球最广泛采用的可持续发展报告框架</div>
+<div class="vocab-item"><strong>scope 3 emissions</strong> — 范围三排放 | 企业价值链上下游的间接温室气体排放（供应链、产品使用等）</div>
+<div class="vocab-item"><strong>KPI dashboard</strong> — 关键绩效指标仪表盘 | 实时追踪和可视化ESG绩效数据的数字化管理工具</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>I'm not entirely sure where to start.</code> → 我不太确定从何入手 | 用于坦诚地表达面对复杂任务时的困惑，比 "I don't know" 更商务化</div>
+<div class="pattern-item"><code>Let's break this down systematically.</code> → 让我们系统地把问题拆解开来 | 用于引导团队成员结构化分析复杂问题</div>
+<div class="pattern-item"><code>Without that, you're essentially reporting into a void.</code> → 没有这个，你的报告基本就是无的放矢 | 用于强调前置步骤的必要性和重要性</div>
+<div class="pattern-item"><code>That's precisely my concern — ...</code> → 这正是我担心的——…… | 回应对方观点并深入阐述自身担忧的经典商务表达</div>
+<div class="pattern-item"><code>Approached correctly, ... could become a competitive advantage rather than a mere compliance exercise.</code> → 处理得当的话，……可以成为竞争优势而不仅仅是合规任务 | 将被动任务转化为主动战略机遇的演讲句型</div>
+<div class="pattern-item"><code>The critical factor is presenting data that's independently auditable.</code> → 关键因素在于呈现可独立审计的数据 | 强调某项要素的决定性重要性</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Daniel，非常感谢你紧急赶来。董事会刚刚批准了我们的首个ESG报告项目，说实话，我不知道从哪里开始。作为一家中型制造企业，面对这个报告领域我感到相当无从下手。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这完全能理解，Olivia。大多数公司在首次信息披露前都有同样的感受。好消息是Nexus已经拥有扎实的运营数据。真正的挑战在于将这些数据构建成一个连贯的叙述，既符合GRI标准又能避免任何漂绿的嫌疑。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这正是我担心的——漂绿。过去三年我们在能源效率方面确实取得了实际进步，但我不想夸大这些成绩。董事会还在推动2040年前的净零承诺，而我并不确定以我们目前的碳足迹数据能否支撑这个承诺。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>让我们系统性地拆解这个问题。首先，我们需要一个扎实的实质性评估来识别对利益相关方最重要的ESG议题。没有这个评估，你基本上是在无的放矢地做报告。你们在投资者电话会之外做过任何正式的利益相关方参与吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>老实说，没有。我们一直在埋头于日常运营，利益相关方参与充其量是临时性的。直到这次股东决议案之前，董事会对ESG事务的监督一直微乎其微——最近的股东决议从根本上改变了这个局面。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>那么我们就从这里开始。我们会设计一份面向投资者、员工、核心客户和社区代表的结构化咨询问卷。与此同时，我们需要梳理你们范围三的排放数据——这通常是一家制造企业碳足迹的大头所在，也是数据采集最具挑战的部分。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>范围三排放将是一个大工程——我们的供应链横跨三大洲六个国家。但我理解其必要性：如果我们在做净零承诺，就不能只计算工厂排放而忽略价值链的其他部分。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>正是如此。而这恰恰是KPI仪表盘变得不可或缺的原因。与其在每个报告周期手忙脚乱地搜集数据，一个实时仪表盘能让你对所有排放范围开启实时可见性，也使得年度报告工作流大大顺畅。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>KPI仪表盘肯定会很有帮助——CFO已经连续好几个月在要求更健全的ESG指标了。现在关于报告框架：GRI标准似乎是行业基准，但我们几家欧洲客户越来越多地询问CSRD合规问题。我们该如何调和两者？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>思路很好。GRI标准是全球公认的，且提供了相当程度的灵活性。我们可以围绕GRI构建核心报告，同时加入一个CSRD过渡性附录。这种方式能同时满足你们的亚洲供应链合作伙伴和欧洲客户群。最关键的是要呈现可独立审计的数据——这是抵御任何漂绿指控的最强防线。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>说得有道理。你对时间表怎么看？董事会希望在第四季度前发布，考虑到我们目前的进展，我担心时间很紧。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>第四季度是有挑战的，但如果我们果断推进实质性评估，这完全能够实现。我的建议是：四周内完成利益相关方参与，第三季度中期前确定范围三排放数据，第四季度初期将报告草稿提交董事监督和审查。十一月最终发布。如果处理得当，这份ESG报告完全可以成为真正的竞争优势，而不仅仅是合规任务。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这正是我在内部推销这个项目所需要的战略表述。好，我们推进吧。我今天下午召集团队通报启动实质性评估和规范利益相关方参与流程的情况。你明天能发给我一份详细项目计划吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>当然。明天中午之前你会收到一份详细的工作范围文档，涵盖问卷设计、KPI仪表盘架构和分阶段的GRI报告路线图。Nexus目前处于一个相当有利的位置——你们并不是从零开始。有了正确的框架和诚实透明的叙事，你们完全可以出品一份能够建立真正利益相关方信任的可持续发展报告。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>ESG（Environmental, Social, Governance）可持续发展报告是BEC中级听力和阅读中的新兴高频主题。备考时需要重点掌握：(1) 三大支柱类词汇——环保（carbon footprint, scope 3 emissions, net-zero）vs 社会（stakeholder engagement, supply chain ethics）vs 治理（board oversight, transparency）；(2) 报告框架名称——GRI、SASB、CSRD、TCFD，考试中经常作为听力关键词出现；(3) 风险类表达——greenwashing是近年BEC重点考核概念，考试中往往配合"reputation risk"和"regulatory scrutiny"等搭配出现。建议结合真实企业的ESG报告（如Unilever, Nestlé等）进行泛读，熟悉语气和句式结构。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+// 语音试听功能
+function speak(btn) {
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+    document.querySelectorAll('.listen-btn').forEach(function(b) { b.classList.remove('playing'); });
+    return;
+  }
+  var row = btn.closest('.dialogue-row');
+  var textEl = row.querySelector('.dialogue-text');
+  var text = textEl.textContent.replace(/\s+/g, ' ').trim();
+  var utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'en-US';
+  utterance.rate = 0.9;
+  utterance.pitch = 1;
+  btn.classList.add('playing');
+  utterance.onend = function() {
+    btn.classList.remove('playing');
+  };
+  utterance.onerror = function() {
+    btn.classList.remove('playing');
+  };
+  window.speechSynthesis.speak(utterance);
+}
+</script>
+
+</body>
+</html>
