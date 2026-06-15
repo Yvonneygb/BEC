@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>国际贸易融资与信用证 Trade Finance & L/C - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+/* 标题行：icon + 文字 + 右侧操作 */
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+/* 中文切换按钮 */
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+/* 词汇高亮 */
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>国际贸易融资与信用证 Trade Finance &amp; L/C</h1>
+<div class="date">&#x1F4C5; 2026年6月16日 · 星期二</div>
+
+<div class="roles">
+  <strong>A (Linda Zheng)</strong> — Export Manager, Sunrise Textiles Co. Ltd., Suzhou<br>
+  <strong>B (David Holt)</strong> — Import Director, Prestige Home Furnishings, London
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">David, we've received your purchase order for the autumn collection. Before we proceed with production, I'd like to clarify the payment method — your proposal of T/T 30 days after shipment is a departure from our standard terms for new accounts.</span></div>
+    <div class="dialogue-cn">David，我们已收到贵方秋季系列的采购订单。在排产之前，我想先明确付款方式——您提出的装运后30天电汇与我们针对新客户的标准条款有出入。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I understand your caution, Linda. However, a direct transfer on open account gives us breathing room to inspect the <span class="vocab-highlight">consignment</span> before full payment. We've been in business for 18 years — our credit standing speaks for itself.</span></div>
+    <div class="dialogue-cn">我理解你的谨慎，Linda。不过赊账直接转账可以让我们在付全款前有时间验货。我们公司经营18年了——资信状况不言自明。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That may be the case, but this order totals £215,000 — it's a substantial exposure. Our finance team insists on an <span class="vocab-highlight">irrevocable letter of credit</span> <span class="vocab-highlight">at sight</span> for any first-time transaction exceeding £100,000. It's simply our risk protocol.</span></div>
+    <div class="dialogue-cn">这或许是事实，但这笔订单总额达215,000英镑——风险敞口很大。我司财务部门坚持，任何超过10万英镑的首次交易都必须采用即期不可撤销信用证。这只是我们的风控流程。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">An L/C at sight would tie up our <span class="vocab-highlight">working capital</span> during peak season, not to mention the bank charges. What if we meet halfway — a confirmed, irrevocable L/C payable at 60 days from the <span class="vocab-highlight">bill of lading</span> date? That gives us a grace period to turn inventory before funds are drawn.</span></div>
+    <div class="dialogue-cn">即期信用证会占用我们的旺季营运资金，更不用说银行手续费了。要不我们折中一下——保兑的、不可撤销的信用证，提单日期后60天付款？这样我们在货款划出之前，有缓冲期来周转库存。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a reasonable compromise on the <span class="vocab-highlight">tenor</span>. But I should flag that any <span class="vocab-highlight">discrepancy</span> in the shipping documents — even a minor typo — could delay the release of funds. I'd strongly recommend you work closely with your freight forwarder to align the B/L details with the L/C terms.</span></div>
+    <div class="dialogue-cn">从付款期限角度看，这是个合理的折中。不过我需要提醒一下——装运单据上任何不符点，哪怕是一个小笔误，都可能导致放款延迟。我强烈建议贵方与货代密切配合，确保提单细节与信用证条款一致。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Point taken. Our logistics team has a solid track record with documentary compliance. Let me just confirm the process: we instruct our <span class="vocab-highlight">issuing bank</span> — Barclays in London — to open the L/C. Your <span class="vocab-highlight">advising bank</span> would be Bank of China, Suzhou branch, correct?</span></div>
+    <div class="dialogue-cn">说得对。我们物流团队在单证合规方面有扎实的记录。我再确认一下流程：我们指示开证行——伦敦巴克莱银行——开立信用证，贵方的通知行是中国银行苏州分行，对吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Exactly. Once the L/C is received and verified, we'll begin production. The validity period should extend to 45 days after shipment to allow ample time for document preparation. I'll email you the draft terms this afternoon for pre-approval.</span></div>
+    <div class="dialogue-cn">没错。收到信用证并核验后，我们立即排产。信用证有效期应延至装运后45天，留足单证准备时间。我今天下午把草拟的条款发给你预审。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Please do. I'd also like to add an inspection clause — SGS or Bureau Veritas to conduct a pre-shipment inspection at your facility. We've had quality consistency issues with another supplier recently, so we're being extra cautious.</span></div>
+    <div class="dialogue-cn">请发过来。我还想加一条检验条款——由SGS或必维国际在贵方工厂进行装船前检验。我们最近从另一家供应商那里遇到了质量一致性问题，所以更谨慎了一些。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Fair enough — we're no strangers to third-party inspection. SGS has an office 20 minutes from our plant. I'll factor the inspection lead time into the production schedule. Shall we aim for a partial shipment clause as well? It would let us ship as each batch is ready instead of holding everything for one vessel.</span></div>
+    <div class="dialogue-cn">没问题——我们对第三方检验并不陌生。SGS在我们工厂20分钟车程就有一间办事处。我会在排产计划中纳入检验前置时间。是否也加入分批装运条款？这样每批次完工就可直接发运，不必等整单集齐一船走。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Partial shipments permitted — that works brilliantly for our warehouse planning. I'll have our legal team draft the L/C application based on these parameters. Linda, I appreciate the collaborative approach — this sets a good precedent for future orders.</span></div>
+    <div class="dialogue-cn">允许分批装运——这对我们的仓储规划太合适了。我马上让法务团队根据这些参数起草信用证申请书。Linda，感谢你的合作态度——这为未来的订单开了个好头。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Likewise, David. A well-structured L/C protects both sides. I'll watch for the <span class="vocab-highlight">SWIFT</span> message and confirm receipt within 24 hours. Here's to the first of many shipments.</span></div>
+    <div class="dialogue-cn">彼此彼此，David。结构完善的信用证能保护双方。我会留意SWIFT报文并在24小时内确认收悉。祝我们合作源源不断。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>irrevocable letter of credit (L/C)</strong> — 不可撤销信用证 | 国际贸易核心支付工具，一经开出未经各方同意不得单方面修改或撤销</div>
+<div class="vocab-item"><strong>at sight</strong> — 即期（付款） | 指银行在收到符合信用证条款的单据后立即付款，BEC阅读高频金融术语</div>
+<div class="vocab-item"><strong>issuing bank</strong> — 开证行 | 应买方（进口商）申请开出信用证的银行</div>
+<div class="vocab-item"><strong>advising bank</strong> — 通知行 | 卖方（出口商）所在地的通知信用证的银行，通常也是付款行</div>
+<div class="vocab-item"><strong>bill of lading (B/L)</strong> — 提单 | 承运人签发的货物收据和运输合同凭证，信用证项下最重要的单据之一</div>
+<div class="vocab-item"><strong>discrepancy</strong> — 不符点 | 单据与信用证条款之间的任何不一致，可能导致银行拒绝付款——BEC考试听力和阅读中反复出现的词汇</div>
+<div class="vocab-item"><strong>consignment</strong> — 货物/托付货物 | 国际贸易中指一批发出的货物，也指代销模式</div>
+<div class="vocab-item"><strong>tenor</strong> — 票据期限/付款期限 | 指L/C或汇票的付款时间安排，如at sight（即期）或60 days（60天远期）</div>
+<div class="vocab-item"><strong>working capital</strong> — 营运资金 | 企业日常运营所需的流动资金，信用证谈判的重要考量因素</div>
+<div class="vocab-item"><strong>SWIFT</strong> — 环球银行金融电信协会 | 国际银行间传递信用证的标准网络系统</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>Before we proceed with..., I'd like to clarify...</code> &#x2192; 在我们继续……之前，我想先澄清…… | 商务谈判开场的专业句式，用于在推进前明确关键条件</div>
+<div class="pattern-item"><code>Your proposal of... is a departure from our standard terms.</code> &#x2192; 您提议的……与我们标准条款有出入 | 委婉表达对方方案不可接受的商务话术</div>
+<div class="pattern-item"><code>What if we meet halfway — ...</code> &#x2192; 我们能不能各让一步——…… | 提出折中方案的经典谈判句式</div>
+<div class="pattern-item"><code>I should flag that...</code> &#x2192; 我需要提醒/标注一下…… | 引出潜在风险或问题的专业表达，比 "I should mention" 更正式</div>
+<div class="pattern-item"><code>Point taken.</code> &#x2192; 理解/收到 | 简洁有力的商务确认用语，表示认同对方观点但不一定完全同意</div>
+<div class="pattern-item"><code>That works brilliantly for...</code> &#x2192; 这对……来说完美可行 | 英式商务英语中对提案表示高度认可的优雅表达</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>David，我们已收到贵方秋季系列的采购订单。在排产之前，我想先明确付款方式——您提出的装运后30天电汇与我们针对新客户的标准条款有出入。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我理解你的谨慎，Linda。不过赊账直接转账可以让我们在付全款前有时间验货。我们公司经营18年了——资信状况不言自明。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这或许是事实，但这笔订单总额达215,000英镑——风险敞口很大。我司财务部门坚持，任何超过10万英镑的首次交易都必须采用即期不可撤销信用证。这只是我们的风控流程。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>即期信用证会占用我们的旺季营运资金，更不用说银行手续费了。要不我们折中一下——保兑的、不可撤销的信用证，提单日期后60天付款？这样我们在货款划出之前，有缓冲期来周转库存。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>从付款期限角度看，这是个合理的折中。不过我需要提醒一下——装运单据上任何不符点，哪怕是一个小笔误，都可能导致放款延迟。我强烈建议贵方与货代密切配合，确保提单细节与信用证条款一致。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>说得对。我们物流团队在单证合规方面有扎实的记录。我再确认一下流程：我们指示开证行——伦敦巴克莱银行——开立信用证，贵方的通知行是中国银行苏州分行，对吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>没错。收到信用证并核验后，我们立即排产。信用证有效期应延至装运后45天，留足单证准备时间。我今天下午把草拟的条款发给你预审。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>请发过来。我还想加一条检验条款——由SGS或必维国际在贵方工厂进行装船前检验。我们最近从另一家供应商那里遇到了质量一致性问题，所以更谨慎了一些。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>没问题——我们对第三方检验并不陌生。SGS在我们工厂20分钟车程就有一间办事处。我会在排产计划中纳入检验前置时间。是否也加入分批装运条款？这样每批次完工就可直接发运，不必等整单集齐一船走。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>允许分批装运——这对我们的仓储规划太合适了。我马上让法务团队根据这些参数起草信用证申请书。Linda，感谢你的合作态度——这为未来的订单开了个好头。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>彼此彼此，David。结构完善的信用证能保护双方。我会留意SWIFT报文并在24小时内确认收悉。祝我们合作源源不断。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>国际贸易支付方式是BEC中级考试阅读Part 4（完形填空）和听力Part 2（信息匹配）的高频主题。信用证相关术语（irrevocable, at sight, discrepancy, bill of lading等）必须做到看到英文立即反应出中文含义。建议制作一套术语闪卡，重点区分：① L/C vs T/T vs D/P 三种支付方式的风险差异；② at sight vs deferred payment 的付款时间差异；③ issuing bank vs advising bank vs confirming bank 的角色差异。同时，注意口语Part 3中可能出现的"negotiating payment terms"场景——掌握让步表达（meet halfway, reasonable compromise）和风险提示表达（I should flag that）会让你在考试中更加游刃有余。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>
