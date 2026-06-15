@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>并购尽职调查 M&A Due Diligence - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+/* 标题行：icon + 文字 + 右侧操作 */
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+/* 中文切换按钮 */
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+/* 词汇高亮 */
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>并购尽职调查 M&A Due Diligence</h1>
+<div class="date">📅 2026年6月15日 · 星期一</div>
+
+<div class="roles">
+  <strong>A (David Chen)</strong> — CFO, Apex Biotech<br>
+  <strong>B (Emma Richardson)</strong> — M&A Advisor, Stratford Capital
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Emma, we've narrowed down our shortlist to two targets. Before we proceed any further, I'd like to align on the scope of the <span class="vocab-highlight">due diligence</span> exercise — particularly around financial and legal exposure.</span></div>
+    <div class="dialogue-cn">Emma，我们已将目标公司名单缩短到两家。在进一步推进之前，我想先就<span class="vocab-highlight">尽职调查</span>的范围达成共识——尤其关注财务和法律风险敞口。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely, David. Given the deal size — roughly £85 million — I'd recommend a full-scope <span class="vocab-highlight">due diligence</span> covering financial, legal, operational, and IT. The last thing we want is a post-acquisition surprise buried in their <span class="vocab-highlight">contingent liabilities</span>.</span></div>
+    <div class="dialogue-cn">完全同意，David。考虑到交易规模——约8500万英镑——我建议进行涵盖财务、法律、运营和IT的全面<span class="vocab-highlight">尽职调查</span>。我们最不想看到的就是收购完成后发现有隐藏的<span class="vocab-highlight">或有负债</span>。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. Our external auditors have flagged that Target A has a complex capital structure with multiple classes of preference shares and outstanding <span class="vocab-highlight">convertible notes</span>. Have you had a chance to review their filings?</span></div>
+    <div class="dialogue-cn">同意。我们的外部审计师已指出目标公司A具有复杂的资本结构，涉及多类优先股和未偿<span class="vocab-highlight">可转换票据</span>。你看过他们的备案文件了吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I have. The <span class="vocab-highlight">convertible notes</span> mature in 14 months and could dilute existing shareholders by roughly 12% if triggered. That's a <span class="vocab-highlight">material risk</span> that needs to be factored into the valuation model. We should also scrutinise their <span class="vocab-highlight">related-party transactions</span> — there's a consulting agreement with a firm owned by the founder's brother-in-law that looks questionable.</span></div>
+    <div class="dialogue-cn">看过了。<span class="vocab-highlight">可转换票据</span>将在14个月后到期，如果触发转股，现有股东的股份可能被稀释约12%。这是一个需要计入估值模型的<span class="vocab-highlight">重大风险</span>。我们还应仔细审查他们的<span class="vocab-highlight">关联方交易</span>——有一份与创始人姐夫/妹夫拥有的公司签订的咨询协议，看起来很可疑。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's precisely the kind of <span class="vocab-highlight">red flag</span> I was worried about. On the operational side, we'll need to verify their intellectual property portfolio — patents, trademarks, and in-licensing agreements. Biotech is all about the IP pipeline.</span></div>
+    <div class="dialogue-cn">这正是我担心的<span class="vocab-highlight">警示信号</span>。在运营方面，我们需要核实他们的知识产权组合——专利、商标和授权引进协议。生物科技行业，核心竞争力全在IP管线。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Precisely. We've engaged a patent attorney to conduct a <span class="vocab-highlight">freedom-to-operate</span> analysis and check for any pending litigation. Separately, we should run an environmental compliance audit on their manufacturing facility in Cork — there's a legacy contamination issue from the previous site owner.</span></div>
+    <div class="dialogue-cn">没错。我们已委托一位专利律师进行<span class="vocab-highlight">自由实施分析</span>，并核查是否存在未决诉讼。另外，我们还应对他们位于科克市的生产设施进行环境合规审计——该场地存在前业主遗留的污染问题。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Good catch. Let's also bring in an independent firm to assess their IT infrastructure and cybersecurity posture. I don't want to inherit a <span class="vocab-highlight">data</span> breach six months post-acquisition.</span></div>
+    <div class="dialogue-cn">发现得好。再请一家独立公司评估他们的IT基础设施和网络安全态势。我可不想收购六个月后还继承一起<span class="vocab-highlight">数据</span>泄露事件。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's prudent. I'll circulate a request for proposal to three cybersecurity firms by end of day. One more thing — we need to review their employee contracts and pension obligations. In Ireland, <span class="vocab-highlight">defined-benefit</span> pension liabilities can be substantial and often don't show up clearly on the balance sheet.</span></div>
+    <div class="dialogue-cn">这是明智的做法。我今晚之前会向三家网络安全公司发出招标邀请。还有一件事——我们需要审查他们的员工合同和养老金义务。在爱尔兰，<span class="vocab-highlight">固定收益</span>型养老金负债可能相当大，而且通常不会在资产负债表上明确体现。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Point taken. Let's set up a <span class="vocab-highlight">data room</span> with tiered access — financials for us and the auditors, legal documents for the law firm, and operational data for the consultancy team. I want tight version control and a full audit trail.</span></div>
+    <div class="dialogue-cn">说得对。我们建立一个分层权限的<span class="vocab-highlight">数据室</span>——财务报表供我们和审计师查看，法律文件供律所查看，运营数据供咨询团队查看。我需要严格的版本控制和完整的审计追踪。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'll coordinate with the virtual <span class="vocab-highlight">data room</span> provider this afternoon. We'll use Q&A logs to track all information requests and responses — that discipline pays dividends if anything goes sideways later.</span></div>
+    <div class="dialogue-cn">我今天下午和虚拟<span class="vocab-highlight">数据室</span>供应商协调。我们将使用问答日志追踪所有信息请求和回复——这种规范的做法以后万一出了岔子会非常有价值。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Sounds like a plan. Let's reconvene on Friday to review the preliminary findings and decide whether we issue a <span class="vocab-highlight">letter of intent</span> or walk away.</span></div>
+    <div class="dialogue-cn">听起来是个好方案。我们周五再碰头，审阅初步调查结果，然后决定是发出<span class="vocab-highlight">意向书</span>还是放弃交易。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'll have the initial diligence report on your desk by Thursday evening. Fingers crossed there are no skeletons in the closet.</span></div>
+    <div class="dialogue-cn">我会在周四晚上前将初步尽职调查报告放在你的桌上。希望他们没有藏着什么见不得人的秘密。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>due diligence</strong> — 尽职调查 | 收购或投资前对目标公司的全面审查</div>
+<div class="vocab-item"><strong>contingent liabilities</strong> — 或有负债 | 潜在的、取决于未来事件是否发生的债务</div>
+<div class="vocab-item"><strong>convertible notes</strong> — 可转换票据 | 可在特定条件下转为股权的债务工具</div>
+<div class="vocab-item"><strong>material risk</strong> — 重大风险 | 可能显著影响决策或估值的关键风险因素</div>
+<div class="vocab-item"><strong>related-party transactions</strong> — 关联方交易 | 与企业关联方进行的交易，需重点审查</div>
+<div class="vocab-item"><strong>freedom-to-operate</strong> — 自由实施分析 | 专利法中确认产品不侵犯他人专利权的分析</div>
+<div class="vocab-item"><strong>data room</strong> — 数据室 | 并购中存放敏感文件的虚拟/实体空间</div>
+<div class="vocab-item"><strong>letter of intent</strong> — 意向书 | 正式收购前的初步书面承诺</div>
+<div class="vocab-item"><strong>defined-benefit</strong> — 固定收益（养老金） | 按约定公式支付，与投资回报无关的养老金计划</div>
+<div class="vocab-item"><strong>red flag</strong> — 警示信号 | 审计或调查中发现的潜在问题迹象</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>Before we proceed any further, I'd like to align on...</code> → 在进一步推进之前，我想先就……达成共识 | 项目启动或关键节点前的常用前置语句</div>
+<div class="pattern-item"><code>That's a material risk that needs to be factored into...</code> → 这是一个需要纳入……考虑的重大风险 | 风控讨论中引出需量化的关键风险</div>
+<div class="pattern-item"><code>We've engaged...to conduct...</code> → 我们已委托……进行…… | 专业服务的正式委托表达</div>
+<div class="pattern-item"><code>I'll circulate a request for proposal to...</code> → 我将向……发出招标邀请 | 商务流程中启动供应商遴选的表达</div>
+<div class="pattern-item"><code>That discipline pays dividends if...</code> → 这种规范的做法在……时会有回报 | 强调流程严谨性的价值</div>
+<div class="pattern-item"><code>Let's reconvene on...to review...and decide whether...</code> → 我们……再碰头，审阅……并决定是否…… | 设定后续决策节点的标准商务句型</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Emma，我们已将目标公司名单缩短到两家。在进一步推进之前，我想先就尽职调查的范围达成共识——尤其关注财务和法律风险敞口。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>完全同意，David。考虑到交易规模——约8500万英镑——我建议进行涵盖财务、法律、运营和IT的全面尽职调查。我们最不想看到的就是收购完成后发现有隐藏的或有负债。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>同意。我们的外部审计师已指出目标公司A具有复杂的资本结构，涉及多类优先股和未偿可转换票据。你看过他们的备案文件了吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>看过了。可转换票据将在14个月后到期，如果触发转股，现有股东的股份可能被稀释约12%。这是一个需要计入估值模型的重大风险。我们还应仔细审查他们的关联方交易——有一份与创始人姐夫/妹夫拥有的公司签订的咨询协议，看起来很可疑。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这正是我担心的问题信号。在运营方面，我们需要核实他们的知识产权组合——专利、商标和授权引进协议。生物科技行业，核心竞争力全在IP管线。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>没错。我们已委托一位专利律师进行自由实施分析，并核查是否存在未决诉讼。另外，我们还应对他们位于科克市的生产设施进行环境合规审计——该场地存在前业主遗留的污染问题。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>发现得好。再请一家独立公司评估他们的IT基础设施和网络安全态势。我可不想收购六个月后还继承一起数据泄露事件。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是明智的做法。我今晚之前会向三家网络安全公司发出招标邀请。还有一件事——我们需要审查他们的员工合同和养老金义务。在爱尔兰，固定收益型养老金负债可能相当大，而且通常不会在资产负债表上明确体现。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>说得对。我们建立一个分层权限的数据室——财务报表供我们和审计师查看，法律文件供律所查看，运营数据供咨询团队查看。我需要严格的版本控制和完整的审计追踪。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我今天下午和虚拟数据室供应商协调。我们将使用问答日志追踪所有信息请求和回复——这种规范的做法以后万一出了岔子会非常有价值。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>听起来是个好方案。我们周五再碰头，审阅初步调查结果，然后决定是发出意向书还是放弃交易。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我会在周四晚上前将初步尽职调查报告放在你的桌上。希望他们没有藏着什么见不得人的秘密。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>尽职调查（Due Diligence）是 BEC 考试中 Part 3 听力和 Part 3 口语的高频场景，尤其在涉及并购、投资和战略合作的题目中。建议重点掌握三类表达：(1) 风险识别用语，如 red flag（警示信号）、material risk（重大风险）、contingent liabilities（或有负债）；(2) 流程推进用语，如 align on（达成共识）、reconvene（再碰头）、letter of intent（意向书）；(3) 专业服务机构委托用语，如 engage（委托）、conduct（进行）、scrutinise（仔细审查）。复习时建议关注数字和百分比的听力辨识，这在考试中尤为关键。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>
