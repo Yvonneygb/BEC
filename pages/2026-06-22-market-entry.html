@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>市场进入 Market Entry - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>市场进入 Market Entry</h1>
+<div class="date">&#x1f4c5; 2026年6月22日 · 星期一</div>
+
+<div class="roles">
+  <strong>A (Sophie Laurent)</strong> — VP of International Expansion, Bloom Cosmetics<br>
+  <strong>B (Kenji Tanaka)</strong> — Market Research Director, Asia Pacific Partners
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Kenji, we've been circling the Japanese market for over a year now, and I think it's time to commit. The board has greenlit an initial investment of €2.5 million for Asia-Pacific expansion, with Japan as the <span class="vocab-highlight">beachhead market</span>. I'd like your assessment on the optimal entry mode.</span></div>
+    <div class="dialogue-cn">Kenji，我们在日本市场周围已经徘徊了一年多，我想是时候下决心了。董事会已经批准了250万欧元的首期投资用于亚太扩张，日本作为滩头阵地市场。我想听听你对最佳进入模式的评估。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a solid budget for a first move, Sophie. Based on our six-month <span class="vocab-highlight">feasibility study</span>, I'd recommend a <span class="vocab-highlight">joint venture</span> over a <span class="vocab-highlight">wholly-owned subsidiary</span> — at least for the first two to three years. The <span class="vocab-highlight">regulatory landscape</span> for cosmetics is complex, and local distribution networks are tightly controlled by established keiretsu relationships.</span></div>
+    <div class="dialogue-cn">对于第一步行之有效来说，这个预算相当充裕，Sophie。基于我们为期六个月的可行性研究，我建议在最初两到三年内采用合资企业模式而非全资子公司。化妆品行业的监管环境很复杂，而且本地分销网络被既有的企业联盟关系牢牢掌控。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">A joint venture makes strategic sense, but partner selection is everything. Have you identified any candidates? We need someone with strong retail relationships — particularly with department store chains like Isetan and Takashimaya, which are critical for the premium positioning we're targeting.</span></div>
+    <div class="dialogue-cn">合资企业在战略上是合理的，但合作伙伴的选择至关重要。有没有锁定候选对象？我们需要一个拥有强大零售关系的伙伴——特别是与伊势丹和高岛屋这样的百货连锁店，它们对我们瞄准的高端定位至关重要。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We've narrowed it down to two candidates. The first is Sakura Trading — they're a mid-sized distributor with deep connections in the Kansai region and a proven track record of launching European beauty brands. The second is Meiji Cosmetics Group, which is larger and has nationwide coverage, but they also carry competing brands, which creates potential <span class="vocab-highlight">channel conflict</span>.</span></div>
+    <div class="dialogue-cn">我们已筛选到两家候选。第一家是Sakura Trading——一家中型分销商，在关西地区有深厚的人脉，并有成功引进欧洲美容品牌的良好记录。第二家是Meiji化妆品集团，规模更大、拥有全国覆盖网络，但他们同时也经营竞争品牌，这会产生潜在的渠道冲突。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Channel conflict is a deal-breaker for me. I'd rather start with a focused regional launch and scale up than dilute our brand from day one. What's your read on Sakura Trading's financial health and cultural fit?</span></div>
+    <div class="dialogue-cn">渠道冲突对我来说是致命障碍。我宁可从一个聚焦的区域性启动开始，逐步扩张，也不想从第一天就稀释品牌。你怎么看Sakura Trading的财务健康度和文化契合度？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Their financials are clean — EBITDA margins of 14% and zero debt. Culturally, they've been actively seeking a Western prestige brand to diversify their portfolio away from mass-market products. The managing director, Mr. Yamada, spent eight years at L'Oréal in Paris, so he understands both our brand ethos and the operational challenges.</span></div>
+    <div class="dialogue-cn">他们的财务状况很干净——EBITDA利润率14%，零负债。文化上，他们一直在积极寻找一个西方高端品牌来多元化其目前集中于大众市场的业务组合。他们的董事总经理Yamada先生曾在巴黎欧莱雅工作了八年，所以他既理解我们的品牌理念，也了解运营方面的挑战。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's encouraging. What about the regulatory hurdles? I recall Japan has a notoriously rigorous approval process for imported cosmetics — the Pharmaceutical and Medical Device Act requires extensive ingredient documentation.</span></div>
+    <div class="dialogue-cn">这令人鼓舞。监管障碍呢？我记得日本对进口化妆品的审批流程是出了名的严格——《药机法》要求提供详尽的产品成分文件。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Correct. PMDA approval typically takes four to six months, but Sakura Trading has an in-house regulatory affairs team that handles the entire submission process. They've successfully navigated approvals for three French skincare brands in the last two years. I'd put the regulatory timeline at five months with their support.</span></div>
+    <div class="dialogue-cn">没错。PMDA审批通常需要四到六个月，但Sakura Trading内部设有法规事务团队，可以处理整个申报流程。过去两年，他们已成功为三个法国护肤品牌完成了审批。有他们的支持，我估计监管时间线大约在五个月。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Let's move forward with Sakura Trading as our preferred partner. I'd like you to arrange an exploratory meeting — perhaps a video call first, then a visit to Osaka in early July if the chemistry is right. Before that, I need a detailed partnership structure proposal: <span class="vocab-highlight">equity split</span>, governance rights, and an exit mechanism.</span></div>
+    <div class="dialogue-cn">那我们就将Sakura Trading定为优先合作伙伴。我需要你安排一次试探性会议——也许先进行一次视频通话，如果双方默契合适，七月初再去大阪实地考察。在此之前，我需要一份详细的合作结构方案：股权分配、治理权和退出机制。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'll draft a term sheet covering the key parameters — 51/49 equity split in our favour, a board with two seats for Bloom and two for Sakura, with a tie-breaking vote for us on strategic decisions. For the exit mechanism, a standard buy-sell provision with a <span class="vocab-highlight">right of first refusal</span> on share transfers.</span></div>
+    <div class="dialogue-cn">我会起草一份条款清单，涵盖关键参数——对我们有利的51/49股权分配，董事会设两席归Bloom、两席归Sakura，战略决策上我们有打破平局的一票。退出机制采用标准的买卖条款，并附股份转让的优先购买权。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's the right framework. And one more piece — I want a phased market entry: start with Osaka and Kyoto for the first twelve months, prove the model, then roll out to Tokyo in year two. No point boiling the ocean.</span></div>
+    <div class="dialogue-cn">这个框架没问题。还有一点——我想要分阶段的市场进入：前十二个月先从大阪和京都起步，验证模式后，第二年再铺到东京。没必要一步登天。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Completely agree. Phased entry de-risks the investment and lets us refine the pricing and positioning based on real market feedback. I'll have the full proposal on your desk by end of week.</span></div>
+    <div class="dialogue-cn">完全同意。分阶段进入可以降低投资风险，同时让我们根据真实市场反馈调整定价和定位。整套方案周末前放你桌上。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Excellent. Let's move fast — if we can finalise the JV agreement by September, we can target a <span class="vocab-highlight">soft launch</span> in Osaka for spring 2027, which aligns with the peak cosmetics buying season.</span></div>
+    <div class="dialogue-cn">很好。让我们加快节奏——如果九月份能敲定合资协议，我们就能争取在2027年春季在大阪进行软启动，正好赶上化妆品的销售旺季。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>beachhead market</strong> — 滩头阵地市场 | 进入新区域的第一个目标市场，用于建立立足点</div>
+<div class="vocab-item"><strong>joint venture (JV)</strong> — 合资企业 | 两家或以上公司共同出资建立的独立经营实体</div>
+<div class="vocab-item"><strong>wholly-owned subsidiary</strong> — 全资子公司 | 由母公司100%控股的海外经营实体</div>
+<div class="vocab-item"><strong>feasibility study</strong> — 可行性研究 | 对市场进入方案的全面分析和风险评估</div>
+<div class="vocab-item"><strong>channel conflict</strong> — 渠道冲突 | 同一市场内不同销售渠道或合作伙伴之间的利益冲突</div>
+<div class="vocab-item"><strong>due diligence</strong> — 尽职调查 | 对潜在合作伙伴的财务状况和商业信誉的全面审查</div>
+<div class="vocab-item"><strong>regulatory landscape</strong> — 监管环境 | 目标市场的法律法规框架</div>
+<div class="vocab-item"><strong>equity split</strong> — 股权分配 | 合资企业中各方的持股比例</div>
+<div class="vocab-item"><strong>right of first refusal</strong> — 优先购买权 | 股东出售股份时，现有股东享有的优先购买权利</div>
+<div class="vocab-item"><strong>soft launch</strong> — 软启动 | 小范围试运营，在全面推广前测试市场反应</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>We've been circling... for over a year, and I think it's time to commit.</code> → 我们在……周围徘徊了一年多，我想是时候下决心了 | 推动重大决策时的有力开场</div>
+<div class="pattern-item"><code>X is a deal-breaker for me.</code> → X对我来说是致命障碍 | 谈判中明确表达不可妥协条件的强硬句式</div>
+<div class="pattern-item"><code>What's your read on...?</code> → 你怎么看……？ | 向对方征询对某人或某事的专业判断</div>
+<div class="pattern-item"><code>No point boiling the ocean.</code> → 没必要一步登天/贪大求全 | 商业中建议采取渐进策略的生动表达</div>
+<div class="pattern-item"><code>I'd put the timeline at...</code> → 我估计时间线大约在…… | 给出基于分析的预估时间的专业表达</div>
+<div class="pattern-item"><code>If the chemistry is right...</code> → 如果双方气场/默契合适的话…… | 评估合作关系的委婉说法</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Kenji，我们在日本市场周围已经徘徊了一年多，我想是时候下决心了。董事会已经批准了250万欧元的首期投资用于亚太扩张，日本作为滩头阵地市场。我想听听你对最佳进入模式的评估。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>对于第一步行之有效来说，这个预算相当充裕，Sophie。基于我们为期六个月的可行性研究，我建议在最初两到三年内采用合资企业模式而非全资子公司。化妆品行业的监管环境很复杂，而且本地分销网络被既有的企业联盟关系牢牢掌控。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>合资企业在战略上是合理的，但合作伙伴的选择至关重要。有没有锁定候选对象？我们需要一个拥有强大零售关系的伙伴——特别是与伊势丹和高岛屋这样的百货连锁店，它们对我们瞄准的高端定位至关重要。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我们已筛选到两家候选。第一家是Sakura Trading——一家中型分销商，在关西地区有深厚的人脉，并有成功引进欧洲美容品牌的良好记录。第二家是Meiji化妆品集团，规模更大、拥有全国覆盖网络，但他们同时也经营竞争品牌，这会产生潜在的渠道冲突。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>渠道冲突对我来说是致命障碍。我宁可从一个聚焦的区域性启动开始，逐步扩张，也不想从第一天就稀释品牌。你怎么看Sakura Trading的财务健康度和文化契合度？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>他们的财务状况很干净——EBITDA利润率14%，零负债。文化上，他们一直在积极寻找一个西方高端品牌来多元化其目前集中于大众市场的业务组合。他们的董事总经理Yamada先生曾在巴黎欧莱雅工作了八年，所以他既理解我们的品牌理念，也了解运营方面的挑战。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这令人鼓舞。监管障碍呢？我记得日本对进口化妆品的审批流程是出了名的严格——《药机法》要求提供详尽的产品成分文件。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>没错。PMDA审批通常需要四到六个月，但Sakura Trading内部设有法规事务团队，可以处理整个申报流程。过去两年，他们已成功为三个法国护肤品牌完成了审批。有他们的支持，我估计监管时间线大约在五个月。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>那我们就将Sakura Trading定为优先合作伙伴。我需要你安排一次试探性会议——也许先进行一次视频通话，如果双方默契合适，七月初再去大阪实地考察。在此之前，我需要一份详细的合作结构方案：股权分配、治理权和退出机制。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我会起草一份条款清单，涵盖关键参数——对我们有利的51/49股权分配，董事会设两席归Bloom、两席归Sakura，战略决策上我们有打破平局的一票。退出机制采用标准的买卖条款，并附股份转让的优先购买权。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这个框架没问题。还有一点——我想要分阶段的市场进入：前十二个月先从大阪和京都起步，验证模式后，第二年再铺到东京。没必要一步登天。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>完全同意。分阶段进入可以降低投资风险，同时让我们根据真实市场反馈调整定价和定位。整套方案周末前放你桌上。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>很好。让我们加快节奏——如果九月份能敲定合资协议，我们就能争取在2027年春季在大阪进行软启动，正好赶上化妆品的销售旺季。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>市场进入（Market Entry）是BEC口语Part 3和写作Part 2（报告）的高频主题。考试中常要求比较不同的进入模式——joint venture、wholly-owned subsidiary、franchising、licensing、strategic alliance等。建议为每种模式准备2-3个优缺点模板句，例如"A joint venture allows you to leverage local market knowledge while sharing financial risk, but it requires careful partner selection and governance structures." 这种结构化表达在写作和口语评分中都能加分。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

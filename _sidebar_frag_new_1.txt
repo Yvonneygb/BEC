@@ -1,0 +1,5 @@
+<a class="nav-item" data-page="2026-06-22-networking-skills.html" onclick="switchPage(this,'2026-06-22-networking-skills.html')"><span class="nav-item-icon">🤝</span><span class="nav-item-text">商务社交</span></a>
+<a class="nav-item" data-page="2026-06-22-annual-report.html" onclick="switchPage(this,'2026-06-22-annual-report.html')"><span class="nav-item-icon">📊</span><span class="nav-item-text">年度报告</span></a>
+<a class="nav-item" data-page="2026-06-22-product-launch.html" onclick="switchPage(this,'2026-06-22-product-launch.html')"><span class="nav-item-icon">🚀</span><span class="nav-item-text">产品发布</span></a>
+<a class="nav-item" data-page="2026-06-22-leadership-meeting.html" onclick="switchPage(this,'2026-06-22-leadership-meeting.html')"><span class="nav-item-icon">🏛️</span><span class="nav-item-text">领导层会议</span></a>
+<a class="nav-item" data-page="2026-06-22-investor-relations.html" onclick="switchPage(this,'2026-06-22-investor-relations.html')"><span class="nav-item-icon">💹</span><span class="nav-item-text">投资者关系</span></a>

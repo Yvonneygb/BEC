@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数据隐私 Data Privacy - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+/* 标题行：icon + 文字 + 右侧操作 */
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+/* 中文切换按钮 */
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+/* 词汇高亮 */
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>数据隐私 Data Privacy</h1>
+<div class="date">📅 2026年6月22日 · 星期一</div>
+
+<div class="roles">
+  <strong>A (Jennifer Liu)</strong> — Data Protection Officer, FinTech Solutions<br>
+  <strong>B (David Park)</strong> — IT Director, Meridian Bank
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">David, thanks for sitting down with me. Our <span class="vocab-highlight">compliance audit</span> is scheduled for next month, and I'm concerned about how we're handling <span class="vocab-highlight">personally identifiable information</span> across our mobile banking app. Can you walk me through the current data flow?</span></div>
+    <div class="dialogue-cn">David，谢谢你抽时间和我面谈。我们的合规审计定在下个月，我担心的是我们手机银行APP对个人身份信息的处理方式。你能带我梳理一下目前的数据流吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely, Jennifer. The short answer is that all customer PII goes through our encryption layer before it hits any database. We implemented end-to-end <span class="vocab-highlight">encryption</span> back in Q2, and we've been running quarterly penetration tests since then. What specific area is the audit going to scrutinise?</span></div>
+    <div class="dialogue-cn">没问题，Jennifer。简而言之，所有客户的PII在进入任何数据库之前都经过了我们的加密层处理。我们在第二季度实施了端到端加密，此后每季度都进行渗透测试。审计具体会重点审查哪个方面？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">The auditors will be looking closely at our <span class="vocab-highlight">consent management</span> framework. Specifically, whether our users are giving explicit <span class="vocab-highlight">opt-in</span> consent for data sharing with <span class="vocab-highlight">third-party vendors</span>. Our legal team flagged that the current cookie banner doesn't distinguish between necessary and marketing cookies clearly enough.</span></div>
+    <div class="dialogue-cn">审计人员会重点审查我们的同意管理框架。具体来说，是我们的用户是否为与第三方供应商共享数据给出了明确的主动同意。我们法务团队指出，目前的Cookie提示横幅没有清晰区分必要Cookie和营销Cookie。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a fair concern. We redesigned the consent dashboard in version 4.2 — users can now toggle individual permissions for analytics, marketing, and location data. But you're right, the cookie banner itself still uses a bundled approach. I can have the dev team split that out by next week. What else is on the audit checklist?</span></div>
+    <div class="dialogue-cn">这是个合理的关切。我们在4.2版本中重新设计了同意控制面板——用户现在可以分别开关分析、营销和位置数据的权限。但你说得对，Cookie横幅本身仍然使用捆绑模式。我可以让开发团队在下周前将其拆分。审计清单上还有什么？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">The second big item is our <span class="vocab-highlight">data retention policy</span>. Under GDPR, we're required to justify how long we keep customer records. Right now, our default retention for inactive accounts is seven years — but for non-financial data, the regulator expects a much shorter window, typically three years. We need to implement automated <span class="vocab-highlight">data minimisation</span> protocols.</span></div>
+    <div class="dialogue-cn">第二大项是我们的数据保留政策。根据GDPR，我们必须对客户记录的保留时长作出合理解释。目前我们对不活跃账户的默认保留期是七年——但对于非财务数据来说，监管机构期望的期限要短得多，通常是三年。我们需要实施自动化的数据最小化协议。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a significant backend change. The CRM is currently set to retain everything indefinitely unless manually purged. I'll need to work with the database team to script a retention schedule that auto-deletes records past their defined lifecycle. Can your team provide the exact retention categories so we can map them to data types?</span></div>
+    <div class="dialogue-cn">这涉及重大的后端改造。目前的CRM系统默认无限期保留所有数据，除非手动清除。我需要和数据库团队合作编写一个保留计划，在数据达到生命周期后自动删除。你的团队能提供具体的保留分类吗？这样我们就能将其映射到相应的数据类型。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll send over the retention matrix this afternoon. One more thing — the auditors will also review our <span class="vocab-highlight">data breach</span> response plan. When was the last time we ran a full simulation?</span></div>
+    <div class="dialogue-cn">我今天下午把保留矩阵发给你。还有一点——审计人员也会审查我们的数据泄露应急响应预案。我们上次完整的模拟演练是什么时候？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We did a tabletop exercise in March, but I'll admit it was limited to the IT security team. Ideally, we should involve Legal, PR, and Customer Support in the next one. A breach response isn't just a technical fix — it's a cross-functional protocol. How about we schedule a full simulation for the week after next?</span></div>
+    <div class="dialogue-cn">三月份我们做了一次桌面推演，但我承认只限于IT安全团队。理想情况下，下一次应该让法务、公关和客服部门都参与进来。泄露响应不仅仅是技术修复——它是一个跨职能的协同流程。我们在下下周排一次完整的模拟演练怎么样？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's exactly what I was going to suggest. I'll coordinate with the department heads and get it on everyone's calendar. Also, let's make sure all <span class="vocab-highlight">data processing agreements</span> with our cloud vendors are up to date — the audit will absolutely check those.</span></div>
+    <div class="dialogue-cn">这正是我想建议的。我来协调各部门负责人，排进大家的日程。另外，确保我们与所有云供应商的数据处理协议都是最新的——审计一定会查这些。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Good catch. I know our agreement with CloudServe was last reviewed in 2024. I'll instruct Procurement to request updated DPA certificates from all vendors by Friday. If any vendor can't provide a compliant DPA, we need a contingency plan.</span></div>
+    <div class="dialogue-cn">好提醒。我知道我们与CloudServe的协议上次审阅是2024年。我会让采购部门在周五前向所有供应商索取更新后的DPA证书。如果有供应商无法提供合规的DPA，我们需要应急方案。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. If a vendor's DPA isn't compliant, we either renegotiate or migrate. There's no middle ground with the regulator on this. I'll flag it as a red-line item in our pre-audit memo. Thanks for being so proactive, David — I feel much more confident going into this.</span></div>
+    <div class="dialogue-cn">同意。如果供应商的DPA不合规，我们要么重新谈判，要么迁移。在监管机构面前这点上没有中间地带。我会在预审备忘录中将其标记为红线项目。感谢你这么积极主动，David——我现在对接下来的审计更有信心了。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Likewise, Jennifer. Data privacy isn't just a compliance checkbox — it's a trust issue with our customers. Let's stay ahead of the curve.</span></div>
+    <div class="dialogue-cn">彼此彼此，Jennifer。数据隐私不只是合规检查——它关乎客户对我们的信任。让我们保持领先。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>personally identifiable information (PII)</strong> — 个人身份信息 | 指可用于识别特定个人的数据，数据隐私领域核心术语</div>
+<div class="vocab-item"><strong>encryption</strong> — 加密 | 将数据转换为不可读格式以保护信息安全的技术手段</div>
+<div class="vocab-item"><strong>consent management</strong> — 同意管理 | 管理用户对数据收集和使用的授权同意，GDPR合规关键环节</div>
+<div class="vocab-item"><strong>opt-in</strong> — 主动选择同意 | 用户主动勾选或确认同意，区别于默认同意的opt-out模式</div>
+<div class="vocab-item"><strong>data retention policy</strong> — 数据保留政策 | 规定不同类型数据应保留多长时间的内部政策</div>
+<div class="vocab-item"><strong>data breach</strong> — 数据泄露 | 未经授权访问或披露个人数据的安全事件</div>
+<div class="vocab-item"><strong>data processing agreement (DPA)</strong> — 数据处理协议 | 数据控制者与处理者之间的法律合同，定义数据处理条款</div>
+<div class="vocab-item"><strong>compliance audit</strong> — 合规审计 | 对组织是否遵守法规要求进行的系统性检查</div>
+<div class="vocab-item"><strong>data minimisation</strong> — 数据最小化 | GDPR原则之一，仅收集处理目的所必需的最少数据</div>
+<div class="vocab-item"><strong>third-party vendor</strong> — 第三方供应商 | 为企业提供服务的合作伙伴，常涉及数据共享场景</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>Can you walk me through...</code> → 你能带我梳理一下……吗？ | 请求对方详细说明某个流程或系统的商务用语</div>
+<div class="pattern-item"><code>The auditors will be looking closely at...</code> → 审计人员会重点审查…… | 用于预告即将面临的审查重点</div>
+<div class="pattern-item"><code>That's a fair concern.</code> → 这是个合理的关切 | 认可对方观点后再提出解决方案的衔接句式</div>
+<div class="pattern-item"><code>Under GDPR, we're required to...</code> → 根据GDPR，我们必须…… | 引用法规要求来解释业务决策的经典句式</div>
+<div class="pattern-item"><code>There's no middle ground with the regulator on this.</code> → 在这点上与监管机构没有中间地带 | 强调某事项不可妥协的坚决表达</div>
+<div class="pattern-item"><code>Let's stay ahead of the curve.</code> → 让我们保持领先 | 表达积极主动态度的商务用语，比"be proactive"更地道</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>David，谢谢你抽时间和我面谈。我们的合规审计定在下个月，我担心的是我们手机银行APP对个人身份信息的处理方式。你能带我梳理一下目前的数据流吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>没问题，Jennifer。简而言之，所有客户的PII在进入任何数据库之前都经过了我们的加密层处理。我们在第二季度实施了端到端加密，此后每季度都进行渗透测试。审计具体会重点审查哪个方面？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>审计人员会重点审查我们的同意管理框架。具体来说，是我们的用户是否为与第三方供应商共享数据给出了明确的主动同意。我们法务团队指出，目前的Cookie提示横幅没有清晰区分必要Cookie和营销Cookie。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是个合理的关切。我们在4.2版本中重新设计了同意控制面板——用户现在可以分别开关分析、营销和位置数据的权限。但你说得对，Cookie横幅本身仍然使用捆绑模式。我可以让开发团队在下周前将其拆分。审计清单上还有什么？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>第二大项是我们的数据保留政策。根据GDPR，我们必须对客户记录的保留时长作出合理解释。目前我们对不活跃账户的默认保留期是七年——但对于非财务数据来说，监管机构期望的期限要短得多，通常是三年。我们需要实施自动化的数据最小化协议。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这涉及重大的后端改造。目前的CRM系统默认无限期保留所有数据，除非手动清除。我需要和数据库团队合作编写一个保留计划，在数据达到生命周期后自动删除。你的团队能提供具体的保留分类吗？这样我们就能将其映射到相应的数据类型。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我今天下午把保留矩阵发给你。还有一点——审计人员也会审查我们的数据泄露应急响应预案。我们上次完整的模拟演练是什么时候？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>三月份我们做了一次桌面推演，但我承认只限于IT安全团队。理想情况下，下一次应该让法务、公关和客服部门都参与进来。泄露响应不仅仅是技术修复——它是一个跨职能的协同流程。我们在下下周排一次完整的模拟演练怎么样？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这正是我想建议的。我来协调各部门负责人，排进大家的日程。另外，确保我们与所有云供应商的数据处理协议都是最新的——审计一定会查这些。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>好提醒。我知道我们与CloudServe的协议上次审阅是2024年。我会让采购部门在周五前向所有供应商索取更新后的DPA证书。如果有供应商无法提供合规的DPA，我们需要应急方案。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>同意。如果供应商的DPA不合规，我们要么重新谈判，要么迁移。在监管机构面前这点上没有中间地带。我会在预审备忘录中将其标记为红线项目。感谢你这么积极主动，David——我现在对接下来的审计更有信心了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>彼此彼此，Jennifer。数据隐私不只是合规检查——它关乎客户对我们的信任。让我们保持领先。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>数据隐私（Data Privacy）是BEC Vantage和Higher阅读Part 5的高频话题，尤其是GDPR相关术语常出现在完形填空和阅读理解中。建议重点掌握"consent management""data breach""third-party vendor"等核心术语，同时注意区分"opt-in"（主动同意）和"opt-out"（默认同意后退出）的法律含义差异——这在BEC考试中经常作为干扰项出现。在口语考试Part 3讨论"公司应如何保护客户数据"时，可以从技术（加密、访问控制）和制度（数据保留政策、员工培训）两个维度展开。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

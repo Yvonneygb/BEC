@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>产品发布 Product Launch - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>产品发布 Product Launch</h1>
+<div class="date">📅 2026年6月22日 · 星期一</div>
+
+<div class="roles">
+  <strong>A (Lisa Chen)</strong> — Product Manager, NovaTech Solutions<br>
+  <strong>B (Tom Harrison)</strong> — Marketing Director, NovaTech Solutions
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Tom, we're six weeks out from launch. I've just got the final prototype signed off by engineering. Where are we on the <span class="vocab-highlight">go-to-market strategy</span>? I need to make sure the <span class="vocab-highlight">product positioning</span> aligns with what we're actually delivering.</span></div>
+    <div class="dialogue-cn">Tom，距离发布还有六周。我刚拿到了工程部签发的最终原型。我们的市场进入策略进展到哪一步了？我需要确保产品定位和我们实际交付的东西是一致的。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Good timing, Lisa. I've just finished the creative brief. We're going with 'Smart. Simple. Secure.' as the tagline. The positioning is premium mid-market — we're not trying to compete on price with the bargain brands, but we also don't want to be perceived as enterprise-only.</span></div>
+    <div class="dialogue-cn">时机正好，Lisa。我刚刚完成了创意简报。我们采用"智能·简洁·安全"作为宣传语。定位是高端中端市场——我们不打算和低价品牌拼价格，但我们也不想被看作是只面向大企业的产品。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I like the tagline — it captures the three core <span class="vocab-highlight">value propositions</span> we tested in the focus groups. But I'm a bit concerned about the 'simple' angle. The onboarding process still takes about 25 minutes, and our beta users flagged that as a friction point.</span></div>
+    <div class="dialogue-cn">我喜欢这个标语——它囊括了我们在焦点小组中测试过的三个核心价值主张。但我对"简洁"这个角度有点担心。引导流程仍然需要约25分钟，我们的测试用户将它标记为一个痛点。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Fair. Let's not oversell simplicity then. We can frame it as 'intuitive' rather than 'simple' — it acknowledges there's a learning curve but the payoff is worth it. On the pricing front, I'm proposing a <span class="vocab-highlight">tiered pricing</span> model: Starter at $29/month, Professional at $59, and Enterprise with custom pricing.</span></div>
+    <div class="dialogue-cn">说得对。那我们不要过度宣传简洁性。我们可以用"直观"而不是"简洁"——这承认有学习曲线，但结果值得。在定价方面，我提议采用阶梯定价模式：入门版每月29美元，专业版59美元，企业版定制定价。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That tiered structure makes sense. We need the Starter tier to drive volume and the Enterprise tier to capture the high-value clients. What about the launch timeline? I know we'd discussed a <span class="vocab-highlight">soft launch</span> with existing customers first.</span></div>
+    <div class="dialogue-cn">这个阶梯结构合理。我们需要入门版来推动销量，企业版来获取高价值客户。发布的时间线呢？我们之前讨论过先向现有客户进行软启动。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Here's the calendar. Soft launch on August 4th to our 200 beta users — they get a lifetime 30% discount if they upgrade within the first week. Public launch on August 18th, which gives us two weeks to fix any last-minute bugs. The <span class="vocab-highlight">press embargo</span> lifts at 9 AM Eastern on launch day.</span></div>
+    <div class="dialogue-cn">这是时间表。8月4日向200名测试用户进行软启动——如果他们在第一周内升级，享受终身七折优惠。公开发布于8月18日，这给我们两周时间修复任何最后的bug。媒体禁发令在发布日上午9点（东部时间）解除。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Two weeks for bug fixes is tight but doable, assuming nothing catastrophic surfaces. Are we doing a launch event, or is this purely digital? I've been pushing for at least a webinar — our B2B customers want to see the product in action before committing.</span></div>
+    <div class="dialogue-cn">两周修bug时间很紧但可行，前提是不出现灾难性的问题。我们会举办发布活动，还是纯线上的？我一直力推至少搞一场网络研讨会——我们的B2B客户想在承诺之前看到产品实际操作。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We're doing both. I've booked a venue for a launch event in San Francisco — capacity 150, with a live stream option. We'll invite key clients, industry analysts, and press. The webinar series starts the following week: three sessions targeting different user personas. I'll need you to do the product demo at the live event.</span></div>
+    <div class="dialogue-cn">我们两个都做。我已在旧金山预订了一个发布活动场地——容纳150人，提供直播选项。我们会邀请关键客户、行业分析师和媒体。网络研讨会系列在接下来的一周开始：三场针对不同用户画像。我需要你在现场活动中做产品演示。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Happy to do the demo, but let's make sure I have a polished script and at least three dry runs. Nothing kills a product launch like a demo that crashes on stage. Speaking of materials — where are we with the <span class="vocab-highlight">sales enablement kit</span>?</span></div>
+    <div class="dialogue-cn">很愿意做演示，但确保我有一份精炼的脚本和至少三次彩排。没有什么比在台上演示崩溃更能毁掉一个产品发布了。说到材料——销售支持工具包准备得怎么样了？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Almost ready. The kit includes a 12-page product brochure, a one-pager for quick reference, three case-study templates based on beta user experiences, and a <span class="vocab-highlight">competitive comparison matrix</span>. We're also producing five short explainer videos — the first two are in final edit.</span></div>
+    <div class="dialogue-cn">基本就绪。工具包包括一份12页的产品手册、一份快速参考单页、三份基于测试用户经验的案例模板，以及竞争对比矩阵。我们还在制作五个短视频解说——前两个已在最终剪辑阶段。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">The competitive comparison matrix needs careful handling. We can't make claims we can't substantiate. I'd rather we highlight three areas where we objectively outperform and acknowledge one area where competitors still have an edge. That builds credibility.</span></div>
+    <div class="dialogue-cn">竞争对比矩阵需要谨慎处理。我们不能做出无法证实的声明。我更倾向于突出我们客观上表现更优的三个领域，并承认竞争对手在某个领域仍有优势。这样能建立可信度。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Agreed. I'll have the legal team review every claim before it ships. On a related note — I'm a bit worried about the launch window. Salesforce is rumoured to be announcing a competing product at Dreamforce, which is the same week as our public launch.</span></div>
+    <div class="dialogue-cn">同意。我会让法务团队在发出前审核每一项声明。说到相关的事情——我对发布窗口有点担心。传闻Salesforce将在Dreamforce上宣布一个竞品，正好是我们公开上市的同一周。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I heard about that. It's actually an opportunity if we play it right. If we launch a week earlier — say August 11th — we own the news cycle. By the time Dreamforce rolls around, our reviews and initial user feedback will be out there. We can position ourselves as the <span class="vocab-highlight">first mover</span>.</span></div>
+    <div class="dialogue-cn">我听说这事了。如果我们处理得当，这其实是个机会。如果我们提前一周发布——比如说8月11日——我们就能抢占新闻周期。到Dreamforce开幕时，我们的评测和初步用户反馈已经公开了。我们可以把自己定位为先发者。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a bold move. It squeezes our soft-launch feedback window to just one week, but the competitive advantage might be worth it. Let me check with the PR agency about shifting the embargo date. Are you confident the build will be stable enough for an earlier launch?</span></div>
+    <div class="dialogue-cn">这是个大胆的举措。它将我们的软启动反馈窗口压缩到只有一周，但竞争优势可能是值得的。让我和公关公司确认一下禁发日期的调整。你对版本稳定性足够有信心来提前发布吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Based on the latest QA report, we've got no critical bugs and seventeen minor issues, all of which are cosmetic or edge-case. I'm comfortable moving the public launch to the 11th, but I want to reserve the right to pull back if anything changes in the next two weeks.</span></div>
+    <div class="dialogue-cn">根据最新的QA报告，我们没有严重bug，只有17个小问题，全都是外观或边缘案例。我对提前到11日公开发布感到放心，但我希望保留在未来两周内如果有任何变化就撤回的权利。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a reasonable condition. I'll draft a revised launch plan tonight and circulate it to the executive team for <span class="vocab-highlight">sign-off</span>. One more thing — your product team has been working insane hours. How are they holding up? I don't want burnout to derail us in the final stretch.</span></div>
+    <div class="dialogue-cn">这是一个合理的条件。我今晚草拟一份修订版的发布计划，发给高管团队签批。还有一件事——你的产品团队一直在疯狂加班。他们状态怎么样？我不希望最后冲刺阶段因为倦怠而出问题。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Appreciate you asking. Honestly, morale is high but fatigue is real. I've told everyone to take this weekend completely off — no emails, no Slack. We'll do a team dinner next Wednesday as a thank-you. If you could drop by and say a few words, it would mean a lot.</span></div>
+    <div class="dialogue-cn">谢谢关心。说实话，士气高昂但疲劳也是真实的。我已经让大家这个周末彻底休息——不要看邮件，不要看Slack。下周三我们搞一个团队聚餐作为感谢。如果你能过来讲几句话，对大家意义重大。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely. I'll bring champagne — or at least the nice sparkling water. You've built something genuinely impressive, Lisa. The early feedback from beta users has been the best I've seen in three product cycles. Let's make sure the world knows about it.</span></div>
+    <div class="dialogue-cn">一定来。我会带香槟——至少是好的气泡水。你真的做出了令人印象深刻的东西，Lisa。测试用户的早期反馈是我在三个产品周期中见过最好的。我们要让全世界都知道。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Thanks, Tom. It's been a grind, but moments like this make it worthwhile. Let's reconvene Monday morning with the revised timeline and finalise everything. And Tom — make sure the explainer videos include closed captions. Our European user base has been asking for it.</span></div>
+    <div class="dialogue-cn">谢谢你，Tom。这段时间很煎熬，但这样的时刻让一切都值得。我们周一早上用修订后的时间表重新讨论并最终确认一切。还有Tom——确保解说视频包含隐藏字幕。我们的欧洲用户一直在要求。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Already in the brief. I'll have the updated project plan in your inbox by tonight. Let's nail this launch.</span></div>
+    <div class="dialogue-cn">已经在简报里了。今晚我会把更新的项目计划发到你邮箱。让我们把这个发布做到完美。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>go-to-market strategy</strong> — 市场进入策略 | 产品发布核心规划术语</div>
+<div class="vocab-item"><strong>product positioning</strong> — 产品定位 | 营销和产品管理基础概念</div>
+<div class="vocab-item"><strong>tiered pricing</strong> — 阶梯定价 | 产品定价策略，BEC听力常见</div>
+<div class="vocab-item"><strong>soft launch</strong> — 软启动/试发布 | 先行小范围推出的产品发布方式</div>
+<div class="vocab-item"><strong>press embargo</strong> — 媒体禁发令 | 设定媒体统一发稿时间的公关术语</div>
+<div class="vocab-item"><strong>sales enablement kit</strong> — 销售支持工具包 | 包含产品材料和案例的辅助销售资料</div>
+<div class="vocab-item"><strong>competitive comparison matrix</strong> — 竞争对比矩阵 | 产品竞争分析工具</div>
+<div class="vocab-item"><strong>first mover</strong> — 先发优势/率先行动者 | 市场竞争战略核心概念</div>
+<div class="vocab-item"><strong>value proposition</strong> — 价值主张 | 产品核心卖点，BEC高频词</div>
+<div class="vocab-item"><strong>sign-off</strong> — 批准/签批 | 商务场景中获取上级批准的表达</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>Where are we on...?</code> → ……方面进展如何？ | 项目进度跟踪的标准商务问句</div>
+<div class="pattern-item"><code>Let's not oversell...</code> → 我们不要过度宣传…… | 营销讨论中保持克制的表达</div>
+<div class="pattern-item"><code>I'd rather we...</code> → 我更倾向于我们…… | 温和提出不同意见的商务句式</div>
+<div class="pattern-item"><code>I want to reserve the right to...</code> → 我希望保留……的权利 | 商务谈判中设置条件的句型</div>
+<div class="pattern-item"><code>Let's reconvene on...</code> → 我们……再集合讨论 | 安排下一步行动的经典句型</div>
+<div class="pattern-item"><code>Let's nail this launch.</code> → 让我们把这个发布做到完美。 | 项目动员收尾的激励表达</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Tom，距离发布还有六周。我刚拿到了工程部签发的最终原型。我们的市场进入策略进展到哪一步了？我需要确保产品定位和我们实际交付的东西是一致的。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>时机正好，Lisa。我刚刚完成了创意简报。我们采用"智能·简洁·安全"作为宣传语。定位是高端中端市场——我们不打算和低价品牌拼价格，但我们也不想被看作是只面向大企业的产品。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我喜欢这个标语——它囊括了我们在焦点小组中测试过的三个核心价值主张。但我对"简洁"这个角度有点担心。引导流程仍然需要约25分钟，我们的测试用户将它标记为一个痛点。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>说得对。那我们不要过度宣传简洁性。我们可以用"直观"而不是"简洁"——这承认有学习曲线，但结果值得。在定价方面，我提议采用阶梯定价模式：入门版每月29美元，专业版59美元，企业版定制定价。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这个阶梯结构合理。我们需要入门版来推动销量，企业版来获取高价值客户。发布的时间线呢？我们之前讨论过先向现有客户进行软启动。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是时间表。8月4日向200名测试用户进行软启动——如果他们在第一周内升级，享受终身七折优惠。公开发布于8月18日，这给我们两周时间修复任何最后的bug。媒体禁发令在发布日上午9点（东部时间）解除。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>两周修bug时间很紧但可行，前提是不出现灾难性的问题。我们会举办发布活动，还是纯线上的？我一直力推至少搞一场网络研讨会——我们的B2B客户想在承诺之前看到产品实际操作。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我们两个都做。我已在旧金山预订了一个发布活动场地——容纳150人，提供直播选项。我们会邀请关键客户、行业分析师和媒体。网络研讨会系列在接下来的一周开始：三场针对不同用户画像。我需要你在现场活动中做产品演示。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>很愿意做演示，但确保我有一份精炼的脚本和至少三次彩排。没有什么比在台上演示崩溃更能毁掉一个产品发布了。说到材料——销售支持工具包准备得怎么样了？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>基本就绪。工具包包括一份12页的产品手册、一份快速参考单页、三份基于测试用户经验的案例模板，以及竞争对比矩阵。我们还在制作五个短视频解说——前两个已在最终剪辑阶段。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>竞争对比矩阵需要谨慎处理。我们不能做出无法证实的声明。我更倾向于突出我们客观上表现更优的三个领域，并承认竞争对手在某个领域仍有优势。这样能建立可信度。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>同意。我会让法务团队在发出前审核每一项声明。说到相关的事情——我对发布窗口有点担心。传闻Salesforce将在Dreamforce上宣布一个竞品，正好是我们公开上市的同一周。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我听说这事了。如果我们处理得当，这其实是个机会。如果我们提前一周发布——比如说8月11日——我们就能抢占新闻周期。到Dreamforce开幕时，我们的评测和初步用户反馈已经公开了。我们可以把自己定位为先发者。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是个大胆的举措。它将我们的软启动反馈窗口压缩到只有一周，但竞争优势可能是值得的。让我和公关公司确认一下禁发日期的调整。你对版本稳定性足够有信心来提前发布吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>根据最新的QA报告，我们没有严重bug，只有17个小问题，全都是外观或边缘案例。我对提前到11日公开发布感到放心，但我希望保留在未来两周内如果有任何变化就撤回的权利。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是一个合理的条件。我今晚草拟一份修订版的发布计划，发给高管团队签批。还有一件事——你的产品团队一直在疯狂加班。他们状态怎么样？我不希望最后冲刺阶段因为倦怠而出问题。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>谢谢关心。说实话，士气高昂但疲劳也是真实的。我已经让大家这个周末彻底休息——不要看邮件，不要看Slack。下周三我们搞一个团队聚餐作为感谢。如果你能过来讲几句话，对大家意义重大。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>一定来。我会带香槟——至少是好的气泡水。你真的做出了令人印象深刻的东西，Lisa。测试用户的早期反馈是我在三个产品周期中见过最好的。我们要让全世界都知道。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>谢谢你，Tom。这段时间很煎熬，但这样的时刻让一切都值得。我们周一早上用修订后的时间表重新讨论并最终确认一切。还有Tom——确保解说视频包含隐藏字幕。我们的欧洲用户一直在要求。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>已经在简报里了。今晚我会把更新的项目计划发到你邮箱。让我们把这个发布做到完美。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>产品发布（Product Launch）是BEC商务英语中集战略、营销和团队协作于一体的综合话题。重点掌握时间线表达（launch timeline、soft launch、public launch）和营销术语（product positioning、value proposition、pricing model）。考试中常要求你模拟项目协调对话，模仿文中的进度跟踪句型和保留条件的表达方式，能让口语和写作更显专业。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

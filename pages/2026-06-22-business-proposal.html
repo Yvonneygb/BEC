@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商业提案 Business Proposal - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>商业提案 Business Proposal</h1>
+<div class="date">📅 2026年6月22日 · 星期一</div>
+
+<div class="roles">
+  <strong>A (Sophia Wang)</strong> — Business Development Manager, EcoVibe Packaging<br>
+  <strong>B (Richard Blake)</strong> — Procurement Director, FreshFoods Supermarket Chain
+</div>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Richard, thanks for taking the meeting. As I mentioned in my email, EcoVibe has developed a fully compostable produce packaging line that we believe aligns perfectly with FreshFoods' <span class="vocab-highlight">sustainability</span> targets for 2027. I'd love to walk you through our <span class="vocab-highlight">proposal</span> and get your initial reaction.</span></div>
+    <div class="dialogue-cn">Richard，感谢你来参加这次会议。正如我在邮件中提到的，EcoVibe开发了一条完全可堆肥的农产品包装生产线，我们相信它与FreshFoods 2027年的可持续发展目标高度契合。我想为你详细介绍我们的提案，听听你的初步反应。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Sophia, good to see you. I'll be upfront — we've been approached by four packaging suppliers this quarter alone, all making similar sustainability claims. What distinguishes your solution from the competition? Because frankly, our board is suffering from green fatigue.</span></div>
+    <div class="dialogue-cn">Sophia，很高兴见到你。我先坦诚说明——仅本季度就有四家包装供应商找到我们，都打着类似的可持续性旗号。你们的方案与竞争对手有何不同？坦白说，我们的董事会对"绿色"宣传已经审美疲劳了。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Fair question, and I appreciate the candour. Two <span class="vocab-highlight">differentiators</span>. First, our material is certified home-compostable within 90 days — not just industrially compostable, which requires facilities most consumers don't have access to. Second, we've conducted a full <span class="vocab-highlight">lifecycle assessment</span> verified by an independent third party, and our production process generates 62% less carbon than conventional PLA alternatives. I've brought the executive summary for your review.</span></div>
+    <div class="dialogue-cn">合理的问题，我欣赏你的坦率。两个差异化优势。第一，我们的材料通过了90天内家庭可堆肥认证——不仅仅是需要大多数消费者无法获得的设施的工业可堆肥。第二，我们完成了一份由独立第三方验证的全生命周期评估，我们的生产过程比传统PLA替代品少排放62%的碳。我带来了执行摘要供你审阅。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The third-party verification is compelling — that addresses a real pain point for our <span class="vocab-highlight">due diligence</span> team. What kind of volume commitment are we looking at, and more importantly, what's the cost implication? Our current supplier is at £0.08 per unit. If the premium is too steep, my CFO will kill this before it reaches the boardroom.</span></div>
+    <div class="dialogue-cn">第三方验证很有说服力——这正好解决了我们尽职调查团队的一个真实痛点。我们需要什么样的量级承诺，更重要的是，成本影响如何？我们目前的供应商单价是0.08英镑。如果溢价太高，我的CFO会在这事到达董事会之前就毙掉它。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll give you the headline numbers. For an initial rollout across your top 200 stores — approximately 5 million units annually — we can offer £0.11 per unit with a two-year <span class="vocab-highlight">fixed-price agreement</span>. That includes custom branding with your EcoFresh sub-label and a co-marketing package. When you factor in the reduced waste disposal costs and the marketing value of the sustainability story, the <span class="vocab-highlight">total cost of ownership</span> is actually favourable.</span></div>
+    <div class="dialogue-cn">我给你关键数据。对于在你们前200家门店的初步推广——每年约500万件——我们可以提供每件0.11英镑的两年固定价格协议。其中包括使用你们的EcoFresh子品牌的定制印刷和联合营销方案。当你把减少的废物处理成本和可持续发展故事带来的营销价值考虑进去时，总拥有成本实际上是有利的。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Eleven pence is higher than I'd hoped, but the fixed-price clause over two years does mitigate the risk of raw material volatility. What does the implementation timeline look like? We have a seasonal peak in October, and I can't afford supply chain disruptions during that window.</span></div>
+    <div class="dialogue-cn">11便士比我期望的要高，但两年的固定价格条款确实规避了原材料波动的风险。实施时间表是怎样的？我们在十月有季节性高峰，我不能在此期间承受供应链中断。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We've anticipated that. Our proposal outlines a <span class="vocab-highlight">phased rollout</span> — soft launch in 50 stores by August, full deployment across all 200 stores by mid-September. We'll maintain a 15% <span class="vocab-highlight">buffer stock</span> at our distribution centre in Milton Keynes specifically for FreshFoods. <span class="vocab-highlight">Contingency planning</span> is built into the timeline.</span></div>
+    <div class="dialogue-cn">我们已经预料到了。我们的提案概述了分阶段推广——八月在50家门店试运行，九月中旬前在所有200家门店全面铺开。我们将在Milton Keynes的配送中心专门为FreshFoods保留15%的缓冲库存。时间表中已内置了应急预案。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That buffer stock detail is the kind of operational thinking I look for in a partner, not just a vendor. Two more things I need clarity on: the <span class="vocab-highlight">exit clause</span> if the product doesn't meet our degradation benchmarks in-store, and whether you'd be open to a <span class="vocab-highlight">performance-based pricing</span> model — say, a rebate if we exceed 7 million units in year two.</span></div>
+    <div class="dialogue-cn">缓冲库存这个细节正是我在合作伙伴而非仅仅是供应商身上寻找的那种运营思维。我还需要明确两点：如果产品在店内不符合我们的降解基准标准，退出条款如何规定；以及你们是否愿意接受基于绩效的定价模式——比如说，如果第二年超过700万件，给予返利。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">On the exit clause, we're proposing a 90-day notice period with no penalty if independent testing confirms non-compliance with the degradation specs. On the rebate — I'd need to take that back to our pricing team, but conceptually, I'm open to a volume-based tier that kicks in above 6.5 million units. I can have revised numbers to you by Thursday.</span></div>
+    <div class="dialogue-cn">关于退出条款，我们提议90天通知期，如果独立测试确认降解规格不合规，则无需支付违约金。关于返利——我需要回去和我们的定价团队商议，但从概念上说，我对在650万件以上触发的量级梯度定价持开放态度。我可以在周四前给你修订后的数据。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's the kind of flexibility that gets deals done, Sophia. I'd like to move this to the formal evaluation stage. Could you send over the full proposal document with the technical specifications, the life cycle assessment, and the revised pricing model by end of week? I'll then put it on the agenda for our quarterly sourcing review on the 15th.</span></div>
+    <div class="dialogue-cn">正是这种灵活性促成交易，Sophia。我想把这事推进到正式评估阶段。你能否在周末前把包含技术规格、生命周期评估和修订后定价模型的完整提案文件发过来？然后我会把它列入15号季度采购审查会议的议程。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Absolutely. I'll have the complete package in your inbox by Friday noon. Richard, I genuinely believe this partnership could be a showcase for how sustainability and commercial viability go hand in hand. I'm excited about where this could lead.</span></div>
+    <div class="dialogue-cn">没问题。完整方案将在周五中午前发到你邮箱。Richard，我由衷相信这次合作可以成为可持续性与商业可行性并行不悖的一个典范。我对未来的可能性充满期待。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm cautiously optimistic as well. The alignment is there — now it's about execution. Let's see those numbers on Thursday and take it from there.</span></div>
+    <div class="dialogue-cn">我也审慎乐观。契合度在那里——现在就取决于执行了。让我们周四看看那些数字，再继续推进。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>proposal</strong> — 提案/方案书 | 向潜在客户或合作方提交的正式商业计划文件</div>
+<div class="vocab-item"><strong>sustainability</strong> — 可持续性 | 现代商业中的核心概念，涵盖环境、社会和经济三方面</div>
+<div class="vocab-item"><strong>differentiator</strong> — 差异化优势/区别因素 | 使产品或服务在竞争中脱颖而出的特征</div>
+<div class="vocab-item"><strong>lifecycle assessment</strong> — 生命周期评估 | 评估产品从原料到废弃全过程的综合环境影响</div>
+<div class="vocab-item"><strong>due diligence</strong> — 尽职调查 | 商业决策前对相关方进行全面核查的过程</div>
+<div class="vocab-item"><strong>fixed-price agreement</strong> — 固定价格协议 | 在合同期内锁定价格，规避原材料价格波动风险</div>
+<div class="vocab-item"><strong>total cost of ownership</strong> — 总拥有成本 | 不仅考虑采购价格，还包括使用、维护和处置的所有成本</div>
+<div class="vocab-item"><strong>phased rollout</strong> — 分阶段推广 | 逐步推进而非一次性全面铺开的实施策略</div>
+<div class="vocab-item"><strong>buffer stock</strong> — 缓冲库存/安全库存 | 为应对需求波动或供应中断而保留的额外库存</div>
+<div class="vocab-item"><strong>contingency planning</strong> — 应急预案 | 预先考虑潜在风险并制定应对措施</div>
+<div class="vocab-item"><strong>exit clause</strong> — 退出条款 | 合同中规定双方在特定条件下可终止合作的条款</div>
+<div class="vocab-item"><strong>performance-based pricing</strong> — 基于绩效的定价 | 根据实际交付成果或使用量调整价格的模式</div>
+
+<hr>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>I'd love to walk you through our proposal and get your initial reaction.</code> → 我想为你详细介绍我们的提案，听听你的初步反应 | 商务提案开场，既展示方案又邀请反馈</div>
+<div class="pattern-item"><code>I'll be upfront — ...</code> → 我先坦诚说明——…… | 直截了当地提出顾虑或困难事实的商务表达</div>
+<div class="pattern-item"><code>What distinguishes your solution from the competition?</code> → 你们的方案与竞争对手有何不同？ | 采购方要求供应商明确差异化优势的标准提问</div>
+<div class="pattern-item"><code>That addresses a real pain point for...</code> → 这正好解决了……的一个真实痛点 | 肯定对方方案切中要害，商务评估中的高频表达</div>
+<div class="pattern-item"><code>What does the implementation timeline look like?</code> → 实施时间表是怎样的？ | 从概念讨论转向执行层面的关键过渡提问</div>
+<div class="pattern-item"><code>That's the kind of flexibility that gets deals done.</code> → 正是这种灵活性促成交易 | 表达对对方配合态度的认可，推动谈判向前</div>
+
+<hr>
+
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Richard，感谢你来参加这次会议。正如我在邮件中提到的，EcoVibe开发了一条完全可堆肥的农产品包装生产线，我们相信它与FreshFoods 2027年的可持续发展目标高度契合。我想为你详细介绍我们的提案，听听你的初步反应。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>Sophia，很高兴见到你。我先坦诚说明——仅本季度就有四家包装供应商找到我们，都打着类似的可持续性旗号。你们的方案与竞争对手有何不同？坦白说，我们的董事会对"绿色"宣传已经审美疲劳了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>合理的问题，我欣赏你的坦率。两个差异化优势。第一，我们的材料通过了90天内家庭可堆肥认证——不仅仅是需要大多数消费者无法获得的设施的工业可堆肥。第二，我们完成了一份由独立第三方验证的全生命周期评估，我们的生产过程比传统PLA替代品少排放62%的碳。我带来了执行摘要供你审阅。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>第三方验证很有说服力——这正好解决了我们尽职调查团队的一个真实痛点。我们需要什么样的量级承诺，更重要的是，成本影响如何？我们目前的供应商单价是0.08英镑。如果溢价太高，我的CFO会在这事到达董事会之前就毙掉它。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我给你关键数据。对于在你们前200家门店的初步推广——每年约500万件——我们可以提供每件0.11英镑的两年固定价格协议。其中包括使用你们的EcoFresh子品牌的定制印刷和联合营销方案。当你把减少的废物处理成本和可持续发展故事带来的营销价值考虑进去时，总拥有成本实际上是有利的。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>11便士比我期望的要高，但两年的固定价格条款确实规避了原材料波动的风险。实施时间表是怎样的？我们在十月有季节性高峰，我不能在此期间承受供应链中断。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我们已经预料到了。我们的提案概述了分阶段推广——八月在50家门店试运行，九月中旬前在所有200家门店全面铺开。我们将在Milton Keynes的配送中心专门为FreshFoods保留15%的缓冲库存。时间表中已内置了应急预案。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>缓冲库存这个细节正是我在合作伙伴而非仅仅是供应商身上寻找的那种运营思维。我还需要明确两点：如果产品在店内不符合我们的降解基准标准，退出条款如何规定；以及你们是否愿意接受基于绩效的定价模式——比如说，如果第二年超过700万件，给予返利。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>关于退出条款，我们提议90天通知期，如果独立测试确认降解规格不合规，则无需支付违约金。关于返利——我需要回去和我们的定价团队商议，但从概念上说，我对在650万件以上触发的量级梯度定价持开放态度。我可以在周四前给你修订后的数据。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>正是这种灵活性促成交易，Sophia。我想把这事推进到正式评估阶段。你能否在周末前把包含技术规格、生命周期评估和修订后定价模型的完整提案文件发过来？然后我会把它列入15号季度采购审查会议的议程。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>没问题。完整方案将在周五中午前发到你邮箱。Richard，我由衷相信这次合作可以成为可持续性与商业可行性并行不悖的一个典范。我对未来的可能性充满期待。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我也审慎乐观。契合度在那里——现在就取决于执行了。让我们周四看看那些数字，再继续推进。</span></div>
+</div>
+</div>
+
+<hr>
+
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>商业提案（Business Proposal）是BEC写作Part 2的高频考题类型。成功提案的关键在于"价值主张"而非"产品罗列"——始终将客户痛点（pain point）与你的解决方案一一对应。建议使用差异化优势（differentiator）、总拥有成本（TCO）、分阶段推广（phased rollout）等框架性术语来组织写作结构。在口语考试中，提案场景常考察你能否将技术细节转化为商业价值——练习句式如"When you factor in..., the total cost of ownership is actually favourable"。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

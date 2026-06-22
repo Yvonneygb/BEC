@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>离职面谈 Exit Interview - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+/* 标题行：icon + 文字 + 右侧操作 */
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+/* 中文切换按钮 */
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+/* 词汇高亮 */
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>离职面谈 Exit Interview</h1>
+<div class="date">📅 2026年6月22日 · 星期一</div>
+
+<div class="roles">
+  <strong>A (Emma Liu)</strong> — HR Manager, NovaTech Solutions<br>
+  <strong>B (James Chen)</strong> — Senior Software Engineer, NovaTech Solutions
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">James, thanks for sitting down with me today. I have to say, your <span class="vocab-highlight">resignation</span> came as quite a surprise to the team. Could you walk me through what led to your decision?</span></div>
+    <div class="dialogue-cn">James，感谢你今天坐下来和我聊。不得不说，你的辞职让团队相当意外。能跟我说说是什么促使你做这个决定吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I appreciate you asking, Emma. It wasn't an easy decision, but I've accepted an offer at a fintech startup. To be honest, I felt my <span class="vocab-highlight">career progression</span> here had plateaued — I've been in the same role for nearly three years without a clear promotion path.</span></div>
+    <div class="dialogue-cn">感谢你问起，Emma。这并非一个轻松的决定，但我已经接受了一家金融科技初创公司的offer。说实话，我觉得自己在这里的职业发展已经停滞了——同一个岗位做了快三年，却没有清晰的晋升路径。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's genuinely helpful feedback, and I'm sorry we didn't address it sooner. Was there anything else that contributed? I'd really value your <span class="vocab-highlight">candid feedback</span> — this is a <span class="vocab-highlight">confidential</span> conversation, so please speak freely.</span></div>
+    <div class="dialogue-cn">这是非常有价值的反馈，很抱歉我们没有更早地解决这个问题。还有其他因素吗？我非常重视你的坦率反馈——这是一次保密对话，请畅所欲言。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Well, since you ask — the <span class="vocab-highlight">work-life balance</span> has been challenging. We've had three major releases back-to-back with mandatory overtime. I'm not opposed to hard work, but when it becomes the norm rather than the exception, it takes a toll.</span></div>
+    <div class="dialogue-cn">既然你问了——工作与生活的平衡一直是个挑战。我们连续三个大版本发布，都要求强制加班。我不反对努力工作，但当它成为常态而非例外时，就会造成消耗。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I hear you, and that's something we're actively working on. Would you be willing to share what the new role offers that we couldn't? I'm asking so we can improve our <span class="vocab-highlight">retention</span> strategy going forward.</span></div>
+    <div class="dialogue-cn">我听到了，这也是我们正在积极改进的方面。你愿意分享一下新公司提供了什么是我们没能提供的吗？我问是为了改进我们未来的留任策略。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Of course. The new position comes with a <span class="vocab-highlight">team lead</span> title and equity. Beyond compensation though, they offered a clear 18-month growth roadmap during the interview process. I felt genuinely invested in from day one.</span></div>
+    <div class="dialogue-cn">当然。新职位带有团队负责人的头衔和股权。不过除了薪酬之外，他们在面试过程中就提供了清晰的18个月成长路线图。我从第一天就感受到了真正的投入。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's very insightful. On a positive note, what did you value most about your time here? Your perspective could help us understand what we should protect and build on.</span></div>
+    <div class="dialogue-cn">这很有启发性。从积极的角度看，你在这里最珍视的是什么？你的看法可以帮助我们了解应该保留和发扬什么。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The <span class="vocab-highlight">mentorship</span> culture, hands down. My first manager, Robert, spent countless hours coaching me through complex architecture decisions. That kind of <span class="vocab-highlight">knowledge transfer</span> is rare, and it's something NovaTech should absolutely preserve.</span></div>
+    <div class="dialogue-cn">毫无疑问是导师文化。我的第一任经理Robert花了无数时间辅导我做复杂的架构决策。这种知识传承非常难得，是NovaTech绝对应该保留的。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That means a lot. Before we wrap up, any final thoughts on how we can improve the <span class="vocab-highlight">onboarding</span> experience for whoever steps into your role? I'd love to capture your insights while they're fresh.</span></div>
+    <div class="dialogue-cn">这很有意义。结束之前，对于我们如何改善接替你角色的人的上岗体验，还有什么最后的建议吗？我想趁热打铁记录下你的见解。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely — I've already started drafting a <span class="vocab-highlight">handover</span> document. I'd recommend giving the new person at least a two-week overlap with me if possible, and I'm happy to do a few <span class="vocab-highlight">exit interview</span> follow-ups remotely after I leave. I genuinely want the team to succeed.</span></div>
+    <div class="dialogue-cn">当然——我已经开始起草交接文档了。我建议如果可能的话，给新人和我至少两周的重叠时间，而且我很乐意在离职后远程做几次后续跟进。我真心希望团队成功。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>resignation</strong> — 辞职/辞呈 | 正式离职的表达方式，比"quit"更专业，BEC写作中常用 submit one's resignation</div>
+<div class="vocab-item"><strong>candid feedback</strong> — 坦率反馈 | 离职面谈中的核心概念，强调坦诚交流而非客套话</div>
+<div class="vocab-item"><strong>confidential</strong> — 保密的 | 离职面谈的基本原则之一，保障员工畅所欲言的权利</div>
+<div class="vocab-item"><strong>career progression</strong> — 职业发展/晋升 | BEC口语和写作中高频出现，近义词 career advancement</div>
+<div class="vocab-item"><strong>work-life balance</strong> — 工作与生活平衡 | 现代职场核心话题，BEC阅读和听力高频词</div>
+<div class="vocab-item"><strong>retention</strong> — 留任/员工留任率 | HR管理中的关键指标，常与 strategy 搭配</div>
+<div class="vocab-item"><strong>team lead</strong> — 团队负责人 | 常见的职场头衔和晋升方向</div>
+<div class="vocab-item"><strong>mentorship</strong> — 导师制/指导关系 | 企业人才培养的核心概念，动词形式 mentor</div>
+<div class="vocab-item"><strong>knowledge transfer</strong> — 知识传承 | 离职流程和项目管理中的关键环节</div>
+<div class="vocab-item"><strong>onboarding</strong> — 入职培训/上岗 | 从新员工入职到融入团队的完整过程</div>
+<div class="vocab-item"><strong>handover</strong> — 工作交接 | 离职流程中向接替者移交工作职责的过程</div>
+<div class="vocab-item"><strong>exit interview</strong> — 离职面谈 | 本文主题，BEC听力Part 3高频场景</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>I have to say, your resignation came as quite a surprise.</code> → 不得不说，你的辞职相当令人意外 | 用于以温和方式开启敏感话题对话，缓冲直接表达</div>
+<div class="pattern-item"><code>Could you walk me through what led to your decision?</code> → 能跟我说说是什么促使你做这个决定吗？ | 开放式提问，鼓励对方详细阐述而非简单回答</div>
+<div class="pattern-item"><code>Would you be willing to share...?</code> → 你愿意分享……吗？ | 委婉请求对方提供信息，适合敏感或私人话题场合</div>
+<div class="pattern-item"><code>On a positive note, what did you value most about...?</code> → 从积极的角度看，你最珍视……的什么？ | 在谈话中转向正面话题，平衡负面反馈</div>
+<div class="pattern-item"><code>Before we wrap up, any final thoughts on...?</code> → 结束之前，关于……还有什么最后想法吗？ | 会议/面谈收尾时的标准提问句式，给对方最后补充机会</div>
+<div class="pattern-item"><code>I'm happy to... after I leave.</code> → 我很乐意在离职后继续…… | 表达离职后仍愿合作的专业态度，展现职业素养</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>James，感谢你今天坐下来和我聊。不得不说，你的辞职让团队相当意外。能跟我说说是什么促使你做这个决定吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>感谢你问起，Emma。这并非一个轻松的决定，但我已经接受了一家金融科技初创公司的offer。说实话，我觉得自己在这里的职业发展已经停滞了——同一个岗位做了快三年，却没有清晰的晋升路径。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这是非常有价值的反馈，很抱歉我们没有更早地解决这个问题。还有其他因素吗？我非常重视你的坦率反馈——这是一次保密对话，请畅所欲言。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>既然你问了——工作与生活的平衡一直是个挑战。我们连续三个大版本发布，都要求强制加班。我不反对努力工作，但当它成为常态而非例外时，就会造成消耗。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我听到了，这也是我们正在积极改进的方面。你愿意分享一下新公司提供了什么是我们没能提供的吗？我问是为了改进我们未来的留任策略。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>当然。新职位带有团队负责人的头衔和股权。不过除了薪酬之外，他们在面试过程中就提供了清晰的18个月成长路线图。我从第一天就感受到了真正的投入。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这很有启发性。从积极的角度看，你在这里最珍视的是什么？你的看法可以帮助我们了解应该保留和发扬什么。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>毫无疑问是导师文化。我的第一任经理Robert花了无数时间辅导我做复杂的架构决策。这种知识传承非常难得，是NovaTech绝对应该保留的。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这很有意义。结束之前，对于我们如何改善接替你角色的人的上岗体验，还有什么最后的建议吗？我想趁热打铁记录下你的见解。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>当然——我已经开始起草交接文档了。我建议如果可能的话，给新人和我至少两周的重叠时间，而且我很乐意在离职后远程做几次后续跟进。我真心希望团队成功。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>离职面谈（Exit Interview）是BEC口语考试Part 3的高频话题，建议备考时重点练习委婉表达（diplomatic language）和开放式提问（open-ended questions）。面谈中要平衡"给予真实反馈"和"维护职业关系"两条线——多用"I felt..."而非"You did..."来降低对抗性，这在BEC口语评分中会被视为高阶沟通技巧。同时注意同义词替换，如用 resignation（正式）代替 quitting（口语化）。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

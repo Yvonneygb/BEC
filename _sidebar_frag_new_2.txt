@@ -1,0 +1,5 @@
+<a class="nav-item" data-page="2026-06-22-training-development.html" onclick="switchPage(this,'2026-06-22-training-development.html')"><span class="nav-item-icon">🎓</span><span class="nav-item-text">培训发展</span></a>
+<a class="nav-item" data-page="2026-06-22-vendor-negotiation.html" onclick="switchPage(this,'2026-06-22-vendor-negotiation.html')"><span class="nav-item-icon">🏭</span><span class="nav-item-text">供应商谈判</span></a>
+<a class="nav-item" data-page="2026-06-22-quality-assurance.html" onclick="switchPage(this,'2026-06-22-quality-assurance.html')"><span class="nav-item-icon">✅</span><span class="nav-item-text">质量保证</span></a>
+<a class="nav-item" data-page="2026-06-22-market-entry.html" onclick="switchPage(this,'2026-06-22-market-entry.html')"><span class="nav-item-icon">🌏</span><span class="nav-item-text">市场进入</span></a>
+<a class="nav-item" data-page="2026-06-22-corporate-training.html" onclick="switchPage(this,'2026-06-22-corporate-training.html')"><span class="nav-item-icon">📚</span><span class="nav-item-text">企业培训</span></a>

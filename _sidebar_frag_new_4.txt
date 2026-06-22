@@ -1,0 +1,5 @@
+<a class="nav-item" data-page="2026-06-22-data-privacy.html" onclick="switchPage(this,'2026-06-22-data-privacy.html')"><span class="nav-item-icon">🔒</span><span class="nav-item-text">数据隐私</span></a>
+<a class="nav-item" data-page="2026-06-22-sustainability.html" onclick="switchPage(this,'2026-06-22-sustainability.html')"><span class="nav-item-icon">🌿</span><span class="nav-item-text">可持续发展</span></a>
+<a class="nav-item" data-page="2026-06-22-conflict-resolution.html" onclick="switchPage(this,'2026-06-22-conflict-resolution.html')"><span class="nav-item-icon">🕊️</span><span class="nav-item-text">冲突调解</span></a>
+<a class="nav-item" data-page="2026-06-22-onboarding.html" onclick="switchPage(this,'2026-06-22-onboarding.html')"><span class="nav-item-icon">🆕</span><span class="nav-item-text">新员工入职</span></a>
+<a class="nav-item" data-page="2026-06-22-digital-transformation.html" onclick="switchPage(this,'2026-06-22-digital-transformation.html')"><span class="nav-item-icon">🤖</span><span class="nav-item-text">数字化转型</span></a>

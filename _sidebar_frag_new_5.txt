@@ -1,0 +1,1 @@
+<a class="nav-item" data-page="2026-06-22-change-management.html" onclick="switchPage(this,'2026-06-22-change-management.html')"><span class="nav-item-icon">🔄</span><span class="nav-item-text">变革管理</span></a>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>可持续发展 Sustainability - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
+/* 标题行：icon + 文字 + 右侧操作 */
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+/* 中文切换按钮 */
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
+.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+/* 词汇高亮 */
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>可持续发展 Sustainability</h1>
+<div class="date">📅 2026年6月22日 · 星期一</div>
+
+<div class="roles">
+  <strong>A (Emma Larsson)</strong> — Sustainability Manager, Nordic Green Energy<br>
+  <strong>B (Carlos Rivera)</strong> — Operations Director, Pacific Manufacturing
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Carlos, I've just finished reviewing your Q1 <span class="vocab-highlight">sustainability report</span>, and I have to say — your reduction in water consumption is impressive. Down 18% year-on-year. But your <span class="vocab-highlight">carbon footprint</span> figures tell a different story. Emissions are up 7%. What's driving that?</span></div>
+    <div class="dialogue-cn">Carlos，我刚审阅完你们第一季度的可持续发展报告，不得不说——用水量的下降令人印象深刻。同比下降了18%。但你们的碳足迹数据则是另一番景象。排放量上升了7%。原因是什么？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Thanks for the kind words on water, Emma. The carbon increase is largely due to our expanded production line in Vietnam. We brought two new factories online in January, and they're still running on the local grid, which is predominantly coal-powered. We're aware it's an issue — we've already commissioned a feasibility study for on-site solar.</span></div>
+    <div class="dialogue-cn">感谢你对用水量的肯定，Emma。碳排放增加主要是因为我们越南生产线的扩建。一月份我们新投产了两家工厂，它们目前仍在使用当地电网，主要是煤电。我们意识到这是个问题——已经委托进行了现场太阳能的可行性研究。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's encouraging, but the timeline matters. Your public <span class="vocab-highlight">net-zero</span> commitment targets a 45% reduction by 2028. At the current trajectory, you're not going to hit that. Have you considered purchasing <span class="vocab-highlight">carbon offsets</span> as a bridging measure while the solar infrastructure gets built?</span></div>
+    <div class="dialogue-cn">这让人鼓舞，但时间很关键。你们的公开净零承诺目标是到2028年减排45%。按目前的趋势，你们无法达成。有没有考虑过在太阳能基础设施建成之前，购买碳抵消作为过渡措施？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We've looked into it. The challenge is that credible offsets are expensive — about $18 per tonne for verified projects — and some of our board members are concerned about <span class="vocab-highlight">greenwashing</span> accusations. They'd rather invest that capital directly into <span class="vocab-highlight">renewable energy</span> infrastructure than buy offsets that might be seen as a PR shortcut.</span></div>
+    <div class="dialogue-cn">我们考虑过。挑战在于可信的碳抵消很贵——经验证的项目每吨约18美元——而且董事会部分成员担心漂绿指控。他们宁愿将资金直接投入可再生能源基础设施，也不愿购买可能被视为公关捷径的碳抵消。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I actually agree with that philosophy, but there's a pragmatic middle path. What if you allocated 30% of your sustainability budget to high-quality offsets — specifically nature-based solutions like reforestation — while the remaining 70% goes to on-site solar and energy efficiency upgrades? That way you show immediate progress while the long-term infrastructure comes online.</span></div>
+    <div class="dialogue-cn">我其实认同这个理念，但有一条务实的中间路线。如果你们将30%的可持续发展预算分配给高质量的碳抵消——特别是基于自然的解决方案如再造林——剩下的70%用于现场太阳能和能效升级呢？这样在长期基础设施上线的同时可以展示即时进展。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's an interesting proposal. It would also strengthen our <span class="vocab-highlight">ESG</span> rating, which has been flat for two quarters. The institutional investors have been asking pointed questions about our environmental score. Let me take that split back to the board. On a related note — how are you handling <span class="vocab-highlight">supply chain</span> emissions in your own operations?</span></div>
+    <div class="dialogue-cn">这是个有趣的提议。这也能提升我们的ESG评级，已经连续两个季度持平了。机构投资者一直在对我们的环境得分提出尖锐问题。让我把这个分配方案带回董事会讨论。说到这——你们自身运营中是如何处理供应链排放的？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We've implemented a supplier code of conduct that requires all Tier 1 suppliers to report their emissions quarterly. If they don't comply within 12 months, we phase them out. It's been effective — we've already transitioned three suppliers to <span class="vocab-highlight">circular economy</span> models, where waste from one process becomes raw material for another. The cost savings have been a pleasant surprise.</span></div>
+    <div class="dialogue-cn">我们实施了供应商行为准则，要求所有一级供应商每季度报告排放量。如果他们在12个月内不合规，我们就逐步淘汰。这很有效——我们已经将三家供应商转向了循环经济模式，其中一个环节的废物成为另一个环节的原材料。成本节约也令人惊喜。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's exactly the kind of integrated approach we're missing. Our procurement team still prioritises unit cost above all else. I've been pushing for a <span class="vocab-highlight">total cost of ownership</span> model that factors in environmental impact, but it's been slow going. Could you share your supplier scorecard framework?</span></div>
+    <div class="dialogue-cn">这正是我们缺失的那种一体化做法。我们的采购团队仍然将单价放在首位。我一直在推动实施包含环境影响的总拥有成本模型，但进展缓慢。你能分享一下你们的供应商评分框架吗？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Happy to. I'll send over our evaluation template — it weights environmental compliance at 25% of the total supplier score. The key is to frame it not as a cost but as a risk mitigation strategy. When a supplier fails an environmental audit, the financial fallout from regulatory fines and reputational damage far outweighs any upfront savings.</span></div>
+    <div class="dialogue-cn">乐意之至。我会把我们的评估模版发给你——它将环境合规权重设为供应商总分的25%。关键在于将其定位为风险规避策略而非成本。当供应商未能通过环境审计时，监管罚款和声誉损害带来的财务损失远远超过任何前期节省。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a compelling argument. I'll use that framing in my next presentation to the procurement committee. One last thing — your annual <span class="vocab-highlight">stakeholder</span> meeting is coming up, right? How are you positioning the sustainability narrative this year?</span></div>
+    <div class="dialogue-cn">这个论点很有说服力。我会在下次向采购委员会汇报时使用这个表述。还有一件事——你们的年度利益相关方大会快到了是吧？今年你们如何定位可持续发展的叙事？</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We're leading with tangible metrics rather than vague commitments. Instead of saying "we care about the planet," we're showing a 22% reduction in energy intensity, a 31% increase in recycled content across our product lines, and €4.2 million in efficiency savings directly attributable to sustainability initiatives. Numbers speak louder than slogans.</span></div>
+    <div class="dialogue-cn">我们以具体的量化指标来引领，而非模糊的承诺。我们不说"我们关心地球"，而是展示能源强度降低22%、产品线回收材料含量提高31%，以及直接归因于可持续发展项目的420万欧元效率节约。数字比口号更有说服力。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's the approach we need to adopt. I'll draft a revised sustainability communications plan and run it by you next week if you're available.</span></div>
+    <div class="dialogue-cn">这正是我们需要采纳的方法。我来起草一份修订后的可持续发展沟通计划，如果你有空的话下周给你看看。</div>
+  </div>
+
+  <div class="dialogue-line">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll make time. The business case for sustainability only works when it's backed by data. Let's turn those aspirations into auditable results.</span></div>
+    <div class="dialogue-cn">我会安排时间。可持续发展的商业论证只有在有数据支撑时才成立。让我们把这些目标转化为可审计的成果。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>carbon footprint</strong> — 碳足迹 | 组织或产品在其生命周期中排放的温室气体总量</div>
+<div class="vocab-item"><strong>sustainability report</strong> — 可持续发展报告 | 企业定期发布的ESG和环境绩效报告，BEC阅读常见话题</div>
+<div class="vocab-item"><strong>net-zero</strong> — 净零排放 | 在特定时间内将温室气体排放量降至接近零，并抵消剩余排放</div>
+<div class="vocab-item"><strong>carbon offset</strong> — 碳抵消 | 通过投资减排项目来补偿自身碳排放的机制</div>
+<div class="vocab-item"><strong>greenwashing</strong> — 漂绿/绿色洗白 | 企业夸大或虚假宣传其环保行为以塑造绿色形象</div>
+<div class="vocab-item"><strong>renewable energy</strong> — 可再生能源 | 太阳能、风能等可自然补充的能源，可持续发展核心概念</div>
+<div class="vocab-item"><strong>ESG (Environmental, Social, Governance)</strong> — 环境、社会和治理 | 评估企业可持续性的三大维度，投资领域高频词</div>
+<div class="vocab-item"><strong>supply chain</strong> — 供应链 | 从原材料到最终产品的全链条，碳排放核算的关键范围</div>
+<div class="vocab-item"><strong>circular economy</strong> — 循环经济 | 通过再利用、修复和回收实现资源循环使用的经济模式</div>
+<div class="vocab-item"><strong>stakeholder</strong> — 利益相关方 | 包括投资者、客户、员工、社区等所有受企业影响或影响企业的群体</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>The figures tell a different story.</code> → 数据呈现出不同的情况 | 用数据引出与预期不符的事实，比"the numbers are different"更商务化</div>
+<div class="pattern-item"><code>At the current trajectory, you're not going to hit that.</code> → 按目前的趋势，你无法达成目标 | 警示对方当前进度落后于目标的外交表达</div>
+<div class="pattern-item"><code>There's a pragmatic middle path.</code> → 存在一条务实的中间路线 | 谈判和协商中提出折中方案的经典句式</div>
+<div class="pattern-item"><code>Numbers speak louder than slogans.</code> → 数字比口号更有说服力 | 强调数据驱动决策，商务演讲中的金句</div>
+<div class="pattern-item"><code>The business case for... only works when it's backed by data.</code> → ……的商业论证只有在有数据支撑时才成立 | 将讨论拉回事实和数据的专业表达</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Carlos，我刚审阅完你们第一季度的可持续发展报告，不得不说——用水量的下降令人印象深刻。同比下降了18%。但你们的碳足迹数据则是另一番景象。排放量上升了7%。原因是什么？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>感谢你对用水量的肯定，Emma。碳排放增加主要是因为我们越南生产线的扩建。一月份我们新投产了两家工厂，它们目前仍在使用当地电网，主要是煤电。我们意识到这是个问题——已经委托进行了现场太阳能的可行性研究。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这让人鼓舞，但时间很关键。你们的公开净零承诺目标是到2028年减排45%。按目前的趋势，你们无法达成。有没有考虑过在太阳能基础设施建成之前，购买碳抵消作为过渡措施？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我们考虑过。挑战在于可信的碳抵消很贵——经验证的项目每吨约18美元——而且董事会部分成员担心漂绿指控。他们宁愿将资金直接投入可再生能源基础设施，也不愿购买可能被视为公关捷径的碳抵消。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我其实认同这个理念，但有一条务实的中间路线。如果你们将30%的可持续发展预算分配给高质量的碳抵消——特别是基于自然的解决方案如再造林——剩下的70%用于现场太阳能和能效升级呢？这样在长期基础设施上线的同时可以展示即时进展。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是个有趣的提议。这也能提升我们的ESG评级，已经连续两个季度持平了。机构投资者一直在对我们的环境得分提出尖锐问题。让我把这个分配方案带回董事会讨论。说到这——你们自身运营中是如何处理供应链排放的？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我们实施了供应商行为准则，要求所有一级供应商每季度报告排放量。如果他们在12个月内不合规，我们就逐步淘汰。这很有效——我们已经将三家供应商转向了循环经济模式，其中一个环节的废物成为另一个环节的原材料。成本节约也令人惊喜。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这正是我们缺失的那种一体化做法。我们的采购团队仍然将单价放在首位。我一直在推动实施包含环境影响的总拥有成本模型，但进展缓慢。你能分享一下你们的供应商评分框架吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>乐意之至。我会把我们的评估模版发给你——它将环境合规权重设为供应商总分的25%。关键在于将其定位为风险规避策略而非成本。当供应商未能通过环境审计时，监管罚款和声誉损害带来的财务损失远远超过任何前期节省。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这个论点很有说服力。我会在下次向采购委员会汇报时使用这个表述。还有一件事——你们的年度利益相关方大会快到了是吧？今年你们如何定位可持续发展的叙事？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我们以具体的量化指标来引领，而非模糊的承诺。我们不说"我们关心地球"，而是展示能源强度降低22%、产品线回收材料含量提高31%，以及直接归因于可持续发展项目的420万欧元效率节约。数字比口号更有说服力。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这正是我们需要采纳的方法。我来起草一份修订后的可持续发展沟通计划，如果你有空的话下周给你看看。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我会安排时间。可持续发展的商业论证只有在有数据支撑时才成立。让我们把这些目标转化为可审计的成果。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>可持续发展（Sustainability）是BEC考试中越来越高频的话题，尤其在阅读Part 3和听力Part 2中经常出现。建议重点掌握ESG三大维度的英文表述（Environmental, Social, Governance），以及"carbon footprint""net-zero""circular economy"等核心概念的准确含义。在口语考试中，当讨论企业社会责任（CSR）时，学会用数据支撑观点——与其说"we should be greener"，不如说"a 20% reduction in energy intensity saved the company €2 million"，这种量化表达在BEC口语评分中会获得更高分数。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>
