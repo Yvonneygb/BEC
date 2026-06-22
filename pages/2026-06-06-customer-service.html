@@ -1,24 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>客户服务 Customer Service - BEC Daily</title>
+<title>瀹㈡埛鏈嶅姟 Customer Service - BEC Daily</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+body{max-width:860px;margin:0 auto;outline:3px dashed #10b981;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem;width:100%;box-sizing:border-box}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 
-/* 标题行：icon + 文字 + 右侧操作 */
+/* 鏍囬琛岋細icon + 鏂囧瓧 + 鍙充晶鎿嶄綔 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
 .section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
 .section-head-right{margin-left:auto;flex-shrink:0}
 
-/* 中文切换按钮 */
+/* 涓枃鍒囨崲鎸夐挳 */
 .cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
 .cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
 .cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
@@ -34,7 +34,7 @@ h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
 body.show-cn .dialogue-cn{display:block}
 
-/* 词汇高亮 */
+/* 璇嶆眹楂樹寒 */
 .vocab-highlight{font-weight:700;color:#6D4AFF}
 
 .roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
@@ -56,11 +56,11 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 <body>
 
 <span class="badge">BEC Daily</span>
-<h1>客户服务 Customer Service</h1>
+<h1>瀹㈡埛鏈嶅姟 Customer Service</h1>
 
 <div class="roles">
-  <strong>A (Emma Foster) — Customer Relations Manager, CloudNet Telecom</strong><br>
-  <strong>B (James Carter) — Operations Director, BrightPath Logistics</strong>
+  <strong>A (Emma Foster) 鈥?Customer Relations Manager, CloudNet Telecom</strong><br>
+  <strong>B (James Carter) 鈥?Operations Director, BrightPath Logistics</strong>
 </div>
 
 <!-- Dialogue -->
@@ -69,7 +69,7 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Dialogue</h2>
   <div class="section-head-right">
     <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
-      <span class="cn-toggle-dot"></span> 展示中文
+      <span class="cn-toggle-dot"></span> 灞曠ず涓枃
     </button>
   </div>
 </div>
@@ -77,58 +77,58 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 <div class="dialogue">
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Good afternoon, Mr. Carter. I understand you've been experiencing connectivity issues. Let me pull up your account — you're on our Enterprise Plus plan with 12 branches, correct?</span></div>
-    <div class="dialogue-cn">下午好，Carter先生。我了解到你们遇到了网络连接问题。让我调出你的账户——你是企业增强版套餐，有12个分点，对吗？</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Good afternoon, Mr. Carter. I understand you've been experiencing connectivity issues. Let me pull up your account 鈥?you're on our Enterprise Plus plan with 12 branches, correct?</span></div>
+    <div class="dialogue-cn">涓嬪崍濂斤紝Carter鍏堢敓銆傛垜浜嗚В鍒颁綘浠亣鍒颁簡缃戠粶杩炴帴闂銆傝鎴戣皟鍑轰綘鐨勮处鎴封€斺€斾綘鏄紒涓氬寮虹増濂楅锛屾湁12涓垎鐐癸紝瀵瑰悧锛?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's right, and I'm frankly at my wit's end. This is the third <span class="vocab-highlight">outage</span> this month, Emma. Our warehouse management system went down for four hours yesterday. We lost thousands in unshipped orders. This is completely unacceptable.</span></div>
-    <div class="dialogue-cn">没错，我真心已经无计可施了。Emma，这是这个月的第三次服务中断了。我们的仓库管理系统昨天宕机了四个小时。我们损失了数千件未发货的订单。这完全无法接受。</div>
+    <div class="dialogue-cn">娌￠敊锛屾垜鐪熷績宸茬粡鏃犺鍙柦浜嗐€侲mma锛岃繖鏄繖涓湀鐨勭涓夋鏈嶅姟涓柇浜嗐€傛垜浠殑浠撳簱绠＄悊绯荤粺鏄ㄥぉ瀹曟満浜嗗洓涓皬鏃躲€傛垜浠崯澶变簡鏁板崈浠舵湭鍙戣揣鐨勮鍗曘€傝繖瀹屽叏鏃犳硶鎺ュ彈銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I hear your frustration, and I want to be completely transparent. Our technical team has traced the <span class="vocab-highlight">root cause</span> to a faulty firmware update on the regional server node serving your area. They've already rolled it back, but I understand that doesn't undo the damage.</span></div>
-    <div class="dialogue-cn">我理解你的不满，我想完全坦诚。我们的技术团队已将根本原因追溯到一台影响你所在区域的区域服务器节点上的故障固件更新。他们已经回滚了，但我明白这无法挽回损失。</div>
+    <div class="dialogue-cn">鎴戠悊瑙ｄ綘鐨勪笉婊★紝鎴戞兂瀹屽叏鍧﹁瘹銆傛垜浠殑鎶€鏈洟闃熷凡灏嗘牴鏈師鍥犺拷婧埌涓€鍙板奖鍝嶄綘鎵€鍦ㄥ尯鍩熺殑鍖哄煙鏈嶅姟鍣ㄨ妭鐐逛笂鐨勬晠闅滃浐浠舵洿鏂般€備粬浠凡缁忓洖婊氫簡锛屼絾鎴戞槑鐧借繖鏃犳硶鎸藉洖鎹熷け銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Rolling back after the fact isn't enough. Our <span class="vocab-highlight">service-level agreement</span> guarantees 99.9% uptime, and this month we're barely at 96%. I want to discuss what <span class="vocab-highlight">compensation</span> you're prepared to offer, and I want a concrete <span class="vocab-highlight">turnaround time</span> for a permanent fix.</span></div>
-    <div class="dialogue-cn">事后回滚是不够的。我们的服务水平协议保证99.9%的在线率，而这个月我们勉强达到96%。我想讨论你们准备提供什么样的赔偿，以及永久性修复的具体解决时间。</div>
+    <div class="dialogue-cn">浜嬪悗鍥炴粴鏄笉澶熺殑銆傛垜浠殑鏈嶅姟姘村钩鍗忚淇濊瘉99.9%鐨勫湪绾跨巼锛岃€岃繖涓湀鎴戜滑鍕夊己杈惧埌96%銆傛垜鎯宠璁轰綘浠噯澶囨彁渚涗粈涔堟牱鐨勮禂鍋匡紝浠ュ強姘镐箙鎬т慨澶嶇殑鍏蜂綋瑙ｅ喅鏃堕棿銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Those are fair requests. Let me address them in order. On compensation — per our SLA, any month below 99.5% uptime triggers an automatic 15% service credit. I'm also authorised to offer a <span class="vocab-highlight">goodwill gesture</span> of one month's service fees waived as a show of our commitment.</span></div>
-    <div class="dialogue-cn">这些要求合情合理。让我逐一回应。关于赔偿——根据我们的SLA，任何一个月低于99.5%的在线率会自动触发15%的服务费抵扣。我也有权限提供免一个月服务费的善意表示，以体现我们对此事的重视。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Those are fair requests. Let me address them in order. On compensation 鈥?per our SLA, any month below 99.5% uptime triggers an automatic 15% service credit. I'm also authorised to offer a <span class="vocab-highlight">goodwill gesture</span> of one month's service fees waived as a show of our commitment.</span></div>
+    <div class="dialogue-cn">杩欎簺瑕佹眰鍚堟儏鍚堢悊銆傝鎴戦€愪竴鍥炲簲銆傚叧浜庤禂鍋库€斺€旀牴鎹垜浠殑SLA锛屼换浣曚竴涓湀浣庝簬99.5%鐨勫湪绾跨巼浼氳嚜鍔ㄨЕ鍙?5%鐨勬湇鍔¤垂鎶垫墸銆傛垜涔熸湁鏉冮檺鎻愪緵鍏嶄竴涓湀鏈嶅姟璐圭殑鍠勬剰琛ㄧず锛屼互浣撶幇鎴戜滑瀵规浜嬬殑閲嶈銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A month's waiver plus the SLA credit — that's a start. But my bigger concern is prevention. What guarantees can you give me that this won't happen again in two weeks?</span></div>
-    <div class="dialogue-cn">一个月免费加上SLA抵扣——这是一个开始。但我更大的担忧是预防。你们能给出什么保证，确保两周后不会再发生同样的事？</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A month's waiver plus the SLA credit 鈥?that's a start. But my bigger concern is prevention. What guarantees can you give me that this won't happen again in two weeks?</span></div>
+    <div class="dialogue-cn">涓€涓湀鍏嶈垂鍔犱笂SLA鎶垫墸鈥斺€旇繖鏄竴涓紑濮嬨€備絾鎴戞洿澶х殑鎷呭咖鏄闃层€備綘浠兘缁欏嚭浠€涔堜繚璇侊紝纭繚涓ゅ懆鍚庝笉浼氬啀鍙戠敓鍚屾牱鐨勪簨锛?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Here's our action plan. We're deploying a <span class="vocab-highlight">redundancy</span> system across all regional servers, which means if one node fails, your traffic automatically switches to a backup within 30 seconds. The rollout completes in ten business days. Your <span class="vocab-highlight">account manager</span> will send you weekly status updates.</span></div>
-    <div class="dialogue-cn">这是我们的行动计划。我们正在所有区域服务器上部署冗余系统，这意味着如果一个节点故障，你的流量会在30秒内自动切换到备份。部署将在十个工作日内完成。你们的客户经理会每周发状态更新给你。</div>
+    <div class="dialogue-cn">杩欐槸鎴戜滑鐨勮鍔ㄨ鍒掋€傛垜浠鍦ㄦ墍鏈夊尯鍩熸湇鍔″櫒涓婇儴缃插啑浣欑郴缁燂紝杩欐剰鍛崇潃濡傛灉涓€涓妭鐐规晠闅滐紝浣犵殑娴侀噺浼氬湪30绉掑唴鑷姩鍒囨崲鍒板浠姐€傞儴缃插皢鍦ㄥ崄涓伐浣滄棩鍐呭畬鎴愩€備綘浠殑瀹㈡埛缁忕悊浼氭瘡鍛ㄥ彂鐘舵€佹洿鏂扮粰浣犮€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Ten business days. I'm going to hold you to that, Emma. And I'd like to <span class="vocab-highlight">escalate</span> this formally — please put everything we've discussed in writing and copy your regional director.</span></div>
-    <div class="dialogue-cn">十个工作日。Emma，我会按这个标准来要求你。另外我想正式升级此事——请把我们讨论的所有内容写下来，并抄送你所在区域的区域总监。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Ten business days. I'm going to hold you to that, Emma. And I'd like to <span class="vocab-highlight">escalate</span> this formally 鈥?please put everything we've discussed in writing and copy your regional director.</span></div>
+    <div class="dialogue-cn">鍗佷釜宸ヤ綔鏃ャ€侲mma锛屾垜浼氭寜杩欎釜鏍囧噯鏉ヨ姹備綘銆傚彟澶栨垜鎯虫寮忓崌绾ф浜嬧€斺€旇鎶婃垜浠璁虹殑鎵€鏈夊唴瀹瑰啓涓嬫潵锛屽苟鎶勯€佷綘鎵€鍦ㄥ尯鍩熺殑鍖哄煙鎬荤洃銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Absolutely. I'll draft the <span class="vocab-highlight">incident report</span> today with the compensation details, action plan, and timeline. I'm also scheduling a follow-up call for two weeks from now so we can review the redundancy deployment together. Does that work for you?</span></div>
-    <div class="dialogue-cn">绝对可以。我今天就起草事件报告，包含赔偿细节、行动方案和时间表。我还安排了两周后的跟进电话，届时我们可以一起审查冗余系统的部署情况。这样可以吗？</div>
+    <div class="dialogue-cn">缁濆鍙互銆傛垜浠婂ぉ灏辫捣鑽変簨浠舵姤鍛婏紝鍖呭惈璧斿伩缁嗚妭銆佽鍔ㄦ柟妗堝拰鏃堕棿琛ㄣ€傛垜杩樺畨鎺掍簡涓ゅ懆鍚庣殑璺熻繘鐢佃瘽锛屽眾鏃舵垜浠彲浠ヤ竴璧峰鏌ュ啑浣欑郴缁熺殑閮ㄧ讲鎯呭喌銆傝繖鏍峰彲浠ュ悧锛?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Yes, that works. I appreciate the proactive follow-up. We've been clients for five years, Emma — I want to keep it that way, but reliability is non-negotiable for our operations.</span></div>
-    <div class="dialogue-cn">好，可以。我欣赏你主动跟进的态度。我们已经是五年的客户了，Emma——我想继续保持这样的关系，但对我们运营而言，稳定性是不可妥协的。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Yes, that works. I appreciate the proactive follow-up. We've been clients for five years, Emma 鈥?I want to keep it that way, but reliability is non-negotiable for our operations.</span></div>
+    <div class="dialogue-cn">濂斤紝鍙互銆傛垜娆ｈ祻浣犱富鍔ㄨ窡杩涚殑鎬佸害銆傛垜浠凡缁忔槸浜斿勾鐨勫鎴蜂簡锛孍mma鈥斺€旀垜鎯崇户缁繚鎸佽繖鏍风殑鍏崇郴锛屼絾瀵规垜浠繍钀ヨ€岃█锛岀ǔ瀹氭€ф槸涓嶅彲濡ュ崗鐨勩€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Completely understood, Mr. Carter. We value the partnership deeply and I'm committed to restoring your confidence. You'll have the incident report in your inbox within the hour.</span></div>
-    <div class="dialogue-cn">完全理解，Carter先生。我们非常珍视这段合作关系，我致力于恢复你的信心。事件报告一小时内会出现在你的收件箱里。</div>
+    <div class="dialogue-cn">瀹屽叏鐞嗚В锛孋arter鍏堢敓銆傛垜浠潪甯哥弽瑙嗚繖娈靛悎浣滃叧绯伙紝鎴戣嚧鍔涗簬鎭㈠浣犵殑淇″績銆備簨浠舵姤鍛婁竴灏忔椂鍐呬細鍑虹幇鍦ㄤ綘鐨勬敹浠剁閲屻€?/div>
   </div>
 
 </div>
@@ -141,16 +141,16 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Key Vocabulary</h2>
 </div>
 
-<div class="vocab-item"><strong>outage</strong> — 服务中断/宕机 | 技术服务场景的高频词，指系统无法使用</div>
-<div class="vocab-item"><strong>root cause</strong> — 根本原因 | 问题分析的标准术语，强调找到源头而非表象</div>
-<div class="vocab-item"><strong>service-level agreement (SLA)</strong> — 服务水平协议 | BEC阅读和听力中的核心合同概念</div>
-<div class="vocab-item"><strong>compensation</strong> — 赔偿/补偿 | 客户投诉处理中的关键环节</div>
-<div class="vocab-item"><strong>turnaround time</strong> — 响应/解决时间 | 服务承诺中的核心时间指标</div>
-<div class="vocab-item"><strong>goodwill gesture</strong> — 善意表示 | 超出合同义务的补偿，体现客户关系维护诚意</div>
-<div class="vocab-item"><strong>redundancy</strong> — 冗余（系统） | IT基础设施中防止单点故障的备份机制</div>
-<div class="vocab-item"><strong>escalate</strong> — 升级/上报 | 将问题提交给更高层级处理的标准流程</div>
-<div class="vocab-item"><strong>incident report</strong> — 事件报告 | 问题发生后的正式书面记录和分析</div>
-<div class="vocab-item"><strong>account manager</strong> — 客户经理 | 商务关系中维护客户关系的关键对接人</div>
+<div class="vocab-item"><strong>outage</strong> 鈥?鏈嶅姟涓柇/瀹曟満 | 鎶€鏈湇鍔″満鏅殑楂橀璇嶏紝鎸囩郴缁熸棤娉曚娇鐢?/div>
+<div class="vocab-item"><strong>root cause</strong> 鈥?鏍规湰鍘熷洜 | 闂鍒嗘瀽鐨勬爣鍑嗘湳璇紝寮鸿皟鎵惧埌婧愬ご鑰岄潪琛ㄨ薄</div>
+<div class="vocab-item"><strong>service-level agreement (SLA)</strong> 鈥?鏈嶅姟姘村钩鍗忚 | BEC闃呰鍜屽惉鍔涗腑鐨勬牳蹇冨悎鍚屾蹇?/div>
+<div class="vocab-item"><strong>compensation</strong> 鈥?璧斿伩/琛ュ伩 | 瀹㈡埛鎶曡瘔澶勭悊涓殑鍏抽敭鐜妭</div>
+<div class="vocab-item"><strong>turnaround time</strong> 鈥?鍝嶅簲/瑙ｅ喅鏃堕棿 | 鏈嶅姟鎵胯涓殑鏍稿績鏃堕棿鎸囨爣</div>
+<div class="vocab-item"><strong>goodwill gesture</strong> 鈥?鍠勬剰琛ㄧず | 瓒呭嚭鍚堝悓涔夊姟鐨勮ˉ鍋匡紝浣撶幇瀹㈡埛鍏崇郴缁存姢璇氭剰</div>
+<div class="vocab-item"><strong>redundancy</strong> 鈥?鍐椾綑锛堢郴缁燂級 | IT鍩虹璁炬柦涓槻姝㈠崟鐐规晠闅滅殑澶囦唤鏈哄埗</div>
+<div class="vocab-item"><strong>escalate</strong> 鈥?鍗囩骇/涓婃姤 | 灏嗛棶棰樻彁浜ょ粰鏇撮珮灞傜骇澶勭悊鐨勬爣鍑嗘祦绋?/div>
+<div class="vocab-item"><strong>incident report</strong> 鈥?浜嬩欢鎶ュ憡 | 闂鍙戠敓鍚庣殑姝ｅ紡涔﹂潰璁板綍鍜屽垎鏋?/div>
+<div class="vocab-item"><strong>account manager</strong> 鈥?瀹㈡埛缁忕悊 | 鍟嗗姟鍏崇郴涓淮鎶ゅ鎴峰叧绯荤殑鍏抽敭瀵规帴浜?/div>
 
 <hr>
 
@@ -160,12 +160,12 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Sentence Patterns</h2>
 </div>
 
-<div class="pattern-item"><code>I'm frankly at my wit's end.</code> → 我真心已经无计可施了 | 表达严重不满和疲惫的习语，比简单说 angry 更有力</div>
-<div class="pattern-item"><code>I hear your frustration, and I want to be completely transparent.</code> → 我理解你的不满，我想完全坦诚 | 客户投诉处理的黄金开场——先共情，再透明</div>
-<div class="pattern-item"><code>Those are fair requests. Let me address them in order.</code> → 这些要求合情合理，让我逐一回应 | 结构化回应客户多项诉求的经典句式</div>
-<div class="pattern-item"><code>I'm going to hold you to that.</code> → 我会按这个标准来要求你 | 表达严肃期望，让对方知道你会追踪后续</div>
-<div class="pattern-item"><code>...but my bigger concern is prevention.</code> → ...但我更大的担忧是预防 | 从赔偿转向根本解决方案的过渡句式</div>
-<div class="pattern-item"><code>We value the partnership deeply.</code> → 我们非常珍视这段合作关系 | 安抚客户、表达长期合作意愿的标准表达</div>
+<div class="pattern-item"><code>I'm frankly at my wit's end.</code> 鈫?鎴戠湡蹇冨凡缁忔棤璁″彲鏂戒簡 | 琛ㄨ揪涓ラ噸涓嶆弧鍜岀柌鎯殑涔犺锛屾瘮绠€鍗曡 angry 鏇存湁鍔?/div>
+<div class="pattern-item"><code>I hear your frustration, and I want to be completely transparent.</code> 鈫?鎴戠悊瑙ｄ綘鐨勪笉婊★紝鎴戞兂瀹屽叏鍧﹁瘹 | 瀹㈡埛鎶曡瘔澶勭悊鐨勯粍閲戝紑鍦衡€斺€斿厛鍏辨儏锛屽啀閫忔槑</div>
+<div class="pattern-item"><code>Those are fair requests. Let me address them in order.</code> 鈫?杩欎簺瑕佹眰鍚堟儏鍚堢悊锛岃鎴戦€愪竴鍥炲簲 | 缁撴瀯鍖栧洖搴斿鎴峰椤硅瘔姹傜殑缁忓吀鍙ュ紡</div>
+<div class="pattern-item"><code>I'm going to hold you to that.</code> 鈫?鎴戜細鎸夎繖涓爣鍑嗘潵瑕佹眰浣?| 琛ㄨ揪涓ヨ們鏈熸湜锛岃瀵规柟鐭ラ亾浣犱細杩借釜鍚庣画</div>
+<div class="pattern-item"><code>...but my bigger concern is prevention.</code> 鈫?...浣嗘垜鏇村ぇ鐨勬媴蹇ф槸棰勯槻 | 浠庤禂鍋胯浆鍚戞牴鏈В鍐虫柟妗堢殑杩囨浮鍙ュ紡</div>
+<div class="pattern-item"><code>We value the partnership deeply.</code> 鈫?鎴戜滑闈炲父鐝嶈杩欐鍚堜綔鍏崇郴 | 瀹夋姎瀹㈡埛銆佽〃杈鹃暱鏈熷悎浣滄剰鎰跨殑鏍囧噯琛ㄨ揪</div>
 
 <hr>
 
@@ -177,17 +177,17 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 </div>
 
 <div class="translation">
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>下午好，Carter先生。我了解到你们遇到了网络连接问题。让我调出你的账户——你是企业增强版套餐，有12个分点，对吗？</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>没错，我真心已经无计可施了。Emma，这是这个月的第三次服务中断了。我们的仓库管理系统昨天宕机了四个小时。我们损失了数千件未发货的订单。这完全无法接受。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>我理解你的不满，我想完全坦诚。我们的技术团队已将根本原因追溯到一台影响你所在区域的区域服务器节点上的故障固件更新。他们已经回滚了，但我明白这无法挽回损失。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>事后回滚是不够的。我们的服务水平协议保证99.9%的在线率，而这个月我们勉强达到96%。我想讨论你们准备提供什么样的赔偿，以及永久性修复的具体解决时间。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>这些要求合情合理。让我逐一回应。关于赔偿——根据我们的SLA，任何一个月低于99.5%的在线率会自动触发15%的服务费抵扣。我也有权限提供免一个月服务费的善意表示，以体现我们对此事的重视。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>一个月免费加上SLA抵扣——这是一个开始。但我更大的担忧是预防。你们能给出什么保证，确保两周后不会再发生同样的事？</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>这是我们的行动计划。我们正在所有区域服务器上部署冗余系统，这意味着如果一个节点故障，你的流量会在30秒内自动切换到备份。部署将在十个工作日内完成。你们的客户经理会每周发状态更新给你。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>十个工作日。Emma，我会按这个标准来要求你。另外我想正式升级此事——请把我们讨论的所有内容写下来，并抄送你所在区域的区域总监。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>绝对可以。我今天就起草事件报告，包含赔偿细节、行动方案和时间表。我还安排了两周后的跟进电话，届时我们可以一起审查冗余系统的部署情况。这样可以吗？</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>好，可以。我欣赏你主动跟进的态度。我们已经是五年的客户了，Emma——我想继续保持这样的关系，但对我们运营而言，稳定性是不可妥协的。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>完全理解，Carter先生。我们非常珍视这段合作关系，我致力于恢复你的信心。事件报告一小时内会出现在你的收件箱里。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>涓嬪崍濂斤紝Carter鍏堢敓銆傛垜浜嗚В鍒颁綘浠亣鍒颁簡缃戠粶杩炴帴闂銆傝鎴戣皟鍑轰綘鐨勮处鎴封€斺€斾綘鏄紒涓氬寮虹増濂楅锛屾湁12涓垎鐐癸紝瀵瑰悧锛?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>娌￠敊锛屾垜鐪熷績宸茬粡鏃犺鍙柦浜嗐€侲mma锛岃繖鏄繖涓湀鐨勭涓夋鏈嶅姟涓柇浜嗐€傛垜浠殑浠撳簱绠＄悊绯荤粺鏄ㄥぉ瀹曟満浜嗗洓涓皬鏃躲€傛垜浠崯澶变簡鏁板崈浠舵湭鍙戣揣鐨勮鍗曘€傝繖瀹屽叏鏃犳硶鎺ュ彈銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>鎴戠悊瑙ｄ綘鐨勪笉婊★紝鎴戞兂瀹屽叏鍧﹁瘹銆傛垜浠殑鎶€鏈洟闃熷凡灏嗘牴鏈師鍥犺拷婧埌涓€鍙板奖鍝嶄綘鎵€鍦ㄥ尯鍩熺殑鍖哄煙鏈嶅姟鍣ㄨ妭鐐逛笂鐨勬晠闅滃浐浠舵洿鏂般€備粬浠凡缁忓洖婊氫簡锛屼絾鎴戞槑鐧借繖鏃犳硶鎸藉洖鎹熷け銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>浜嬪悗鍥炴粴鏄笉澶熺殑銆傛垜浠殑鏈嶅姟姘村钩鍗忚淇濊瘉99.9%鐨勫湪绾跨巼锛岃€岃繖涓湀鎴戜滑鍕夊己杈惧埌96%銆傛垜鎯宠璁轰綘浠噯澶囨彁渚涗粈涔堟牱鐨勮禂鍋匡紝浠ュ強姘镐箙鎬т慨澶嶇殑鍏蜂綋瑙ｅ喅鏃堕棿銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>杩欎簺瑕佹眰鍚堟儏鍚堢悊銆傝鎴戦€愪竴鍥炲簲銆傚叧浜庤禂鍋库€斺€旀牴鎹垜浠殑SLA锛屼换浣曚竴涓湀浣庝簬99.5%鐨勫湪绾跨巼浼氳嚜鍔ㄨЕ鍙?5%鐨勬湇鍔¤垂鎶垫墸銆傛垜涔熸湁鏉冮檺鎻愪緵鍏嶄竴涓湀鏈嶅姟璐圭殑鍠勬剰琛ㄧず锛屼互浣撶幇鎴戜滑瀵规浜嬬殑閲嶈銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>涓€涓湀鍏嶈垂鍔犱笂SLA鎶垫墸鈥斺€旇繖鏄竴涓紑濮嬨€備絾鎴戞洿澶х殑鎷呭咖鏄闃层€備綘浠兘缁欏嚭浠€涔堜繚璇侊紝纭繚涓ゅ懆鍚庝笉浼氬啀鍙戠敓鍚屾牱鐨勪簨锛?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>杩欐槸鎴戜滑鐨勮鍔ㄨ鍒掋€傛垜浠鍦ㄦ墍鏈夊尯鍩熸湇鍔″櫒涓婇儴缃插啑浣欑郴缁燂紝杩欐剰鍛崇潃濡傛灉涓€涓妭鐐规晠闅滐紝浣犵殑娴侀噺浼氬湪30绉掑唴鑷姩鍒囨崲鍒板浠姐€傞儴缃插皢鍦ㄥ崄涓伐浣滄棩鍐呭畬鎴愩€備綘浠殑瀹㈡埛缁忕悊浼氭瘡鍛ㄥ彂鐘舵€佹洿鏂扮粰浣犮€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>鍗佷釜宸ヤ綔鏃ャ€侲mma锛屾垜浼氭寜杩欎釜鏍囧噯鏉ヨ姹備綘銆傚彟澶栨垜鎯虫寮忓崌绾ф浜嬧€斺€旇鎶婃垜浠璁虹殑鎵€鏈夊唴瀹瑰啓涓嬫潵锛屽苟鎶勯€佷綘鎵€鍦ㄥ尯鍩熺殑鍖哄煙鎬荤洃銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>缁濆鍙互銆傛垜浠婂ぉ灏辫捣鑽変簨浠舵姤鍛婏紝鍖呭惈璧斿伩缁嗚妭銆佽鍔ㄦ柟妗堝拰鏃堕棿琛ㄣ€傛垜杩樺畨鎺掍簡涓ゅ懆鍚庣殑璺熻繘鐢佃瘽锛屽眾鏃舵垜浠彲浠ヤ竴璧峰鏌ュ啑浣欑郴缁熺殑閮ㄧ讲鎯呭喌銆傝繖鏍峰彲浠ュ悧锛?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>濂斤紝鍙互銆傛垜娆ｈ祻浣犱富鍔ㄨ窡杩涚殑鎬佸害銆傛垜浠凡缁忔槸浜斿勾鐨勫鎴蜂簡锛孍mma鈥斺€旀垜鎯崇户缁繚鎸佽繖鏍风殑鍏崇郴锛屼絾瀵规垜浠繍钀ヨ€岃█锛岀ǔ瀹氭€ф槸涓嶅彲濡ュ崗鐨勩€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>瀹屽叏鐞嗚В锛孋arter鍏堢敓銆傛垜浠潪甯哥弽瑙嗚繖娈靛悎浣滃叧绯伙紝鎴戣嚧鍔涗簬鎭㈠浣犵殑淇″績銆備簨浠舵姤鍛婁竴灏忔椂鍐呬細鍑虹幇鍦ㄤ綘鐨勬敹浠剁閲屻€?/span></div>
 </div>
 </div>
 
@@ -199,7 +199,7 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
     <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
     <h2>Learning Tip</h2>
   </div>
-  <p>客户服务（Customer Service）场景在BEC口语Part 2和听力Part 2中频繁出现。投诉处理的核心模式是"共情（empathise）→ 解释原因（explain）→ 提出方案（propose）→ 跟进承诺（follow up）"。建议重点练习 SLA、compensation、goodwill gesture 等专业术语，并注意区分"投诉方"和"处理方"两套话术。</p>
+  <p>瀹㈡埛鏈嶅姟锛圕ustomer Service锛夊満鏅湪BEC鍙ｈPart 2鍜屽惉鍔汸art 2涓绻佸嚭鐜般€傛姇璇夊鐞嗙殑鏍稿績妯″紡鏄?鍏辨儏锛坋mpathise锛夆啋 瑙ｉ噴鍘熷洜锛坋xplain锛夆啋 鎻愬嚭鏂规锛坧ropose锛夆啋 璺熻繘鎵胯锛坒ollow up锛?銆傚缓璁噸鐐圭粌涔?SLA銆乧ompensation銆乬oodwill gesture 绛変笓涓氭湳璇紝骞舵敞鎰忓尯鍒?鎶曡瘔鏂?鍜?澶勭悊鏂?涓ゅ璇濇湳銆?/p>
 </div>
 
 <script>
@@ -210,20 +210,19 @@ function toggleChinese() {
   var btn = document.getElementById('cnToggle');
   btn.classList.toggle('showing', showChinese);
   btn.innerHTML = showChinese
-    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
-    : '<span class="cn-toggle-dot"></span> 展示中文';
+    ? '<span class="cn-toggle-dot"></span> 闅愯棌涓枃'
+    : '<span class="cn-toggle-dot"></span> 灞曠ず涓枃';
   document.body.classList.toggle('show-cn', showChinese);
 }
 
-// 监听父窗口切换指令
-window.addEventListener('message', function(e) {
+// 鐩戝惉鐖剁獥鍙ｅ垏鎹㈡寚浠?window.addEventListener('message', function(e) {
   if (e.data && e.data.action === 'toggleChinese') {
     showChinese = e.data.show;
     var btn = document.getElementById('cnToggle');
     btn.classList.toggle('showing', showChinese);
     btn.innerHTML = showChinese
-      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
-      : '<span class="cn-toggle-dot"></span> 展示中文';
+      ? '<span class="cn-toggle-dot"></span> 闅愯棌涓枃'
+      : '<span class="cn-toggle-dot"></span> 灞曠ず涓枃';
     document.body.classList.toggle('show-cn', showChinese);
   }
 });

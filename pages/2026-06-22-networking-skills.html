@@ -1,24 +1,24 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>商务社交 Networking Skills - BEC Daily</title>
+<title>鍟嗗姟绀句氦 Networking Skills - BEC Daily</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+body{max-width:860px;margin:0 auto;outline:3px dashed #10b981;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem;width:100%;box-sizing:border-box}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 
-/* 标题行：icon + 文字 + 右侧操作 */
+/* 鏍囬琛岋細icon + 鏂囧瓧 + 鍙充晶鎿嶄綔 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
 .section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
 .section-head-right{margin-left:auto;flex-shrink:0}
 
-/* 中文切换按钮 */
+/* 涓枃鍒囨崲鎸夐挳 */
 .cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
 .cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
 .cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
@@ -34,7 +34,7 @@ h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
 body.show-cn .dialogue-cn{display:block}
 
-/* 词汇高亮 */
+/* 璇嶆眹楂樹寒 */
 .vocab-highlight{font-weight:700;color:#6D4AFF}
 
 .roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
@@ -56,11 +56,11 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 <body>
 
 <span class="badge">BEC Daily</span>
-<h1>商务社交 Networking Skills</h1>
+<h1>鍟嗗姟绀句氦 Networking Skills</h1>
 
 <div class="roles">
-  <strong>A (Emily Wang)</strong> — Marketing Manager, EastBridge Consulting<br>
-  <strong>B (James Carter)</strong> — Regional Director, Pacific Partners Ltd
+  <strong>A (Emily Wang)</strong> 鈥?Marketing Manager, EastBridge Consulting<br>
+  <strong>B (James Carter)</strong> 鈥?Regional Director, Pacific Partners Ltd
 </div>
 
 <!-- Dialogue -->
@@ -69,7 +69,7 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Dialogue</h2>
   <div class="section-head-right">
     <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
-      <span class="cn-toggle-dot"></span> 展示中文
+      <span class="cn-toggle-dot"></span> 灞曠ず涓枃
     </button>
   </div>
 </div>
@@ -77,103 +77,103 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 <div class="dialogue">
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">So, you're with Pacific Partners? I've been following your expansion into Southeast Asia — quite impressive. I don't believe we've been <span class="vocab-highlight">formally introduced</span>. I'm Emily Wang, Marketing Manager at EastBridge Consulting.</span></div>
-    <div class="dialogue-cn">你是Pacific Partners的吗？我一直在关注你们向东南亚的扩张——印象非常深刻。我们好像还没有正式介绍过。我是Emily Wang，EastBridge Consulting的市场经理。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">So, you're with Pacific Partners? I've been following your expansion into Southeast Asia 鈥?quite impressive. I don't believe we've been <span class="vocab-highlight">formally introduced</span>. I'm Emily Wang, Marketing Manager at EastBridge Consulting.</span></div>
+    <div class="dialogue-cn">浣犳槸Pacific Partners鐨勫悧锛熸垜涓€鐩村湪鍏虫敞浣犱滑鍚戜笢鍗椾簹鐨勬墿寮犫€斺€斿嵃璞￠潪甯告繁鍒汇€傛垜浠ソ鍍忚繕娌℃湁姝ｅ紡浠嬬粛杩囥€傛垜鏄疎mily Wang锛孍astBridge Consulting鐨勫競鍦虹粡鐞嗐€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Guilty as charged! James Carter. Pleased to meet you, Emily. EastBridge — you handled the market entry for that German medtech firm last year, didn't you? That case study made the rounds in our office.</span></div>
-    <div class="dialogue-cn">正是我！James Carter。很高兴认识你，Emily。EastBridge——你们去年帮那家德国医疗科技公司做市场准入的案子，对吧？那个案例研究在我们办公室传阅了很久。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Guilty as charged! James Carter. Pleased to meet you, Emily. EastBridge 鈥?you handled the market entry for that German medtech firm last year, didn't you? That case study made the rounds in our office.</span></div>
+    <div class="dialogue-cn">姝ｆ槸鎴戯紒James Carter銆傚緢楂樺叴璁よ瘑浣狅紝Emily銆侲astBridge鈥斺€斾綘浠幓骞村府閭ｅ寰峰浗鍖荤枟绉戞妧鍏徃鍋氬競鍦哄噯鍏ョ殑妗堝瓙锛屽鍚э紵閭ｄ釜妗堜緥鐮旂┒鍦ㄦ垜浠姙鍏浼犻槄浜嗗緢涔呫€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's right — our team spent the better part of six months on it. It's great to meet someone who actually reads those case studies! So what brings you to this conference? Are you speaking on any panels?</span></div>
-    <div class="dialogue-cn">没错——我们团队花了差不多六个月时间做这个项目。能遇到真正读过那些案例研究的人真好！那么你来参加这次会议是为了什么？你有在哪个分论坛发言吗？</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's right 鈥?our team spent the better part of six months on it. It's great to meet someone who actually reads those case studies! So what brings you to this conference? Are you speaking on any panels?</span></div>
+    <div class="dialogue-cn">娌￠敊鈥斺€旀垜浠洟闃熻姳浜嗗樊涓嶅鍏釜鏈堟椂闂村仛杩欎釜椤圭洰銆傝兘閬囧埌鐪熸璇昏繃閭ｄ簺妗堜緥鐮旂┒鐨勪汉鐪熷ソ锛侀偅涔堜綘鏉ュ弬鍔犺繖娆′細璁槸涓轰簡浠€涔堬紵浣犳湁鍦ㄥ摢涓垎璁哄潧鍙戣█鍚楋紵</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm moderating a panel on <span class="vocab-highlight">cross-border partnerships</span> tomorrow morning at 10. Actually, we're still looking for a third panellist with hands-on market-entry experience. Would that be something you might consider?</span></div>
-    <div class="dialogue-cn">我明天上午10点主持一个关于跨境合作的分论坛。实际上，我们还在找第三个小组成员，需要有市场准入的实际操作经验。你考虑参与吗？</div>
+    <div class="dialogue-cn">鎴戞槑澶╀笂鍗?0鐐逛富鎸佷竴涓叧浜庤法澧冨悎浣滅殑鍒嗚鍧涖€傚疄闄呬笂锛屾垜浠繕鍦ㄦ壘绗笁涓皬缁勬垚鍛橈紝闇€瑕佹湁甯傚満鍑嗗叆鐨勫疄闄呮搷浣滅粡楠屻€備綘鑰冭檻鍙備笌鍚楋紵</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a generous invitation, James. I'd need to check my schedule, but I'm certainly interested. Let me give you my <span class="vocab-highlight">business card</span> — my direct line is on there. Could we <span class="vocab-highlight">touch base</span> after the keynote this afternoon?</span></div>
-    <div class="dialogue-cn">这邀请太慷慨了，James。我得确认一下日程，但我确实很感兴趣。容我给你我的名片——上面有我的直拨号码。主题演讲后我们碰个头聊？</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a generous invitation, James. I'd need to check my schedule, but I'm certainly interested. Let me give you my <span class="vocab-highlight">business card</span> 鈥?my direct line is on there. Could we <span class="vocab-highlight">touch base</span> after the keynote this afternoon?</span></div>
+    <div class="dialogue-cn">杩欓個璇峰お鎱锋叏浜嗭紝James銆傛垜寰楃‘璁や竴涓嬫棩绋嬶紝浣嗘垜纭疄寰堟劅鍏磋叮銆傚鎴戠粰浣犳垜鐨勫悕鐗団€斺€斾笂闈㈡湁鎴戠殑鐩存嫧鍙风爜銆備富棰樻紨璁插悗鎴戜滑纰颁釜澶磋亰锛?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Perfect. Here's mine as well. Actually, a few of us are grabbing coffee during the break in about twenty minutes — it's an informal gathering of the Asia-Pacific working group. You should join us. It'd be a great chance to expand your network.</span></div>
-    <div class="dialogue-cn">太好了。这是我的名片。其实，二十分钟后的茶歇时间有几个人要来喝咖啡——是亚太工作组的非正式聚会。你应该来参加。这将是拓展人脉的好机会。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Perfect. Here's mine as well. Actually, a few of us are grabbing coffee during the break in about twenty minutes 鈥?it's an informal gathering of the Asia-Pacific working group. You should join us. It'd be a great chance to expand your network.</span></div>
+    <div class="dialogue-cn">澶ソ浜嗐€傝繖鏄垜鐨勫悕鐗囥€傚叾瀹烇紝浜屽崄鍒嗛挓鍚庣殑鑼舵瓏鏃堕棿鏈夊嚑涓汉瑕佹潵鍠濆挅鍟♀€斺€旀槸浜氬お宸ヤ綔缁勭殑闈炴寮忚仛浼氥€備綘搴旇鏉ュ弬鍔犮€傝繖灏嗘槸鎷撳睍浜鸿剦鐨勫ソ鏈轰細銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'd love to. Who else will be there? I'm particularly keen to connect with anyone in logistics or regulatory compliance — those are our <span class="vocab-highlight">pain points</span> for the Q3 expansion.</span></div>
-    <div class="dialogue-cn">我很乐意。还有谁会来？我特别想和在物流或合规领域的人建立联系——这些是我们Q3扩张的痛点。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'd love to. Who else will be there? I'm particularly keen to connect with anyone in logistics or regulatory compliance 鈥?those are our <span class="vocab-highlight">pain points</span> for the Q3 expansion.</span></div>
+    <div class="dialogue-cn">鎴戝緢涔愭剰銆傝繕鏈夎皝浼氭潵锛熸垜鐗瑰埆鎯冲拰鍦ㄧ墿娴佹垨鍚堣棰嗗煙鐨勪汉寤虹珛鑱旂郴鈥斺€旇繖浜涙槸鎴戜滑Q3鎵╁紶鐨勭棝鐐广€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">As it happens, Sandra Lim from TransGlobal Logistics will be there, and I believe Kenji Tanaka from the ASEAN compliance desk is joining too. I'd be happy to make the introductions — Sandra and I have worked together for years.</span></div>
-    <div class="dialogue-cn">正好，TransGlobal Logistics的Sandra Lim会来，而且我觉得ASEAN合规部门的Kenji Tanaka也会来。我很乐意帮忙引荐——Sandra和我合作多年了。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">As it happens, Sandra Lim from TransGlobal Logistics will be there, and I believe Kenji Tanaka from the ASEAN compliance desk is joining too. I'd be happy to make the introductions 鈥?Sandra and I have worked together for years.</span></div>
+    <div class="dialogue-cn">姝ｅソ锛孴ransGlobal Logistics鐨凷andra Lim浼氭潵锛岃€屼笖鎴戣寰桝SEAN鍚堣閮ㄩ棬鐨凨enji Tanaka涔熶細鏉ャ€傛垜寰堜箰鎰忓府蹇欏紩鑽愨€斺€擲andra鍜屾垜鍚堜綔澶氬勾浜嗐€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That would be incredibly helpful. I've been meaning to reach out to TransGlobal but didn't have a <span class="vocab-highlight">warm introduction</span>. By the way, are you on LinkedIn? I find it's much easier to keep in touch and share industry updates there.</span></div>
-    <div class="dialogue-cn">那会非常有帮助。我一直想联系TransGlobal但苦于没有熟人介绍。对了，你用LinkedIn吗？我觉得在上面保持联系和分享行业动态更方便。</div>
+    <div class="dialogue-cn">閭ｄ細闈炲父鏈夊府鍔┿€傛垜涓€鐩存兂鑱旂郴TransGlobal浣嗚嫤浜庢病鏈夌啛浜轰粙缁嶃€傚浜嗭紝浣犵敤LinkedIn鍚楋紵鎴戣寰楀湪涓婇潰淇濇寔鑱旂郴鍜屽垎浜涓氬姩鎬佹洿鏂逛究銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely — let's connect right now. I post a weekly roundup of regulatory changes in the region; it might be useful for your planning. Just search James Carter, Pacific Partners. And I'll send you the panel briefing doc this evening if you're game.</span></div>
-    <div class="dialogue-cn">当然——我们现在就互加吧。我每周会发一份该地区监管变化的汇总；对你做规划可能有用。直接搜James Carter, Pacific Partners就行。如果你有兴趣，我今晚把分论坛简报发给你。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely 鈥?let's connect right now. I post a weekly roundup of regulatory changes in the region; it might be useful for your planning. Just search James Carter, Pacific Partners. And I'll send you the panel briefing doc this evening if you're game.</span></div>
+    <div class="dialogue-cn">褰撶劧鈥斺€旀垜浠幇鍦ㄥ氨浜掑姞鍚с€傛垜姣忓懆浼氬彂涓€浠借鍦板尯鐩戠鍙樺寲鐨勬眹鎬伙紱瀵逛綘鍋氳鍒掑彲鑳芥湁鐢ㄣ€傜洿鎺ユ悳James Carter, Pacific Partners灏辫銆傚鏋滀綘鏈夊叴瓒ｏ紝鎴戜粖鏅氭妸鍒嗚鍧涚畝鎶ュ彂缁欎綘銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll look it up now. And yes, please do send the briefing. I should mention — I'm not just here as an attendee; our firm is actually scouting for a <span class="vocab-highlight">strategic partner</span> with established distribution channels in Vietnam and Indonesia.</span></div>
-    <div class="dialogue-cn">我现在就搜。是的，请一定把简报发给我。我得提一下——我不只是来参会的；我们公司其实正在寻找在越南和印尼有成熟分销渠道的战略合作伙伴。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll look it up now. And yes, please do send the briefing. I should mention 鈥?I'm not just here as an attendee; our firm is actually scouting for a <span class="vocab-highlight">strategic partner</span> with established distribution channels in Vietnam and Indonesia.</span></div>
+    <div class="dialogue-cn">鎴戠幇鍦ㄥ氨鎼溿€傛槸鐨勶紝璇蜂竴瀹氭妸绠€鎶ュ彂缁欐垜銆傛垜寰楁彁涓€涓嬧€斺€旀垜涓嶅彧鏄潵鍙備細鐨勶紱鎴戜滑鍏徃鍏跺疄姝ｅ湪瀵绘壘鍦ㄨ秺鍗楀拰鍗板凹鏈夋垚鐔熷垎閿€娓犻亾鐨勬垬鐣ュ悎浣滀紮浼淬€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Now that's interesting. We've got a mature <span class="vocab-highlight">distribution network</span> across both markets — we've been there since 2018. I won't pitch you in the middle of a conference hallway, but let's schedule a proper sit-down. How does dinner tomorrow sound? I know a quiet place five minutes from here.</span></div>
-    <div class="dialogue-cn">这就很有意思了。我们在这两个市场都有成熟的分销网络——我们从2018年就在那边了。我不会在会议走廊里就开始推销，但我们可以约个正式面谈。明天晚上一起吃饭怎么样？我知道离这儿五分钟有个安静的地方。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Now that's interesting. We've got a mature <span class="vocab-highlight">distribution network</span> across both markets 鈥?we've been there since 2018. I won't pitch you in the middle of a conference hallway, but let's schedule a proper sit-down. How does dinner tomorrow sound? I know a quiet place five minutes from here.</span></div>
+    <div class="dialogue-cn">杩欏氨寰堟湁鎰忔€濅簡銆傛垜浠湪杩欎袱涓競鍦洪兘鏈夋垚鐔熺殑鍒嗛攢缃戠粶鈥斺€旀垜浠粠2018骞村氨鍦ㄩ偅杈逛簡銆傛垜涓嶄細鍦ㄤ細璁蛋寤婇噷灏卞紑濮嬫帹閿€锛屼絾鎴戜滑鍙互绾︿釜姝ｅ紡闈㈣皥銆傛槑澶╂櫄涓婁竴璧峰悆楗€庝箞鏍凤紵鎴戠煡閬撶杩欏効浜斿垎閽熸湁涓畨闈欑殑鍦版柟銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Dinner tomorrow works. I'll block out 7 PM. But I should be transparent — we're in <span class="vocab-highlight">preliminary discussions</span> with two other firms. I don't want to mislead you about where things stand.</span></div>
-    <div class="dialogue-cn">明天晚餐没问题。我预留晚上7点。但我得坦诚地说——我们正在和另外两家公司进行初步洽谈。我不想让你对现状产生误解。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Dinner tomorrow works. I'll block out 7 PM. But I should be transparent 鈥?we're in <span class="vocab-highlight">preliminary discussions</span> with two other firms. I don't want to mislead you about where things stand.</span></div>
+    <div class="dialogue-cn">鏄庡ぉ鏅氶娌￠棶棰樸€傛垜棰勭暀鏅氫笂7鐐广€備絾鎴戝緱鍧﹁瘹鍦拌鈥斺€旀垜浠鍦ㄥ拰鍙﹀涓ゅ鍏徃杩涜鍒濇娲借皥銆傛垜涓嶆兂璁╀綘瀵圭幇鐘朵骇鐢熻瑙ｃ€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Understood and appreciated. That's how business should be done — no surprises. Let's keep tomorrow <span class="vocab-highlight">exploratory</span>, no pressure. If there's a fit, great; if not, the networking alone is worth the time.</span></div>
-    <div class="dialogue-cn">明白，也很欣赏你的坦诚。做生意就该这样——没有意外。明天就算是探索性的，没有压力。如果匹配，那很好；如果不匹配，光是社交本身就值得这顿晚餐。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Understood and appreciated. That's how business should be done 鈥?no surprises. Let's keep tomorrow <span class="vocab-highlight">exploratory</span>, no pressure. If there's a fit, great; if not, the networking alone is worth the time.</span></div>
+    <div class="dialogue-cn">鏄庣櫧锛屼篃寰堟璧忎綘鐨勫潶璇氥€傚仛鐢熸剰灏辫杩欐牱鈥斺€旀病鏈夋剰澶栥€傛槑澶╁氨绠楁槸鎺㈢储鎬х殑锛屾病鏈夊帇鍔涖€傚鏋滃尮閰嶏紝閭ｅ緢濂斤紱濡傛灉涓嶅尮閰嶏紝鍏夋槸绀句氦鏈韩灏卞€煎緱杩欓】鏅氶銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Exactly my thinking. One thing I've learned in this industry — relationships built on trust outlast any single deal. Speaking of which, I noticed you mentioned sustainability initiatives in your LinkedIn profile. We're launching a green supply chain initiative next quarter.</span></div>
-    <div class="dialogue-cn">正是我的想法。我在这个行业学到的一点就是——建立在信任之上的人际关系比任何单次交易都长久。说到这个，我注意到你在LinkedIn资料上提到了可持续发展项目。我们下个季度要启动一个绿色供应链项目。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Exactly my thinking. One thing I've learned in this industry 鈥?relationships built on trust outlast any single deal. Speaking of which, I noticed you mentioned sustainability initiatives in your LinkedIn profile. We're launching a green supply chain initiative next quarter.</span></div>
+    <div class="dialogue-cn">姝ｆ槸鎴戠殑鎯虫硶銆傛垜鍦ㄨ繖涓涓氬鍒扮殑涓€鐐瑰氨鏄€斺€斿缓绔嬪湪淇′换涔嬩笂鐨勪汉闄呭叧绯绘瘮浠讳綍鍗曟浜ゆ槗閮介暱涔呫€傝鍒拌繖涓紝鎴戞敞鎰忓埌浣犲湪LinkedIn璧勬枡涓婃彁鍒颁簡鍙寔缁彂灞曢」鐩€傛垜浠笅涓搴﹁鍚姩涓€涓豢鑹蹭緵搴旈摼椤圭洰銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">You've done your homework! Sustainability is actually a personal passion — I sit on the advisory board of the ASEAN Green Business Council. We should definitely talk about that green initiative of yours; there might be some grant funding available through the council.</span></div>
-    <div class="dialogue-cn">你做了功课呀！可持续发展其实是我个人的热情所在——我是ASEAN绿色商业委员会的顾问委员会成员。我们一定要聊聊你们的绿色项目；委员会那边可能有一些拨款资助。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">You've done your homework! Sustainability is actually a personal passion 鈥?I sit on the advisory board of the ASEAN Green Business Council. We should definitely talk about that green initiative of yours; there might be some grant funding available through the council.</span></div>
+    <div class="dialogue-cn">浣犲仛浜嗗姛璇惧憖锛佸彲鎸佺画鍙戝睍鍏跺疄鏄垜涓汉鐨勭儹鎯呮墍鍦ㄢ€斺€旀垜鏄疉SEAN缁胯壊鍟嗕笟濮斿憳浼氱殑椤鹃棶濮斿憳浼氭垚鍛樸€傛垜浠竴瀹氳鑱婅亰浣犱滑鐨勭豢鑹查」鐩紱濮斿憳浼氶偅杈瑰彲鑳芥湁涓€浜涙嫧娆捐祫鍔┿€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I had no idea you were on the advisory board — that's a fantastic connection. Let's add that to the dinner agenda. I'll bring our preliminary proposal. In the meantime, I'll see you at the coffee break?</span></div>
-    <div class="dialogue-cn">我完全不知道你是顾问委员会成员——这是一个绝佳的连接。让我们把这个加到晚餐议程中。我会带上我们的初步方案。那期间，茶歇时见？</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I had no idea you were on the advisory board 鈥?that's a fantastic connection. Let's add that to the dinner agenda. I'll bring our preliminary proposal. In the meantime, I'll see you at the coffee break?</span></div>
+    <div class="dialogue-cn">鎴戝畬鍏ㄤ笉鐭ラ亾浣犳槸椤鹃棶濮斿憳浼氭垚鍛樷€斺€旇繖鏄竴涓粷浣崇殑杩炴帴銆傝鎴戜滑鎶婅繖涓姞鍒版櫄椁愯绋嬩腑銆傛垜浼氬甫涓婃垜浠殑鍒濇鏂规銆傞偅鏈熼棿锛岃尪姝囨椂瑙侊紵</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Looking forward to it. I'll introduce you to Sandra and Kenji first thing. And Emily — one piece of advice? Don't try to cover everything in the first coffee chat. Pick one meaningful connection and go deep. Quality over quantity.</span></div>
-    <div class="dialogue-cn">期待见到你。我会第一时间给你介绍Sandra和Kenji。对了Emily——给你一个建议？不要试图在第一次咖啡聊天中覆盖所有事情。专注于一个有意义的关系，深入下去。质量胜于数量。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Looking forward to it. I'll introduce you to Sandra and Kenji first thing. And Emily 鈥?one piece of advice? Don't try to cover everything in the first coffee chat. Pick one meaningful connection and go deep. Quality over quantity.</span></div>
+    <div class="dialogue-cn">鏈熷緟瑙佸埌浣犮€傛垜浼氱涓€鏃堕棿缁欎綘浠嬬粛Sandra鍜孠enji銆傚浜咵mily鈥斺€旂粰浣犱竴涓缓璁紵涓嶈璇曞浘鍦ㄧ涓€娆″挅鍟¤亰澶╀腑瑕嗙洊鎵€鏈変簨鎯呫€備笓娉ㄤ簬涓€涓湁鎰忎箟鐨勫叧绯伙紝娣卞叆涓嬪幓銆傝川閲忚儨浜庢暟閲忋€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Wise words. I'll focus on Sandra since logistics is our immediate priority. Thanks for taking the time, James — I have a feeling this conference just got a lot more productive.</span></div>
-    <div class="dialogue-cn">明智的建议。我会专注于Sandra，因为物流是我们当前的首要任务。谢谢你抽出时间，James——我感觉这次会议一下子变得更有价值了。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Wise words. I'll focus on Sandra since logistics is our immediate priority. Thanks for taking the time, James 鈥?I have a feeling this conference just got a lot more productive.</span></div>
+    <div class="dialogue-cn">鏄庢櫤鐨勫缓璁€傛垜浼氫笓娉ㄤ簬Sandra锛屽洜涓虹墿娴佹槸鎴戜滑褰撳墠鐨勯瑕佷换鍔°€傝阿璋綘鎶藉嚭鏃堕棿锛孞ames鈥斺€旀垜鎰熻杩欐浼氳涓€涓嬪瓙鍙樺緱鏇存湁浠峰€间簡銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">My pleasure, Emily. See you in twenty minutes. And don't forget to send me a LinkedIn request — I'll accept it right away so you can see the regulatory updates before our dinner.</span></div>
-    <div class="dialogue-cn">我的荣幸，Emily。二十分钟后见。别忘了给我发LinkedIn请求——我会马上通过，这样你在晚餐前就能看到那些监管更新了。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">My pleasure, Emily. See you in twenty minutes. And don't forget to send me a LinkedIn request 鈥?I'll accept it right away so you can see the regulatory updates before our dinner.</span></div>
+    <div class="dialogue-cn">鎴戠殑鑽ｅ垢锛孍mily銆備簩鍗佸垎閽熷悗瑙併€傚埆蹇樹簡缁欐垜鍙慙inkedIn璇锋眰鈥斺€旀垜浼氶┈涓婇€氳繃锛岃繖鏍蜂綘鍦ㄦ櫄椁愬墠灏辫兘鐪嬪埌閭ｄ簺鐩戠鏇存柊浜嗐€?/div>
   </div>
 
 </div>
@@ -186,16 +186,16 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Key Vocabulary</h2>
 </div>
 
-<div class="vocab-item"><strong>formally introduced</strong> — 正式介绍 | 商务社交开场标准用语，BEC口语常用</div>
-<div class="vocab-item"><strong>cross-border partnerships</strong> — 跨境合作 | 国际贸易和BEC阅读高频词</div>
-<div class="vocab-item"><strong>touch base</strong> — 联系/沟通/碰头 | 商务社交中非正式约谈的常用短语</div>
-<div class="vocab-item"><strong>business card</strong> — 名片 | 线下社交基本工具，BEC听力场景常见</div>
-<div class="vocab-item"><strong>warm introduction</strong> — 熟人引荐/热介绍 | 指有中间人介绍的商务连接</div>
-<div class="vocab-item"><strong>distribution network</strong> — 分销网络 | 商务战略和供应链核心词汇</div>
-<div class="vocab-item"><strong>exploratory</strong> — 探索性的 | 用于初期商务会谈，表示无压力的合作探讨</div>
-<div class="vocab-item"><strong>strategic partner</strong> — 战略合作伙伴 | 商务合作中的关键术语</div>
-<div class="vocab-item"><strong>pain points</strong> — 痛点/难点 | 商务咨询场景常用，指业务面临的困难</div>
-<div class="vocab-item"><strong>preliminary discussions</strong> — 初步洽谈 | 描述早期商务阶段的正式表达</div>
+<div class="vocab-item"><strong>formally introduced</strong> 鈥?姝ｅ紡浠嬬粛 | 鍟嗗姟绀句氦寮€鍦烘爣鍑嗙敤璇紝BEC鍙ｈ甯哥敤</div>
+<div class="vocab-item"><strong>cross-border partnerships</strong> 鈥?璺ㄥ鍚堜綔 | 鍥介檯璐告槗鍜孊EC闃呰楂橀璇?/div>
+<div class="vocab-item"><strong>touch base</strong> 鈥?鑱旂郴/娌熼€?纰板ご | 鍟嗗姟绀句氦涓潪姝ｅ紡绾﹁皥鐨勫父鐢ㄧ煭璇?/div>
+<div class="vocab-item"><strong>business card</strong> 鈥?鍚嶇墖 | 绾夸笅绀句氦鍩烘湰宸ュ叿锛孊EC鍚姏鍦烘櫙甯歌</div>
+<div class="vocab-item"><strong>warm introduction</strong> 鈥?鐔熶汉寮曡崘/鐑粙缁?| 鎸囨湁涓棿浜轰粙缁嶇殑鍟嗗姟杩炴帴</div>
+<div class="vocab-item"><strong>distribution network</strong> 鈥?鍒嗛攢缃戠粶 | 鍟嗗姟鎴樼暐鍜屼緵搴旈摼鏍稿績璇嶆眹</div>
+<div class="vocab-item"><strong>exploratory</strong> 鈥?鎺㈢储鎬х殑 | 鐢ㄤ簬鍒濇湡鍟嗗姟浼氳皥锛岃〃绀烘棤鍘嬪姏鐨勫悎浣滄帰璁?/div>
+<div class="vocab-item"><strong>strategic partner</strong> 鈥?鎴樼暐鍚堜綔浼欎即 | 鍟嗗姟鍚堜綔涓殑鍏抽敭鏈</div>
+<div class="vocab-item"><strong>pain points</strong> 鈥?鐥涚偣/闅剧偣 | 鍟嗗姟鍜ㄨ鍦烘櫙甯哥敤锛屾寚涓氬姟闈复鐨勫洶闅?/div>
+<div class="vocab-item"><strong>preliminary discussions</strong> 鈥?鍒濇娲借皥 | 鎻忚堪鏃╂湡鍟嗗姟闃舵鐨勬寮忚〃杈?/div>
 
 <hr>
 
@@ -205,12 +205,12 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Sentence Patterns</h2>
 </div>
 
-<div class="pattern-item"><code>I don't believe we've been formally introduced.</code> → 我们好像还没有正式介绍过。 | 商务社交破冰的经典开场白</div>
-<div class="pattern-item"><code>What brings you to this conference?</code> → 你来参加这个会议是出于什么原因？ | 社交场合开启话题的万能句式</div>
-<div class="pattern-item"><code>Could we touch base after the keynote?</code> → 主题演讲后我们再联系？ | 商务场合约定后续沟通的委婉表达</div>
-<div class="pattern-item"><code>I'd be happy to make the introductions.</code> → 我很乐意帮你引荐。 | 社交场合主动牵线搭桥的句式</div>
-<div class="pattern-item"><code>I should be transparent — ...</code> → 我应该坦诚地说…… | 建立信任关系的商务表达</div>
-<div class="pattern-item"><code>I have a feeling this conference just got a lot more productive.</code> → 我感觉这个会议一下子变得更有价值了。 | 社交收尾时积极评价的经典句式</div>
+<div class="pattern-item"><code>I don't believe we've been formally introduced.</code> 鈫?鎴戜滑濂藉儚杩樻病鏈夋寮忎粙缁嶈繃銆?| 鍟嗗姟绀句氦鐮村啺鐨勭粡鍏稿紑鍦虹櫧</div>
+<div class="pattern-item"><code>What brings you to this conference?</code> 鈫?浣犳潵鍙傚姞杩欎釜浼氳鏄嚭浜庝粈涔堝師鍥狅紵 | 绀句氦鍦哄悎寮€鍚瘽棰樼殑涓囪兘鍙ュ紡</div>
+<div class="pattern-item"><code>Could we touch base after the keynote?</code> 鈫?涓婚婕旇鍚庢垜浠啀鑱旂郴锛?| 鍟嗗姟鍦哄悎绾﹀畾鍚庣画娌熼€氱殑濮斿琛ㄨ揪</div>
+<div class="pattern-item"><code>I'd be happy to make the introductions.</code> 鈫?鎴戝緢涔愭剰甯綘寮曡崘銆?| 绀句氦鍦哄悎涓诲姩鐗电嚎鎼ˉ鐨勫彞寮?/div>
+<div class="pattern-item"><code>I should be transparent 鈥?...</code> 鈫?鎴戝簲璇ュ潶璇氬湴璇粹€︹€?| 寤虹珛淇′换鍏崇郴鐨勫晢鍔¤〃杈?/div>
+<div class="pattern-item"><code>I have a feeling this conference just got a lot more productive.</code> 鈫?鎴戞劅瑙夎繖涓細璁竴涓嬪瓙鍙樺緱鏇存湁浠峰€间簡銆?| 绀句氦鏀跺熬鏃剁Н鏋佽瘎浠风殑缁忓吀鍙ュ紡</div>
 
 <hr>
 
@@ -222,26 +222,26 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 </div>
 
 <div class="translation">
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>你是Pacific Partners的吗？我一直在关注你们向东南亚的扩张——印象非常深刻。我们好像还没有正式介绍过。我是Emily Wang，EastBridge Consulting的市场经理。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>正是我！James Carter。很高兴认识你，Emily。EastBridge——你们去年帮那家德国医疗科技公司做市场准入的案子，对吧？那个案例研究在我们办公室传阅了很久。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>没错——我们团队花了差不多六个月时间做这个项目。能遇到真正读过那些案例研究的人真好！那么你来参加这次会议是为了什么？你有在哪个分论坛发言吗？</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>我明天上午10点主持一个关于跨境合作的分论坛。实际上，我们还在找第三个小组成员，需要有市场准入的实际操作经验。你考虑参与吗？</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>这邀请太慷慨了，James。我得确认一下日程，但我确实很感兴趣。容我给你我的名片——上面有我的直拨号码。主题演讲后我们碰个头聊？</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>太好了。这是我的名片。其实，二十分钟后的茶歇时间有几个人要来喝咖啡——是亚太工作组的非正式聚会。你应该来参加。这将是拓展人脉的好机会。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>我很乐意。还有谁会来？我特别想和在物流或合规领域的人建立联系——这些是我们Q3扩张的痛点。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>正好，TransGlobal Logistics的Sandra Lim会来，而且我觉得ASEAN合规部门的Kenji Tanaka也会来。我很乐意帮忙引荐——Sandra和我合作多年了。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>那会非常有帮助。我一直想联系TransGlobal但苦于没有熟人介绍。对了，你用LinkedIn吗？我觉得在上面保持联系和分享行业动态更方便。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>当然——我们现在就互加吧。我每周会发一份该地区监管变化的汇总；对你做规划可能有用。直接搜James Carter, Pacific Partners就行。如果你有兴趣，我今晚把分论坛简报发给你。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>我现在就搜。是的，请一定把简报发给我。我得提一下——我不只是来参会的；我们公司其实正在寻找在越南和印尼有成熟分销渠道的战略合作伙伴。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>这就很有意思了。我们在这两个市场都有成熟的分销网络——我们从2018年就在那边了。我不会在会议走廊里就开始推销，但我们可以约个正式面谈。明天晚上一起吃饭怎么样？我知道离这儿五分钟有个安静的地方。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>明天晚餐没问题。我预留晚上7点。但我得坦诚地说——我们正在和另外两家公司进行初步洽谈。我不想让你对现状产生误解。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>明白，也很欣赏你的坦诚。做生意就该这样——没有意外。明天就算是探索性的，没有压力。如果匹配，那很好；如果不匹配，光是社交本身就值得这顿晚餐。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>正是我的想法。我在这个行业学到的一点就是——建立在信任之上的人际关系比任何单次交易都长久。说到这个，我注意到你在LinkedIn资料上提到了可持续发展项目。我们下个季度要启动一个绿色供应链项目。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>你做了功课呀！可持续发展其实是我个人的热情所在——我是ASEAN绿色商业委员会的顾问委员会成员。我们一定要聊聊你们的绿色项目；委员会那边可能有一些拨款资助。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>我完全不知道你是顾问委员会成员——这是一个绝佳的连接。让我们把这个加到晚餐议程中。我会带上我们的初步方案。那期间，茶歇时见？</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>期待见到你。我会第一时间给你介绍Sandra和Kenji。对了Emily——给你一个建议？不要试图在第一次咖啡聊天中覆盖所有事情。专注于一个有意义的关系，深入下去。质量胜于数量。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>明智的建议。我会专注于Sandra，因为物流是我们当前的首要任务。谢谢你抽出时间，James——我感觉这次会议一下子变得更有价值了。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>我的荣幸，Emily。二十分钟后见。别忘了给我发LinkedIn请求——我会马上通过，这样你在晚餐前就能看到那些监管更新了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>浣犳槸Pacific Partners鐨勫悧锛熸垜涓€鐩村湪鍏虫敞浣犱滑鍚戜笢鍗椾簹鐨勬墿寮犫€斺€斿嵃璞￠潪甯告繁鍒汇€傛垜浠ソ鍍忚繕娌℃湁姝ｅ紡浠嬬粛杩囥€傛垜鏄疎mily Wang锛孍astBridge Consulting鐨勫競鍦虹粡鐞嗐€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>姝ｆ槸鎴戯紒James Carter銆傚緢楂樺叴璁よ瘑浣狅紝Emily銆侲astBridge鈥斺€斾綘浠幓骞村府閭ｅ寰峰浗鍖荤枟绉戞妧鍏徃鍋氬競鍦哄噯鍏ョ殑妗堝瓙锛屽鍚э紵閭ｄ釜妗堜緥鐮旂┒鍦ㄦ垜浠姙鍏浼犻槄浜嗗緢涔呫€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>娌￠敊鈥斺€旀垜浠洟闃熻姳浜嗗樊涓嶅鍏釜鏈堟椂闂村仛杩欎釜椤圭洰銆傝兘閬囧埌鐪熸璇昏繃閭ｄ簺妗堜緥鐮旂┒鐨勪汉鐪熷ソ锛侀偅涔堜綘鏉ュ弬鍔犺繖娆′細璁槸涓轰簡浠€涔堬紵浣犳湁鍦ㄥ摢涓垎璁哄潧鍙戣█鍚楋紵</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>鎴戞槑澶╀笂鍗?0鐐逛富鎸佷竴涓叧浜庤法澧冨悎浣滅殑鍒嗚鍧涖€傚疄闄呬笂锛屾垜浠繕鍦ㄦ壘绗笁涓皬缁勬垚鍛橈紝闇€瑕佹湁甯傚満鍑嗗叆鐨勫疄闄呮搷浣滅粡楠屻€備綘鑰冭檻鍙備笌鍚楋紵</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>杩欓個璇峰お鎱锋叏浜嗭紝James銆傛垜寰楃‘璁や竴涓嬫棩绋嬶紝浣嗘垜纭疄寰堟劅鍏磋叮銆傚鎴戠粰浣犳垜鐨勫悕鐗団€斺€斾笂闈㈡湁鎴戠殑鐩存嫧鍙风爜銆備富棰樻紨璁插悗鎴戜滑纰颁釜澶磋亰锛?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>澶ソ浜嗐€傝繖鏄垜鐨勫悕鐗囥€傚叾瀹烇紝浜屽崄鍒嗛挓鍚庣殑鑼舵瓏鏃堕棿鏈夊嚑涓汉瑕佹潵鍠濆挅鍟♀€斺€旀槸浜氬お宸ヤ綔缁勭殑闈炴寮忚仛浼氥€備綘搴旇鏉ュ弬鍔犮€傝繖灏嗘槸鎷撳睍浜鸿剦鐨勫ソ鏈轰細銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>鎴戝緢涔愭剰銆傝繕鏈夎皝浼氭潵锛熸垜鐗瑰埆鎯冲拰鍦ㄧ墿娴佹垨鍚堣棰嗗煙鐨勪汉寤虹珛鑱旂郴鈥斺€旇繖浜涙槸鎴戜滑Q3鎵╁紶鐨勭棝鐐广€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>姝ｅソ锛孴ransGlobal Logistics鐨凷andra Lim浼氭潵锛岃€屼笖鎴戣寰桝SEAN鍚堣閮ㄩ棬鐨凨enji Tanaka涔熶細鏉ャ€傛垜寰堜箰鎰忓府蹇欏紩鑽愨€斺€擲andra鍜屾垜鍚堜綔澶氬勾浜嗐€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>閭ｄ細闈炲父鏈夊府鍔┿€傛垜涓€鐩存兂鑱旂郴TransGlobal浣嗚嫤浜庢病鏈夌啛浜轰粙缁嶃€傚浜嗭紝浣犵敤LinkedIn鍚楋紵鎴戣寰楀湪涓婇潰淇濇寔鑱旂郴鍜屽垎浜涓氬姩鎬佹洿鏂逛究銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>褰撶劧鈥斺€旀垜浠幇鍦ㄥ氨浜掑姞鍚с€傛垜姣忓懆浼氬彂涓€浠借鍦板尯鐩戠鍙樺寲鐨勬眹鎬伙紱瀵逛綘鍋氳鍒掑彲鑳芥湁鐢ㄣ€傜洿鎺ユ悳James Carter, Pacific Partners灏辫銆傚鏋滀綘鏈夊叴瓒ｏ紝鎴戜粖鏅氭妸鍒嗚鍧涚畝鎶ュ彂缁欎綘銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>鎴戠幇鍦ㄥ氨鎼溿€傛槸鐨勶紝璇蜂竴瀹氭妸绠€鎶ュ彂缁欐垜銆傛垜寰楁彁涓€涓嬧€斺€旀垜涓嶅彧鏄潵鍙備細鐨勶紱鎴戜滑鍏徃鍏跺疄姝ｅ湪瀵绘壘鍦ㄨ秺鍗楀拰鍗板凹鏈夋垚鐔熷垎閿€娓犻亾鐨勬垬鐣ュ悎浣滀紮浼淬€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>杩欏氨寰堟湁鎰忔€濅簡銆傛垜浠湪杩欎袱涓競鍦洪兘鏈夋垚鐔熺殑鍒嗛攢缃戠粶鈥斺€旀垜浠粠2018骞村氨鍦ㄩ偅杈逛簡銆傛垜涓嶄細鍦ㄤ細璁蛋寤婇噷灏卞紑濮嬫帹閿€锛屼絾鎴戜滑鍙互绾︿釜姝ｅ紡闈㈣皥銆傛槑澶╂櫄涓婁竴璧峰悆楗€庝箞鏍凤紵鎴戠煡閬撶杩欏効浜斿垎閽熸湁涓畨闈欑殑鍦版柟銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>鏄庡ぉ鏅氶娌￠棶棰樸€傛垜棰勭暀鏅氫笂7鐐广€備絾鎴戝緱鍧﹁瘹鍦拌鈥斺€旀垜浠鍦ㄥ拰鍙﹀涓ゅ鍏徃杩涜鍒濇娲借皥銆傛垜涓嶆兂璁╀綘瀵圭幇鐘朵骇鐢熻瑙ｃ€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>鏄庣櫧锛屼篃寰堟璧忎綘鐨勫潶璇氥€傚仛鐢熸剰灏辫杩欐牱鈥斺€旀病鏈夋剰澶栥€傛槑澶╁氨绠楁槸鎺㈢储鎬х殑锛屾病鏈夊帇鍔涖€傚鏋滃尮閰嶏紝閭ｅ緢濂斤紱濡傛灉涓嶅尮閰嶏紝鍏夋槸绀句氦鏈韩灏卞€煎緱杩欓】鏅氶銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>姝ｆ槸鎴戠殑鎯虫硶銆傛垜鍦ㄨ繖涓涓氬鍒扮殑涓€鐐瑰氨鏄€斺€斿缓绔嬪湪淇′换涔嬩笂鐨勪汉闄呭叧绯绘瘮浠讳綍鍗曟浜ゆ槗閮介暱涔呫€傝鍒拌繖涓紝鎴戞敞鎰忓埌浣犲湪LinkedIn璧勬枡涓婃彁鍒颁簡鍙寔缁彂灞曢」鐩€傛垜浠笅涓搴﹁鍚姩涓€涓豢鑹蹭緵搴旈摼椤圭洰銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>浣犲仛浜嗗姛璇惧憖锛佸彲鎸佺画鍙戝睍鍏跺疄鏄垜涓汉鐨勭儹鎯呮墍鍦ㄢ€斺€旀垜鏄疉SEAN缁胯壊鍟嗕笟濮斿憳浼氱殑椤鹃棶濮斿憳浼氭垚鍛樸€傛垜浠竴瀹氳鑱婅亰浣犱滑鐨勭豢鑹查」鐩紱濮斿憳浼氶偅杈瑰彲鑳芥湁涓€浜涙嫧娆捐祫鍔┿€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>鎴戝畬鍏ㄤ笉鐭ラ亾浣犳槸椤鹃棶濮斿憳浼氭垚鍛樷€斺€旇繖鏄竴涓粷浣崇殑杩炴帴銆傝鎴戜滑鎶婅繖涓姞鍒版櫄椁愯绋嬩腑銆傛垜浼氬甫涓婃垜浠殑鍒濇鏂规銆傞偅鏈熼棿锛岃尪姝囨椂瑙侊紵</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>鏈熷緟瑙佸埌浣犮€傛垜浼氱涓€鏃堕棿缁欎綘浠嬬粛Sandra鍜孠enji銆傚浜咵mily鈥斺€旂粰浣犱竴涓缓璁紵涓嶈璇曞浘鍦ㄧ涓€娆″挅鍟¤亰澶╀腑瑕嗙洊鎵€鏈変簨鎯呫€備笓娉ㄤ簬涓€涓湁鎰忎箟鐨勫叧绯伙紝娣卞叆涓嬪幓銆傝川閲忚儨浜庢暟閲忋€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>鏄庢櫤鐨勫缓璁€傛垜浼氫笓娉ㄤ簬Sandra锛屽洜涓虹墿娴佹槸鎴戜滑褰撳墠鐨勯瑕佷换鍔°€傝阿璋綘鎶藉嚭鏃堕棿锛孞ames鈥斺€旀垜鎰熻杩欐浼氳涓€涓嬪瓙鍙樺緱鏇存湁浠峰€间簡銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>鎴戠殑鑽ｅ垢锛孍mily銆備簩鍗佸垎閽熷悗瑙併€傚埆蹇樹簡缁欐垜鍙慙inkedIn璇锋眰鈥斺€旀垜浼氶┈涓婇€氳繃锛岃繖鏍蜂綘鍦ㄦ櫄椁愬墠灏辫兘鐪嬪埌閭ｄ簺鐩戠鏇存柊浜嗐€?/span></div>
 </div>
 </div>
 
@@ -253,7 +253,7 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
     <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
     <h2>Learning Tip</h2>
   </div>
-  <p>商务社交（Networking Skills）是BEC口语考试Part 2和Part 3的常见话题。练习时重点关注三点：破冰话术（icebreaker）、主动引荐（making introductions）和后续跟进（follow-up）。职场社交的秘诀不在于收集多少张名片，而在于建立少量但深入的联系。建议用角色扮演方式练习6个句型中的对话，特别注意"touch base"、"warm introduction"等商务短语的自然运用。</p>
+  <p>鍟嗗姟绀句氦锛圢etworking Skills锛夋槸BEC鍙ｈ鑰冭瘯Part 2鍜孭art 3鐨勫父瑙佽瘽棰樸€傜粌涔犳椂閲嶇偣鍏虫敞涓夌偣锛氱牬鍐拌瘽鏈紙icebreaker锛夈€佷富鍔ㄥ紩鑽愶紙making introductions锛夊拰鍚庣画璺熻繘锛坒ollow-up锛夈€傝亴鍦虹ぞ浜ょ殑绉樿瘈涓嶅湪浜庢敹闆嗗灏戝紶鍚嶇墖锛岃€屽湪浜庡缓绔嬪皯閲忎絾娣卞叆鐨勮仈绯汇€傚缓璁敤瑙掕壊鎵紨鏂瑰紡缁冧範6涓彞鍨嬩腑鐨勫璇濓紝鐗瑰埆娉ㄦ剰"touch base"銆?warm introduction"绛夊晢鍔＄煭璇殑鑷劧杩愮敤銆?/p>
 </div>
 
 <script>
@@ -264,20 +264,19 @@ function toggleChinese() {
   var btn = document.getElementById('cnToggle');
   btn.classList.toggle('showing', showChinese);
   btn.innerHTML = showChinese
-    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
-    : '<span class="cn-toggle-dot"></span> 展示中文';
+    ? '<span class="cn-toggle-dot"></span> 闅愯棌涓枃'
+    : '<span class="cn-toggle-dot"></span> 灞曠ず涓枃';
   document.body.classList.toggle('show-cn', showChinese);
 }
 
-// 监听父窗口切换指令
-window.addEventListener('message', function(e) {
+// 鐩戝惉鐖剁獥鍙ｅ垏鎹㈡寚浠?window.addEventListener('message', function(e) {
   if (e.data && e.data.action === 'toggleChinese') {
     showChinese = e.data.show;
     var btn = document.getElementById('cnToggle');
     btn.classList.toggle('showing', showChinese);
     btn.innerHTML = showChinese
-      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
-      : '<span class="cn-toggle-dot"></span> 展示中文';
+      ? '<span class="cn-toggle-dot"></span> 闅愯棌涓枃'
+      : '<span class="cn-toggle-dot"></span> 灞曠ず涓枃';
     document.body.classList.toggle('show-cn', showChinese);
   }
 });

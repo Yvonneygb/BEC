@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>质量保证 Quality Assurance - BEC Daily</title>
+<title>璐ㄩ噺淇濊瘉 Quality Assurance - BEC Daily</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+body{max-width:860px;margin:0 auto;outline:3px dashed #10b981;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem;width:100%;box-sizing:border-box}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
@@ -53,11 +53,11 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 <body>
 
 <span class="badge">BEC Daily</span>
-<h1>质量保证 Quality Assurance</h1>
+<h1>璐ㄩ噺淇濊瘉 Quality Assurance</h1>
 
 <div class="roles">
-  <strong>A (Emily Zhang)</strong> — QA Manager, MedTech Devices<br>
-  <strong>B (Robert Hayes)</strong> — Production Director, MedTech Devices
+  <strong>A (Emily Zhang)</strong> 鈥?QA Manager, MedTech Devices<br>
+  <strong>B (Robert Hayes)</strong> 鈥?Production Director, MedTech Devices
 </div>
 
 <!-- Dialogue -->
@@ -66,7 +66,7 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Dialogue</h2>
   <div class="section-head-right">
     <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
-      <span class="cn-toggle-dot"></span> 展示中文
+      <span class="cn-toggle-dot"></span> 灞曠ず涓枃
     </button>
   </div>
 </div>
@@ -74,68 +74,68 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 <div class="dialogue">
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Robert, I've just received the preliminary findings from our ISO 13485 <span class="vocab-highlight">surveillance audit</span>, and I need to brief you before the management review meeting. There are three <span class="vocab-highlight">non-conformities</span> — one of them is classified as major.</span></div>
-    <div class="dialogue-cn">Robert，我刚收到ISO 13485监督审核的初步报告，需要在管理评审会之前向你汇报。有三项不合格——其中一项被定级为严重不合格。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Robert, I've just received the preliminary findings from our ISO 13485 <span class="vocab-highlight">surveillance audit</span>, and I need to brief you before the management review meeting. There are three <span class="vocab-highlight">non-conformities</span> 鈥?one of them is classified as major.</span></div>
+    <div class="dialogue-cn">Robert锛屾垜鍒氭敹鍒癐SO 13485鐩戠潱瀹℃牳鐨勫垵姝ユ姤鍛婏紝闇€瑕佸湪绠＄悊璇勫浼氫箣鍓嶅悜浣犳眹鎶ャ€傛湁涓夐」涓嶅悎鏍尖€斺€斿叾涓竴椤硅瀹氱骇涓轰弗閲嶄笉鍚堟牸銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A major non-conformity? That's the last thing we need ahead of the FDA inspection next month. Walk me through it — which process area triggered it?</span></div>
-    <div class="dialogue-cn">严重不合格？在下个月FDA检查之前这绝对是我们最不想看到的事情。给我详细说一遍——是哪个流程区域触发它的？</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A major non-conformity? That's the last thing we need ahead of the FDA inspection next month. Walk me through it 鈥?which process area triggered it?</span></div>
+    <div class="dialogue-cn">涓ラ噸涓嶅悎鏍硷紵鍦ㄤ笅涓湀FDA妫€鏌ヤ箣鍓嶈繖缁濆鏄垜浠渶涓嶆兂鐪嬪埌鐨勪簨鎯呫€傜粰鎴戣缁嗚涓€閬嶁€斺€旀槸鍝釜娴佺▼鍖哄煙瑙﹀彂瀹冪殑锛?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">The sterile packaging validation for Batch 2407. The auditor found that our process validation records were incomplete — specifically, the bioburden testing data for three production runs was documented but not formally signed off by the quality director. It's a paperwork issue, but under ISO 13485, incomplete validation documentation is an automatic major finding.</span></div>
-    <div class="dialogue-cn">批次2407的无菌包装验证。审核员发现我们的过程验证记录不完整——具体来说，三个生产批次的微生物负荷测试数据有记录，但缺少质量总监的正式签批。这属于文件问题，但按ISO 13485标准，验证记录不完整自动构成严重不合格项。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">The sterile packaging validation for Batch 2407. The auditor found that our process validation records were incomplete 鈥?specifically, the bioburden testing data for three production runs was documented but not formally signed off by the quality director. It's a paperwork issue, but under ISO 13485, incomplete validation documentation is an automatic major finding.</span></div>
+    <div class="dialogue-cn">鎵规2407鐨勬棤鑿屽寘瑁呴獙璇併€傚鏍稿憳鍙戠幇鎴戜滑鐨勮繃绋嬮獙璇佽褰曚笉瀹屾暣鈥斺€斿叿浣撴潵璇达紝涓変釜鐢熶骇鎵规鐨勫井鐢熺墿璐熻嵎娴嬭瘯鏁版嵁鏈夎褰曪紝浣嗙己灏戣川閲忔€荤洃鐨勬寮忕鎵广€傝繖灞炰簬鏂囦欢闂锛屼絾鎸塈SO 13485鏍囧噯锛岄獙璇佽褰曚笉瀹屾暣鑷姩鏋勬垚涓ラ噸涓嶅悎鏍奸」銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's frustrating. The testing was done — we have the raw data. It's the sign-off workflow that failed. What's the <span class="vocab-highlight">corrective action</span> timeline?</span></div>
-    <div class="dialogue-cn">这令人沮丧。测试是完成了的——我们有原始数据。出问题的是签批流程。纠正措施的时间线是怎样的？</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's frustrating. The testing was done 鈥?we have the raw data. It's the sign-off workflow that failed. What's the <span class="vocab-highlight">corrective action</span> timeline?</span></div>
+    <div class="dialogue-cn">杩欎护浜烘伯涓с€傛祴璇曟槸瀹屾垚浜嗙殑鈥斺€旀垜浠湁鍘熷鏁版嵁銆傚嚭闂鐨勬槸绛炬壒娴佺▼銆傜籂姝ｆ帾鏂界殑鏃堕棿绾挎槸鎬庢牱鐨勶紵</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We have 30 days to submit a corrective action plan to the certification body. I'm proposing a three-pronged approach: first, immediate retrospective sign-off for the affected batches with full <span class="vocab-highlight">traceability</span> documentation; second, a <span class="vocab-highlight">root cause analysis</span> to understand why the sign-off was missed; third, implementing an <span class="vocab-highlight">electronic quality management system</span> to enforce digital sign-off gates going forward.</span></div>
-    <div class="dialogue-cn">我们有30天时间向认证机构提交纠正措施计划。我建议采取三管齐下的方案：第一，对受影响批次进行即时回溯签批，并附完整的可追溯性文件；第二，进行根本原因分析，查明签批遗漏的原因；第三，实施电子质量管理系统，在后续流程中强制执行数字化签批关卡。</div>
+    <div class="dialogue-cn">鎴戜滑鏈?0澶╂椂闂村悜璁よ瘉鏈烘瀯鎻愪氦绾犳鎺柦璁″垝銆傛垜寤鸿閲囧彇涓夌榻愪笅鐨勬柟妗堬細绗竴锛屽鍙楀奖鍝嶆壒娆¤繘琛屽嵆鏃跺洖婧鎵癸紝骞堕檮瀹屾暣鐨勫彲杩芥函鎬ф枃浠讹紱绗簩锛岃繘琛屾牴鏈師鍥犲垎鏋愶紝鏌ユ槑绛炬壒閬楁紡鐨勫師鍥狅紱绗笁锛屽疄鏂界數瀛愯川閲忕鐞嗙郴缁燂紝鍦ㄥ悗缁祦绋嬩腑寮哄埗鎵ц鏁板瓧鍖栫鎵瑰叧鍗°€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The eQMS has been on our wish list for two years. If the major non-conformity gives us the leverage to finally get budget approval, there's a silver lining. What about the other two findings?</span></div>
-    <div class="dialogue-cn">eQMS在我们的愿望清单上已经躺了两年了。如果这项严重不合格能成为我们最终获得预算批准的筹码，那倒是一线希望。另外两项不合格呢？</div>
+    <div class="dialogue-cn">eQMS鍦ㄦ垜浠殑鎰挎湜娓呭崟涓婂凡缁忚汉浜嗕袱骞翠簡銆傚鏋滆繖椤逛弗閲嶄笉鍚堟牸鑳芥垚涓烘垜浠渶缁堣幏寰楅绠楁壒鍑嗙殑绛圭爜锛岄偅鍊掓槸涓€绾垮笇鏈涖€傚彟澶栦袱椤逛笉鍚堟牸鍛紵</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Both are minor. One relates to calibration records for two measurement instruments that were overdue by three weeks. The other is a training gap — two operators on the assembly line hadn't completed their annual <span class="vocab-highlight">GMP</span> refresher course. Both are straightforward to <span class="vocab-highlight">close out</span>.</span></div>
-    <div class="dialogue-cn">两项都是轻微不合格。一项涉及两台测量仪器的校准记录逾期三周。另一项是培训缺口——装配线上两名操作员没有完成年度GMP进修课程。两项都很容易结案。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Both are minor. One relates to calibration records for two measurement instruments that were overdue by three weeks. The other is a training gap 鈥?two operators on the assembly line hadn't completed their annual <span class="vocab-highlight">GMP</span> refresher course. Both are straightforward to <span class="vocab-highlight">close out</span>.</span></div>
+    <div class="dialogue-cn">涓ら」閮芥槸杞诲井涓嶅悎鏍笺€備竴椤规秹鍙婁袱鍙版祴閲忎华鍣ㄧ殑鏍″噯璁板綍閫炬湡涓夊懆銆傚彟涓€椤规槸鍩硅缂哄彛鈥斺€旇閰嶇嚎涓婁袱鍚嶆搷浣滃憳娌℃湁瀹屾垚骞村害GMP杩涗慨璇剧▼銆備袱椤归兘寰堝鏄撶粨妗堛€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Right. Let's tackle the calibration issue immediately — have maintenance recalibrate the instruments and update the log by end of day. For the training gap, schedule the GMP refresher for early next week and update the training matrix. On the major finding, I want a draft root cause analysis on my desk by Friday.</span></div>
-    <div class="dialogue-cn">好。校准问题立即处理——让维护部门今天内重新校准仪器并更新日志。培训缺口方面，安排下周初的GMP进修课并更新培训矩阵。关于严重不合格，我要在周五前拿到根本原因分析的初稿。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Right. Let's tackle the calibration issue immediately 鈥?have maintenance recalibrate the instruments and update the log by end of day. For the training gap, schedule the GMP refresher for early next week and update the training matrix. On the major finding, I want a draft root cause analysis on my desk by Friday.</span></div>
+    <div class="dialogue-cn">濂姐€傛牎鍑嗛棶棰樼珛鍗冲鐞嗏€斺€旇缁存姢閮ㄩ棬浠婂ぉ鍐呴噸鏂版牎鍑嗕华鍣ㄥ苟鏇存柊鏃ュ織銆傚煿璁己鍙ｆ柟闈紝瀹夋帓涓嬪懆鍒濈殑GMP杩涗慨璇惧苟鏇存柊鍩硅鐭╅樀銆傚叧浜庝弗閲嶄笉鍚堟牸锛屾垜瑕佸湪鍛ㄤ簲鍓嶆嬁鍒版牴鏈師鍥犲垎鏋愮殑鍒濈銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. I'll coordinate with the document control team on the retrospective sign-offs and start building the business case for the eQMS. One more thing — the auditor hinted that our <span class="vocab-highlight">continuous improvement</span> metrics could be stronger. He suggested we implement <span class="vocab-highlight">statistical process control</span> on our three most critical production lines.</span></div>
-    <div class="dialogue-cn">同意。我会与文件控制团队协调回溯签批，同时开始构建eQMS的商业论证。还有一件事——审核员暗示我们的持续改进指标可以做得更好。他建议我们在三条最关键的产线上实施统计过程控制。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. I'll coordinate with the document control team on the retrospective sign-offs and start building the business case for the eQMS. One more thing 鈥?the auditor hinted that our <span class="vocab-highlight">continuous improvement</span> metrics could be stronger. He suggested we implement <span class="vocab-highlight">statistical process control</span> on our three most critical production lines.</span></div>
+    <div class="dialogue-cn">鍚屾剰銆傛垜浼氫笌鏂囦欢鎺у埗鍥㈤槦鍗忚皟鍥炴函绛炬壒锛屽悓鏃跺紑濮嬫瀯寤篹QMS鐨勫晢涓氳璇併€傝繕鏈変竴浠朵簨鈥斺€斿鏍稿憳鏆楃ず鎴戜滑鐨勬寔缁敼杩涙寚鏍囧彲浠ュ仛寰楁洿濂姐€備粬寤鸿鎴戜滑鍦ㄤ笁鏉℃渶鍏抽敭鐨勪骇绾夸笂瀹炴柦缁熻杩囩▼鎺у埗銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">SPC is a best practice we should have adopted years ago. Let's include it in the quality improvement plan. If we present the entire package — corrective actions plus preventive measures — the management team is more likely to approve the eQMS investment.</span></div>
-    <div class="dialogue-cn">SPC是我们早该采用的最佳实践。把它纳入质量改进计划中。如果我们把整套方案——纠正措施加预防措施——一起提报，管理团队更有可能批准eQMS的投资。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">SPC is a best practice we should have adopted years ago. Let's include it in the quality improvement plan. If we present the entire package 鈥?corrective actions plus preventive measures 鈥?the management team is more likely to approve the eQMS investment.</span></div>
+    <div class="dialogue-cn">SPC鏄垜浠棭璇ラ噰鐢ㄧ殑鏈€浣冲疄璺点€傛妸瀹冪撼鍏ヨ川閲忔敼杩涜鍒掍腑銆傚鏋滄垜浠妸鏁村鏂规鈥斺€旂籂姝ｆ帾鏂藉姞棰勯槻鎺柦鈥斺€斾竴璧锋彁鎶ワ紝绠＄悊鍥㈤槦鏇存湁鍙兘鎵瑰噯eQMS鐨勬姇璧勩€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a smart framing. I'll prepare a consolidated presentation covering all findings, corrective actions, and the preventive roadmap. Can we schedule a dry run on Monday before the formal management review on Wednesday?</span></div>
-    <div class="dialogue-cn">这个包装方式很聪明。我会准备一份整合的演示文稿，涵盖所有不合格项、纠正措施和预防路线图。周三正式管理评审前，周一我们能不能先进行一轮预演？</div>
+    <div class="dialogue-cn">杩欎釜鍖呰鏂瑰紡寰堣仾鏄庛€傛垜浼氬噯澶囦竴浠芥暣鍚堢殑婕旂ず鏂囩锛屾兜鐩栨墍鏈変笉鍚堟牸椤广€佺籂姝ｆ帾鏂藉拰棰勯槻璺嚎鍥俱€傚懆涓夋寮忕鐞嗚瘎瀹″墠锛屽懆涓€鎴戜滑鑳戒笉鑳藉厛杩涜涓€杞婕旓紵</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Let's do it. Monday at 2 PM in the main conference room. And Emily — don't beat yourself up over the major finding. These audits are designed to identify gaps. What matters is how we respond.</span></div>
-    <div class="dialogue-cn">就这么办。周一下午2点，主会议室。还有Emily——别为严重不合格太自责。这些审核的本意就是发现差距。关键是我们如何应对。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Let's do it. Monday at 2 PM in the main conference room. And Emily 鈥?don't beat yourself up over the major finding. These audits are designed to identify gaps. What matters is how we respond.</span></div>
+    <div class="dialogue-cn">灏辫繖涔堝姙銆傚懆涓€涓嬪崍2鐐癸紝涓讳細璁銆傝繕鏈塃mily鈥斺€斿埆涓轰弗閲嶄笉鍚堟牸澶嚜璐ｃ€傝繖浜涘鏍哥殑鏈剰灏辨槸鍙戠幇宸窛銆傚叧閿槸鎴戜滑濡備綍搴斿銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Thanks, Robert. I'll have the materials ready.</span></div>
-    <div class="dialogue-cn">谢谢，Robert。我会把材料准备好。</div>
+    <div class="dialogue-cn">璋㈣阿锛孯obert銆傛垜浼氭妸鏉愭枡鍑嗗濂姐€?/div>
   </div>
 
 </div>
@@ -148,16 +148,16 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Key Vocabulary</h2>
 </div>
 
-<div class="vocab-item"><strong>non-conformity</strong> — 不合格项 | 质量管理体系中不符合标准要求的发现项</div>
-<div class="vocab-item"><strong>surveillance audit</strong> — 监督审核 | 认证机构对获证组织进行的定期合规检查</div>
-<div class="vocab-item"><strong>root cause analysis</strong> — 根本原因分析 | 追溯问题深层原因的系统性调查方法</div>
-<div class="vocab-item"><strong>corrective action</strong> — 纠正措施 | 消除不合格项根本原因以防止再发生的行动计划</div>
-<div class="vocab-item"><strong>electronic quality management system (eQMS)</strong> — 电子质量管理系统 | 数字化管理质量流程和文档的软件平台</div>
-<div class="vocab-item"><strong>traceability</strong> — 可追溯性 | 追踪产品从原材料到成品全过程记录的能力</div>
-<div class="vocab-item"><strong>statistical process control (SPC)</strong> — 统计过程控制 | 用统计方法监控和控制生产过程的质控工具</div>
-<div class="vocab-item"><strong>GMP (Good Manufacturing Practice)</strong> — 良好生产规范 | 确保产品持续按质量标准生产的体系</div>
-<div class="vocab-item"><strong>close out</strong> — 关闭/结案 | 在质量管理中表示不合格项已完成整改并验证通过</div>
-<div class="vocab-item"><strong>continuous improvement</strong> — 持续改进 | 质量管理中不断优化流程和产品的核心理念</div>
+<div class="vocab-item"><strong>non-conformity</strong> 鈥?涓嶅悎鏍奸」 | 璐ㄩ噺绠＄悊浣撶郴涓笉绗﹀悎鏍囧噯瑕佹眰鐨勫彂鐜伴」</div>
+<div class="vocab-item"><strong>surveillance audit</strong> 鈥?鐩戠潱瀹℃牳 | 璁よ瘉鏈烘瀯瀵硅幏璇佺粍缁囪繘琛岀殑瀹氭湡鍚堣妫€鏌?/div>
+<div class="vocab-item"><strong>root cause analysis</strong> 鈥?鏍规湰鍘熷洜鍒嗘瀽 | 杩芥函闂娣卞眰鍘熷洜鐨勭郴缁熸€ц皟鏌ユ柟娉?/div>
+<div class="vocab-item"><strong>corrective action</strong> 鈥?绾犳鎺柦 | 娑堥櫎涓嶅悎鏍奸」鏍规湰鍘熷洜浠ラ槻姝㈠啀鍙戠敓鐨勮鍔ㄨ鍒?/div>
+<div class="vocab-item"><strong>electronic quality management system (eQMS)</strong> 鈥?鐢靛瓙璐ㄩ噺绠＄悊绯荤粺 | 鏁板瓧鍖栫鐞嗚川閲忔祦绋嬪拰鏂囨。鐨勮蒋浠跺钩鍙?/div>
+<div class="vocab-item"><strong>traceability</strong> 鈥?鍙拷婧€?| 杩借釜浜у搧浠庡師鏉愭枡鍒版垚鍝佸叏杩囩▼璁板綍鐨勮兘鍔?/div>
+<div class="vocab-item"><strong>statistical process control (SPC)</strong> 鈥?缁熻杩囩▼鎺у埗 | 鐢ㄧ粺璁℃柟娉曠洃鎺у拰鎺у埗鐢熶骇杩囩▼鐨勮川鎺у伐鍏?/div>
+<div class="vocab-item"><strong>GMP (Good Manufacturing Practice)</strong> 鈥?鑹ソ鐢熶骇瑙勮寖 | 纭繚浜у搧鎸佺画鎸夎川閲忔爣鍑嗙敓浜х殑浣撶郴</div>
+<div class="vocab-item"><strong>close out</strong> 鈥?鍏抽棴/缁撴 | 鍦ㄨ川閲忕鐞嗕腑琛ㄧず涓嶅悎鏍奸」宸插畬鎴愭暣鏀瑰苟楠岃瘉閫氳繃</div>
+<div class="vocab-item"><strong>continuous improvement</strong> 鈥?鎸佺画鏀硅繘 | 璐ㄩ噺绠＄悊涓笉鏂紭鍖栨祦绋嬪拰浜у搧鐨勬牳蹇冪悊蹇?/div>
 
 <hr>
 
@@ -167,12 +167,12 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Sentence Patterns</h2>
 </div>
 
-<div class="pattern-item"><code>Walk me through it — ...</code> → 给我详细说一遍——…… | 要求对方按步骤解释复杂事项的高效句式</div>
-<div class="pattern-item"><code>That's the last thing we need ahead of...</code> → 在……之前这绝对是我们最不想要的事 | 强调在某个关键时刻之前某个问题的严重性</div>
-<div class="pattern-item"><code>If X gives us the leverage to Y, there's a silver lining.</code> → 如果X给了我们做Y的筹码，那倒是一线希望 | 在负面情境中找出积极面的经典表达</div>
-<div class="pattern-item"><code>Both are straightforward to close out.</code> → 这两项都很容易结案 | 质量管理中评估问题难度的简洁判定</div>
-<div class="pattern-item"><code>That's a smart framing.</code> → 这个包装方式很聪明 | 认可对方呈现方案策略的常用赞语</div>
-<div class="pattern-item"><code>Don't beat yourself up over...</code> → 别为……太自责 | 商务沟通中安慰和鼓励同事的贴心表达</div>
+<div class="pattern-item"><code>Walk me through it 鈥?...</code> 鈫?缁欐垜璇︾粏璇翠竴閬嶁€斺€斺€︹€?| 瑕佹眰瀵规柟鎸夋楠よВ閲婂鏉備簨椤圭殑楂樻晥鍙ュ紡</div>
+<div class="pattern-item"><code>That's the last thing we need ahead of...</code> 鈫?鍦ㄢ€︹€︿箣鍓嶈繖缁濆鏄垜浠渶涓嶆兂瑕佺殑浜?| 寮鸿皟鍦ㄦ煇涓叧閿椂鍒讳箣鍓嶆煇涓棶棰樼殑涓ラ噸鎬?/div>
+<div class="pattern-item"><code>If X gives us the leverage to Y, there's a silver lining.</code> 鈫?濡傛灉X缁欎簡鎴戜滑鍋歒鐨勭鐮侊紝閭ｅ€掓槸涓€绾垮笇鏈?| 鍦ㄨ礋闈㈡儏澧冧腑鎵惧嚭绉瀬闈㈢殑缁忓吀琛ㄨ揪</div>
+<div class="pattern-item"><code>Both are straightforward to close out.</code> 鈫?杩欎袱椤归兘寰堝鏄撶粨妗?| 璐ㄩ噺绠＄悊涓瘎浼伴棶棰橀毦搴︾殑绠€娲佸垽瀹?/div>
+<div class="pattern-item"><code>That's a smart framing.</code> 鈫?杩欎釜鍖呰鏂瑰紡寰堣仾鏄?| 璁ゅ彲瀵规柟鍛堢幇鏂规绛栫暐鐨勫父鐢ㄨ禐璇?/div>
+<div class="pattern-item"><code>Don't beat yourself up over...</code> 鈫?鍒负鈥︹€﹀お鑷矗 | 鍟嗗姟娌熼€氫腑瀹夋叞鍜岄紦鍔卞悓浜嬬殑璐村績琛ㄨ揪</div>
 
 <hr>
 
@@ -184,19 +184,19 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 </div>
 
 <div class="translation">
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>Robert，我刚收到ISO 13485监督审核的初步报告，需要在管理评审会之前向你汇报。有三项不合格——其中一项被定级为严重不合格。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>严重不合格？在下个月FDA检查之前这绝对是我们最不想看到的事情。给我详细说一遍——是哪个流程区域触发它的？</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>批次2407的无菌包装验证。审核员发现我们的过程验证记录不完整——具体来说，三个生产批次的微生物负荷测试数据有记录，但缺少质量总监的正式签批。这属于文件问题，但按ISO 13485标准，验证记录不完整自动构成严重不合格项。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>这令人沮丧。测试是完成了的——我们有原始数据。出问题的是签批流程。纠正措施的时间线是怎样的？</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>我们有30天时间向认证机构提交纠正措施计划。我建议采取三管齐下的方案：第一，对受影响批次进行即时回溯签批，并附完整的可追溯性文件；第二，进行根本原因分析，查明签批遗漏的原因；第三，实施电子质量管理系统，在后续流程中强制执行数字化签批关卡。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>eQMS在我们的愿望清单上已经躺了两年了。如果这项严重不合格能成为我们最终获得预算批准的筹码，那倒是一线希望。另外两项不合格呢？</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>两项都是轻微不合格。一项涉及两台测量仪器的校准记录逾期三周。另一项是培训缺口——装配线上两名操作员没有完成年度GMP进修课程。两项都很容易结案。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>好。校准问题立即处理——让维护部门今天内重新校准仪器并更新日志。培训缺口方面，安排下周初的GMP进修课并更新培训矩阵。关于严重不合格，我要在周五前拿到根本原因分析的初稿。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>同意。我会与文件控制团队协调回溯签批，同时开始构建eQMS的商业论证。还有一件事——审核员暗示我们的持续改进指标可以做得更好。他建议我们在三条最关键的产线上实施统计过程控制。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>SPC是我们早该采用的最佳实践。把它纳入质量改进计划中。如果我们把整套方案——纠正措施加预防措施——一起提报，管理团队更有可能批准eQMS的投资。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>这个包装方式很聪明。我会准备一份整合的演示文稿，涵盖所有不合格项、纠正措施和预防路线图。周三正式管理评审前，周一我们能不能先进行一轮预演？</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>就这么办。周一下午2点，主会议室。还有Emily——别为严重不合格太自责。这些审核的本意就是发现差距。关键是我们如何应对。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>谢谢，Robert。我会把材料准备好。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Robert锛屾垜鍒氭敹鍒癐SO 13485鐩戠潱瀹℃牳鐨勫垵姝ユ姤鍛婏紝闇€瑕佸湪绠＄悊璇勫浼氫箣鍓嶅悜浣犳眹鎶ャ€傛湁涓夐」涓嶅悎鏍尖€斺€斿叾涓竴椤硅瀹氱骇涓轰弗閲嶄笉鍚堟牸銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>涓ラ噸涓嶅悎鏍硷紵鍦ㄤ笅涓湀FDA妫€鏌ヤ箣鍓嶈繖缁濆鏄垜浠渶涓嶆兂鐪嬪埌鐨勪簨鎯呫€傜粰鎴戣缁嗚涓€閬嶁€斺€旀槸鍝釜娴佺▼鍖哄煙瑙﹀彂瀹冪殑锛?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>鎵规2407鐨勬棤鑿屽寘瑁呴獙璇併€傚鏍稿憳鍙戠幇鎴戜滑鐨勮繃绋嬮獙璇佽褰曚笉瀹屾暣鈥斺€斿叿浣撴潵璇达紝涓変釜鐢熶骇鎵规鐨勫井鐢熺墿璐熻嵎娴嬭瘯鏁版嵁鏈夎褰曪紝浣嗙己灏戣川閲忔€荤洃鐨勬寮忕鎵广€傝繖灞炰簬鏂囦欢闂锛屼絾鎸塈SO 13485鏍囧噯锛岄獙璇佽褰曚笉瀹屾暣鑷姩鏋勬垚涓ラ噸涓嶅悎鏍奸」銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>杩欎护浜烘伯涓с€傛祴璇曟槸瀹屾垚浜嗙殑鈥斺€旀垜浠湁鍘熷鏁版嵁銆傚嚭闂鐨勬槸绛炬壒娴佺▼銆傜籂姝ｆ帾鏂界殑鏃堕棿绾挎槸鎬庢牱鐨勶紵</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>鎴戜滑鏈?0澶╂椂闂村悜璁よ瘉鏈烘瀯鎻愪氦绾犳鎺柦璁″垝銆傛垜寤鸿閲囧彇涓夌榻愪笅鐨勬柟妗堬細绗竴锛屽鍙楀奖鍝嶆壒娆¤繘琛屽嵆鏃跺洖婧鎵癸紝骞堕檮瀹屾暣鐨勫彲杩芥函鎬ф枃浠讹紱绗簩锛岃繘琛屾牴鏈師鍥犲垎鏋愶紝鏌ユ槑绛炬壒閬楁紡鐨勫師鍥狅紱绗笁锛屽疄鏂界數瀛愯川閲忕鐞嗙郴缁燂紝鍦ㄥ悗缁祦绋嬩腑寮哄埗鎵ц鏁板瓧鍖栫鎵瑰叧鍗°€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>eQMS鍦ㄦ垜浠殑鎰挎湜娓呭崟涓婂凡缁忚汉浜嗕袱骞翠簡銆傚鏋滆繖椤逛弗閲嶄笉鍚堟牸鑳芥垚涓烘垜浠渶缁堣幏寰楅绠楁壒鍑嗙殑绛圭爜锛岄偅鍊掓槸涓€绾垮笇鏈涖€傚彟澶栦袱椤逛笉鍚堟牸鍛紵</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>涓ら」閮芥槸杞诲井涓嶅悎鏍笺€備竴椤规秹鍙婁袱鍙版祴閲忎华鍣ㄧ殑鏍″噯璁板綍閫炬湡涓夊懆銆傚彟涓€椤规槸鍩硅缂哄彛鈥斺€旇閰嶇嚎涓婁袱鍚嶆搷浣滃憳娌℃湁瀹屾垚骞村害GMP杩涗慨璇剧▼銆備袱椤归兘寰堝鏄撶粨妗堛€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>濂姐€傛牎鍑嗛棶棰樼珛鍗冲鐞嗏€斺€旇缁存姢閮ㄩ棬浠婂ぉ鍐呴噸鏂版牎鍑嗕华鍣ㄥ苟鏇存柊鏃ュ織銆傚煿璁己鍙ｆ柟闈紝瀹夋帓涓嬪懆鍒濈殑GMP杩涗慨璇惧苟鏇存柊鍩硅鐭╅樀銆傚叧浜庝弗閲嶄笉鍚堟牸锛屾垜瑕佸湪鍛ㄤ簲鍓嶆嬁鍒版牴鏈師鍥犲垎鏋愮殑鍒濈銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>鍚屾剰銆傛垜浼氫笌鏂囦欢鎺у埗鍥㈤槦鍗忚皟鍥炴函绛炬壒锛屽悓鏃跺紑濮嬫瀯寤篹QMS鐨勫晢涓氳璇併€傝繕鏈変竴浠朵簨鈥斺€斿鏍稿憳鏆楃ず鎴戜滑鐨勬寔缁敼杩涙寚鏍囧彲浠ュ仛寰楁洿濂姐€備粬寤鸿鎴戜滑鍦ㄤ笁鏉℃渶鍏抽敭鐨勪骇绾夸笂瀹炴柦缁熻杩囩▼鎺у埗銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>SPC鏄垜浠棭璇ラ噰鐢ㄧ殑鏈€浣冲疄璺点€傛妸瀹冪撼鍏ヨ川閲忔敼杩涜鍒掍腑銆傚鏋滄垜浠妸鏁村鏂规鈥斺€旂籂姝ｆ帾鏂藉姞棰勯槻鎺柦鈥斺€斾竴璧锋彁鎶ワ紝绠＄悊鍥㈤槦鏇存湁鍙兘鎵瑰噯eQMS鐨勬姇璧勩€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>杩欎釜鍖呰鏂瑰紡寰堣仾鏄庛€傛垜浼氬噯澶囦竴浠芥暣鍚堢殑婕旂ず鏂囩锛屾兜鐩栨墍鏈変笉鍚堟牸椤广€佺籂姝ｆ帾鏂藉拰棰勯槻璺嚎鍥俱€傚懆涓夋寮忕鐞嗚瘎瀹″墠锛屽懆涓€鎴戜滑鑳戒笉鑳藉厛杩涜涓€杞婕旓紵</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>灏辫繖涔堝姙銆傚懆涓€涓嬪崍2鐐癸紝涓讳細璁銆傝繕鏈塃mily鈥斺€斿埆涓轰弗閲嶄笉鍚堟牸澶嚜璐ｃ€傝繖浜涘鏍哥殑鏈剰灏辨槸鍙戠幇宸窛銆傚叧閿槸鎴戜滑濡備綍搴斿銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>璋㈣阿锛孯obert銆傛垜浼氭妸鏉愭枡鍑嗗濂姐€?/span></div>
 </div>
 </div>
 
@@ -208,7 +208,7 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
     <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
     <h2>Learning Tip</h2>
   </div>
-  <p>质量保证（Quality Assurance）是BEC听力和阅读考试中的高难度主题，涉及大量专业术语和流程描述。建议建立自己的"QA词汇地图"：将术语按类别分组——审核（audit, non-conformity, corrective action）、文档（traceability, validation, sign-off）、工具（SPC, eQMS, root cause analysis）。BEC阅读Part 3经常出现QA场景的流程排序题，熟悉这些术语能让你快速定位关键信息。</p>
+  <p>璐ㄩ噺淇濊瘉锛圦uality Assurance锛夋槸BEC鍚姏鍜岄槄璇昏€冭瘯涓殑楂橀毦搴︿富棰橈紝娑夊強澶ч噺涓撲笟鏈鍜屾祦绋嬫弿杩般€傚缓璁缓绔嬭嚜宸辩殑"QA璇嶆眹鍦板浘"锛氬皢鏈鎸夌被鍒垎缁勨€斺€斿鏍革紙audit, non-conformity, corrective action锛夈€佹枃妗ｏ紙traceability, validation, sign-off锛夈€佸伐鍏凤紙SPC, eQMS, root cause analysis锛夈€侭EC闃呰Part 3缁忓父鍑虹幇QA鍦烘櫙鐨勬祦绋嬫帓搴忛锛岀啛鎮夎繖浜涙湳璇兘璁╀綘蹇€熷畾浣嶅叧閿俊鎭€?/p>
 </div>
 
 <script>
@@ -219,20 +219,19 @@ function toggleChinese() {
   var btn = document.getElementById('cnToggle');
   btn.classList.toggle('showing', showChinese);
   btn.innerHTML = showChinese
-    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
-    : '<span class="cn-toggle-dot"></span> 展示中文';
+    ? '<span class="cn-toggle-dot"></span> 闅愯棌涓枃'
+    : '<span class="cn-toggle-dot"></span> 灞曠ず涓枃';
   document.body.classList.toggle('show-cn', showChinese);
 }
 
-// 监听父窗口切换指令
-window.addEventListener('message', function(e) {
+// 鐩戝惉鐖剁獥鍙ｅ垏鎹㈡寚浠?window.addEventListener('message', function(e) {
   if (e.data && e.data.action === 'toggleChinese') {
     showChinese = e.data.show;
     var btn = document.getElementById('cnToggle');
     btn.classList.toggle('showing', showChinese);
     btn.innerHTML = showChinese
-      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
-      : '<span class="cn-toggle-dot"></span> 展示中文';
+      ? '<span class="cn-toggle-dot"></span> 闅愯棌涓枃'
+      : '<span class="cn-toggle-dot"></span> 灞曠ず涓枃';
     document.body.classList.toggle('show-cn', showChinese);
   }
 });

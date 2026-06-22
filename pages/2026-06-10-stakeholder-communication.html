@@ -1,30 +1,30 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>利益相关者沟通 Stakeholder Communication - BEC Daily</title>
+<title>鍒╃泭鐩稿叧鑰呮矡閫?Stakeholder Communication - BEC Daily</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+body{max-width:860px;margin:0 auto;outline:3px dashed #10b981;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem;width:100%;box-sizing:border-box}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 
-/* 标题行：icon + 文字 + 右侧操作 */
+/* 鏍囬琛岋細icon + 鏂囧瓧 + 鍙充晶鎿嶄綔 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
 .section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
 .section-head-right{margin-left:auto;flex-shrink:0}
 
-/* 中文切换按钮 */
+/* 涓枃鍒囨崲鎸夐挳 */
 .cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
 .cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
 .cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
 .cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
 
-/* 试听按钮 */
+/* 璇曞惉鎸夐挳 */
 .listen-btn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:6px;border:1px solid rgba(109,74,255,0.2);background:#fff;color:#6D4AFF;cursor:pointer;font-size:.7rem;flex-shrink:0;transition:all .2s;margin-left:.3rem;align-self:flex-start;margin-top:1px}
 .listen-btn:hover{background:rgba(109,74,255,0.08);border-color:#6D4AFF}
 .listen-btn.playing{background:#6D4AFF;color:#fff;border-color:#6D4AFF}
@@ -39,7 +39,7 @@ h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
 body.show-cn .dialogue-cn{display:block}
 
-/* 词汇高亮 */
+/* 璇嶆眹楂樹寒 */
 .vocab-highlight{font-weight:700;color:#6D4AFF}
 
 .roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
@@ -61,11 +61,11 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 <body>
 
 <span class="badge">BEC Daily</span>
-<h1>利益相关者沟通 Stakeholder Communication</h1>
+<h1>鍒╃泭鐩稿叧鑰呮矡閫?Stakeholder Communication</h1>
 
 <div class="roles">
-  <strong>A (Rebecca Torres)</strong> — Senior Project Manager, Apex Construction Group<br>
-  <strong>B (David Okonkwo)</strong> — Community Relations Director, MetroCity Council
+  <strong>A (Rebecca Torres)</strong> 鈥?Senior Project Manager, Apex Construction Group<br>
+  <strong>B (David Okonkwo)</strong> 鈥?Community Relations Director, MetroCity Council
 </div>
 
 <!-- Dialogue -->
@@ -74,7 +74,7 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Dialogue</h2>
   <div class="section-head-right">
     <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
-      <span class="cn-toggle-dot"></span> 展示中文
+      <span class="cn-toggle-dot"></span> 灞曠ず涓枃
     </button>
   </div>
 </div>
@@ -82,78 +82,78 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 <div class="dialogue">
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">David, I wanted to loop you in early on our Riverside Quarter redevelopment. The planning application goes in next month, and I think it's crucial that we get the local community on board from the outset.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">David，我想在Riverside Quarter重建项目的早期就让你参与进来。规划申请下个月递交，我觉得我们必须从一开始就获得当地社区的认同。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">David, I wanted to loop you in early on our Riverside Quarter redevelopment. The planning application goes in next month, and I think it's crucial that we get the local community on board from the outset.</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">David锛屾垜鎯冲湪Riverside Quarter閲嶅缓椤圭洰鐨勬棭鏈熷氨璁╀綘鍙備笌杩涙潵銆傝鍒掔敵璇蜂笅涓湀閫掍氦锛屾垜瑙夊緱鎴戜滑蹇呴』浠庝竴寮€濮嬪氨鑾峰緱褰撳湴绀惧尯鐨勮鍚屻€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Rebecca, I'm glad you're thinking ahead. Riverside has a very vocal residents' association. If we don't manage the <span class="vocab-highlight">stakeholder</span> communication with proper <span class="vocab-highlight">transparency</span>, we could be looking at six months of objections and a PR headache.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">Rebecca，很高兴你在提前思考。Riverside的居民协会非常活跃。如果我们不以恰当的透明度来妥善处理利益相关者的沟通，可能面临六个月的反对意见和一场公关噩梦。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Rebecca, I'm glad you're thinking ahead. Riverside has a very vocal residents' association. If we don't manage the <span class="vocab-highlight">stakeholder</span> communication with proper <span class="vocab-highlight">transparency</span>, we could be looking at six months of objections and a PR headache.</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">Rebecca锛屽緢楂樺叴浣犲湪鎻愬墠鎬濊€冦€俁iverside鐨勫眳姘戝崗浼氶潪甯告椿璺冦€傚鏋滄垜浠笉浠ユ伆褰撶殑閫忔槑搴︽潵濡ュ杽澶勭悊鍒╃泭鐩稿叧鑰呯殑娌熼€氾紝鍙兘闈复鍏釜鏈堢殑鍙嶅鎰忚鍜屼竴鍦哄叕鍏冲櫓姊︺€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Exactly what I'm trying to avoid. I'd like to propose that we hold a <span class="vocab-highlight">town hall meeting</span> before the formal submission. Give people a chance to see the plans, ask questions, and feel heard. What do you think?</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">这正是我想避免的。我提议我们在正式提交前举办一次市民座谈会，让人们有机会看方案、提问，并感受到被倾听。你怎么看？</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Exactly what I'm trying to avoid. I'd like to propose that we hold a <span class="vocab-highlight">town hall meeting</span> before the formal submission. Give people a chance to see the plans, ask questions, and feel heard. What do you think?</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">杩欐鏄垜鎯抽伩鍏嶇殑銆傛垜鎻愯鎴戜滑鍦ㄦ寮忔彁浜ゅ墠涓惧姙涓€娆″競姘戝骇璋堜細锛岃浜轰滑鏈夋満浼氱湅鏂规銆佹彁闂紝骞舵劅鍙楀埌琚€惧惉銆備綘鎬庝箞鐪嬶紵</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a sensible starting point, but I'd recommend something more structured — a series of focus groups with different stakeholder segments: residents, local businesses, and the school board. A one-off town hall can easily turn into a shouting match.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">这是个合理的起点，但我建议更结构化的方式——针对不同利益相关者群体做一系列焦点小组：居民、当地商户和学校董事会。一次性的市民座谈会很容易变成吵架大会。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a sensible starting point, but I'd recommend something more structured 鈥?a series of focus groups with different stakeholder segments: residents, local businesses, and the school board. A one-off town hall can easily turn into a shouting match.</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">杩欐槸涓悎鐞嗙殑璧风偣锛屼絾鎴戝缓璁洿缁撴瀯鍖栫殑鏂瑰紡鈥斺€旈拡瀵逛笉鍚屽埄鐩婄浉鍏宠€呯兢浣撳仛涓€绯诲垪鐒︾偣灏忕粍锛氬眳姘戙€佸綋鍦板晢鎴峰拰瀛︽牎钁ｄ簨浼氥€備竴娆℃€х殑甯傛皯搴ц皥浼氬緢瀹规槗鍙樻垚鍚垫灦澶т細銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Fair enough. Focus groups it is. We've already commissioned an <span class="vocab-highlight">impact assessment</span> covering traffic, noise, and green space preservation. The preliminary findings are quite positive — the new pedestrian zone alone would reduce rush-hour congestion by an estimated 18%.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">有道理。就做焦点小组。我们已经委托了一份影响评估，涵盖交通、噪音和绿地保护。初步结果相当积极——光是新建的行人区就能减少高峰时段约18%的拥堵。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Fair enough. Focus groups it is. We've already commissioned an <span class="vocab-highlight">impact assessment</span> covering traffic, noise, and green space preservation. The preliminary findings are quite positive 鈥?the new pedestrian zone alone would reduce rush-hour congestion by an estimated 18%.</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">鏈夐亾鐞嗐€傚氨鍋氱劍鐐瑰皬缁勩€傛垜浠凡缁忓鎵樹簡涓€浠藉奖鍝嶈瘎浼帮紝娑电洊浜ら€氥€佸櫔闊冲拰缁垮湴淇濇姢銆傚垵姝ョ粨鏋滅浉褰撶Н鏋佲€斺€斿厜鏄柊寤虹殑琛屼汉鍖哄氨鑳藉噺灏戦珮宄版椂娈电害18%鐨勬嫢鍫点€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Those figures will help build <span class="vocab-highlight">buy-in</span>, no question. But the last thing we want is for residents to feel they're being presented with a fait accompli. We need to frame this as a consultation, not a persuasion exercise.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">这些数据无疑有助于建立认同。但我们最不想看到的就是居民觉得这是个既成事实。我们必须把这定位为征询意见，而非说服活动。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Those figures will help build <span class="vocab-highlight">buy-in</span>, no question. But the last thing we want is for residents to feel they're being presented with a fait accompli. We need to frame this as a consultation, not a persuasion exercise.</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">杩欎簺鏁版嵁鏃犵枒鏈夊姪浜庡缓绔嬭鍚屻€備絾鎴戜滑鏈€涓嶆兂鐪嬪埌鐨勫氨鏄眳姘戣寰楄繖鏄釜鏃㈡垚浜嬪疄銆傛垜浠繀椤绘妸杩欏畾浣嶄负寰佽鎰忚锛岃€岄潪璇存湇娲诲姩銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I take your point. Let me put it this way — what we need is a genuine <span class="vocab-highlight">feedback loop</span>. We present the outline plans, collect concerns, feed them back into the design team, and then come back with visible adjustments. That shows we're listening.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">我理解你的意思。让我这样说——我们需要的是一个真正的反馈机制。我们展示框架方案，收集顾虑，反馈给设计团队，然后带着可见的调整回来。这证明我们在倾听。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I take your point. Let me put it this way 鈥?what we need is a genuine <span class="vocab-highlight">feedback loop</span>. We present the outline plans, collect concerns, feed them back into the design team, and then come back with visible adjustments. That shows we're listening.</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">鎴戠悊瑙ｄ綘鐨勬剰鎬濄€傝鎴戣繖鏍疯鈥斺€旀垜浠渶瑕佺殑鏄竴涓湡姝ｇ殑鍙嶉鏈哄埗銆傛垜浠睍绀烘鏋舵柟妗堬紝鏀堕泦椤捐檻锛屽弽棣堢粰璁捐鍥㈤槦锛岀劧鍚庡甫鐫€鍙鐨勮皟鏁村洖鏉ャ€傝繖璇佹槑鎴戜滑鍦ㄥ€惧惉銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's the way to do it. I can help you set up a dedicated project microsite with a Q&A section and a newsletter sign-up. <span class="vocab-highlight">Community outreach</span> works best when it's multi-channel — digital, face-to-face, and print. Some of our older residents still prefer a printed newsletter in their letterbox.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">就该这么做。我可以帮你建一个项目专题微型网站，有问答区和简讯订阅功能。社区外联多渠道效果最好——数字、面对面、纸质都有。我们有些年长居民还是更愿意在信箱里收到纸质简讯。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's the way to do it. I can help you set up a dedicated project microsite with a Q&A section and a newsletter sign-up. <span class="vocab-highlight">Community outreach</span> works best when it's multi-channel 鈥?digital, face-to-face, and print. Some of our older residents still prefer a printed newsletter in their letterbox.</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">灏辫杩欎箞鍋氥€傛垜鍙互甯綘寤轰竴涓」鐩笓棰樺井鍨嬬綉绔欙紝鏈夐棶绛斿尯鍜岀畝璁闃呭姛鑳姐€傜ぞ鍖哄鑱斿娓犻亾鏁堟灉鏈€濂解€斺€旀暟瀛椼€侀潰瀵归潰銆佺焊璐ㄩ兘鏈夈€傛垜浠湁浜涘勾闀垮眳姘戣繕鏄洿鎰挎剰鍦ㄤ俊绠遍噷鏀跺埌绾歌川绠€璁€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I hadn't thought of that. Alright, we'll produce a bilingual community update leaflet — English and Polish, given the local demographics. We'll issue a <span class="vocab-highlight">press release</span> to the local paper at the same time as the microsite goes live.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">这点我倒没想到。好，我们出一份双语社区更新宣传页——英语和波兰语，考虑当地的族裔构成。微型网站上线同时向当地报纸发新闻稿。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I hadn't thought of that. Alright, we'll produce a bilingual community update leaflet 鈥?English and Polish, given the local demographics. We'll issue a <span class="vocab-highlight">press release</span> to the local paper at the same time as the microsite goes live.</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">杩欑偣鎴戝€掓病鎯冲埌銆傚ソ锛屾垜浠嚭涓€浠藉弻璇ぞ鍖烘洿鏂板浼犻〉鈥斺€旇嫳璇拰娉㈠叞璇紝鑰冭檻褰撳湴鐨勬棌瑁旀瀯鎴愩€傚井鍨嬬綉绔欎笂绾垮悓鏃跺悜褰撳湴鎶ョ焊鍙戞柊闂荤銆?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That certainly helps address the inclusivity concern. Now, on the timeline — I'd suggest a soft launch in Week 1, focus groups in Weeks 2-3, and then the formal planning submission at the end of Week 4. That gives you a full month of <span class="vocab-highlight">constructive dialogue</span> before the paperwork lands.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">这确实有助于解决包容性问题。现在关于时间线——我建议第一周软启动，第二到三周做焦点小组，第四周末正式递交规划申请。这样在文件落地前你有整整一个月的建设性对话。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That certainly helps address the inclusivity concern. Now, on the timeline 鈥?I'd suggest a soft launch in Week 1, focus groups in Weeks 2-3, and then the formal planning submission at the end of Week 4. That gives you a full month of <span class="vocab-highlight">constructive dialogue</span> before the paperwork lands.</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">杩欑‘瀹炴湁鍔╀簬瑙ｅ喅鍖呭鎬ч棶棰樸€傜幇鍦ㄥ叧浜庢椂闂寸嚎鈥斺€旀垜寤鸿绗竴鍛ㄨ蒋鍚姩锛岀浜屽埌涓夊懆鍋氱劍鐐瑰皬缁勶紝绗洓鍛ㄦ湯姝ｅ紡閫掍氦瑙勫垝鐢宠銆傝繖鏍峰湪鏂囦欢钀藉湴鍓嶄綘鏈夋暣鏁翠竴涓湀鐨勫缓璁炬€у璇濄€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Works for me. What about the council's own communications team? Should we coordinate messaging to ensure consistency?</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">我没问题。那市政厅自己的宣传团队呢？我们要不要协调口径确保信息一致？</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Works for me. What about the council's own communications team? Should we coordinate messaging to ensure consistency?</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">鎴戞病闂銆傞偅甯傛斂鍘呰嚜宸辩殑瀹ｄ紶鍥㈤槦鍛紵鎴戜滑瑕佷笉瑕佸崗璋冨彛寰勭‘淇濅俊鎭竴鑷达紵</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely. I'll assign a dedicated comms officer to your project. One voice, one message — that's critical when you're dealing with a development of this scale. Any mixed signals and the rumour mill starts turning.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">绝对要。我会指定一位专门的宣传官对接你的项目。一个声音、一个信息——处理这种体量的开发项目，这很关键。任何混淆信号都会让谣言满天飞。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely. I'll assign a dedicated comms officer to your project. One voice, one message 鈥?that's critical when you're dealing with a development of this scale. Any mixed signals and the rumour mill starts turning.</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">缁濆瑕併€傛垜浼氭寚瀹氫竴浣嶄笓闂ㄧ殑瀹ｄ紶瀹樺鎺ヤ綘鐨勯」鐩€備竴涓０闊炽€佷竴涓俊鎭€斺€斿鐞嗚繖绉嶄綋閲忕殑寮€鍙戦」鐩紝杩欏緢鍏抽敭銆備换浣曟贩娣嗕俊鍙烽兘浼氳璋ｈ█婊″ぉ椋炪€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. I'll need a sign-off from my board on the community engagement budget, but if we present this as a risk mitigation measure — the cost of doing proper stakeholder management versus the cost of a delayed project — I don't think I'll face much <span class="vocab-highlight">pushback</span>.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">同意。我需要董事会签批社区参与预算，但如果把这作为风险缓解措施来呈现——做利益相关者管理的成本对比项目延误的成本——我认为不会遇到什么阻力。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. I'll need a sign-off from my board on the community engagement budget, but if we present this as a risk mitigation measure 鈥?the cost of doing proper stakeholder management versus the cost of a delayed project 鈥?I don't think I'll face much <span class="vocab-highlight">pushback</span>.</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">鍚屾剰銆傛垜闇€瑕佽懀浜嬩細绛炬壒绀惧尯鍙備笌棰勭畻锛屼絾濡傛灉鎶婅繖浣滀负椋庨櫓缂撹В鎺柦鏉ュ憟鐜扳€斺€斿仛鍒╃泭鐩稿叧鑰呯鐞嗙殑鎴愭湰瀵规瘮椤圭洰寤惰鐨勬垚鏈€斺€旀垜璁や负涓嶄細閬囧埌浠€涔堥樆鍔涖€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Smart framing. The business case writes itself — every month of planning delay from unresolved objections costs you roughly 2.5% of the total project margin. Compare that to a few grand on focus groups and leaflets.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">聪明的表述。商业论证一目了然——未解决的反对意见每延误一个月，就耗费项目总利润的约2.5%。跟花几千块做焦点小组和宣传单比，差距显而易见。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Smart framing. The business case writes itself 鈥?every month of planning delay from unresolved objections costs you roughly 2.5% of the total project margin. Compare that to a few grand on focus groups and leaflets.</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">鑱槑鐨勮〃杩般€傚晢涓氳璇佷竴鐩簡鐒垛€斺€旀湭瑙ｅ喅鐨勫弽瀵规剰瑙佹瘡寤惰涓€涓湀锛屽氨鑰楄垂椤圭洰鎬诲埄娑︾殑绾?.5%銆傝窡鑺卞嚑鍗冨潡鍋氱劍鐐瑰皬缁勫拰瀹ｄ紶鍗曟瘮锛屽樊璺濇樉鑰屾槗瑙併€?/div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Precisely. Let me draft a stakeholder communication plan this afternoon. I'll have it in your inbox by 6 PM. If we're aligned, we can present jointly to the residents' association committee next Thursday.</span><button class="listen-btn" onclick="speak(this)" title="试听">▶</button></div>
-    <div class="dialogue-cn">完全正确。我今天下午草拟一份利益相关者沟通计划，6点前发到你邮箱。如果我们达成一致，下周四可以向居民协会委员会做联合汇报。</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Precisely. Let me draft a stakeholder communication plan this afternoon. I'll have it in your inbox by 6 PM. If we're aligned, we can present jointly to the residents' association committee next Thursday.</span><button class="listen-btn" onclick="speak(this)" title="璇曞惉">鈻?/button></div>
+    <div class="dialogue-cn">瀹屽叏姝ｇ‘銆傛垜浠婂ぉ涓嬪崍鑽夋嫙涓€浠藉埄鐩婄浉鍏宠€呮矡閫氳鍒掞紝6鐐瑰墠鍙戝埌浣犻偖绠便€傚鏋滄垜浠揪鎴愪竴鑷达紝涓嬪懆鍥涘彲浠ュ悜灞呮皯鍗忎細濮斿憳浼氬仛鑱斿悎姹囨姤銆?/div>
   </div>
 
 </div>
@@ -166,16 +166,16 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Key Vocabulary</h2>
 </div>
 
-<div class="vocab-item"><strong>stakeholder</strong> — 利益相关者 | 任何受项目影响或有利益关联的个人或团体，BEC 听力和阅读超高频词</div>
-<div class="vocab-item"><strong>transparency</strong> — 透明度 | 公开、诚实的信息披露，利益相关者管理的核心价值观</div>
-<div class="vocab-item"><strong>town hall meeting</strong> — 市民座谈会/公开听证会 | 企业与社区公开沟通的常见形式</div>
-<div class="vocab-item"><strong>impact assessment</strong> — 影响评估 | 项目启动前对交通、环境、噪音等方面的专业评估报告</div>
-<div class="vocab-item"><strong>buy-in</strong> — 认同/支持 | 让利益相关者从内心支持项目，而非仅仅被动接受</div>
-<div class="vocab-item"><strong>feedback loop</strong> — 反馈机制 | 收集意见→反馈给团队→调整方案→再回应的闭环流程</div>
-<div class="vocab-item"><strong>community outreach</strong> — 社区外联 | 主动与社区建立联系和沟通的系列活动</div>
-<div class="vocab-item"><strong>constructive dialogue</strong> — 建设性对话 | 双方都致力于解决问题而进行的积极沟通</div>
-<div class="vocab-item"><strong>press release</strong> — 新闻稿 | 正式向媒体发布的声明，对外沟通的标准渠道</div>
-<div class="vocab-item"><strong>pushback</strong> — 反对/阻力 | 来自内部或外部的反驳意见，非正式但非常地道的商务用语</div>
+<div class="vocab-item"><strong>stakeholder</strong> 鈥?鍒╃泭鐩稿叧鑰?| 浠讳綍鍙楅」鐩奖鍝嶆垨鏈夊埄鐩婂叧鑱旂殑涓汉鎴栧洟浣擄紝BEC 鍚姏鍜岄槄璇昏秴楂橀璇?/div>
+<div class="vocab-item"><strong>transparency</strong> 鈥?閫忔槑搴?| 鍏紑銆佽瘹瀹炵殑淇℃伅鎶湶锛屽埄鐩婄浉鍏宠€呯鐞嗙殑鏍稿績浠峰€艰</div>
+<div class="vocab-item"><strong>town hall meeting</strong> 鈥?甯傛皯搴ц皥浼?鍏紑鍚瘉浼?| 浼佷笟涓庣ぞ鍖哄叕寮€娌熼€氱殑甯歌褰㈠紡</div>
+<div class="vocab-item"><strong>impact assessment</strong> 鈥?褰卞搷璇勪及 | 椤圭洰鍚姩鍓嶅浜ら€氥€佺幆澧冦€佸櫔闊崇瓑鏂归潰鐨勪笓涓氳瘎浼版姤鍛?/div>
+<div class="vocab-item"><strong>buy-in</strong> 鈥?璁ゅ悓/鏀寔 | 璁╁埄鐩婄浉鍏宠€呬粠鍐呭績鏀寔椤圭洰锛岃€岄潪浠呬粎琚姩鎺ュ彈</div>
+<div class="vocab-item"><strong>feedback loop</strong> 鈥?鍙嶉鏈哄埗 | 鏀堕泦鎰忚鈫掑弽棣堢粰鍥㈤槦鈫掕皟鏁存柟妗堚啋鍐嶅洖搴旂殑闂幆娴佺▼</div>
+<div class="vocab-item"><strong>community outreach</strong> 鈥?绀惧尯澶栬仈 | 涓诲姩涓庣ぞ鍖哄缓绔嬭仈绯诲拰娌熼€氱殑绯诲垪娲诲姩</div>
+<div class="vocab-item"><strong>constructive dialogue</strong> 鈥?寤鸿鎬у璇?| 鍙屾柟閮借嚧鍔涗簬瑙ｅ喅闂鑰岃繘琛岀殑绉瀬娌熼€?/div>
+<div class="vocab-item"><strong>press release</strong> 鈥?鏂伴椈绋?| 姝ｅ紡鍚戝獟浣撳彂甯冪殑澹版槑锛屽澶栨矡閫氱殑鏍囧噯娓犻亾</div>
+<div class="vocab-item"><strong>pushback</strong> 鈥?鍙嶅/闃诲姏 | 鏉ヨ嚜鍐呴儴鎴栧閮ㄧ殑鍙嶉┏鎰忚锛岄潪姝ｅ紡浣嗛潪甯稿湴閬撶殑鍟嗗姟鐢ㄨ</div>
 
 <hr>
 
@@ -185,12 +185,12 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Sentence Patterns</h2>
 </div>
 
-<div class="pattern-item"><code>It's crucial that we get... on board from the outset.</code> → 我们从一开始就必须获得……的认同 | 项目启动阶段强调利益相关者参与的重要性</div>
-<div class="pattern-item"><code>I'd like to propose that we...</code> → 我提议我们…… | 提出建议的正式但友好的表达方式，比 "I suggest" 更商务化</div>
-<div class="pattern-item"><code>The last thing we want is...</code> → 我们最不想看到的就是…… | 用于强调应当避免的风险或负面结果</div>
-<div class="pattern-item"><code>Let me put it this way — ...</code> → 让我这样说——…… | 重新组织思路、换个方式解释的常用过渡语</div>
-<div class="pattern-item"><code>What we need is a genuine...</code> → 我们需要的是一个真正的…… | 强调核心需求的简洁有力句型</div>
-<div class="pattern-item"><code>That certainly helps address...</code> → 这确实有助于解决…… | 认可对方提议并点明其解决的具体问题</div>
+<div class="pattern-item"><code>It's crucial that we get... on board from the outset.</code> 鈫?鎴戜滑浠庝竴寮€濮嬪氨蹇呴』鑾峰緱鈥︹€︾殑璁ゅ悓 | 椤圭洰鍚姩闃舵寮鸿皟鍒╃泭鐩稿叧鑰呭弬涓庣殑閲嶈鎬?/div>
+<div class="pattern-item"><code>I'd like to propose that we...</code> 鈫?鎴戞彁璁垜浠€︹€?| 鎻愬嚭寤鸿鐨勬寮忎絾鍙嬪ソ鐨勮〃杈炬柟寮忥紝姣?"I suggest" 鏇村晢鍔″寲</div>
+<div class="pattern-item"><code>The last thing we want is...</code> 鈫?鎴戜滑鏈€涓嶆兂鐪嬪埌鐨勫氨鏄€︹€?| 鐢ㄤ簬寮鸿皟搴斿綋閬垮厤鐨勯闄╂垨璐熼潰缁撴灉</div>
+<div class="pattern-item"><code>Let me put it this way 鈥?...</code> 鈫?璁╂垜杩欐牱璇粹€斺€斺€︹€?| 閲嶆柊缁勭粐鎬濊矾銆佹崲涓柟寮忚В閲婄殑甯哥敤杩囨浮璇?/div>
+<div class="pattern-item"><code>What we need is a genuine...</code> 鈫?鎴戜滑闇€瑕佺殑鏄竴涓湡姝ｇ殑鈥︹€?| 寮鸿皟鏍稿績闇€姹傜殑绠€娲佹湁鍔涘彞鍨?/div>
+<div class="pattern-item"><code>That certainly helps address...</code> 鈫?杩欑‘瀹炴湁鍔╀簬瑙ｅ喅鈥︹€?| 璁ゅ彲瀵规柟鎻愯骞剁偣鏄庡叾瑙ｅ喅鐨勫叿浣撻棶棰?/div>
 
 <hr>
 
@@ -202,21 +202,21 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 </div>
 
 <div class="translation">
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>David，我想在Riverside Quarter重建项目的早期就让你参与进来。规划申请下个月递交，我觉得我们必须从一开始就获得当地社区的认同。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>Rebecca，很高兴你在提前思考。Riverside的居民协会非常活跃。如果我们不以恰当的透明度来妥善处理利益相关者的沟通，可能面临六个月的反对意见和一场公关噩梦。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>这正是我想避免的。我提议我们在正式提交前举办一次市民座谈会，让人们有机会看方案、提问，并感受到被倾听。你怎么看？</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是个合理的起点，但我建议更结构化的方式——针对不同利益相关者群体做一系列焦点小组：居民、当地商户和学校董事会。一次性的市民座谈会很容易变成吵架大会。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>有道理。就做焦点小组。我们已经委托了一份影响评估，涵盖交通、噪音和绿地保护。初步结果相当积极——光是新建的行人区就能减少高峰时段约18%的拥堵。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>这些数据无疑有助于建立认同。但我们最不想看到的就是居民觉得这是个既成事实。我们必须把这定位为征询意见，而非说服活动。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>我理解你的意思。让我这样说——我们需要的是一个真正的反馈机制。我们展示框架方案，收集顾虑，反馈给设计团队，然后带着可见的调整回来。这证明我们在倾听。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>就该这么做。我可以帮你建一个项目专题微型网站，有问答区和简讯订阅功能。社区外联多渠道效果最好——数字、面对面、纸质都有。我们有些年长居民还是更愿意在信箱里收到纸质简讯。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>这点我倒没想到。好，我们出一份双语社区更新宣传页——英语和波兰语，考虑当地的族裔构成。微型网站上线同时向当地报纸发新闻稿。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>这确实有助于解决包容性问题。现在关于时间线——我建议第一周软启动，第二到三周做焦点小组，第四周末正式递交规划申请。这样在文件落地前你有整整一个月的建设性对话。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>我没问题。那市政厅自己的宣传团队呢？我们要不要协调口径确保信息一致？</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>绝对要。我会指定一位专门的宣传官对接你的项目。一个声音、一个信息——处理这种体量的开发项目，这很关键。任何混淆信号都会让谣言满天飞。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>同意。我需要董事会签批社区参与预算，但如果把这作为风险缓解措施来呈现——做利益相关者管理的成本对比项目延误的成本——我认为不会遇到什么阻力。</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>聪明的表述。商业论证一目了然——未解决的反对意见每延误一个月，就耗费项目总利润的约2.5%。跟花几千块做焦点小组和宣传单比，差距显而易见。</span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>完全正确。我今天下午草拟一份利益相关者沟通计划，6点前发到你邮箱。如果我们达成一致，下周四可以向居民协会委员会做联合汇报。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>David锛屾垜鎯冲湪Riverside Quarter閲嶅缓椤圭洰鐨勬棭鏈熷氨璁╀綘鍙備笌杩涙潵銆傝鍒掔敵璇蜂笅涓湀閫掍氦锛屾垜瑙夊緱鎴戜滑蹇呴』浠庝竴寮€濮嬪氨鑾峰緱褰撳湴绀惧尯鐨勮鍚屻€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>Rebecca锛屽緢楂樺叴浣犲湪鎻愬墠鎬濊€冦€俁iverside鐨勫眳姘戝崗浼氶潪甯告椿璺冦€傚鏋滄垜浠笉浠ユ伆褰撶殑閫忔槑搴︽潵濡ュ杽澶勭悊鍒╃泭鐩稿叧鑰呯殑娌熼€氾紝鍙兘闈复鍏釜鏈堢殑鍙嶅鎰忚鍜屼竴鍦哄叕鍏冲櫓姊︺€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>杩欐鏄垜鎯抽伩鍏嶇殑銆傛垜鎻愯鎴戜滑鍦ㄦ寮忔彁浜ゅ墠涓惧姙涓€娆″競姘戝骇璋堜細锛岃浜轰滑鏈夋満浼氱湅鏂规銆佹彁闂紝骞舵劅鍙楀埌琚€惧惉銆備綘鎬庝箞鐪嬶紵</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>杩欐槸涓悎鐞嗙殑璧风偣锛屼絾鎴戝缓璁洿缁撴瀯鍖栫殑鏂瑰紡鈥斺€旈拡瀵逛笉鍚屽埄鐩婄浉鍏宠€呯兢浣撳仛涓€绯诲垪鐒︾偣灏忕粍锛氬眳姘戙€佸綋鍦板晢鎴峰拰瀛︽牎钁ｄ簨浼氥€備竴娆℃€х殑甯傛皯搴ц皥浼氬緢瀹规槗鍙樻垚鍚垫灦澶т細銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>鏈夐亾鐞嗐€傚氨鍋氱劍鐐瑰皬缁勩€傛垜浠凡缁忓鎵樹簡涓€浠藉奖鍝嶈瘎浼帮紝娑电洊浜ら€氥€佸櫔闊冲拰缁垮湴淇濇姢銆傚垵姝ョ粨鏋滅浉褰撶Н鏋佲€斺€斿厜鏄柊寤虹殑琛屼汉鍖哄氨鑳藉噺灏戦珮宄版椂娈电害18%鐨勬嫢鍫点€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>杩欎簺鏁版嵁鏃犵枒鏈夊姪浜庡缓绔嬭鍚屻€備絾鎴戜滑鏈€涓嶆兂鐪嬪埌鐨勫氨鏄眳姘戣寰楄繖鏄釜鏃㈡垚浜嬪疄銆傛垜浠繀椤绘妸杩欏畾浣嶄负寰佽鎰忚锛岃€岄潪璇存湇娲诲姩銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>鎴戠悊瑙ｄ綘鐨勬剰鎬濄€傝鎴戣繖鏍疯鈥斺€旀垜浠渶瑕佺殑鏄竴涓湡姝ｇ殑鍙嶉鏈哄埗銆傛垜浠睍绀烘鏋舵柟妗堬紝鏀堕泦椤捐檻锛屽弽棣堢粰璁捐鍥㈤槦锛岀劧鍚庡甫鐫€鍙鐨勮皟鏁村洖鏉ャ€傝繖璇佹槑鎴戜滑鍦ㄥ€惧惉銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>灏辫杩欎箞鍋氥€傛垜鍙互甯綘寤轰竴涓」鐩笓棰樺井鍨嬬綉绔欙紝鏈夐棶绛斿尯鍜岀畝璁闃呭姛鑳姐€傜ぞ鍖哄鑱斿娓犻亾鏁堟灉鏈€濂解€斺€旀暟瀛椼€侀潰瀵归潰銆佺焊璐ㄩ兘鏈夈€傛垜浠湁浜涘勾闀垮眳姘戣繕鏄洿鎰挎剰鍦ㄤ俊绠遍噷鏀跺埌绾歌川绠€璁€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>杩欑偣鎴戝€掓病鎯冲埌銆傚ソ锛屾垜浠嚭涓€浠藉弻璇ぞ鍖烘洿鏂板浼犻〉鈥斺€旇嫳璇拰娉㈠叞璇紝鑰冭檻褰撳湴鐨勬棌瑁旀瀯鎴愩€傚井鍨嬬綉绔欎笂绾垮悓鏃跺悜褰撳湴鎶ョ焊鍙戞柊闂荤銆?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>杩欑‘瀹炴湁鍔╀簬瑙ｅ喅鍖呭鎬ч棶棰樸€傜幇鍦ㄥ叧浜庢椂闂寸嚎鈥斺€旀垜寤鸿绗竴鍛ㄨ蒋鍚姩锛岀浜屽埌涓夊懆鍋氱劍鐐瑰皬缁勶紝绗洓鍛ㄦ湯姝ｅ紡閫掍氦瑙勫垝鐢宠銆傝繖鏍峰湪鏂囦欢钀藉湴鍓嶄綘鏈夋暣鏁翠竴涓湀鐨勫缓璁炬€у璇濄€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>鎴戞病闂銆傞偅甯傛斂鍘呰嚜宸辩殑瀹ｄ紶鍥㈤槦鍛紵鎴戜滑瑕佷笉瑕佸崗璋冨彛寰勭‘淇濅俊鎭竴鑷达紵</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>缁濆瑕併€傛垜浼氭寚瀹氫竴浣嶄笓闂ㄧ殑瀹ｄ紶瀹樺鎺ヤ綘鐨勯」鐩€備竴涓０闊炽€佷竴涓俊鎭€斺€斿鐞嗚繖绉嶄綋閲忕殑寮€鍙戦」鐩紝杩欏緢鍏抽敭銆備换浣曟贩娣嗕俊鍙烽兘浼氳璋ｈ█婊″ぉ椋炪€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>鍚屾剰銆傛垜闇€瑕佽懀浜嬩細绛炬壒绀惧尯鍙備笌棰勭畻锛屼絾濡傛灉鎶婅繖浣滀负椋庨櫓缂撹В鎺柦鏉ュ憟鐜扳€斺€斿仛鍒╃泭鐩稿叧鑰呯鐞嗙殑鎴愭湰瀵规瘮椤圭洰寤惰鐨勬垚鏈€斺€旀垜璁や负涓嶄細閬囧埌浠€涔堥樆鍔涖€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>鑱槑鐨勮〃杩般€傚晢涓氳璇佷竴鐩簡鐒垛€斺€旀湭瑙ｅ喅鐨勫弽瀵规剰瑙佹瘡寤惰涓€涓湀锛屽氨鑰楄垂椤圭洰鎬诲埄娑︾殑绾?.5%銆傝窡鑺卞嚑鍗冨潡鍋氱劍鐐瑰皬缁勫拰瀹ｄ紶鍗曟瘮锛屽樊璺濇樉鑰屾槗瑙併€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>瀹屽叏姝ｇ‘銆傛垜浠婂ぉ涓嬪崍鑽夋嫙涓€浠藉埄鐩婄浉鍏宠€呮矡閫氳鍒掞紝6鐐瑰墠鍙戝埌浣犻偖绠便€傚鏋滄垜浠揪鎴愪竴鑷达紝涓嬪懆鍥涘彲浠ュ悜灞呮皯鍗忎細濮斿憳浼氬仛鑱斿悎姹囨姤銆?/span></div>
 </div>
 </div>
 
@@ -228,7 +228,7 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
     <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
     <h2>Learning Tip</h2>
   </div>
-  <p>利益相关者沟通（Stakeholder Communication）是BEC中级口语Part 2（Mini-presentation）和写作Part 2（Report/Proposal）的高频话题。考试中常见的命题角度包括：如何处理项目反对意见、如何组织社区沟通活动、如何向不同类型利益相关者传达信息。建议练习时关注"倾听→回应→调整"三步法的英文表达，同时记住"transparency"、"feedback loop"、"constructive dialogue"这三个概念经常被用作评分标准中的加分关键词。可以假想自己是一个项目经理，用英语起草一份两分钟的stakeholder engagement briefing，录音后自我评估流利度和术语使用准确度。</p>
+  <p>鍒╃泭鐩稿叧鑰呮矡閫氾紙Stakeholder Communication锛夋槸BEC涓骇鍙ｈPart 2锛圡ini-presentation锛夊拰鍐欎綔Part 2锛圧eport/Proposal锛夌殑楂橀璇濋銆傝€冭瘯涓父瑙佺殑鍛介瑙掑害鍖呮嫭锛氬浣曞鐞嗛」鐩弽瀵规剰瑙併€佸浣曠粍缁囩ぞ鍖烘矡閫氭椿鍔ㄣ€佸浣曞悜涓嶅悓绫诲瀷鍒╃泭鐩稿叧鑰呬紶杈句俊鎭€傚缓璁粌涔犳椂鍏虫敞"鍊惧惉鈫掑洖搴斺啋璋冩暣"涓夋娉曠殑鑻辨枃琛ㄨ揪锛屽悓鏃惰浣?transparency"銆?feedback loop"銆?constructive dialogue"杩欎笁涓蹇电粡甯歌鐢ㄤ綔璇勫垎鏍囧噯涓殑鍔犲垎鍏抽敭璇嶃€傚彲浠ュ亣鎯宠嚜宸辨槸涓€涓」鐩粡鐞嗭紝鐢ㄨ嫳璇捣鑽変竴浠戒袱鍒嗛挓鐨剆takeholder engagement briefing锛屽綍闊冲悗鑷垜璇勪及娴佸埄搴﹀拰鏈浣跨敤鍑嗙‘搴︺€?/p>
 </div>
 
 <script>
@@ -241,15 +241,15 @@ function toggleChinese() {
   var btn = document.getElementById('cnToggle');
   btn.classList.toggle('showing', showChinese);
   btn.innerHTML = showChinese
-    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
-    : '<span class="cn-toggle-dot"></span> 展示中文';
+    ? '<span class="cn-toggle-dot"></span> 闅愯棌涓枃'
+    : '<span class="cn-toggle-dot"></span> 灞曠ず涓枃';
   document.body.classList.toggle('show-cn', showChinese);
 }
 
 function speak(btn) {
   if (synth.speaking) {
     synth.cancel();
-    document.querySelectorAll('.listen-btn.playing').forEach(function(b) { b.classList.remove('playing'); b.textContent = '▶'; });
+    document.querySelectorAll('.listen-btn.playing').forEach(function(b) { b.classList.remove('playing'); b.textContent = '鈻?; });
     if (currentUtterance && btn.dataset.text === currentUtterance.text) return;
   }
   var text = btn.parentElement.querySelector('.dialogue-text').textContent.trim();
@@ -259,16 +259,16 @@ function speak(btn) {
   utterance.pitch = 1;
   currentUtterance = utterance;
   btn.classList.add('playing');
-  btn.textContent = '⏹';
+  btn.textContent = '鈴?;
   btn.dataset.text = text;
   utterance.onend = function() {
     btn.classList.remove('playing');
-    btn.textContent = '▶';
+    btn.textContent = '鈻?;
     currentUtterance = null;
   };
   utterance.onerror = function() {
     btn.classList.remove('playing');
-    btn.textContent = '▶';
+    btn.textContent = '鈻?;
     currentUtterance = null;
   };
   synth.speak(utterance);
@@ -280,8 +280,8 @@ window.addEventListener('message', function(e) {
     var btn = document.getElementById('cnToggle');
     btn.classList.toggle('showing', showChinese);
     btn.innerHTML = showChinese
-      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
-      : '<span class="cn-toggle-dot"></span> 展示中文';
+      ? '<span class="cn-toggle-dot"></span> 闅愯棌涓枃'
+      : '<span class="cn-toggle-dot"></span> 灞曠ず涓枃';
     document.body.classList.toggle('show-cn', showChinese);
   }
 });
