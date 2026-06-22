@@ -1,24 +1,24 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>浠锋牸璋堝垽 Price Negotiation - BEC Daily</title>
+<title>价格谈判 Price Negotiation - BEC Daily</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{max-width:860px;margin:0 auto;outline:3px dashed #10b981;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem;width:100%;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 
-/* 鏍囬琛岋細icon + 鏂囧瓧 + 鍙充晶鎿嶄綔 */
+/* 标题行：icon + 文字 + 右侧操作 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
 .section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
 .section-head-right{margin-left:auto;flex-shrink:0}
 
-/* 涓枃鍒囨崲鎸夐挳 */
+/* 中文切换按钮 */
 .cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
 .cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
 .cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
@@ -34,7 +34,7 @@ h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
 body.show-cn .dialogue-cn{display:block}
 
-/* 璇嶆眹楂樹寒 */
+/* 词汇高亮 */
 .vocab-highlight{font-weight:700;color:#6D4AFF}
 
 .roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
@@ -56,11 +56,11 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 <body>
 
 <span class="badge">BEC Daily</span>
-<h1>浠锋牸璋堝垽 Price Negotiation</h1>
+<h1>价格谈判 Price Negotiation</h1>
 
 <div class="roles">
-  <strong>A (Sarah Chen)</strong> 鈥?Purchasing Manager, GreenTech Electronics<br>
-  <strong>B (Marcus Weber)</strong> 鈥?Sales Director, Schneider Components GmbH
+  <strong>A (Sarah Chen)</strong> — Purchasing Manager, GreenTech Electronics<br>
+  <strong>B (Marcus Weber)</strong> — Sales Director, Schneider Components GmbH
 </div>
 
 <!-- Dialogue -->
@@ -69,7 +69,7 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Dialogue</h2>
   <div class="section-head-right">
     <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
-      <span class="cn-toggle-dot"></span> 灞曠ず涓枃
+      <span class="cn-toggle-dot"></span> 展示中文
     </button>
   </div>
 </div>
@@ -77,58 +77,58 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 <div class="dialogue">
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Marcus, thanks for making time. We've reviewed your revised quote, and while we're impressed with the component quality, I have to be frank 鈥?your unit price of 鈧?7.50 is still significantly above our budget ceiling.</span></div>
-    <div class="dialogue-cn">Marcus锛屾劅璋綘鎶藉嚭鏃堕棿銆傛垜浠凡瀹￠槄浜嗚吹鏂逛慨鏀瑰悗鐨勬姤浠凤紝铏界劧瀵圭粍浠惰川閲忓嵃璞℃繁鍒伙紝浣嗘垜蹇呴』鍧︾巼鍦拌鈥斺€?7.50娆у厓鐨勫崟浠蜂粛鐒惰繙楂樹簬鎴戜滑鐨勯绠椾笂闄愩€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Marcus, thanks for making time. We've reviewed your revised quote, and while we're impressed with the component quality, I have to be frank — your unit price of €47.50 is still significantly above our budget ceiling.</span></div>
+    <div class="dialogue-cn">Marcus，感谢你抽出时间。我们已审阅了贵方修改后的报价，虽然对组件质量印象深刻，但我必须坦率地说——47.50欧元的单价仍然远高于我们的预算上限。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I appreciate the directness, Sarah. Let me walk you through our cost breakdown. The 鈧?7.50 reflects the upgraded thermal management module you specifically requested, plus the extended warranty from 18 to 36 months. That alone accounts for roughly 鈧?.20 per unit.</span></div>
-    <div class="dialogue-cn">鎴戞璧忎綘鐨勭洿鎺ワ紝Sarah銆傝鎴戜负浣犳⒊鐞嗕竴涓嬫垚鏈槑缁嗐€?7.50娆у厓鍖呭惈浜嗚吹鏂圭壒鍒姹傜殑鍗囩骇鐗堢儹绠＄悊妯″潡锛屼互鍙婁粠18涓湀寤堕暱鍒?6涓湀鐨勮川淇濇湡銆備粎杩欎竴椤瑰氨澶х害鍗犲埌浜嗘瘡浠?.20娆у厓銆?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I appreciate the directness, Sarah. Let me walk you through our cost breakdown. The €47.50 reflects the upgraded thermal management module you specifically requested, plus the extended warranty from 18 to 36 months. That alone accounts for roughly €4.20 per unit.</span></div>
+    <div class="dialogue-cn">我欣赏你的直接，Sarah。让我为你梳理一下成本明细。47.50欧元包含了贵方特别要求的升级版热管理模块，以及从18个月延长到36个月的质保期。仅这一项就大约占到了每件4.20欧元。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Granted, and we do value the extended warranty. However, we're placing a <span class="vocab-highlight">blanket order</span> of 15,000 units over 12 months 鈥?surely that volume warrants a more competitive tier. Our alternative supplier in Taiwan is quoting 鈧?1.80 with comparable specs.</span></div>
-    <div class="dialogue-cn">杩欑偣鎴戣鍙紝鎴戜滑涔熺‘瀹炵湅閲嶅欢闀胯川淇濄€備笉杩囷紝鎴戜滑涓嬬殑鏄?2涓湀鍐?5000浠剁殑涓€鎻藉瓙璁㈠崟鈥斺€旇繖鏍风殑閲忕悊搴斾韩鏈夋洿鏈夌珵浜夊姏鐨勪环鏍兼。浣嶃€傛垜浠湪鍙版咕鐨勬浛浠ｄ緵搴斿晢鎶ヤ环鏄?1.80娆у厓锛岃鏍肩浉褰撱€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Granted, and we do value the extended warranty. However, we're placing a <span class="vocab-highlight">blanket order</span> of 15,000 units over 12 months — surely that volume warrants a more competitive tier. Our alternative supplier in Taiwan is quoting €41.80 with comparable specs.</span></div>
+    <div class="dialogue-cn">这点我认可，我们也确实看重延长质保。不过，我们下的是12个月内15000件的一揽子订单——这样的量理应享有更有竞争力的价格档位。我们在台湾的替代供应商报价是41.80欧元，规格相当。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm aware of the competitive landscape, but I'd caution against comparing on price alone. Our <span class="vocab-highlight">defect rate</span> is 0.03% 鈥?industry-leading. Theirs, from what our QA team has gathered, hovers around 0.7%. Factor in rework and field returns, and that gap narrows considerably.</span></div>
-    <div class="dialogue-cn">鎴戜簡瑙ｇ珵浜夋牸灞€锛屼絾鎴戝缓璁笉瑕佷粎鍑环鏍煎仛姣旇緝銆傛垜浠殑涓嶈壇鐜囨槸0.03%鈥斺€旇涓氶鍏堛€傛牴鎹垜鏂瑰搧鎺у洟闃熺殑鏁版嵁锛屼粬浠殑涓嶈壇鐜囧ぇ绾﹀湪0.7%銆傛妸杩斿伐鍜屽敭鍚庨€€鎹㈣揣鐨勬垚鏈畻杩涘幓锛岃繖涓樊璺濆氨澶уぇ缂╁皬浜嗐€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm aware of the competitive landscape, but I'd caution against comparing on price alone. Our <span class="vocab-highlight">defect rate</span> is 0.03% — industry-leading. Theirs, from what our QA team has gathered, hovers around 0.7%. Factor in rework and field returns, and that gap narrows considerably.</span></div>
+    <div class="dialogue-cn">我了解竞争格局，但我建议不要仅凭价格做比较。我们的不良率是0.03%——行业领先。根据我方品控团队的数据，他们的不良率大约在0.7%。把返工和售后退换货的成本算进去，这个差距就大大缩小了。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Fair point, but you're also asking us to commit to a two-year <span class="vocab-highlight">exclusivity clause</span>, which limits our sourcing flexibility. If we're locking ourselves in, we need that reflected in the pricing. I'm authorised to go to 鈧?3.20 if you drop the exclusivity requirement.</span></div>
-    <div class="dialogue-cn">璇村緱鏈夐亾鐞嗭紝浣嗚吹鏂硅繕瑕佹眰鎴戜滑绛剧讲涓ゅ勾鐨勬帓浠栨€ф潯娆撅紝杩欓檺鍒朵簡鎴戜滑鐨勯噰璐伒娲诲害銆傚鏋滆閿佸畾鎴戜滑锛屼环鏍间笂闇€瑕佹湁鎵€浣撶幇銆傚鏋滃彇娑堟帓浠栨€ц姹傦紝鎴戞湁鏉冪粰鍑?3.20娆у厓銆?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Fair point, but you're also asking us to commit to a two-year <span class="vocab-highlight">exclusivity clause</span>, which limits our sourcing flexibility. If we're locking ourselves in, we need that reflected in the pricing. I'm authorised to go to €43.20 if you drop the exclusivity requirement.</span></div>
+    <div class="dialogue-cn">说得有道理，但贵方还要求我们签署两年的排他性条款，这限制了我们的采购灵活度。如果要锁定我们，价格上需要有所体现。如果取消排他性要求，我有权给出43.20欧元。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The <span class="vocab-highlight">exclusivity clause</span> is non-negotiable from our legal side 鈥?it protects our <span class="vocab-highlight">IP</span> on the custom firmware integration. But here's what I can do: 鈧?5.80 per unit, and I'll throw in free technical training for your assembly team, which normally runs 鈧?,000. That's concrete value without touching the unit price further.</span></div>
-    <div class="dialogue-cn">鎺掍粬鎬ф潯娆惧湪鎴戞柟娉曞姟灞傞潰鏄笉鍙崗鍟嗙殑鈥斺€斿畠淇濇姢鐨勬槸鎴戜滑瀹氬埗鍥轰欢闆嗘垚鐨勭煡璇嗕骇鏉冦€備笉杩囨垜鍙互鍋氱殑鏄細45.80娆у厓姣忎欢锛屽苟闄勮禒璐垫柟瑁呴厤鍥㈤槦鐨勫厤璐规妧鏈煿璁紝杩欓」鍩硅閫氬父鏀惰垂6000娆у厓銆傝繖鏄疄瀹炲湪鍦ㄧ殑浠峰€硷紝涓嶈Е鍙婂崟浠风殑杩涗竴姝ヨ皟鏁淬€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The <span class="vocab-highlight">exclusivity clause</span> is non-negotiable from our legal side — it protects our <span class="vocab-highlight">IP</span> on the custom firmware integration. But here's what I can do: €45.80 per unit, and I'll throw in free technical training for your assembly team, which normally runs €6,000. That's concrete value without touching the unit price further.</span></div>
+    <div class="dialogue-cn">排他性条款在我方法务层面是不可协商的——它保护的是我们定制固件集成的知识产权。不过我可以做的是：45.80欧元每件，并附赠贵方装配团队的免费技术培训，这项培训通常收费6000欧元。这是实实在在的价值，不触及单价的进一步调整。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That training package is appealing 鈥?we've had onboarding issues with our last three hires. If we split the difference at 鈧?4.50 and you include <span class="vocab-highlight">payment terms</span> of net-60 instead of net-30, I think we can sell this internally.</span></div>
-    <div class="dialogue-cn">鍩硅濂楅寰堟湁鍚稿紩鍔涒€斺€旀垜浠渶杩戜笁浣嶆柊鍛樺伐纭疄閬囧埌浜嗕笂鎵嬮棶棰樸€傚鏋滄垜浠湪44.50娆у厓鍚勮涓€姝ワ紝骞朵笖浠樻鏉′欢浠庤揣鍒?0澶╂敼涓鸿揣鍒?0澶╋紝鎴戞兂鍐呴儴鍙互鎺ㄥ姩閫氳繃銆?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That training package is appealing — we've had onboarding issues with our last three hires. If we split the difference at €44.50 and you include <span class="vocab-highlight">payment terms</span> of net-60 instead of net-30, I think we can sell this internally.</span></div>
+    <div class="dialogue-cn">培训套餐很有吸引力——我们最近三位新员工确实遇到了上手问题。如果我们在44.50欧元各让一步，并且付款条件从货到30天改为货到60天，我想内部可以推动通过。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Net-60 puts pressure on our <span class="vocab-highlight">cash flow</span>, but for a commitment of 15,000 units... alright. 鈧?4.80, net-60, plus the training package, and I'll need <span class="vocab-highlight">sign-off</span> from our CFO by end of week. That's as far as I can stretch.</span></div>
-    <div class="dialogue-cn">璐у埌60澶╁鎴戜滑鐨勭幇閲戞祦鏈夊帇鍔涳紝浣嗗浜?5000浠剁殑鎵胯閲忊€︹€﹀ソ鍚с€?4.80娆у厓锛岃揣鍒?0澶╋紝鍔犱笂鍩硅濂楅锛屾垜闇€瑕佸湪鏈懆鏈墠鑾峰緱CFO鐨勭鎵广€傝繖宸叉槸鎴戣兘鍋氬嚭鐨勬渶澶ц姝ヤ簡銆?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Net-60 puts pressure on our <span class="vocab-highlight">cash flow</span>, but for a commitment of 15,000 units... alright. €44.80, net-60, plus the training package, and I'll need <span class="vocab-highlight">sign-off</span> from our CFO by end of week. That's as far as I can stretch.</span></div>
+    <div class="dialogue-cn">货到60天对我们的现金流有压力，但对于15000件的承诺量……好吧。44.80欧元，货到60天，加上培训套餐，我需要在本周末前获得CFO的签批。这已是我能做出的最大让步了。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">鈧?4.80 with net-60 and the training 鈥?I can work with that. Let me draft the <span class="vocab-highlight">term sheet</span> this afternoon. We'll aim for a full contract review by next Wednesday. Deal?</span></div>
-    <div class="dialogue-cn">44.80娆у厓锛岃揣鍒?0澶╋紝闄勫煿璁€斺€旀垜鍙互鎺ュ彈銆傛垜浠婂ぉ涓嬪崍鍑嗗鏉℃娓呭崟锛屼笅鍛ㄤ笁鍓嶅畬鎴愬畬鏁村悎鍚岀殑瀹￠槄銆傛垚浜わ紵</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">€44.80 with net-60 and the training — I can work with that. Let me draft the <span class="vocab-highlight">term sheet</span> this afternoon. We'll aim for a full contract review by next Wednesday. Deal?</span></div>
+    <div class="dialogue-cn">44.80欧元，货到60天，附培训——我可以接受。我今天下午准备条款清单，下周三前完成完整合同的审阅。成交？</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Deal. I'll <span class="vocab-highlight">loop in</span> our legal team first thing tomorrow. It's been a constructive negotiation, Sarah 鈥?I'm confident this partnership will deliver real value on both sides.</span></div>
-    <div class="dialogue-cn">鎴愪氦銆傛槑鏃╃涓€浠朵簨鎴戝氨鎷夋硶鍔″洟闃熻繘鏉ャ€傝繖鏄竴娆″瘜鏈夊缓璁炬€х殑璋堝垽锛孲arah鈥斺€旀垜鐩镐俊杩欐鍚堜綔灏嗕负鍙屾柟甯︽潵鐪熸鐨勪环鍊笺€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Deal. I'll <span class="vocab-highlight">loop in</span> our legal team first thing tomorrow. It's been a constructive negotiation, Sarah — I'm confident this partnership will deliver real value on both sides.</span></div>
+    <div class="dialogue-cn">成交。明早第一件事我就拉法务团队进来。这是一次富有建设性的谈判，Sarah——我相信这次合作将为双方带来真正的价值。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Likewise, Marcus. This sets a solid foundation. I'll have the <span class="vocab-highlight">term sheet</span> in your inbox by 5 PM.</span></div>
-    <div class="dialogue-cn">褰兼褰兼锛孧arcus銆傝繖涓哄悎浣滄墦涓嬩簡鍧氬疄鍩虹銆傛潯娆炬竻鍗曚笅鍗?鐐瑰墠鍙戝埌浣犻偖绠便€?/div>
+    <div class="dialogue-cn">彼此彼此，Marcus。这为合作打下了坚实基础。条款清单下午5点前发到你邮箱。</div>
   </div>
 
 </div>
@@ -141,15 +141,15 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Key Vocabulary</h2>
 </div>
 
-<div class="vocab-item"><strong>blanket order</strong> 鈥?涓€鎻藉瓙璁㈠崟 | 闀挎湡澶ф壒閲忛噰璐崗璁紝BEC 闃呰鍜屽惉鍔涢珮棰戣瘝</div>
-<div class="vocab-item"><strong>defect rate</strong> 鈥?涓嶈壇鐜?娆″搧鐜?| 鍒堕€犱笟鍜岃川閲忔帶鍒跺満鏅牳蹇冩湳璇?/div>
-<div class="vocab-item"><strong>exclusivity clause</strong> 鈥?鎺掍粬鎬ф潯娆?| 鍚堝悓涓檺鍒跺悎浣滄柟涓嶅緱涓庣珵浜夊鎵嬪悎浣滅殑鏉℃</div>
-<div class="vocab-item"><strong>IP (Intellectual Property)</strong> 鈥?鐭ヨ瘑浜ф潈 | 璋堝垽涓繚鎶ゆ妧鏈笓鍒╁拰鍟嗕笟鏈哄瘑鐨勫父瑙佹蹇?/div>
-<div class="vocab-item"><strong>payment terms</strong> 鈥?浠樻鏉′欢/璐︽湡 | net-30锛?0澶╀粯娆撅級/ net-60锛?0澶╀粯娆撅級鏄晢鍔¤皥鍒ゅ叧閿绱?/div>
-<div class="vocab-item"><strong>term sheet</strong> 鈥?鏉℃娓呭崟 | 姝ｅ紡鍚堝悓鍓嶇殑妗嗘灦鎬ф枃浠讹紝鍒楁槑鏍稿績鍟嗕笟鏉℃</div>
-<div class="vocab-item"><strong>sign-off</strong> 鈥?鎵瑰噯/绛炬壒 | 鍟嗗姟鍦烘櫙涓寚涓婄骇鎴栫壒瀹氶儴闂ㄧ殑姝ｅ紡鎵瑰噯</div>
-<div class="vocab-item"><strong>loop in</strong> 鈥?鎶勯€?鎷夊叆锛堟煇浜哄弬涓庯級 | 鍟嗗姟閭欢鍜屼細璁腑鐨勯珮棰戝彛璇〃杈?/div>
-<div class="vocab-item"><strong>cash flow</strong> 鈥?鐜伴噾娴?| 璐㈠姟鍜岃皥鍒や腑鐨勬牳蹇冩蹇碉紝鐩存帴褰卞搷璐︽湡璋堝垽</div>
+<div class="vocab-item"><strong>blanket order</strong> — 一揽子订单 | 长期大批量采购协议，BEC 阅读和听力高频词</div>
+<div class="vocab-item"><strong>defect rate</strong> — 不良率/次品率 | 制造业和质量控制场景核心术语</div>
+<div class="vocab-item"><strong>exclusivity clause</strong> — 排他性条款 | 合同中限制合作方不得与竞争对手合作的条款</div>
+<div class="vocab-item"><strong>IP (Intellectual Property)</strong> — 知识产权 | 谈判中保护技术专利和商业机密的常见概念</div>
+<div class="vocab-item"><strong>payment terms</strong> — 付款条件/账期 | net-30（30天付款）/ net-60（60天付款）是商务谈判关键要素</div>
+<div class="vocab-item"><strong>term sheet</strong> — 条款清单 | 正式合同前的框架性文件，列明核心商业条款</div>
+<div class="vocab-item"><strong>sign-off</strong> — 批准/签批 | 商务场景中指上级或特定部门的正式批准</div>
+<div class="vocab-item"><strong>loop in</strong> — 抄送/拉入（某人参与） | 商务邮件和会议中的高频口语表达</div>
+<div class="vocab-item"><strong>cash flow</strong> — 现金流 | 财务和谈判中的核心概念，直接影响账期谈判</div>
 
 <hr>
 
@@ -159,12 +159,12 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Sentence Patterns</h2>
 </div>
 
-<div class="pattern-item"><code>I have to be frank 鈥?...</code> 鈫?鍧︾櫧璇粹€︹€?| 鐢ㄤ簬寮曞嚭鏁忔劅鎴栧洶闅捐瘽棰橈紝姣?"to be honest" 鏇村晢鍔″寲</div>
-<div class="pattern-item"><code>That alone accounts for roughly...</code> 鈫?浠呰繖涓€椤瑰氨澶х害鍗犲埌鈥︹€?| 鐢ㄤ簬鍒嗚В鎴愭湰銆佽В閲婁环鏍兼瀯鎴?/div>
-<div class="pattern-item"><code>I'd caution against comparing on price alone.</code> 鈫?鎴戝缓璁笉瑕佷粎鍑环鏍煎仛姣旇緝 | 鍟嗗姟璋堝垽涓紩瀵煎鏂瑰叧娉ㄤ环鍊艰€岄潪鍗曠函浠锋牸鐨勭粡鍏稿彞寮?/div>
-<div class="pattern-item"><code>Factor in..., and that gap narrows considerably.</code> 鈫?鎶娾€︹€﹁€冭檻杩涙潵锛屽樊璺濆氨澶уぇ缂╁皬浜?| 鐢ㄤ簬寮曞瀵规柟鐪嬪埌闅愭€ф垚鏈?/div>
-<div class="pattern-item"><code>If we split the difference at...</code> 鈫?濡傛灉鎴戜滑鍦ㄢ€︹€﹁繖涓环浣嶅悇璁╀竴姝?| 璋堝垽涓?鎶樹腑璁╂"鐨勭粡鍏歌〃杈?/div>
-<div class="pattern-item"><code>That's as far as I can stretch.</code> 鈫?杩欐槸鎴戠殑鏈€澶ц姝ヤ簡 | 琛ㄨ揪搴曠嚎鐨勫父鐢ㄥ晢鍔″彞鍨?/div>
+<div class="pattern-item"><code>I have to be frank — ...</code> → 坦白说…… | 用于引出敏感或困难话题，比 "to be honest" 更商务化</div>
+<div class="pattern-item"><code>That alone accounts for roughly...</code> → 仅这一项就大约占到…… | 用于分解成本、解释价格构成</div>
+<div class="pattern-item"><code>I'd caution against comparing on price alone.</code> → 我建议不要仅凭价格做比较 | 商务谈判中引导对方关注价值而非单纯价格的经典句式</div>
+<div class="pattern-item"><code>Factor in..., and that gap narrows considerably.</code> → 把……考虑进来，差距就大大缩小了 | 用于引导对方看到隐性成本</div>
+<div class="pattern-item"><code>If we split the difference at...</code> → 如果我们在……这个价位各让一步 | 谈判中"折中让步"的经典表达</div>
+<div class="pattern-item"><code>That's as far as I can stretch.</code> → 这是我的最大让步了 | 表达底线的常用商务句型</div>
 
 <hr>
 
@@ -176,17 +176,17 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 </div>
 
 <div class="translation">
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>Marcus锛屾劅璋綘鎶藉嚭鏃堕棿銆傛垜浠凡瀹￠槄浜嗚吹鏂逛慨鏀瑰悗鐨勬姤浠凤紝铏界劧瀵圭粍浠惰川閲忓嵃璞℃繁鍒伙紝浣嗘垜蹇呴』鍧︾巼鍦拌鈥斺€?7.50娆у厓鐨勫崟浠蜂粛鐒惰繙楂樹簬鎴戜滑鐨勯绠椾笂闄愩€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>鎴戞璧忎綘鐨勭洿鎺ワ紝Sarah銆傝鎴戜负浣犳⒊鐞嗕竴涓嬫垚鏈槑缁嗐€?7.50娆у厓鍖呭惈浜嗚吹鏂圭壒鍒姹傜殑鍗囩骇鐗堢儹绠＄悊妯″潡锛屼互鍙婁粠18涓湀寤堕暱鍒?6涓湀鐨勮川淇濇湡銆備粎杩欎竴椤瑰氨澶х害鍗犲埌浜嗘瘡浠?.20娆у厓銆?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>杩欑偣鎴戣鍙紝鎴戜滑涔熺‘瀹炵湅閲嶅欢闀胯川淇濄€備笉杩囷紝鎴戜滑涓嬬殑鏄?2涓湀鍐?5000浠剁殑涓€鎻藉瓙璁㈠崟鈥斺€旇繖鏍风殑閲忕悊搴斾韩鏈夋洿鏈夌珵浜夊姏鐨勪环鏍兼。浣嶃€傛垜浠湪鍙版咕鐨勬浛浠ｄ緵搴斿晢鎶ヤ环鏄?1.80娆у厓锛岃鏍肩浉褰撱€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>鎴戜簡瑙ｇ珵浜夋牸灞€锛屼絾鎴戝缓璁笉瑕佷粎鍑环鏍煎仛姣旇緝銆傛垜浠殑涓嶈壇鐜囨槸0.03%鈥斺€旇涓氶鍏堛€傛牴鎹垜鏂瑰搧鎺у洟闃熺殑鏁版嵁锛屼粬浠殑涓嶈壇鐜囧ぇ绾﹀湪0.7%銆傛妸杩斿伐鍜屽敭鍚庨€€鎹㈣揣鐨勬垚鏈畻杩涘幓锛岃繖涓樊璺濆氨澶уぇ缂╁皬浜嗐€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>璇村緱鏈夐亾鐞嗭紝浣嗚吹鏂硅繕瑕佹眰鎴戜滑绛剧讲涓ゅ勾鐨勬帓浠栨€ф潯娆撅紝杩欓檺鍒朵簡鎴戜滑鐨勯噰璐伒娲诲害銆傚鏋滆閿佸畾鎴戜滑锛屼环鏍间笂闇€瑕佹湁鎵€浣撶幇銆傚鏋滃彇娑堟帓浠栨€ц姹傦紝鎴戞湁鏉冪粰鍑?3.20娆у厓銆?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>鎺掍粬鎬ф潯娆惧湪鎴戞柟娉曞姟灞傞潰鏄笉鍙崗鍟嗙殑鈥斺€斿畠淇濇姢鐨勬槸鎴戜滑瀹氬埗鍥轰欢闆嗘垚鐨勭煡璇嗕骇鏉冦€備笉杩囨垜鍙互鍋氱殑鏄細45.80娆у厓姣忎欢锛屽苟闄勮禒璐垫柟瑁呴厤鍥㈤槦鐨勫厤璐规妧鏈煿璁紝杩欓」鍩硅閫氬父鏀惰垂6000娆у厓銆傝繖鏄疄瀹炲湪鍦ㄧ殑浠峰€硷紝涓嶈Е鍙婂崟浠风殑杩涗竴姝ヨ皟鏁淬€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>鍩硅濂楅寰堟湁鍚稿紩鍔涒€斺€旀垜浠渶杩戜笁浣嶆柊鍛樺伐纭疄閬囧埌浜嗕笂鎵嬮棶棰樸€傚鏋滄垜浠湪44.50娆у厓鍚勮涓€姝ワ紝骞朵笖浠樻鏉′欢浠庤揣鍒?0澶╂敼涓鸿揣鍒?0澶╋紝鎴戞兂鍐呴儴鍙互鎺ㄥ姩閫氳繃銆?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>璐у埌60澶╁鎴戜滑鐨勭幇閲戞祦鏈夊帇鍔涳紝浣嗗浜?5000浠剁殑鎵胯閲忊€︹€﹀ソ鍚с€?4.80娆у厓锛岃揣鍒?0澶╋紝鍔犱笂鍩硅濂楅锛屾垜闇€瑕佸湪鏈懆鏈墠鑾峰緱CFO鐨勭鎵广€傝繖宸叉槸鎴戣兘鍋氬嚭鐨勬渶澶ц姝ヤ簡銆?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>44.80娆у厓锛岃揣鍒?0澶╋紝闄勫煿璁€斺€旀垜鍙互鎺ュ彈銆傛垜浠婂ぉ涓嬪崍鍑嗗鏉℃娓呭崟锛屼笅鍛ㄤ笁鍓嶅畬鎴愬畬鏁村悎鍚岀殑瀹￠槄銆傛垚浜わ紵</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>鎴愪氦銆傛槑鏃╃涓€浠朵簨鎴戝氨鎷夋硶鍔″洟闃熻繘鏉ャ€傝繖鏄竴娆″瘜鏈夊缓璁炬€х殑璋堝垽锛孲arah鈥斺€旀垜鐩镐俊杩欐鍚堜綔灏嗕负鍙屾柟甯︽潵鐪熸鐨勪环鍊笺€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>褰兼褰兼锛孧arcus銆傝繖涓哄悎浣滄墦涓嬩簡鍧氬疄鍩虹銆傛潯娆炬竻鍗曚笅鍗?鐐瑰墠鍙戝埌浣犻偖绠便€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Marcus，感谢你抽出时间。我们已审阅了贵方修改后的报价，虽然对组件质量印象深刻，但我必须坦率地说——47.50欧元的单价仍然远高于我们的预算上限。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我欣赏你的直接，Sarah。让我为你梳理一下成本明细。47.50欧元包含了贵方特别要求的升级版热管理模块，以及从18个月延长到36个月的质保期。仅这一项就大约占到了每件4.20欧元。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这点我认可，我们也确实看重延长质保。不过，我们下的是12个月内15000件的一揽子订单——这样的量理应享有更有竞争力的价格档位。我们在台湾的替代供应商报价是41.80欧元，规格相当。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我了解竞争格局，但我建议不要仅凭价格做比较。我们的不良率是0.03%——行业领先。根据我方品控团队的数据，他们的不良率大约在0.7%。把返工和售后退换货的成本算进去，这个差距就大大缩小了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>说得有道理，但贵方还要求我们签署两年的排他性条款，这限制了我们的采购灵活度。如果要锁定我们，价格上需要有所体现。如果取消排他性要求，我有权给出43.20欧元。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>排他性条款在我方法务层面是不可协商的——它保护的是我们定制固件集成的知识产权。不过我可以做的是：45.80欧元每件，并附赠贵方装配团队的免费技术培训，这项培训通常收费6000欧元。这是实实在在的价值，不触及单价的进一步调整。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>培训套餐很有吸引力——我们最近三位新员工确实遇到了上手问题。如果我们在44.50欧元各让一步，并且付款条件从货到30天改为货到60天，我想内部可以推动通过。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>货到60天对我们的现金流有压力，但对于15000件的承诺量……好吧。44.80欧元，货到60天，加上培训套餐，我需要在本周末前获得CFO的签批。这已是我能做出的最大让步了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>44.80欧元，货到60天，附培训——我可以接受。我今天下午准备条款清单，下周三前完成完整合同的审阅。成交？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>成交。明早第一件事我就拉法务团队进来。这是一次富有建设性的谈判，Sarah——我相信这次合作将为双方带来真正的价值。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>彼此彼此，Marcus。这为合作打下了坚实基础。条款清单下午5点前发到你邮箱。</span></div>
 </div>
 </div>
 
@@ -198,7 +198,7 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
     <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
     <h2>Learning Tip</h2>
   </div>
-  <p>鍦˙EC鍟嗗姟鑻辫鑰冭瘯涓紝浠锋牸璋堝垽锛圥rice Negotiation锛夋槸鍚姏Part 3鍜屽彛璇璓art 3鐨勯珮棰戝満鏅€傚缓璁粌涔犳椂閲嶇偣鍏虫敞"璁╂闃舵"鐨勮〃杈炬柟寮忊€斺€斾粠琛ㄨ揪搴曠嚎锛坆ottom line锛夈€佹彁鍑烘浛浠ｆ柟妗堬紙alternative proposal锛夊埌鏈€缁堟垚浜わ紙close the deal锛夛紝姣忎竴姝ラ兘鏈夊浐瀹氱殑鍟嗗姟璇濇湳銆傚彲浠ラ€氳繃瑙掕壊鎵紨锛坮ole-play锛夊弽澶嶇粌涔狅紝鍚屾椂娉ㄦ剰鏁板瓧鍜岀櫨鍒嗘瘮鐨勫惉鍔涜鲸璇嗚兘鍔涳紝杩欏湪鑰冭瘯涓挨涓哄叧閿€?/p>
+  <p>在BEC商务英语考试中，价格谈判（Price Negotiation）是听力Part 3和口语Part 3的高频场景。建议练习时重点关注"让步阶梯"的表达方式——从表达底线（bottom line）、提出替代方案（alternative proposal）到最终成交（close the deal），每一步都有固定的商务话术。可以通过角色扮演（role-play）反复练习，同时注意数字和百分比的听力辨识能力，这在考试中尤为关键。</p>
 </div>
 
 <script>
@@ -209,19 +209,20 @@ function toggleChinese() {
   var btn = document.getElementById('cnToggle');
   btn.classList.toggle('showing', showChinese);
   btn.innerHTML = showChinese
-    ? '<span class="cn-toggle-dot"></span> 闅愯棌涓枃'
-    : '<span class="cn-toggle-dot"></span> 灞曠ず涓枃';
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
   document.body.classList.toggle('show-cn', showChinese);
 }
 
-// 鐩戝惉鐖剁獥鍙ｅ垏鎹㈡寚浠?window.addEventListener('message', function(e) {
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
   if (e.data && e.data.action === 'toggleChinese') {
     showChinese = e.data.show;
     var btn = document.getElementById('cnToggle');
     btn.classList.toggle('showing', showChinese);
     btn.innerHTML = showChinese
-      ? '<span class="cn-toggle-dot"></span> 闅愯棌涓枃'
-      : '<span class="cn-toggle-dot"></span> 灞曠ず涓枃';
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
     document.body.classList.toggle('show-cn', showChinese);
   }
 });

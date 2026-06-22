@@ -1,24 +1,24 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>渚涘簲鍟嗗鏍?Supplier Audit - BEC Daily</title>
+<title>供应商审核 Supplier Audit - BEC Daily</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{max-width:860px;margin:0 auto;outline:3px dashed #10b981;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem;width:100%;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 
-/* 鏍囬琛岋細icon + 鏂囧瓧 + 鍙充晶鎿嶄綔 */
+/* 标题行：icon + 文字 + 右侧操作 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
 .section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
 .section-head-right{margin-left:auto;flex-shrink:0}
 
-/* 涓枃鍒囨崲鎸夐挳 */
+/* 中文切换按钮 */
 .cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
 .cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
 .cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
@@ -34,7 +34,7 @@ h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
 body.show-cn .dialogue-cn{display:block}
 
-/* 璇嶆眹楂樹寒 */
+/* 词汇高亮 */
 .vocab-highlight{font-weight:700;color:#6D4AFF}
 
 .roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
@@ -56,11 +56,11 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 <body>
 
 <span class="badge">BEC Daily</span>
-<h1>渚涘簲鍟嗗鏍?Supplier Audit</h1>
+<h1>供应商审核 Supplier Audit</h1>
 
 <div class="roles">
-  <strong>A (Linda Park)</strong> 鈥?Quality Assurance Manager, EcoVibe Apparel<br>
-  <strong>B (David Okonkwo)</strong> 鈥?Production Director, WestGate Textiles Ltd
+  <strong>A (Linda Park)</strong> — Quality Assurance Manager, EcoVibe Apparel<br>
+  <strong>B (David Okonkwo)</strong> — Production Director, WestGate Textiles Ltd
 </div>
 
 <!-- Dialogue -->
@@ -69,7 +69,7 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Dialogue</h2>
   <div class="section-head-right">
     <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
-      <span class="cn-toggle-dot"></span> 灞曠ず涓枃
+      <span class="cn-toggle-dot"></span> 展示中文
     </button>
   </div>
 </div>
@@ -78,72 +78,72 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">David, thank you for hosting us on such short notice. As you know, this is our first <span class="vocab-highlight">on-site audit</span> since signing the framework agreement, and I'm keen to walk through your production floor before we sit down with the documentation.</span></div>
-    <div class="dialogue-cn">David锛屾劅璋綘鍦ㄨ繖涔堢煭鐨勬椂闂村唴鎺ュ緟鎴戜滑銆傚浣犳墍鐭ワ紝杩欐槸鎴戜滑绛剧讲妗嗘灦鍗忚鍚庣殑棣栨鐜板満瀹℃牳锛屾垜甯屾湜鑳藉厛璧颁竴閬嶇敓浜ц溅闂达紝鐒跺悗鍐嶅潗涓嬫潵鐪嬫枃浠惰祫鏂欍€?/div>
+    <div class="dialogue-cn">David，感谢你在这么短的时间内接待我们。如你所知，这是我们签署框架协议后的首次现场审核，我希望能先走一遍生产车间，然后再坐下来看文件资料。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely, Linda. Transparency is central to how we operate. I've arranged a full tour of our cutting, stitching, and finishing sections. Our shift supervisor, Amara, will join us 鈥?she's been with WestGate for eleven years and knows every machine on that floor.</span></div>
-    <div class="dialogue-cn">瀹屽叏鐞嗚В锛孡inda銆傞€忔槑杩愯惀鏄垜浠殑鏍稿績鐞嗗康銆傛垜宸茬粡瀹夋帓濂戒簡瑁佸壀銆佺紳鍒跺拰鏁寸悊杞﹂棿鐨勫叏绋嬪弬瑙傘€傛垜浠殑鐝粍闀緼mara浼氶櫔鍚屸€斺€斿ス鍦╓estGate宸ヤ綔浜嗗崄涓€骞达紝瀵硅溅闂撮噷鐨勬瘡鍙版満鍣ㄩ兘浜嗗鎸囨帉銆?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely, Linda. Transparency is central to how we operate. I've arranged a full tour of our cutting, stitching, and finishing sections. Our shift supervisor, Amara, will join us — she's been with WestGate for eleven years and knows every machine on that floor.</span></div>
+    <div class="dialogue-cn">完全理解，Linda。透明运营是我们的核心理念。我已经安排好了裁剪、缝制和整理车间的全程参观。我们的班组长Amara会陪同——她在WestGate工作了十一年，对车间里的每台机器都了如指掌。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Excellent. I'll be paying particular attention to your quality control checkpoints. Our last shipment had a <span class="vocab-highlight">defect rate</span> of 1.8%, which, while within the contractual tolerance of 2%, is trending in the wrong direction compared to the 0.9% we saw in the initial trial batch.</span></div>
-    <div class="dialogue-cn">澶ソ浜嗐€傛垜浼氱壒鍒叧娉ㄤ綘浠殑鍝佹帶妫€鏌ョ偣銆傛垜浠笂涓€鎵硅揣鐨勪笉鑹巼鏄?.8%锛岃櫧鐒朵粛鍦ㄥ悎鍚岀害瀹氱殑2%瀹瑰繊鑼冨洿鍐咃紝浣嗙浉姣斿垵鏈熻瘯鍗曠殑0.9%锛岃秼鍔夸护浜烘媴蹇с€?/div>
+    <div class="dialogue-cn">太好了。我会特别关注你们的品控检查点。我们上一批货的不良率是1.8%，虽然仍在合同约定的2%容忍范围内，但相比初期试单的0.9%，趋势令人担忧。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I appreciate you flagging that. We've actually retrofitted three inspection stations with automated optical scanners since that shipment. The investment wasn't trivial 鈥?about $47,000 鈥?but we're already seeing a 40% reduction in missed defects during <span class="vocab-highlight">inline inspection</span>.</span></div>
-    <div class="dialogue-cn">鎰熻阿浣犳寚鍑鸿繖涓€鐐广€傚疄闄呬笂锛岃嚜閭ｆ壒璐т箣鍚庯紝鎴戜滑宸茬粡涓轰笁涓楠屽伐浣嶅姞瑁呬簡鑷姩鍏夊鎵弿浠€傝繖绗旀姇璧勪笉灏忊€斺€斿ぇ绾?7000缇庡厓鈥斺€斾絾鍦ㄧ嚎妫€楠岀殑婕忔鐜囧凡缁忛檷浣庝簡40%銆?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I appreciate you flagging that. We've actually retrofitted three inspection stations with automated optical scanners since that shipment. The investment wasn't trivial — about $47,000 — but we're already seeing a 40% reduction in missed defects during <span class="vocab-highlight">inline inspection</span>.</span></div>
+    <div class="dialogue-cn">感谢你指出这一点。实际上，自那批货之后，我们已经为三个检验工位加装了自动光学扫描仪。这笔投资不小——大约47000美元——但在线检验的漏检率已经降低了40%。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's the kind of proactive improvement we love to see. While we're on the topic, I'd also like to review your <span class="vocab-highlight">corrective action reports</span> from the past quarter. If there's a pattern, I'd rather we catch it now than discover it in a returned shipment.</span></div>
-    <div class="dialogue-cn">杩欑涓诲姩鏀硅繘姝ｆ槸鎴戜滑涔愯鐨勩€傝鍒拌繖涓紝鎴戣繕鎯虫煡鐪嬩綘浠繃鍘讳竴涓搴︾殑绾犳鎺柦鎶ュ憡銆傚鏋滃瓨鍦ㄧ郴缁熸€ч棶棰橈紝鎴戝笇鏈涚幇鍦ㄥ彂鐜帮紝鑰屼笉鏄瓑鍒伴€€璐ф椂鎵嶅彂瑙夈€?/div>
+    <div class="dialogue-cn">这种主动改进正是我们乐见的。说到这个，我还想查看你们过去一个季度的纠正措施报告。如果存在系统性问题，我希望现在发现，而不是等到退货时才发觉。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Of course. All CARs are logged in our quality management system, which I'll give you read-only access to. Off the top of my head, the main recurring issue has been inconsistent stitch tension on the shoulder seams 鈥?we traced it to a batch of subpar thread from a new supplier, which we've since dropped.</span></div>
-    <div class="dialogue-cn">褰撶劧銆傛墍鏈夌殑CAR閮借褰曞湪鎴戜滑鐨勮川閲忕鐞嗙郴缁熶腑锛屾垜浼氱粰浣犲彧璇绘潈闄愩€傜矖鐣ュ洖蹇嗕竴涓嬶紝涓昏鐨勯噸澶嶆€ч棶棰樻槸鑲╅儴缂濈嚎鐨勫紶鍔涗笉鍧団€斺€旀垜浠拷鏌ュ埌涓€涓柊渚涘簲鍟嗘彁渚涗簡鎵规涓嶅悎鏍肩殑缂濈韩绾匡紝鎴戜滑宸茬粡鍋滄鍚堜綔浜嗐€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Of course. All CARs are logged in our quality management system, which I'll give you read-only access to. Off the top of my head, the main recurring issue has been inconsistent stitch tension on the shoulder seams — we traced it to a batch of subpar thread from a new supplier, which we've since dropped.</span></div>
+    <div class="dialogue-cn">当然。所有的CAR都记录在我们的质量管理系统中，我会给你只读权限。粗略回忆一下，主要的重复性问题是肩部缝线的张力不均——我们追查到一个新供应商提供了批次不合格的缝纫线，我们已经停止合作了。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That brings me to another point 鈥?<span class="vocab-highlight">supplier qualification</span>. Under clause 7.3 of our agreement, any tier-2 supplier that provides materials constituting more than 5% of the finished product's value must be pre-approved by us. Were we notified about this thread supplier?</span></div>
-    <div class="dialogue-cn">杩欒鎴戞兂鍒板彟涓€鐐光€斺€斾緵搴斿晢璧勮川璁よ瘉銆傛牴鎹垜浠崗璁7.3鏉★紝浠讳綍鍗犳垚鍝佷环鍊?%浠ヤ笂鐨勫師鏉愭枡浜岀骇渚涘簲鍟嗭紝閮藉繀椤讳簨鍏堣幏寰楁垜浠殑鎵瑰噯銆傚叧浜庤繖涓紳绾嚎渚涘簲鍟嗭紝鎴戜滑鏀跺埌閫氱煡浜嗗悧锛?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That brings me to another point — <span class="vocab-highlight">supplier qualification</span>. Under clause 7.3 of our agreement, any tier-2 supplier that provides materials constituting more than 5% of the finished product's value must be pre-approved by us. Were we notified about this thread supplier?</span></div>
+    <div class="dialogue-cn">这让我想到另一点——供应商资质认证。根据我们协议第7.3条，任何占成品价值5%以上的原材料二级供应商，都必须事先获得我们的批准。关于这个缝纫线供应商，我们收到通知了吗？</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Frankly, we missed that. The thread supplier accounted for roughly 3.8% of material cost, so our procurement team classified it as non-critical. But I acknowledge the oversight 鈥?I'll have the qualification dossier on your desk by end of day tomorrow.</span></div>
-    <div class="dialogue-cn">鍧︾巼鍦拌锛屾垜浠枏蹇戒簡銆傜紳绾嚎渚涘簲鍟嗙殑鏉愭枡鎴愭湰澶х害鍗?.8%锛屾垜浠殑閲囪喘鍥㈤槦灏嗗叾褰掔被涓洪潪鍏抽敭渚涘簲鍟嗐€備絾鎴戞壙璁よ繖涓枏婕忊€斺€旀槑澶╀笅鐝墠鎴戜細鎶婅祫璐ㄥ鏌ユ枃浠舵斁鍒颁綘妗屼笂銆?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Frankly, we missed that. The thread supplier accounted for roughly 3.8% of material cost, so our procurement team classified it as non-critical. But I acknowledge the oversight — I'll have the qualification dossier on your desk by end of day tomorrow.</span></div>
+    <div class="dialogue-cn">坦率地说，我们疏忽了。缝纫线供应商的材料成本大约占3.8%，我们的采购团队将其归类为非关键供应商。但我承认这个疏漏——明天下班前我会把资质审查文件放到你桌上。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I appreciate the candour. Let's not treat this as a finding 鈥?more of a process alignment. Speaking of which, I'd also like to observe your end-of-line random sampling procedure. The <span class="vocab-highlight">AQL</span> 2.5 standard you committed to requires a specific sample size matrix, and I want to make sure the floor team is applying it consistently.</span></div>
-    <div class="dialogue-cn">鎴戞璧忎綘鐨勫潶璇氥€傛垜浠笉蹇呮妸杩欒涓哄鏍稿彂鐜伴」鈥斺€旀洿鍍忔槸娴佺▼瀵归綈銆傝鍒版祦绋嬶紝鎴戣繕鎯宠鎽╀竴涓嬩綘浠殑鎴愬搧闅忔満鎶芥牱绋嬪簭銆備綘浠壙璇虹殑AQL 2.5鏍囧噯鏈夊叿浣撶殑鎶芥牱鏂规鐭╅樀锛屾垜鎯崇‘璁よ溅闂村洟闃熸槸鍚︿竴鑷存墽琛屻€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I appreciate the candour. Let's not treat this as a finding — more of a process alignment. Speaking of which, I'd also like to observe your end-of-line random sampling procedure. The <span class="vocab-highlight">AQL</span> 2.5 standard you committed to requires a specific sample size matrix, and I want to make sure the floor team is applying it consistently.</span></div>
+    <div class="dialogue-cn">我欣赏你的坦诚。我们不必把这视为审核发现项——更像是流程对齐。说到流程，我还想观摩一下你们的成品随机抽样程序。你们承诺的AQL 2.5标准有具体的抽样方案矩阵，我想确认车间团队是否一致执行。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Happy to demonstrate. We've actually gone beyond <span class="vocab-highlight">AQL</span> 2.5 鈥?our internal benchmark is 1.5 for all export orders. Amara can walk you through the sampling plan and show you the reject log. One thing I'm particularly proud of is that our rework rate has dropped below 0.5% for the first time this quarter.</span></div>
-    <div class="dialogue-cn">寰堜箰鎰忓睍绀恒€傚疄闄呬笂鎴戜滑鐨勬爣鍑嗗凡缁忚秴瓒婁簡AQL 2.5鈥斺€旀墍鏈夊嚭鍙ｈ鍗曠殑鍐呴儴鍩哄噯鏄?.5銆侫mara鍙互甯︿綘杩囦竴閬嶆娊鏍疯鍒掑苟鏌ョ湅鎷掓敹璁板綍銆傛湁浠朵簨鎴戠壒鍒嚜璞€斺€旀湰瀛ｅ害鎴戜滑鐨勮繑宸ョ巼棣栨闄嶅埌浜?.5%浠ヤ笅銆?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Happy to demonstrate. We've actually gone beyond <span class="vocab-highlight">AQL</span> 2.5 — our internal benchmark is 1.5 for all export orders. Amara can walk you through the sampling plan and show you the reject log. One thing I'm particularly proud of is that our rework rate has dropped below 0.5% for the first time this quarter.</span></div>
+    <div class="dialogue-cn">很乐意展示。实际上我们的标准已经超越了AQL 2.5——所有出口订单的内部基准是1.5。Amara可以带你过一遍抽样计划并查看拒收记录。有件事我特别自豪——本季度我们的返工率首次降到了0.5%以下。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's impressive. If the numbers hold up, it'll certainly factor positively into our <span class="vocab-highlight">vendor scorecard</span>. On a related note, I'd also like to briefly discuss <span class="vocab-highlight">lead times</span>. Our peak season is coming up in Q3, and we're forecasting a 30% volume increase. Can your current capacity absorb that without compromising quality?</span></div>
-    <div class="dialogue-cn">杩欑‘瀹炰簡涓嶈捣銆傚鏋滄暟鎹粡寰楄捣楠岃瘉锛岃繖鑲畾浼氬鎴戜滑鐨勪緵搴斿晢璇勫垎鍗′骇鐢熺Н鏋佸奖鍝嶃€傞『渚胯涓€鍙ワ紝鎴戣繕鎯崇畝鍗曡璁轰竴涓嬩氦璐у懆鏈熴€傛垜浠殑鏃哄鍦ㄧ涓夊搴﹀嵆灏嗗埌鏉ワ紝棰勮璁㈠崟閲忎細澧炲姞30%銆備綘浠洰鍓嶇殑浜ц兘鑳藉惁鍦ㄤ笉褰卞搷璐ㄩ噺鐨勫墠鎻愪笅娑堝寲杩欎釜澧為噺锛?/div>
+    <div class="dialogue-cn">这确实了不起。如果数据经得起验证，这肯定会对我们的供应商评分卡产生积极影响。顺便说一句，我还想简单讨论一下交货周期。我们的旺季在第三季度即将到来，预计订单量会增加30%。你们目前的产能能否在不影响质量的前提下消化这个增量？</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We've been preparing for exactly that. We added a second shift in April, and our <span class="vocab-highlight">throughput</span> is already at 85% of the projected Q3 requirement. The bottleneck, honestly, isn't production 鈥?it's inbound logistics for raw cotton. We're working with two freight forwarders now instead of one to mitigate delays.</span></div>
-    <div class="dialogue-cn">鎴戜滑姝ｆ槸涓烘鍦ㄥ仛鍑嗗銆傚洓鏈堜唤鎴戜滑澧炲姞浜嗙浜屼釜鐝锛岀洰鍓嶇殑浜ч噺宸茬粡杈惧埌绗笁瀛ｅ害棰勬祴闇€姹傜殑85%銆傝瀹炶瘽锛岀摱棰堜笉鍦ㄧ敓浜р€斺€旇€屽湪鍘熸鐨勮繘鍘傜墿娴併€傛垜浠幇鍦ㄤ笌涓ゅ璐ц繍浠ｇ悊鍚堜綔锛岃€屼笉鏄竴瀹讹紝浠ラ檷浣庡欢璇闄┿€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We've been preparing for exactly that. We added a second shift in April, and our <span class="vocab-highlight">throughput</span> is already at 85% of the projected Q3 requirement. The bottleneck, honestly, isn't production — it's inbound logistics for raw cotton. We're working with two freight forwarders now instead of one to mitigate delays.</span></div>
+    <div class="dialogue-cn">我们正是为此在做准备。四月份我们增加了第二个班次，目前的产量已经达到第三季度预测需求的85%。说实话，瓶颈不在生产——而在原棉的进厂物流。我们现在与两家货运代理合作，而不是一家，以降低延误风险。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Good to hear you're thinking end-to-end. One last thing before we head to the floor 鈥?I'll need to speak with two or three line workers privately, without management present. It's standard protocol for our <span class="vocab-highlight">social compliance audit</span>, and I'm sure you understand.</span></div>
-    <div class="dialogue-cn">寰堥珮鍏翠綘浠湪閫氱洏鑰冭檻銆傚幓杞﹂棿涔嬪墠杩樻湁鏈€鍚庝竴浠朵簨鈥斺€旀垜闇€瑕佷笌涓ゅ埌涓変綅涓€绾垮伐浜哄崟鐙氦璋堬紝涓嶉渶瑕佺鐞嗕汉鍛樺湪鍦恒€傝繖鏄垜浠ぞ浼氳矗浠诲悎瑙勫鏍哥殑鏍囧噯绋嬪簭锛岀浉淇′綘鑳界悊瑙ｃ€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Good to hear you're thinking end-to-end. One last thing before we head to the floor — I'll need to speak with two or three line workers privately, without management present. It's standard protocol for our <span class="vocab-highlight">social compliance audit</span>, and I'm sure you understand.</span></div>
+    <div class="dialogue-cn">很高兴你们在通盘考虑。去车间之前还有最后一件事——我需要与两到三位一线工人单独交谈，不需要管理人员在场。这是我们社会责任合规审核的标准程序，相信你能理解。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Completely. We've set aside the meeting room near the canteen. I'll let the team know they can speak freely 鈥?our worker retention rate is 92%, so I'm confident you'll hear positive feedback.</span></div>
-    <div class="dialogue-cn">瀹屽叏鐞嗚В銆傛垜浠凡缁忛鐣欎簡椋熷爞鏃佽竟鐨勪細璁銆傛垜浼氬憡鐭ュ洟闃熶粬浠彲浠ョ晠鎵€娆茶█鈥斺€旀垜浠殑鍛樺伐鐣欎换鐜囨槸92%锛屾墍浠ユ垜寰堟湁淇″績浣犱細鍚埌姝ｉ潰鐨勫弽棣堛€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Completely. We've set aside the meeting room near the canteen. I'll let the team know they can speak freely — our worker retention rate is 92%, so I'm confident you'll hear positive feedback.</span></div>
+    <div class="dialogue-cn">完全理解。我们已经预留了食堂旁边的会议室。我会告知团队他们可以畅所欲言——我们的员工留任率是92%，所以我很有信心你会听到正面的反馈。</div>
   </div>
 
 </div>
@@ -156,16 +156,16 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Key Vocabulary</h2>
 </div>
 
-<div class="vocab-item"><strong>on-site audit</strong> 鈥?鐜板満瀹℃牳 | 閲囪喘鏂瑰埌渚涘簲鍟嗙幇鍦鸿繘琛岀殑璐ㄩ噺銆佸悎瑙勬垨娴佺▼瀹℃煡锛孊EC鍚姏楂橀鍦烘櫙</div>
-<div class="vocab-item"><strong>defect rate</strong> 鈥?涓嶈壇鐜?娆″搧鐜?| 琛￠噺浜у搧璐ㄩ噺鐨勬牳蹇僈PI锛岄€氬父浠ョ櫨鍒嗘瘮琛ㄧず</div>
-<div class="vocab-item"><strong>corrective action report (CAR)</strong> 鈥?绾犳鎺柦鎶ュ憡 | 璐ㄩ噺绠＄悊浣撶郴涓敤浜庤褰曞拰杩借釜闂鏁存敼鐨勬寮忔枃浠?/div>
-<div class="vocab-item"><strong>inline inspection</strong> 鈥?鍦ㄧ嚎妫€楠?杩囩▼妫€楠?| 鐢熶骇杩囩▼涓紙鑰岄潪鎴愬搧鍚庯級杩涜鐨勮川閲忔鏌?/div>
-<div class="vocab-item"><strong>supplier qualification</strong> 鈥?渚涘簲鍟嗚祫璐ㄨ璇?| 瀵逛緵搴斿晢鑳藉姏銆佸悎瑙勬€у拰鍙潬鎬х殑姝ｅ紡璇勪及娴佺▼</div>
-<div class="vocab-item"><strong>AQL (Acceptable Quality Level)</strong> 鈥?鍙帴鍙楄川閲忔按骞?| 鍥介檯璐告槗涓娊鏍锋楠岀殑鏍囧噯锛屽AQL 2.5琛ㄧず鍏佽2.5%鐨勪笉鍚堟牸鍝佺巼</div>
-<div class="vocab-item"><strong>vendor scorecard</strong> 鈥?渚涘簲鍟嗚瘎鍒嗗崱 | 鐢ㄤ簬瀹氭湡璇勪及渚涘簲鍟嗙患鍚堣〃鐜扮殑宸ュ叿锛屾兜鐩栬川閲忋€佷氦鏈熴€佹垚鏈瓑缁村害</div>
-<div class="vocab-item"><strong>lead time</strong> 鈥?浜よ揣鍛ㄦ湡/鍓嶇疆鏃堕棿 | 浠庝笅璁㈠崟鍒版敹鍒拌揣鐗╃殑鎬绘椂闂达紝渚涘簲閾剧鐞嗘牳蹇冩蹇?/div>
-<div class="vocab-item"><strong>throughput</strong> 鈥?浜ц兘/鍚炲悙閲?| 鍗曚綅鏃堕棿鍐呯殑鐢熶骇浜у嚭閲?/div>
-<div class="vocab-item"><strong>social compliance audit</strong> 鈥?绀句細璐ｄ换鍚堣瀹℃牳 | 妫€鏌ヤ緵搴斿晢鏄惁閬靛畧鍔冲姩娉曘€佸仴搴峰畨鍏ㄧ瓑绀句細鏍囧噯鐨勫鏍?/div>
+<div class="vocab-item"><strong>on-site audit</strong> — 现场审核 | 采购方到供应商现场进行的质量、合规或流程审查，BEC听力高频场景</div>
+<div class="vocab-item"><strong>defect rate</strong> — 不良率/次品率 | 衡量产品质量的核心KPI，通常以百分比表示</div>
+<div class="vocab-item"><strong>corrective action report (CAR)</strong> — 纠正措施报告 | 质量管理体系中用于记录和追踪问题整改的正式文件</div>
+<div class="vocab-item"><strong>inline inspection</strong> — 在线检验/过程检验 | 生产过程中（而非成品后）进行的质量检查</div>
+<div class="vocab-item"><strong>supplier qualification</strong> — 供应商资质认证 | 对供应商能力、合规性和可靠性的正式评估流程</div>
+<div class="vocab-item"><strong>AQL (Acceptable Quality Level)</strong> — 可接受质量水平 | 国际贸易中抽样检验的标准，如AQL 2.5表示允许2.5%的不合格品率</div>
+<div class="vocab-item"><strong>vendor scorecard</strong> — 供应商评分卡 | 用于定期评估供应商综合表现的工具，涵盖质量、交期、成本等维度</div>
+<div class="vocab-item"><strong>lead time</strong> — 交货周期/前置时间 | 从下订单到收到货物的总时间，供应链管理核心概念</div>
+<div class="vocab-item"><strong>throughput</strong> — 产能/吞吐量 | 单位时间内的生产产出量</div>
+<div class="vocab-item"><strong>social compliance audit</strong> — 社会责任合规审核 | 检查供应商是否遵守劳动法、健康安全等社会标准的审核</div>
 
 <hr>
 
@@ -175,12 +175,12 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Sentence Patterns</h2>
 </div>
 
-<div class="pattern-item"><code>I'm keen to... before we...</code> 鈫?鎴戝笇鏈涘湪鈥︹€︿箣鍓嶅厛鈥︹€?| 鐢ㄤ簬琛ㄨ揪浼樺厛椤哄簭锛屽湪鍟嗗姟鏃ョ▼瀹夋帓涓潪甯稿疄鐢?/div>
-<div class="pattern-item"><code>I'll be paying particular attention to...</code> 鈫?鎴戜細鐗瑰埆鍏虫敞鈥︹€?| 瀹℃牳鎴栨鏌ュ満鏅腑琛ㄨ揪閲嶇偣鍏虫敞棰嗗煙鐨勬爣鍑嗗彞寮?/div>
-<div class="pattern-item"><code>That brings me to another point 鈥?...</code> 鈫?杩欒鎴戞兂鍒板彟涓€鐐光€斺€斺€︹€?| 浼氳鍜岃皥鍒や腑鑷劧杩囨浮璇濋鐨勫父鐢ㄨ〃杈?/div>
-<div class="pattern-item"><code>I appreciate the candour. Let's not treat this as...</code> 鈫?鎴戞璧忎綘鐨勫潶璇氾紝鎴戜滑涓嶅繀鎶婅繖瑙嗕负鈥︹€?| 鍦ㄥ彂鐜伴棶棰樻椂琛ㄨ揪鍚堜綔鑰岄潪瀵圭珛鎬佸害鐨勭粡鍏稿彞鍨?/div>
-<div class="pattern-item"><code>If the numbers hold up, it'll certainly factor positively into...</code> 鈫?濡傛灉鏁版嵁缁忓緱璧烽獙璇侊紝杩欒偗瀹氫細瀵光€︹€︿骇鐢熺Н鏋佸奖鍝?| 鏉′欢鍙?鍟嗗姟鏈鐨勭粍鍚堬紝琛ㄨ揪瀹℃厧涔愯</div>
-<div class="pattern-item"><code>We're working with... instead of... to mitigate...</code> 鈫?鎴戜滑姝ｅ湪涓庘€︹€﹀悎浣滆€岄潪鈥︹€︿互闄嶄綆鈥︹€?| 琛ㄨ揪椋庨櫓绠＄悊鎺柦鐨勫晢鍔″彞鍨?/div>
+<div class="pattern-item"><code>I'm keen to... before we...</code> → 我希望在……之前先…… | 用于表达优先顺序，在商务日程安排中非常实用</div>
+<div class="pattern-item"><code>I'll be paying particular attention to...</code> → 我会特别关注…… | 审核或检查场景中表达重点关注领域的标准句式</div>
+<div class="pattern-item"><code>That brings me to another point — ...</code> → 这让我想到另一点——…… | 会议和谈判中自然过渡话题的常用表达</div>
+<div class="pattern-item"><code>I appreciate the candour. Let's not treat this as...</code> → 我欣赏你的坦诚，我们不必把这视为…… | 在发现问题时表达合作而非对立态度的经典句型</div>
+<div class="pattern-item"><code>If the numbers hold up, it'll certainly factor positively into...</code> → 如果数据经得起验证，这肯定会对……产生积极影响 | 条件句+商务术语的组合，表达审慎乐观</div>
+<div class="pattern-item"><code>We're working with... instead of... to mitigate...</code> → 我们正在与……合作而非……以降低…… | 表达风险管理措施的商务句型</div>
 
 <hr>
 
@@ -192,20 +192,20 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 </div>
 
 <div class="translation">
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>David锛屾劅璋綘鍦ㄨ繖涔堢煭鐨勬椂闂村唴鎺ュ緟鎴戜滑銆傚浣犳墍鐭ワ紝杩欐槸鎴戜滑绛剧讲妗嗘灦鍗忚鍚庣殑棣栨鐜板満瀹℃牳锛屾垜甯屾湜鑳藉厛璧颁竴閬嶇敓浜ц溅闂达紝鐒跺悗鍐嶅潗涓嬫潵鐪嬫枃浠惰祫鏂欍€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>瀹屽叏鐞嗚В锛孡inda銆傞€忔槑杩愯惀鏄垜浠殑鏍稿績鐞嗗康銆傛垜宸茬粡瀹夋帓濂戒簡瑁佸壀銆佺紳鍒跺拰鏁寸悊杞﹂棿鐨勫叏绋嬪弬瑙傘€傛垜浠殑鐝粍闀緼mara浼氶櫔鍚屸€斺€斿ス鍦╓estGate宸ヤ綔浜嗗崄涓€骞达紝瀵硅溅闂撮噷鐨勬瘡鍙版満鍣ㄩ兘浜嗗鎸囨帉銆?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>澶ソ浜嗐€傛垜浼氱壒鍒叧娉ㄤ綘浠殑鍝佹帶妫€鏌ョ偣銆傛垜浠笂涓€鎵硅揣鐨勪笉鑹巼鏄?.8%锛岃櫧鐒朵粛鍦ㄥ悎鍚岀害瀹氱殑2%瀹瑰繊鑼冨洿鍐咃紝浣嗙浉姣斿垵鏈熻瘯鍗曠殑0.9%锛岃秼鍔夸护浜烘媴蹇с€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>鎰熻阿浣犳寚鍑鸿繖涓€鐐广€傚疄闄呬笂锛岃嚜閭ｆ壒璐т箣鍚庯紝鎴戜滑宸茬粡涓轰笁涓楠屽伐浣嶅姞瑁呬簡鑷姩鍏夊鎵弿浠€傝繖绗旀姇璧勪笉灏忊€斺€斿ぇ绾?7000缇庡厓鈥斺€斾絾鍦ㄧ嚎妫€楠岀殑婕忔鐜囧凡缁忛檷浣庝簡40%銆?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>杩欑涓诲姩鏀硅繘姝ｆ槸鎴戜滑涔愯鐨勩€傝鍒拌繖涓紝鎴戣繕鎯虫煡鐪嬩綘浠繃鍘讳竴涓搴︾殑绾犳鎺柦鎶ュ憡銆傚鏋滃瓨鍦ㄧ郴缁熸€ч棶棰橈紝鎴戝笇鏈涚幇鍦ㄥ彂鐜帮紝鑰屼笉鏄瓑鍒伴€€璐ф椂鎵嶅彂瑙夈€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>褰撶劧銆傛墍鏈夌殑CAR閮借褰曞湪鎴戜滑鐨勮川閲忕鐞嗙郴缁熶腑锛屾垜浼氱粰浣犲彧璇绘潈闄愩€傜矖鐣ュ洖蹇嗕竴涓嬶紝涓昏鐨勯噸澶嶆€ч棶棰樻槸鑲╅儴缂濈嚎鐨勫紶鍔涗笉鍧団€斺€旀垜浠拷鏌ュ埌涓€涓柊渚涘簲鍟嗘彁渚涗簡鎵规涓嶅悎鏍肩殑缂濈韩绾匡紝鎴戜滑宸茬粡鍋滄鍚堜綔浜嗐€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>杩欒鎴戞兂鍒板彟涓€鐐光€斺€斾緵搴斿晢璧勮川璁よ瘉銆傛牴鎹垜浠崗璁7.3鏉★紝浠讳綍鍗犳垚鍝佷环鍊?%浠ヤ笂鐨勫師鏉愭枡浜岀骇渚涘簲鍟嗭紝閮藉繀椤讳簨鍏堣幏寰楁垜浠殑鎵瑰噯銆傚叧浜庤繖涓紳绾嚎渚涘簲鍟嗭紝鎴戜滑鏀跺埌閫氱煡浜嗗悧锛?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>鍧︾巼鍦拌锛屾垜浠枏蹇戒簡銆傜紳绾嚎渚涘簲鍟嗙殑鏉愭枡鎴愭湰澶х害鍗?.8%锛屾垜浠殑閲囪喘鍥㈤槦灏嗗叾褰掔被涓洪潪鍏抽敭渚涘簲鍟嗐€備絾鎴戞壙璁よ繖涓枏婕忊€斺€旀槑澶╀笅鐝墠鎴戜細鎶婅祫璐ㄥ鏌ユ枃浠舵斁鍒颁綘妗屼笂銆?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>鎴戞璧忎綘鐨勫潶璇氥€傛垜浠笉蹇呮妸杩欒涓哄鏍稿彂鐜伴」鈥斺€旀洿鍍忔槸娴佺▼瀵归綈銆傝鍒版祦绋嬶紝鎴戣繕鎯宠鎽╀竴涓嬩綘浠殑鎴愬搧闅忔満鎶芥牱绋嬪簭銆備綘浠壙璇虹殑AQL 2.5鏍囧噯鏈夊叿浣撶殑鎶芥牱鏂规鐭╅樀锛屾垜鎯崇‘璁よ溅闂村洟闃熸槸鍚︿竴鑷存墽琛屻€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>寰堜箰鎰忓睍绀恒€傚疄闄呬笂鎴戜滑鐨勬爣鍑嗗凡缁忚秴瓒婁簡AQL 2.5鈥斺€旀墍鏈夊嚭鍙ｈ鍗曠殑鍐呴儴鍩哄噯鏄?.5銆侫mara鍙互甯︿綘杩囦竴閬嶆娊鏍疯鍒掑苟鏌ョ湅鎷掓敹璁板綍銆傛湁浠朵簨鎴戠壒鍒嚜璞€斺€旀湰瀛ｅ害鎴戜滑鐨勮繑宸ョ巼棣栨闄嶅埌浜?.5%浠ヤ笅銆?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>杩欑‘瀹炰簡涓嶈捣銆傚鏋滄暟鎹粡寰楄捣楠岃瘉锛岃繖鑲畾浼氬鎴戜滑鐨勪緵搴斿晢璇勫垎鍗′骇鐢熺Н鏋佸奖鍝嶃€傞『渚胯涓€鍙ワ紝鎴戣繕鎯崇畝鍗曡璁轰竴涓嬩氦璐у懆鏈熴€傛垜浠殑鏃哄鍦ㄧ涓夊搴﹀嵆灏嗗埌鏉ワ紝棰勮璁㈠崟閲忎細澧炲姞30%銆備綘浠洰鍓嶇殑浜ц兘鑳藉惁鍦ㄤ笉褰卞搷璐ㄩ噺鐨勫墠鎻愪笅娑堝寲杩欎釜澧為噺锛?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>鎴戜滑姝ｆ槸涓烘鍦ㄥ仛鍑嗗銆傚洓鏈堜唤鎴戜滑澧炲姞浜嗙浜屼釜鐝锛岀洰鍓嶇殑浜ч噺宸茬粡杈惧埌绗笁瀛ｅ害棰勬祴闇€姹傜殑85%銆傝瀹炶瘽锛岀摱棰堜笉鍦ㄧ敓浜р€斺€旇€屽湪鍘熸鐨勮繘鍘傜墿娴併€傛垜浠幇鍦ㄤ笌涓ゅ璐ц繍浠ｇ悊鍚堜綔锛岃€屼笉鏄竴瀹讹紝浠ラ檷浣庡欢璇闄┿€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>寰堥珮鍏翠綘浠湪閫氱洏鑰冭檻銆傚幓杞﹂棿涔嬪墠杩樻湁鏈€鍚庝竴浠朵簨鈥斺€旀垜闇€瑕佷笌涓ゅ埌涓変綅涓€绾垮伐浜哄崟鐙氦璋堬紝涓嶉渶瑕佺鐞嗕汉鍛樺湪鍦恒€傝繖鏄垜浠ぞ浼氳矗浠诲悎瑙勫鏍哥殑鏍囧噯绋嬪簭锛岀浉淇′綘鑳界悊瑙ｃ€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>瀹屽叏鐞嗚В銆傛垜浠凡缁忛鐣欎簡椋熷爞鏃佽竟鐨勪細璁銆傛垜浼氬憡鐭ュ洟闃熶粬浠彲浠ョ晠鎵€娆茶█鈥斺€旀垜浠殑鍛樺伐鐣欎换鐜囨槸92%锛屾墍浠ユ垜寰堟湁淇″績浣犱細鍚埌姝ｉ潰鐨勫弽棣堛€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>David，感谢你在这么短的时间内接待我们。如你所知，这是我们签署框架协议后的首次现场审核，我希望能先走一遍生产车间，然后再坐下来看文件资料。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>完全理解，Linda。透明运营是我们的核心理念。我已经安排好了裁剪、缝制和整理车间的全程参观。我们的班组长Amara会陪同——她在WestGate工作了十一年，对车间里的每台机器都了如指掌。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>太好了。我会特别关注你们的品控检查点。我们上一批货的不良率是1.8%，虽然仍在合同约定的2%容忍范围内，但相比初期试单的0.9%，趋势令人担忧。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>感谢你指出这一点。实际上，自那批货之后，我们已经为三个检验工位加装了自动光学扫描仪。这笔投资不小——大约47000美元——但在线检验的漏检率已经降低了40%。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这种主动改进正是我们乐见的。说到这个，我还想查看你们过去一个季度的纠正措施报告。如果存在系统性问题，我希望现在发现，而不是等到退货时才发觉。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>当然。所有的CAR都记录在我们的质量管理系统中，我会给你只读权限。粗略回忆一下，主要的重复性问题是肩部缝线的张力不均——我们追查到一个新供应商提供了批次不合格的缝纫线，我们已经停止合作了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这让我想到另一点——供应商资质认证。根据我们协议第7.3条，任何占成品价值5%以上的原材料二级供应商，都必须事先获得我们的批准。关于这个缝纫线供应商，我们收到通知了吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>坦率地说，我们疏忽了。缝纫线供应商的材料成本大约占3.8%，我们的采购团队将其归类为非关键供应商。但我承认这个疏漏——明天下班前我会把资质审查文件放到你桌上。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我欣赏你的坦诚。我们不必把这视为审核发现项——更像是流程对齐。说到流程，我还想观摩一下你们的成品随机抽样程序。你们承诺的AQL 2.5标准有具体的抽样方案矩阵，我想确认车间团队是否一致执行。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>很乐意展示。实际上我们的标准已经超越了AQL 2.5——所有出口订单的内部基准是1.5。Amara可以带你过一遍抽样计划并查看拒收记录。有件事我特别自豪——本季度我们的返工率首次降到了0.5%以下。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这确实了不起。如果数据经得起验证，这肯定会对我们的供应商评分卡产生积极影响。顺便说一句，我还想简单讨论一下交货周期。我们的旺季在第三季度即将到来，预计订单量会增加30%。你们目前的产能能否在不影响质量的前提下消化这个增量？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我们正是为此在做准备。四月份我们增加了第二个班次，目前的产量已经达到第三季度预测需求的85%。说实话，瓶颈不在生产——而在原棉的进厂物流。我们现在与两家货运代理合作，而不是一家，以降低延误风险。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>很高兴你们在通盘考虑。去车间之前还有最后一件事——我需要与两到三位一线工人单独交谈，不需要管理人员在场。这是我们社会责任合规审核的标准程序，相信你能理解。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>完全理解。我们已经预留了食堂旁边的会议室。我会告知团队他们可以畅所欲言——我们的员工留任率是92%，所以我很有信心你会听到正面的反馈。</span></div>
 </div>
 </div>
 
@@ -217,7 +217,7 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
     <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
     <h2>Learning Tip</h2>
   </div>
-  <p>BEC涓骇鑰冭瘯涓紝渚涘簲鍟嗗鏍革紙Supplier Audit锛夋槸鍚姏鍜屽彛璇儴鍒嗙殑楂橀鍟嗗姟鍦烘櫙銆傚缓璁粌涔犳椂閲嶇偣鍏虫敞"璐ㄩ噺鏈鐨勭簿纭娇鐢?鈥斺€斿defect rate銆丄QL銆乮nline inspection銆乧orrective action report绛夛紝杩欎簺鍦ㄥ惉鍔汸art 2鐨勪俊鎭尮閰嶉涓粡甯稿嚭鐜般€傚彛璇€冭瘯涓紝瑕佸浼氬湪鎸囧嚭闂鏃?杞寲鍜屽缓璁炬€у湴琛ㄨ揪"锛堝"I appreciate the candour. Let's not treat this as a finding"锛夛紝杩欎綋鐜颁簡B2绾у埆"缁存姢鍟嗗姟鍏崇郴鐨勫悓鏃惰В鍐抽棶棰?鐨勬矡閫氳兘鍔涖€傚缓璁湕璇诲璇?-5閬嶏紝鐗瑰埆娉ㄦ剰鏁板瓧鍜岀櫨鍒嗘瘮鐨勭簿鍑嗗彂闊炽€?/p>
+  <p>BEC中级考试中，供应商审核（Supplier Audit）是听力和口语部分的高频商务场景。建议练习时重点关注"质量术语的精确使用"——如defect rate、AQL、inline inspection、corrective action report等，这些在听力Part 2的信息匹配题中经常出现。口语考试中，要学会在指出问题时"软化和建设性地表达"（如"I appreciate the candour. Let's not treat this as a finding"），这体现了B2级别"维护商务关系的同时解决问题"的沟通能力。建议朗读对话3-5遍，特别注意数字和百分比的精准发音。</p>
 </div>
 
 <script>
@@ -228,19 +228,20 @@ function toggleChinese() {
   var btn = document.getElementById('cnToggle');
   btn.classList.toggle('showing', showChinese);
   btn.innerHTML = showChinese
-    ? '<span class="cn-toggle-dot"></span> 闅愯棌涓枃'
-    : '<span class="cn-toggle-dot"></span> 灞曠ず涓枃';
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
   document.body.classList.toggle('show-cn', showChinese);
 }
 
-// 鐩戝惉鐖剁獥鍙ｅ垏鎹㈡寚浠?window.addEventListener('message', function(e) {
+// 监听父窗口切换指令
+window.addEventListener('message', function(e) {
   if (e.data && e.data.action === 'toggleChinese') {
     showChinese = e.data.show;
     var btn = document.getElementById('cnToggle');
     btn.classList.toggle('showing', showChinese);
     btn.innerHTML = showChinese
-      ? '<span class="cn-toggle-dot"></span> 闅愯棌涓枃'
-      : '<span class="cn-toggle-dot"></span> 灞曠ず涓枃';
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
     document.body.classList.toggle('show-cn', showChinese);
   }
 });

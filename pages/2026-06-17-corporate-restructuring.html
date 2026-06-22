@@ -1,24 +1,24 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>浼佷笟閲嶇粍 Corporate Restructuring - BEC Daily</title>
+<title>企业重组 Corporate Restructuring - BEC Daily</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{max-width:860px;margin:0 auto;outline:3px dashed #10b981;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem;width:100%;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 
-/* 鏍囬琛岋細icon + 鏂囧瓧 + 鍙充晶鎿嶄綔 */
+/* 标题行：icon + 文字 + 右侧操作 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
 .section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
 .section-head-right{margin-left:auto;flex-shrink:0}
 
-/* 涓枃鍒囨崲鎸夐挳 */
+/* 中文切换按钮 */
 .cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
 .cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
 .cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
@@ -34,7 +34,7 @@ h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
 body.show-cn .dialogue-cn{display:block}
 
-/* 璇嶆眹楂樹寒 */
+/* 词汇高亮 */
 .vocab-highlight{font-weight:700;color:#6D4AFF}
 
 .roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
@@ -56,11 +56,11 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 <body>
 
 <span class="badge">BEC Daily</span>
-<h1>浼佷笟閲嶇粍 Corporate Restructuring</h1>
+<h1>企业重组 Corporate Restructuring</h1>
 
 <div class="roles">
-  <strong>A (James Hawthorne)</strong> 鈥?CEO, Apex Manufacturing Ltd.<br>
-  <strong>B (Diana Voss)</strong> 鈥?Senior Consultant, Stratos Advisory Group
+  <strong>A (James Hawthorne)</strong> — CEO, Apex Manufacturing Ltd.<br>
+  <strong>B (Diana Voss)</strong> — Senior Consultant, Stratos Advisory Group
 </div>
 
 <!-- Dialogue -->
@@ -69,7 +69,7 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Dialogue</h2>
   <div class="section-head-right">
     <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
-      <span class="cn-toggle-dot"></span> 灞曠ず涓枃
+      <span class="cn-toggle-dot"></span> 展示中文
     </button>
   </div>
 </div>
@@ -77,78 +77,78 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 <div class="dialogue">
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Diana, the board has finally greenlit the <span class="vocab-highlight">restructuring</span> plan. I need you to walk me through the implementation timeline 鈥?we're looking at a six-month window to complete the operational overhaul.</span></div>
-    <div class="dialogue-cn">Diana锛岃懀浜嬩細缁堜簬鎵瑰噯浜嗛噸缁勬柟妗堛€傛垜闇€瑕佷綘甯︽垜璇︾粏浜嗚В涓€涓嬪疄鏂芥椂闂磋〃鈥斺€旀垜浠湁鍏釜鏈堢殑绐楀彛鏉ュ畬鎴愯繍钀ユ敼闈┿€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Diana, the board has finally greenlit the <span class="vocab-highlight">restructuring</span> plan. I need you to walk me through the implementation timeline — we're looking at a six-month window to complete the operational overhaul.</span></div>
+    <div class="dialogue-cn">Diana，董事会终于批准了重组方案。我需要你带我详细了解一下实施时间表——我们有六个月的窗口来完成运营改革。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Congratulations, James. That's a significant milestone. Let me outline the phased approach. Phase One 鈥?the first eight weeks 鈥?focuses on departmental consolidation. We're merging Sales and Marketing into a unified Commercial division, which eliminates twelve redundant positions but creates a leaner go-to-market engine.</span></div>
-    <div class="dialogue-cn">鎭枩锛孞ames銆傝繖鏄竴涓噸瑕佺殑閲岀▼纰戙€傝鎴戞杩颁竴涓嬪垎闃舵鐨勬柟娉曘€傜涓€闃舵鈥斺€斿墠鍏懆鈥斺€旇仛鐒︿簬閮ㄩ棬鏁村悎銆傛垜浠皢閿€鍞拰甯傚満閮ㄥ悎骞朵负涓€涓粺涓€鐨勫晢鍔￠儴闂紝杩欎細瑁佹挙12涓啑浣欏矖浣嶏紝浣嗚兘鎵撻€犱竴涓洿绮剧畝鐨勫競鍦烘帹骞垮紩鎿庛€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Congratulations, James. That's a significant milestone. Let me outline the phased approach. Phase One — the first eight weeks — focuses on departmental consolidation. We're merging Sales and Marketing into a unified Commercial division, which eliminates twelve redundant positions but creates a leaner go-to-market engine.</span></div>
+    <div class="dialogue-cn">恭喜，James。这是一个重要的里程碑。让我概述一下分阶段的方法。第一阶段——前八周——聚焦于部门整合。我们将销售和市场部合并为一个统一的商务部门，这会裁撤12个冗余岗位，但能打造一个更精简的市场推广引擎。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's the part that keeps me up at night. The <span class="vocab-highlight">headcount reduction</span> 鈥?how do we handle the <span class="vocab-highlight">severance packages</span> without triggering a wave of negative press? Our employer brand has taken years to build.</span></div>
-    <div class="dialogue-cn">杩欐鏄鎴戝涓嶈兘瀵愮殑鍦版柟銆備汉鍛樼缉鍑忊€斺€旀垜浠浣曞鐞嗛仯鏁ｈ垂鏂规鎵嶄笉浼氬紩鍙戣礋闈㈡柊闂伙紵鎴戜滑鐨勯泧涓诲搧鐗屽彲鏄姳浜嗗骞存墠寤虹珛璧锋潵鐨勩€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's the part that keeps me up at night. The <span class="vocab-highlight">headcount reduction</span> — how do we handle the <span class="vocab-highlight">severance packages</span> without triggering a wave of negative press? Our employer brand has taken years to build.</span></div>
+    <div class="dialogue-cn">这正是让我夜不能寐的地方。人员缩减——我们如何处理遣散费方案才不会引发负面新闻？我们的雇主品牌可是花了多年才建立起来的。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A valid concern. I'd recommend we frame this as a strategic realignment rather than a cost-cutting exercise. The narrative matters immensely. We'll offer an enhanced <span class="vocab-highlight">severance package</span> 鈥?three months' salary plus <span class="vocab-highlight">outplacement services</span> 鈥?and position it as investing in our people even as we transition them out. The retained workforce needs to see we're treating departing colleagues with dignity.</span></div>
-    <div class="dialogue-cn">杩欐槸涓悎鐞嗙殑鎷呭咖銆傛垜寤鸿灏嗚繖瀹氫綅涓烘垬鐣ユ€ц皟鏁磋€岄潪鍓婂噺鎴愭湰鐨勪妇鎺€傚彊浜嬫柟寮忚嚦鍏抽噸瑕併€傛垜浠皢鎻愪緵澧炲己鍨嬮仯鏁ｆ柟妗堚€斺€斾笁涓湀钖祫鍔犱笂鍐嶅氨涓氭湇鍔♀€斺€斿苟灏嗗叾鍖呰涓哄嵆渚垮湪鍛樺伐绂昏亴鏃朵篃鍦ㄦ姇璧勪粬浠€傜暀浠荤殑鍛樺伐闇€瑕佺湅鍒版垜浠綋闈㈠湴瀵瑰緟鍗冲皢绂诲紑鐨勫悓浜嬨€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A valid concern. I'd recommend we frame this as a strategic realignment rather than a cost-cutting exercise. The narrative matters immensely. We'll offer an enhanced <span class="vocab-highlight">severance package</span> — three months' salary plus <span class="vocab-highlight">outplacement services</span> — and position it as investing in our people even as we transition them out. The retained workforce needs to see we're treating departing colleagues with dignity.</span></div>
+    <div class="dialogue-cn">这是个合理的担忧。我建议将这定位为战略性调整而非削减成本的举措。叙事方式至关重要。我们将提供增强型遣散方案——三个月薪资加上再就业服务——并将其包装为即便在员工离职时也在投资他们。留任的员工需要看到我们体面地对待即将离开的同事。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text"><span class="vocab-highlight">Outplacement services</span> is a smart touch 鈥?it softens the blow and demonstrates good faith. What about the operational side? Phase Two, if I recall, involves the supply chain consolidation.</span></div>
-    <div class="dialogue-cn">鍐嶅氨涓氭湇鍔℃槸涓仾鏄庣殑涓炬帾鈥斺€旇繖鑳界紦鍜屽啿鍑诲苟灞曠ず鍠勬剰銆傝繍钀ユ柟闈㈠憿锛熺浜岄樁娈碉紝濡傛灉鎴戞病璁伴敊鐨勮瘽锛屾槸渚涘簲閾炬暣鍚堬紵</div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text"><span class="vocab-highlight">Outplacement services</span> is a smart touch — it softens the blow and demonstrates good faith. What about the operational side? Phase Two, if I recall, involves the supply chain consolidation.</span></div>
+    <div class="dialogue-cn">再就业服务是个聪明的举措——这能缓和冲击并展示善意。运营方面呢？第二阶段，如果我没记错的话，是供应链整合？</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Correct. From week nine through sixteen, we're centralising <span class="vocab-highlight">procurement</span> across all three manufacturing sites. Right now, each plant negotiates independently, which fragments our purchasing power. By aggregating spend under a single procurement team, our modelling suggests we can secure <span class="vocab-highlight">volume discounts</span> of 12鈥?5% on raw materials. That alone could offset the severance costs within the first fiscal year.</span></div>
-    <div class="dialogue-cn">娌￠敊銆備粠绗節鍛ㄥ埌绗崄鍏懆锛屾垜浠皢鍦ㄤ笁涓埗閫犲熀鍦伴泦涓噰璐€傜洰鍓嶅悇宸ュ巶鐙珛璋堝垽锛岃繖鍒嗘暎浜嗘垜浠殑閲囪喘璁环鑳藉姏銆傞€氳繃灏嗘敮鍑烘眹鎬诲埌涓€涓噰璐洟闃燂紝鎴戜滑鐨勬ā鍨嬮娴嬪彲浠ュ湪鍘熸潗鏂欎笂鑾峰緱12-15%鐨勬壒閲忔姌鎵ｃ€備粎姝や竴椤瑰氨鑳藉湪绗竴璐㈠勾鍐呮姷娑堥仯鏁ｆ垚鏈€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Correct. From week nine through sixteen, we're centralising <span class="vocab-highlight">procurement</span> across all three manufacturing sites. Right now, each plant negotiates independently, which fragments our purchasing power. By aggregating spend under a single procurement team, our modelling suggests we can secure <span class="vocab-highlight">volume discounts</span> of 12–15% on raw materials. That alone could offset the severance costs within the first fiscal year.</span></div>
+    <div class="dialogue-cn">没错。从第九周到第十六周，我们将在三个制造基地集中采购。目前各工厂独立谈判，这分散了我们的采购议价能力。通过将支出汇总到一个采购团队，我们的模型预测可以在原材料上获得12-15%的批量折扣。仅此一项就能在第一财年内抵消遣散成本。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's compelling on paper, but the plant managers won't be thrilled. They've had autonomy over their supplier relationships for decades. How do we bring them on board without creating resistance that stalls the entire initiative?</span></div>
-    <div class="dialogue-cn">绾搁潰涓婄湅寰堟湁璇存湇鍔涳紝浣嗗伐鍘傜粡鐞嗕滑涓嶄細楂樺叴銆傚嚑鍗佸勾鏉ヤ粬浠竴鐩磋嚜涓绘帉鎺т緵搴斿晢鍏崇郴銆傛垜浠浣曡浠栦滑鍙備笌杩涙潵锛岃€屼笉寮曞彂闃荤鏁翠釜璁″垝鐨勯樆鍔涳紵</div>
+    <div class="dialogue-cn">纸面上看很有说服力，但工厂经理们不会高兴。几十年来他们一直自主掌控供应商关系。我们如何让他们参与进来，而不引发阻碍整个计划的阻力？</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'd suggest a <span class="vocab-highlight">stakeholder engagement</span> roadshow. You and I visit each site, present the consolidated P&L projections, and more importantly, involve the plant managers in shaping the new procurement framework. Give them ownership of the transition rather than imposing it top-down. We can also designate two plant managers to sit on the new central procurement steering committee.</span></div>
-    <div class="dialogue-cn">鎴戝缓璁妇琛屽埄鐩婄浉鍏虫柟鍙備笌鐨勮矾婕斻€備綘鍜屾垜璧拌姣忎釜鍩哄湴锛屽睍绀烘暣鍚堝悗鐨勬崯鐩婇娴嬶紝鏇撮噸瑕佺殑鏄紝璁╁伐鍘傜粡鐞嗗弬涓庡閫犳柊鐨勯噰璐鏋躲€傝浠栦滑鎷ユ湁杩囨浮杩囩▼鐨勪富瀵兼潈锛岃€屼笉鏄嚜涓婅€屼笅鍦板己鍔犮€傛垜浠繕鍙互鎸囧畾涓ゅ悕宸ュ巶缁忕悊杩涘叆鏂扮殑涓ぎ閲囪喘鎸囧濮斿憳浼氥€?/div>
+    <div class="dialogue-cn">我建议举行利益相关方参与的路演。你和我走访每个基地，展示整合后的损益预测，更重要的是，让工厂经理参与塑造新的采购框架。让他们拥有过渡过程的主导权，而不是自上而下地强加。我们还可以指定两名工厂经理进入新的中央采购指导委员会。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">A steering committee with plant representation 鈥?that's clever. It turns potential adversaries into co-architects. What's the timeline look like for Phase Three, the IT systems integration?</span></div>
-    <div class="dialogue-cn">鍖呭惈宸ュ巶浠ｈ〃鐨勬寚瀵煎鍛樹細鈥斺€旇繖涓璁″緢宸у銆傝繖鑳芥妸娼滃湪鐨勫鎶楄€呭彉鎴愬叡鍚岀殑璁捐鑰呫€傜涓夐樁娈电殑鏃堕棿琛ㄦ槸鎬庢牱鐨勶紝灏辨槸IT绯荤粺鏁村悎锛?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">A steering committee with plant representation — that's clever. It turns potential adversaries into co-architects. What's the timeline look like for Phase Three, the IT systems integration?</span></div>
+    <div class="dialogue-cn">包含工厂代表的指导委员会——这个设计很巧妙。这能把潜在的对抗者变成共同的设计者。第三阶段的时间表是怎样的，就是IT系统整合？</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Phase Three runs concurrently from week twelve. We're migrating all three sites onto a unified <span class="vocab-highlight">ERP</span> platform. This is the most technically demanding phase, and I'll be frank 鈥?we're budgeting a four-week contingency buffer because these migrations rarely go according to plan. The key deliverable is real-time inventory visibility across all locations by month five.</span></div>
-    <div class="dialogue-cn">绗笁闃舵浠庣鍗佷簩鍛ㄥ紑濮嬪苟琛屾帹杩涖€傛垜浠皢涓変釜鍩哄湴杩佺Щ鍒扮粺涓€鐨凟RP骞冲彴銆傝繖鏄妧鏈笂鏈€鍏锋寫鎴樻€х殑闃舵锛屽潶鐜囧湴璇粹€斺€旀垜浠鐣欎簡鍥涘懆鐨勫簲鎬ョ紦鍐叉湡锛屽洜涓鸿繖绫昏縼绉诲緢灏戞寜璁″垝杩涜銆傚叧閿氦浠樻垚鏋滄槸鍦ㄧ浜斾釜鏈堝疄鐜版墍鏈夊湴鐐圭殑瀹炴椂搴撳瓨鍙鎬с€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Phase Three runs concurrently from week twelve. We're migrating all three sites onto a unified <span class="vocab-highlight">ERP</span> platform. This is the most technically demanding phase, and I'll be frank — we're budgeting a four-week contingency buffer because these migrations rarely go according to plan. The key deliverable is real-time inventory visibility across all locations by month five.</span></div>
+    <div class="dialogue-cn">第三阶段从第十二周开始并行推进。我们将三个基地迁移到统一的ERP平台。这是技术上最具挑战性的阶段，坦率地说——我们预留了四周的应急缓冲期，因为这类迁移很少按计划进行。关键交付成果是在第五个月实现所有地点的实时库存可视性。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Real-time inventory visibility has been a pain point for years. If we can actually pull that off, the working capital savings alone could be substantial. What's your honest assessment of the risks here?</span></div>
-    <div class="dialogue-cn">瀹炴椂搴撳瓨鍙鎬у凡缁忔槸涓骞寸殑鐥涚偣浜嗐€傚鏋滅湡鑳藉仛鍒帮紝浠呰惀杩愯祫閲戠殑鑺傜渷灏辩浉褰撳彲瑙傘€備綘瀵硅繖閲岀殑椋庨櫓鏈変粈涔堣瘹瀹炵殑璇勪及锛?/div>
+    <div class="dialogue-cn">实时库存可视性已经是个多年的痛点了。如果真能做到，仅营运资金的节省就相当可观。你对这里的风险有什么诚实的评估？</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The primary risk isn't technical 鈥?it's cultural. We're asking people who've operated in silos for twenty-plus years to collaborate on a shared platform, with shared KPIs. I'd flag <span class="vocab-highlight">change fatigue</span> as a real threat. My recommendation is we front-load quick wins 鈥?announce the procurement savings publicly in month two, celebrate small milestones 鈥?to sustain momentum through the harder phases.</span></div>
-    <div class="dialogue-cn">涓昏椋庨櫓涓嶆槸鎶€鏈眰闈㈢殑鈥斺€旀槸鏂囧寲灞傞潰鐨勩€傛垜浠姹傞偅浜涘湪鍚勮嚜瀛ゅ矝閲屽伐浣滀簡浜屽崄骞翠互涓婄殑浜哄湪涓€涓叡浜钩鍙颁笂鍗忎綔锛屼娇鐢ㄥ叡浜殑KPI銆傛垜瑕佹寚鍑哄彉闈╃柌鍔虫槸涓€涓垏瀹炵殑濞佽儊銆傛垜鐨勫缓璁槸鍓嶇疆蹇€熻儨鍒┾€斺€斿湪绗簩涓湀鍏紑瀹ｅ竷閲囪喘鑺傜渷鎴愭晥锛屽簡绁濆皬鐨勯噷绋嬬鈥斺€斾互鍦ㄦ洿鍥伴毦鐨勯樁娈典繚鎸佸姩鍔涖€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The primary risk isn't technical — it's cultural. We're asking people who've operated in silos for twenty-plus years to collaborate on a shared platform, with shared KPIs. I'd flag <span class="vocab-highlight">change fatigue</span> as a real threat. My recommendation is we front-load quick wins — announce the procurement savings publicly in month two, celebrate small milestones — to sustain momentum through the harder phases.</span></div>
+    <div class="dialogue-cn">主要风险不是技术层面的——是文化层面的。我们要求那些在各自孤岛里工作了二十年以上的人在一个共享平台上协作，使用共享的KPI。我要指出变革疲劳是一个切实的威胁。我的建议是前置快速胜利——在第二个月公开宣布采购节省成效，庆祝小的里程碑——以在更困难的阶段保持动力。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text"><span class="vocab-highlight">Change fatigue</span> 鈥?that resonates. I've seen restructurings lose steam because people simply got exhausted. Alright, let's set up the steering committee this week, kick off the stakeholder roadshow next Monday, and aim for the ERP vendor selection by Friday. Diana, I want a detailed <span class="vocab-highlight">Gantt chart</span> on my desk by Thursday end of day.</span></div>
-    <div class="dialogue-cn">鍙橀潻鐤插姵鈥斺€旇繖涓垜寰堣鍚屻€傛垜瑙佽繃閲嶇粍鍥犱负浜轰滑绾补绛嬬柌鍔涘敖鑰屽け鍘诲姩鍔涚殑妗堜緥銆傚ソ鍚э紝鎴戜滑鏈懆鎴愮珛鎸囧濮斿憳浼氾紝涓嬪懆涓€寮€濮嬪埄鐩婄浉鍏虫柟璺紨锛屼簤鍙栧懆浜斿墠瀹屾垚ERP渚涘簲鍟嗛€夊瀷銆侱iana锛屾垜瑕佸湪鍛ㄥ洓涓嬬彮鍓嶇湅鍒颁竴浠借缁嗙殑鐢樼壒鍥炬斁鍦ㄦ垜妗屼笂銆?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text"><span class="vocab-highlight">Change fatigue</span> — that resonates. I've seen restructurings lose steam because people simply got exhausted. Alright, let's set up the steering committee this week, kick off the stakeholder roadshow next Monday, and aim for the ERP vendor selection by Friday. Diana, I want a detailed <span class="vocab-highlight">Gantt chart</span> on my desk by Thursday end of day.</span></div>
+    <div class="dialogue-cn">变革疲劳——这个我很认同。我见过重组因为人们纯粹筋疲力尽而失去动力的案例。好吧，我们本周成立指导委员会，下周一开始利益相关方路演，争取周五前完成ERP供应商选型。Diana，我要在周四下班前看到一份详细的甘特图放在我桌上。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-b">
-    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">You'll have it by Wednesday afternoon. I'll also draft a town hall presentation deck for the company-wide announcement. James, one last thought 鈥?don't underestimate the power of over-communicating during this process. In the absence of information, people fill the void with rumour.</span></div>
-    <div class="dialogue-cn">鍛ㄤ笁涓嬪崍鍓嶄綘浼氭嬁鍒般€傛垜杩樹細璧疯崏涓€浠介潰鍚戝叏鍏徃鐨勫叏鍛樺ぇ浼氭紨绀烘枃绋裤€侸ames锛屾渶鍚庝竴鐐光€斺€斾笉瑕佷綆浼板湪杩欎釜杩囩▼涓繃搴︽矡閫氱殑鍔涢噺銆傚湪淇℃伅鐪熺┖鐨勬儏鍐典笅锛屼汉浠細鐢ㄨ埃瑷€鏉ュ～琛ョ┖鐧姐€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">You'll have it by Wednesday afternoon. I'll also draft a town hall presentation deck for the company-wide announcement. James, one last thought — don't underestimate the power of over-communicating during this process. In the absence of information, people fill the void with rumour.</span></div>
+    <div class="dialogue-cn">周三下午前你会拿到。我还会起草一份面向全公司的全员大会演示文稿。James，最后一点——不要低估在这个过程中过度沟通的力量。在信息真空的情况下，人们会用谣言来填补空白。</div>
   </div>
 
   <div class="dialogue-line dialogue-line-a">
-    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Sage advice. Over-communication it is. Thank you, Diana 鈥?let's make this a restructuring that the business school case studies write about, not the cautionary tales.</span></div>
-    <div class="dialogue-cn">鐫挎櫤鐨勫缓璁€傞偅灏辫繃搴︽矡閫氬惂銆傝阿璋綘锛孌iana鈥斺€旇鎴戜滑鎶婅繖娆￠噸缁勬墦閫犳垚鍟嗗闄㈡渚嬬爺绌朵腑鐨勬闈㈡暀鏉愶紝鑰屼笉鏄弽闈㈣绀恒€?/div>
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Sage advice. Over-communication it is. Thank you, Diana — let's make this a restructuring that the business school case studies write about, not the cautionary tales.</span></div>
+    <div class="dialogue-cn">睿智的建议。那就过度沟通吧。谢谢你，Diana——让我们把这次重组打造成商学院案例研究中的正面教材，而不是反面警示。</div>
   </div>
 
 </div>
@@ -161,16 +161,16 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Key Vocabulary</h2>
 </div>
 
-<div class="vocab-item"><strong>restructuring</strong> 鈥?閲嶇粍 | 浼佷笟瀵圭粍缁囨灦鏋勩€佽繍钀ユ垨璐㈠姟杩涜閲嶅ぇ璋冩暣鐨勮繃绋嬶紝BEC闃呰楂橀璇?/div>
-<div class="vocab-item"><strong>severance package</strong> 鈥?閬ｆ暎璐规柟妗?| 鍛樺伐绂昏亴鏃跺叕鍙告敮浠樼殑琛ュ伩閲戝強闄勫姞绂忓埄锛堝鍐嶅氨涓氭湇鍔★級</div>
-<div class="vocab-item"><strong>outplacement services</strong> 鈥?鍐嶅氨涓氭湇鍔?| 鍏徃涓鸿瑁佸憳宸ユ彁渚涚殑鑱屼笟杩囨浮鏀寔锛屽绠€鍘嗚緟瀵笺€佹眰鑱屽煿璁?/div>
-<div class="vocab-item"><strong>headcount reduction</strong> 鈥?浜哄憳缂╁噺/瑁佸憳 | 鍟嗗姟鍦烘櫙涓瘮"layoff"鏇存寮忕殑琛ㄨ揪鏂瑰紡</div>
-<div class="vocab-item"><strong>procurement</strong> 鈥?閲囪喘 | 浼佷笟閲囪喘娴佺▼鐨勭粺绉帮紝鍚緵搴斿晢绠＄悊銆佸悎鍚岃皥鍒ょ瓑</div>
-<div class="vocab-item"><strong>volume discounts</strong> 鈥?鎵归噺鎶樻墸 | 鍥犻噰璐噺澶ц€岃幏寰楃殑鍗曚环浼樻儬锛孊EC鍚姏鍜岄槄璇诲父瑙佹湳璇?/div>
-<div class="vocab-item"><strong>ERP (Enterprise Resource Planning)</strong> 鈥?浼佷笟璧勬簮璁″垝绯荤粺 | 鏁村悎浼佷笟鍚勪笟鍔℃ā鍧楃殑缁熶竴绠＄悊杞欢骞冲彴</div>
-<div class="vocab-item"><strong>change fatigue</strong> 鈥?鍙橀潻鐤插姵 | 鍛樺伐鍥犻绻佹垨澶ц妯＄粍缁囧彉闈╄€屼骇鐢熺殑鐤叉儷鍜屾姷瑙﹀績鐞?/div>
-<div class="vocab-item"><strong>stakeholder engagement</strong> 鈥?鍒╃泭鐩稿叧鏂瑰弬涓?| 鍦ㄩ噸澶у喅绛栬繃绋嬩腑涓诲姩娌熼€氥€佷簤鍙栧叧閿柟鏀寔鐨勭鐞嗙瓥鐣?/div>
-<div class="vocab-item"><strong>Gantt chart</strong> 鈥?鐢樼壒鍥?| 椤圭洰绠＄悊涓睍绀轰换鍔℃椂闂寸嚎鍜屼緷璧栧叧绯荤殑鍙鍖栧伐鍏?/div>
+<div class="vocab-item"><strong>restructuring</strong> — 重组 | 企业对组织架构、运营或财务进行重大调整的过程，BEC阅读高频词</div>
+<div class="vocab-item"><strong>severance package</strong> — 遣散费方案 | 员工离职时公司支付的补偿金及附加福利（如再就业服务）</div>
+<div class="vocab-item"><strong>outplacement services</strong> — 再就业服务 | 公司为被裁员工提供的职业过渡支持，如简历辅导、求职培训</div>
+<div class="vocab-item"><strong>headcount reduction</strong> — 人员缩减/裁员 | 商务场景中比"layoff"更正式的表达方式</div>
+<div class="vocab-item"><strong>procurement</strong> — 采购 | 企业采购流程的统称，含供应商管理、合同谈判等</div>
+<div class="vocab-item"><strong>volume discounts</strong> — 批量折扣 | 因采购量大而获得的单价优惠，BEC听力和阅读常见术语</div>
+<div class="vocab-item"><strong>ERP (Enterprise Resource Planning)</strong> — 企业资源计划系统 | 整合企业各业务模块的统一管理软件平台</div>
+<div class="vocab-item"><strong>change fatigue</strong> — 变革疲劳 | 员工因频繁或大规模组织变革而产生的疲惫和抵触心理</div>
+<div class="vocab-item"><strong>stakeholder engagement</strong> — 利益相关方参与 | 在重大决策过程中主动沟通、争取关键方支持的管理策略</div>
+<div class="vocab-item"><strong>Gantt chart</strong> — 甘特图 | 项目管理中展示任务时间线和依赖关系的可视化工具</div>
 
 <hr>
 
@@ -180,12 +180,12 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
   <h2>Sentence Patterns</h2>
 </div>
 
-<div class="pattern-item"><code>I need you to walk me through...</code> 鈫?鎴戦渶瑕佷綘甯︽垜杩囦竴閬嶁€︹€?| 瑕佹眰瀵规柟璇︾粏瑙ｉ噴璁″垝銆佹祦绋嬫垨鏁版嵁鏃朵娇鐢紝姣?explain"鏇村晢鍔″寲</div>
-<div class="pattern-item"><code>I'd recommend we frame this as... rather than...</code> 鈫?鎴戝缓璁皢姝や簨瀹氫綅涓衡€︹€﹁€岄潪鈥︹€?| 鐢ㄤ簬寮曞鍙欒堪瑙掑害銆佺鐞嗗唴閮ㄥ拰澶栭儴鎰熺煡</div>
-<div class="pattern-item"><code>That alone could offset...</code> 鈫?浠呰繖涓€椤瑰氨鑳芥姷娑堚€︹€?| 鐢ㄤ簬璁鸿瘉鏌愰」鎺柦鐨勮储鍔″彲琛屾€э紝绐佸嚭鏀剁泭</div>
-<div class="pattern-item"><code>I'd flag... as a real threat.</code> 鈫?鎴戣鎸囧嚭鈥︹€︽槸涓€涓垏瀹炵殑濞佽儊 | 鍦ㄩ闄╄瘎浼颁腑寮曞嚭鍏抽敭椋庨櫓鐨勫父鐢ㄨ〃杈?/div>
-<div class="pattern-item"><code>We're asking people who've... to...</code> 鈫?鎴戜滑瑕佹眰閭ｄ簺浜屽崄骞存潵涔犳儻浜庘€︹€︾殑浜哄幓鈥︹€?| 鐢ㄤ簬鎻忚堪鍙橀潻绠＄悊鐨勯毦搴︼紝甯︽湁鍚岀悊蹇冪殑琛ㄨ揪鏂瑰紡</div>
-<div class="pattern-item"><code>Don't underestimate the power of...</code> 鈫?涓嶈浣庝及鈥︹€︾殑鍔涢噺 | 寮鸿皟鏌愪釜鍏抽敭鍥犵礌鐨勯噸瑕佹€э紝甯哥敤浜庡缓璁垨璀﹀憡</div>
+<div class="pattern-item"><code>I need you to walk me through...</code> → 我需要你带我过一遍…… | 要求对方详细解释计划、流程或数据时使用，比"explain"更商务化</div>
+<div class="pattern-item"><code>I'd recommend we frame this as... rather than...</code> → 我建议将此事定位为……而非…… | 用于引导叙述角度、管理内部和外部感知</div>
+<div class="pattern-item"><code>That alone could offset...</code> → 仅这一项就能抵消…… | 用于论证某项措施的财务可行性，突出收益</div>
+<div class="pattern-item"><code>I'd flag... as a real threat.</code> → 我要指出……是一个切实的威胁 | 在风险评估中引出关键风险的常用表达</div>
+<div class="pattern-item"><code>We're asking people who've... to...</code> → 我们要求那些二十年来习惯于……的人去…… | 用于描述变革管理的难度，带有同理心的表达方式</div>
+<div class="pattern-item"><code>Don't underestimate the power of...</code> → 不要低估……的力量 | 强调某个关键因素的重要性，常用于建议或警告</div>
 
 <hr>
 
@@ -197,21 +197,21 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 </div>
 
 <div class="translation">
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>Diana锛岃懀浜嬩細缁堜簬鎵瑰噯浜嗛噸缁勬柟妗堛€傛垜闇€瑕佷綘甯︽垜璇︾粏浜嗚В涓€涓嬪疄鏂芥椂闂磋〃鈥斺€旀垜浠湁鍏釜鏈堢殑绐楀彛鏉ュ畬鎴愯繍钀ユ敼闈┿€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>鎭枩锛孞ames銆傝繖鏄竴涓噸瑕佺殑閲岀▼纰戙€傝鎴戞杩颁竴涓嬪垎闃舵鐨勬柟娉曘€傜涓€闃舵鈥斺€斿墠鍏懆鈥斺€旇仛鐒︿簬閮ㄩ棬鏁村悎銆傛垜浠皢閿€鍞拰甯傚満閮ㄥ悎骞朵负涓€涓粺涓€鐨勫晢鍔￠儴闂紝杩欎細瑁佹挙12涓啑浣欏矖浣嶏紝浣嗚兘鎵撻€犱竴涓洿绮剧畝鐨勫競鍦烘帹骞垮紩鎿庛€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>杩欐鏄鎴戝涓嶈兘瀵愮殑鍦版柟銆備汉鍛樼缉鍑忊€斺€旀垜浠浣曞鐞嗛仯鏁ｈ垂鏂规鎵嶄笉浼氬紩鍙戣礋闈㈡柊闂伙紵鎴戜滑鐨勯泧涓诲搧鐗屽彲鏄姳浜嗗骞存墠寤虹珛璧锋潵鐨勩€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>杩欐槸涓悎鐞嗙殑鎷呭咖銆傛垜寤鸿灏嗚繖瀹氫綅涓烘垬鐣ユ€ц皟鏁磋€岄潪鍓婂噺鎴愭湰鐨勪妇鎺€傚彊浜嬫柟寮忚嚦鍏抽噸瑕併€傛垜浠皢鎻愪緵澧炲己鍨嬮仯鏁ｆ柟妗堚€斺€斾笁涓湀钖祫鍔犱笂鍐嶅氨涓氭湇鍔♀€斺€斿苟灏嗗叾鍖呰涓哄嵆渚垮湪鍛樺伐绂昏亴鏃朵篃鍦ㄦ姇璧勪粬浠€傜暀浠荤殑鍛樺伐闇€瑕佺湅鍒版垜浠綋闈㈠湴瀵瑰緟鍗冲皢绂诲紑鐨勫悓浜嬨€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>鍐嶅氨涓氭湇鍔℃槸涓仾鏄庣殑涓炬帾鈥斺€旇繖鑳界紦鍜屽啿鍑诲苟灞曠ず鍠勬剰銆傝繍钀ユ柟闈㈠憿锛熺浜岄樁娈碉紝濡傛灉鎴戞病璁伴敊鐨勮瘽锛屾槸渚涘簲閾炬暣鍚堬紵</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>娌￠敊銆備粠绗節鍛ㄥ埌绗崄鍏懆锛屾垜浠皢鍦ㄤ笁涓埗閫犲熀鍦伴泦涓噰璐€傜洰鍓嶅悇宸ュ巶鐙珛璋堝垽锛岃繖鍒嗘暎浜嗘垜浠殑閲囪喘璁环鑳藉姏銆傞€氳繃灏嗘敮鍑烘眹鎬诲埌涓€涓噰璐洟闃燂紝鎴戜滑鐨勬ā鍨嬮娴嬪彲浠ュ湪鍘熸潗鏂欎笂鑾峰緱12-15%鐨勬壒閲忔姌鎵ｃ€備粎姝や竴椤瑰氨鑳藉湪绗竴璐㈠勾鍐呮姷娑堥仯鏁ｆ垚鏈€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>绾搁潰涓婄湅寰堟湁璇存湇鍔涳紝浣嗗伐鍘傜粡鐞嗕滑涓嶄細楂樺叴銆傚嚑鍗佸勾鏉ヤ粬浠竴鐩磋嚜涓绘帉鎺т緵搴斿晢鍏崇郴銆傛垜浠浣曡浠栦滑鍙備笌杩涙潵锛岃€屼笉寮曞彂闃荤鏁翠釜璁″垝鐨勯樆鍔涳紵</span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>鎴戝缓璁妇琛屽埄鐩婄浉鍏虫柟鍙備笌鐨勮矾婕斻€備綘鍜屾垜璧拌姣忎釜鍩哄湴锛屽睍绀烘暣鍚堝悗鐨勬崯鐩婇娴嬶紝鏇撮噸瑕佺殑鏄紝璁╁伐鍘傜粡鐞嗗弬涓庡閫犳柊鐨勯噰璐鏋躲€傝浠栦滑鎷ユ湁杩囨浮杩囩▼鐨勪富瀵兼潈锛岃€屼笉鏄嚜涓婅€屼笅鍦板己鍔犮€傛垜浠繕鍙互鎸囧畾涓ゅ悕宸ュ巶缁忕悊杩涘叆鏂扮殑涓ぎ閲囪喘鎸囧濮斿憳浼氥€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>鍖呭惈宸ュ巶浠ｈ〃鐨勬寚瀵煎鍛樹細鈥斺€旇繖涓璁″緢宸у銆傝繖鑳芥妸娼滃湪鐨勫鎶楄€呭彉鎴愬叡鍚岀殑璁捐鑰呫€傜涓夐樁娈电殑鏃堕棿琛ㄦ槸鎬庢牱鐨勶紝灏辨槸IT绯荤粺鏁村悎锛?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>绗笁闃舵浠庣鍗佷簩鍛ㄥ紑濮嬪苟琛屾帹杩涖€傛垜浠皢涓変釜鍩哄湴杩佺Щ鍒扮粺涓€鐨凟RP骞冲彴銆傝繖鏄妧鏈笂鏈€鍏锋寫鎴樻€х殑闃舵锛屽潶鐜囧湴璇粹€斺€旀垜浠鐣欎簡鍥涘懆鐨勫簲鎬ョ紦鍐叉湡锛屽洜涓鸿繖绫昏縼绉诲緢灏戞寜璁″垝杩涜銆傚叧閿氦浠樻垚鏋滄槸鍦ㄧ浜斾釜鏈堝疄鐜版墍鏈夊湴鐐圭殑瀹炴椂搴撳瓨鍙鎬с€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>瀹炴椂搴撳瓨鍙鎬у凡缁忔槸涓骞寸殑鐥涚偣浜嗐€傚鏋滅湡鑳藉仛鍒帮紝浠呰惀杩愯祫閲戠殑鑺傜渷灏辩浉褰撳彲瑙傘€備綘瀵硅繖閲岀殑椋庨櫓鏈変粈涔堣瘹瀹炵殑璇勪及锛?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>涓昏椋庨櫓涓嶆槸鎶€鏈眰闈㈢殑鈥斺€旀槸鏂囧寲灞傞潰鐨勩€傛垜浠姹傞偅浜涘湪鍚勮嚜瀛ゅ矝閲屽伐浣滀簡浜屽崄骞翠互涓婄殑浜哄湪涓€涓叡浜钩鍙颁笂鍗忎綔锛屼娇鐢ㄥ叡浜殑KPI銆傛垜瑕佹寚鍑哄彉闈╃柌鍔虫槸涓€涓垏瀹炵殑濞佽儊銆傛垜鐨勫缓璁槸鍓嶇疆蹇€熻儨鍒┾€斺€斿湪绗簩涓湀鍏紑瀹ｅ竷閲囪喘鑺傜渷鎴愭晥锛屽簡绁濆皬鐨勯噷绋嬬鈥斺€斾互鍦ㄦ洿鍥伴毦鐨勯樁娈典繚鎸佸姩鍔涖€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>鍙橀潻鐤插姵鈥斺€旇繖涓垜寰堣鍚屻€傛垜瑙佽繃閲嶇粍鍥犱负浜轰滑绾补绛嬬柌鍔涘敖鑰屽け鍘诲姩鍔涚殑妗堜緥銆傚ソ鍚э紝鎴戜滑鏈懆鎴愮珛鎸囧濮斿憳浼氾紝涓嬪懆涓€寮€濮嬪埄鐩婄浉鍏虫柟璺紨锛屼簤鍙栧懆浜斿墠瀹屾垚ERP渚涘簲鍟嗛€夊瀷銆侱iana锛屾垜瑕佸湪鍛ㄥ洓涓嬬彮鍓嶇湅鍒颁竴浠借缁嗙殑鐢樼壒鍥炬斁鍦ㄦ垜妗屼笂銆?/span></div>
-  <div class="translation-line"><span class="translation-speaker">B:</span><span>鍛ㄤ笁涓嬪崍鍓嶄綘浼氭嬁鍒般€傛垜杩樹細璧疯崏涓€浠介潰鍚戝叏鍏徃鐨勫叏鍛樺ぇ浼氭紨绀烘枃绋裤€侸ames锛屾渶鍚庝竴鐐光€斺€斾笉瑕佷綆浼板湪杩欎釜杩囩▼涓繃搴︽矡閫氱殑鍔涢噺銆傚湪淇℃伅鐪熺┖鐨勬儏鍐典笅锛屼汉浠細鐢ㄨ埃瑷€鏉ュ～琛ョ┖鐧姐€?/span></div>
-  <div class="translation-line"><span class="translation-speaker">A:</span><span>鐫挎櫤鐨勫缓璁€傞偅灏辫繃搴︽矡閫氬惂銆傝阿璋綘锛孌iana鈥斺€旇鎴戜滑鎶婅繖娆￠噸缁勬墦閫犳垚鍟嗗闄㈡渚嬬爺绌朵腑鐨勬闈㈡暀鏉愶紝鑰屼笉鏄弽闈㈣绀恒€?/span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Diana，董事会终于批准了重组方案。我需要你带我详细了解一下实施时间表——我们有六个月的窗口来完成运营改革。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>恭喜，James。这是一个重要的里程碑。让我概述一下分阶段的方法。第一阶段——前八周——聚焦于部门整合。我们将销售和市场部合并为一个统一的商务部门，这会裁撤12个冗余岗位，但能打造一个更精简的市场推广引擎。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这正是让我夜不能寐的地方。人员缩减——我们如何处理遣散费方案才不会引发负面新闻？我们的雇主品牌可是花了多年才建立起来的。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是个合理的担忧。我建议将这定位为战略性调整而非削减成本的举措。叙事方式至关重要。我们将提供增强型遣散方案——三个月薪资加上再就业服务——并将其包装为即便在员工离职时也在投资他们。留任的员工需要看到我们体面地对待即将离开的同事。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>再就业服务是个聪明的举措——这能缓和冲击并展示善意。运营方面呢？第二阶段，如果我没记错的话，是供应链整合？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>没错。从第九周到第十六周，我们将在三个制造基地集中采购。目前各工厂独立谈判，这分散了我们的采购议价能力。通过将支出汇总到一个采购团队，我们的模型预测可以在原材料上获得12-15%的批量折扣。仅此一项就能在第一财年内抵消遣散成本。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>纸面上看很有说服力，但工厂经理们不会高兴。几十年来他们一直自主掌控供应商关系。我们如何让他们参与进来，而不引发阻碍整个计划的阻力？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我建议举行利益相关方参与的路演。你和我走访每个基地，展示整合后的损益预测，更重要的是，让工厂经理参与塑造新的采购框架。让他们拥有过渡过程的主导权，而不是自上而下地强加。我们还可以指定两名工厂经理进入新的中央采购指导委员会。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>包含工厂代表的指导委员会——这个设计很巧妙。这能把潜在的对抗者变成共同的设计者。第三阶段的时间表是怎样的，就是IT系统整合？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>第三阶段从第十二周开始并行推进。我们将三个基地迁移到统一的ERP平台。这是技术上最具挑战性的阶段，坦率地说——我们预留了四周的应急缓冲期，因为这类迁移很少按计划进行。关键交付成果是在第五个月实现所有地点的实时库存可视性。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>实时库存可视性已经是个多年的痛点了。如果真能做到，仅营运资金的节省就相当可观。你对这里的风险有什么诚实的评估？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>主要风险不是技术层面的——是文化层面的。我们要求那些在各自孤岛里工作了二十年以上的人在一个共享平台上协作，使用共享的KPI。我要指出变革疲劳是一个切实的威胁。我的建议是前置快速胜利——在第二个月公开宣布采购节省成效，庆祝小的里程碑——以在更困难的阶段保持动力。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>变革疲劳——这个我很认同。我见过重组因为人们纯粹筋疲力尽而失去动力的案例。好吧，我们本周成立指导委员会，下周一开始利益相关方路演，争取周五前完成ERP供应商选型。Diana，我要在周四下班前看到一份详细的甘特图放在我桌上。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>周三下午前你会拿到。我还会起草一份面向全公司的全员大会演示文稿。James，最后一点——不要低估在这个过程中过度沟通的力量。在信息真空的情况下，人们会用谣言来填补空白。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>睿智的建议。那就过度沟通吧。谢谢你，Diana——让我们把这次重组打造成商学院案例研究中的正面教材，而不是反面警示。</span></div>
 </div>
 </div>
 
@@ -223,7 +223,7 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
     <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
     <h2>Learning Tip</h2>
   </div>
-  <p>浼佷笟閲嶇粍锛圕orporate Restructuring锛夋槸BEC涓骇鍚姏鍜岄槄璇讳腑鐨勯珮棰戝晢鍔″満鏅€傚鑰冩椂寤鸿閲嶇偣鎺屾彙涓変釜鏂归潰锛?1) 鍙橀潻绠＄悊鐨勯樁娈垫€ц〃杈锯€斺€斾粠announcement锛堝叕鍛婏級銆乮mplementation锛堝疄鏂斤級鍒癱onsolidation锛堝珐鍥猴級锛屾帉鎻″悇闃舵鐨勫晢鍔¤瘽鏈紱(2) 浜哄姏璧勬簮鐩稿叧鏈鈥斺€攕everance銆乺edundancy銆乷utplacement銆乺edeployment绛夊湪閲嶇粍缁囨儏鏅笅缁忓父鎴愮粍鍑虹幇锛?3) "杞寲"璐熼潰淇℃伅鐨勮〃杈炬柟寮忥紝濡傜敤"strategic realignment"鏇夸唬"layoffs"銆佺敤"rightsizing"鏇夸唬"downsizing"锛岃繖鍦˙EC鍐欎綔鍜屽彛璇腑閮芥槸閲嶈鐨勮鐢ㄨ兘鍔涖€?/p>
+  <p>企业重组（Corporate Restructuring）是BEC中级听力和阅读中的高频商务场景。备考时建议重点掌握三个方面：(1) 变革管理的阶段性表达——从announcement（公告）、implementation（实施）到consolidation（巩固），掌握各阶段的商务话术；(2) 人力资源相关术语——severance、redundancy、outplacement、redeployment等在重组织情景下经常成组出现；(3) "软化"负面信息的表达方式，如用"strategic realignment"替代"layoffs"、用"rightsizing"替代"downsizing"，这在BEC写作和口语中都是重要的语用能力。</p>
 </div>
 
 <script>
@@ -234,20 +234,20 @@ function toggleChinese() {
   var btn = document.getElementById('cnToggle');
   btn.classList.toggle('showing', showChinese);
   btn.innerHTML = showChinese
-    ? '<span class="cn-toggle-dot"></span> 闅愯棌涓枃'
-    : '<span class="cn-toggle-dot"></span> 灞曠ず涓枃';
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
   document.body.classList.toggle('show-cn', showChinese);
 }
 
-// 鐩戝惉鐖剁獥鍙ｅ垏鎹㈡寚浠?
+// 监听父窗口切换指令
 window.addEventListener('message', function(e) {
   if (e.data && e.data.action === 'toggleChinese') {
     showChinese = e.data.show;
     var btn = document.getElementById('cnToggle');
     btn.classList.toggle('showing', showChinese);
     btn.innerHTML = showChinese
-      ? '<span class="cn-toggle-dot"></span> 闅愯棌涓枃'
-      : '<span class="cn-toggle-dot"></span> 灞曠ず涓枃';
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
     document.body.classList.toggle('show-cn', showChinese);
   }
 });
