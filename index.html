@@ -42,9 +42,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
   .hamburger{display:flex!important;position:fixed;top:.75rem;left:.75rem;z-index:101;width:36px;height:36px;border-radius:8px;background:#fff;border:1px solid rgba(0,0,0,0.08);cursor:pointer;align-items:center;justify-content:center;font-size:1.1rem;color:#4b5563;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 }
 .hamburger{display:none}
+
+.watermark-overlay{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;overflow:hidden}
+.watermark-overlay canvas{display:block}
+.watermark-notice{position:fixed;bottom:4px;right:8px;z-index:10000;font-size:9px;color:#D1D5DB;opacity:0.6;pointer-events:none}
 </style>
 </head>
 <body>
+
+<div class="watermark-overlay" id="watermark"></div>
+<div class="watermark-notice" id="watermark-notice"></div>
+
 <button class="hamburger" onclick="toggleMobileSidebar()">☰</button>
 <div class="mobile-overlay" onclick="closeMobileSidebar()"></div>
 <aside class="sidebar" id="sidebar">
@@ -133,6 +141,42 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
   <iframe class="content-frame" id="contentFrame" src="pages/2026-06-22-change-management.html" title="内容区"></iframe>
 </main>
 <script>
+// ======== 买家水印配置（每位买家修改变量即可） ========
+var BUYER_NAME = '小红书买家昵称';
+var WATERMARK_TEXT = '仅供 ' + BUYER_NAME + ' 学习使用 · 盗用必究';
+
+(function(){
+  var c = document.getElementById('watermark');
+  if(!c) return;
+  var canvas = document.createElement('canvas');
+  var ctx = canvas.getContext('2d');
+  var ratio = window.devicePixelRatio || 1;
+  function draw(){
+    var pw = c.offsetWidth, ph = c.offsetHeight;
+    canvas.width = pw * ratio; canvas.height = ph * ratio;
+    canvas.style.width = pw + 'px'; canvas.style.height = ph + 'px';
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    ctx.font = '14px -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif';
+    ctx.fillStyle = 'rgba(0,0,0,0.06)';
+    ctx.textAlign = 'center';
+    var tw = ctx.measureText(WATERMARK_TEXT).width;
+    ctx.save();
+    ctx.translate(pw / 2, ph / 2);
+    ctx.rotate(-20 * Math.PI / 180);
+    ctx.translate(-pw / 2, -ph / 2);
+    var stepX = Math.max(tw * 1.6, 200), stepY = 140;
+    for(var r = -1; r < Math.ceil(ph / stepY) + 2; r++)
+      for(var c = -1; c < Math.ceil(pw / stepX) + 2; c++)
+        ctx.fillText(WATERMARK_TEXT, c * stepX + (r % 2 ? stepX * 0.5 : 0), r * stepY);
+    ctx.restore();
+  }
+  draw();
+  window.addEventListener('resize', draw);
+  c.appendChild(canvas);
+  var notice = document.getElementById('watermark-notice');
+  if(notice) notice.textContent = '受保护内容 · ' + BUYER_NAME;
+})();
+
 let sidebarCollapsed = false;
 
 function toggleSidebar() {
