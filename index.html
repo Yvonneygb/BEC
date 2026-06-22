@@ -141,9 +141,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
   <iframe class="content-frame" id="contentFrame" src="pages/2026-06-22-change-management.html" title="内容区"></iframe>
 </main>
 <script>
-// ======== 买家水印配置（每位买家修改变量即可） ========
-var BUYER_NAME = '测试';
-var WATERMARK_TEXT = '仅供 ' + BUYER_NAME + ' 学习使用 · 盗用必究';
+// ======== 统一水印 ========
+var WATERMARK_TEXT = '日勿出品 · 仅供学习使用 · 二次售卖将追究法律责任';
 
 (function(){
   var c = document.getElementById('watermark');
@@ -174,7 +173,7 @@ var WATERMARK_TEXT = '仅供 ' + BUYER_NAME + ' 学习使用 · 盗用必究';
   window.addEventListener('resize', draw);
   c.appendChild(canvas);
   var notice = document.getElementById('watermark-notice');
-  if(notice) notice.textContent = '受保护内容 · ' + BUYER_NAME;
+  if(notice) notice.textContent = '日勿出品 · 正版内容';
 })();
 
 let sidebarCollapsed = false;
