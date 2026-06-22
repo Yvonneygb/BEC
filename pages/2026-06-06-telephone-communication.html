@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
@@ -24,8 +24,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -54,7 +54,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>电话沟通 Telephone Communication</h1>
-<div class="date">📅 2026年6月6日 · 星期六</div>
 
 <div class="roles">
   <strong>A (Jack Morrison)</strong> — Supply Chain Coordinator, Atlas Manufacturing<br>
@@ -74,72 +73,72 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Good morning, this is Jack Morrison calling from Atlas Manufacturing. Could I speak to someone regarding order EF-8842, please? The automated tracking hasn't updated in four days and I'm getting rather anxious.</span></div>
     <div class="dialogue-cn">早上好，我是Atlas Manufacturing的Jack Morrison。我想就订单EF-8842咨询相关人员。自动追踪系统已四天未更新，我相当焦虑。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Good morning, Mr Morrison. This is Sophie Keller speaking. Let me <span class="vocab-highlight">pull up your order</span> on the system. Could you give me your account number or the order reference while I search?</span></div>
     <div class="dialogue-cn">早上好，Morrison先生。我是Sophie Keller。让我在系统中调出您的订单。能否在我搜索时提供您的账号或订单编号？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Certainly — the order reference is EF-8842, and our account number is ATL-77630. I was told the consignment would arrive by Tuesday, but it's now Thursday and our production line is about to grind to a halt.</span></div>
     <div class="dialogue-cn">当然——订单编号EF-8842，账号ATL-77630。之前被告知货物周二前到，但现在已是周四，我们的生产线即将停顿。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I can see the order here, Mr Morrison. It appears the consignment was <span class="vocab-highlight">held up</span> at the Rotterdam hub due to a <span class="vocab-highlight">backlog</span> caused by the bank holiday weekend. I do apologise for the lack of communication — that shouldn't have happened. Let me find out where your pallets are right now. Would you mind holding for a moment while I contact the <span class="vocab-highlight">depot</span>?</span></div>
     <div class="dialogue-cn">我在系统中看到了这个订单，Morrison先生。货物似乎在鹿特丹中转站因银行假日周末造成的积压而耽搁了。对于沟通缺失我很抱歉——这种情况本不该发生。让我查清您的货盘现在的位置。您介意稍等片刻，让我联系中转站吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'd rather not — we've been on the line for a while. Could you <span class="vocab-highlight">call me back</span> on the number I'm calling from? I have a site meeting in fifteen minutes. I'll be reachable again after eleven.</span></div>
     <div class="dialogue-cn">最好还是不要——我们已经通话一段时间了。能否用我当前拨打的号码给我回电？十五分钟后我有个现场会议，十一点后可以再接电话。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely. I've noted your contact number. I'll <span class="vocab-highlight">get to the bottom of this</span> and ring you back by 11:15 sharp with a concrete update. May I also suggest I set up SMS alerts on your order so you receive real-time updates going forward? That way you won't have to rely on the automated tracking alone.</span></div>
     <div class="dialogue-cn">完全没问题。我已记下您的联系号码。我会彻底查明此事，在十一点十五分整回电给您具体的最新进展。另外，我能否建议为您的订单开通短信提醒，以便往后实时接收更新？这样您就不用只依赖自动追踪系统了。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Yes, please do — that would be helpful. While you're at it, can you confirm whether the remaining two pallets have even left the Rotterdam hub? If they haven't, I need to explore <span class="vocab-highlight">contingency</span> options with a local supplier to tide us over.</span></div>
     <div class="dialogue-cn">好的，请开通——这会很有帮助。另外，能否确认剩下两托货是否已离开鹿特丹中转站？如果还没有，我需要与本地供应商探讨应急方案来维持生产。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a very sensible question. Let me check — I can see that pallet one of three and two of three were scanned out of Rotterdam at 08:12 this morning. It's pallet three that's still showing as <span class="vocab-highlight">pending</span>. They may have been split onto different vehicles. Give me until 11:15 to confirm and I'll present you with a clear picture of the delivery schedule.</span></div>
     <div class="dialogue-cn">这个问题问得很到位。让我查看——我看到三托中的第一托和第二托今早08:12已扫描离港鹿特丹。第三托仍显示待处理状态。它们可能被分到了不同车辆上。给我到十一点十五分的时间确认，我会为您呈现清晰的派送时间表。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Three pallets split across different trucks? That's exactly the kind of detail the tracking system should communicate but doesn't. I appreciate you being <span class="vocab-highlight">upfront</span> about it, Sophie. I'll wait for your call at eleven.</span></div>
     <div class="dialogue-cn">三托货分到不同卡车上？这正是追踪系统应该告知却不告知的细节。感谢你的坦诚相告，Sophie。我等十一点的来电。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I completely understand your frustration, Mr Morrison. I'll personally <span class="vocab-highlight">escalate</span> the tracking visibility issue to our IT team as well — it's a recurring complaint we need to address. One more thing: would you like me to notify your warehouse contact directly once the delivery window is confirmed?</span></div>
     <div class="dialogue-cn">我完全理解您的沮丧，Morrison先生。我也会亲自将这个追踪可见性问题升级给我们的IT团队——这是需要解决的反复投诉。还有一件事：派送时间确认后，是否需要我直接通知贵方仓库联系人？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a great idea. The warehouse supervisor is Martin Reeves — his direct line is in the account notes. Loop him in as well. I'll make sure he's expecting your call. Thanks for taking ownership of this, Sophie. It's reassuring.</span></div>
     <div class="dialogue-cn">好主意。仓库主管是Martin Reeves——他的直线电话在账户备注里。也请他加入联络。我会确保他知道你的来电。感谢你主动承担这件事，Sophie。让人安心。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Not at all, it's what I'm here for. So, to recap: I'll trace the three pallets, ring you back at 11:15 with a confirmed delivery timeline, set up SMS alerts, notify Martin Reeves at your warehouse, and escalate the tracking issue to IT. Anything else while I have you?</span></div>
     <div class="dialogue-cn">不用客气，这是我应该做的。那么，概括一下：我将追踪三托货物，十一点十五分回复确认派送时间，开通短信提醒，通知贵仓库的Martin Reeves，并将追踪问题升级给IT。还有什么其他需要吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That covers it. I'll speak to you soon. Goodbye for now, Sophie.</span></div>
     <div class="dialogue-cn">就这些。稍后聊。先再见了，Sophie。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Goodbye, Mr Morrison. You'll hear from me before 11:15.</span></div>
     <div class="dialogue-cn">再见，Morrison先生。十一点十五分前您会收到我的答复。</div>
   </div>

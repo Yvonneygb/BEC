@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
@@ -21,8 +21,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 .cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -49,7 +49,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>年终评估 Annual Review</h1>
-<div class="date">📅 2026年6月22日 · 星期一</div>
 
 <div class="roles">
   <strong>A (Rebecca Torres)</strong> — Department Head, MarketEdge Consulting<br>
@@ -68,57 +67,57 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">David, welcome to your annual <span class="vocab-highlight">performance review</span>. I want to start by saying this has been a remarkable year for you — your campaign analytics work alone drove a 23% uptick in client retention. How do you feel the year has gone from your perspective?</span></div>
     <div class="dialogue-cn">David，欢迎来到你的年度绩效评估。我想先说，这一年对你来说是卓越的一年——仅你的营销活动分析工作就推动了客户留任率提升23%。从你的角度看，这一年过得怎么样？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Thank you, Rebecca. I'm proud of what we've accomplished on the analytics front. That said, I do feel there were areas where I could have stretched myself more — particularly in new business development. I tended to stay in my comfort zone with existing accounts rather than pursuing leads.</span></div>
     <div class="dialogue-cn">谢谢你，Rebecca。我为我们在分析方面取得的成就感到自豪。话虽如此，我确实觉得有些领域我本可以更进一步——尤其是在新业务拓展方面。我倾向于待在现有客户的舒适区，而不是主动开发潜在客户。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's impressively self-aware, and actually ties into one of my key points today. Your <span class="vocab-highlight">core competency</span> in data-driven marketing is outstanding, but for the next level, we need to see more initiative on the business development side. Let's set some concrete objectives around that.</span></div>
     <div class="dialogue-cn">这个自我认知令人印象深刻，而且正好关联到我今天要说的一个重点。你在数据驱动营销方面的核心竞争力非常出色，但要迈向下一个层级，我们需要看到你在业务拓展方面展现出更多主动性。让我们围绕这一点制定一些具体目标。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'd welcome that structure. One thing I'd like to raise is <span class="vocab-highlight">professional development</span>. I've identified a certification programme in strategic marketing that I believe would directly benefit my <span class="vocab-highlight">KPIs</span> next year. Would the department consider sponsoring it?</span></div>
     <div class="dialogue-cn">我很欢迎这样的框架安排。有件事我想提一下——职业发展。我发现了一个战略营销认证课程，我相信它会直接影响我明年的KPI。部门会考虑资助吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I've actually got your training request on my desk. The budget is tight this quarter, but I can approve 70% <span class="vocab-highlight">sponsorship</span> if you commit to sharing the learnings with the wider team through a workshop series. That way we get a multiplier effect on the investment.</span></div>
     <div class="dialogue-cn">你的培训申请已经在我桌上了。本季度预算紧张，但我可以批准70%的资助，前提是你要通过系列工作坊与整个团队分享所学内容。这样我们就能获得投资的乘数效应。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's more than fair — I'll take that. On the topic of team contribution, I've also been mentoring our two junior associates on A/B testing methodology. I'd like that to be formally recognised as part of my <span class="vocab-highlight">appraisal criteria</span> going forward.</span></div>
     <div class="dialogue-cn">这很公道——我接受。关于团队贡献，我也一直在辅导两位初级同事学习A/B测试方法论。我希望这能在今后的评估标准中被正式认可。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Noted, and I appreciate the initiative. Now, let's talk numbers. Based on your <span class="vocab-highlight">performance metrics</span>, I'm recommending a 12% salary increase and a <span class="vocab-highlight">promotion</span> to Senior Marketing Specialist, effective next month. The promotion comes with an expanded scope — you'll own the Q3 product launch end-to-end.</span></div>
     <div class="dialogue-cn">已记录，我很欣赏你的主动性。现在，我们来谈数字。基于你的绩效指标，我推荐12%的薪资涨幅，并晋升为高级营销专员，下月生效。晋升附带扩大的职责范围——你将全程负责第三季度产品发布。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's incredibly motivating to hear, Rebecca. I'm genuinely excited about leading the Q3 launch. Could we also discuss the possibility of a flexible working arrangement? Even two days remote per week would significantly boost my productivity based on the data from our trial period last autumn.</span></div>
     <div class="dialogue-cn">这太令人振奋了，Rebecca。我对主导第三季度发布充满期待。我们能否也讨论一下灵活工作安排的可能性？哪怕每周两天远程，根据我们去年的试行数据，也会显著提高我的效率。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'm open to it. Let's pilot a <span class="vocab-highlight">hybrid schedule</span> — three days in office, two remote — with a review after 90 days. If the Q3 launch metrics hold up, we'll make it permanent. I'll need you to document your workflow so others can learn from it.</span></div>
     <div class="dialogue-cn">我对此持开放态度。我们来试行混合办公制——三天办公室、两天远程——90天后评估。如果第三季度发布指标达标，我们就转为永久安排。我需要你记录工作流程，方便其他人学习。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely — I'll put together a remote collaboration <span class="vocab-highlight">playbook</span> based on what worked during the trial. And Rebecca, I genuinely appreciate how thorough this review has been. It's the first time I've walked out of an appraisal feeling I have a clear roadmap rather than just a rating.</span></div>
     <div class="dialogue-cn">没问题——我会基于试行期间的成功经验，整理一份远程协作操作手册。Rebecca，我由衷感谢这次评估如此详尽。这是我第一次在考核结束后感觉自己拿到的是清晰的路线图，而不仅仅是一个分数。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's exactly the experience we're aiming for, David. You've earned this. Let's reconvene in six months for a mid-year pulse check. Congratulations — you've set a high bar for the rest of the team.</span></div>
     <div class="dialogue-cn">这正是我们追求的面谈体验，David。这是你应得的。六个月后我们再做一次中期回顾。恭喜——你为团队其他人树立了高标准。</div>
   </div>

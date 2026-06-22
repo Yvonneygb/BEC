@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
@@ -21,8 +21,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 .cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -49,7 +49,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>新员工入职 Onboarding</h1>
-<div class="date">📅 2026年6月22日 · 星期一</div>
 
 <div class="roles">
   <strong>A (Michael Zhang)</strong> — HR Coordinator, TechBridge Inc.<br>
@@ -68,87 +67,87 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Good morning, Priya. Welcome to TechBridge! I'm Michael, your HR coordinator. I know you've been through the <span class="vocab-highlight">orientation</span> presentation this morning, so now let me walk you through the details that will actually matter for your first week. How are you settling in so far?</span></div>
     <div class="dialogue-cn">早上好，Priya。欢迎加入TechBridge！我是Michael，你的人事协调员。我知道你今天上午已经参加了入职介绍会，现在让我带你了解第一周真正重要的事项。目前为止适应得怎么样？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Thanks, Michael. Good to finally meet you in person — we've only corresponded over email during the recruitment process. I'm feeling a mix of excitement and mild information overload, to be honest. The orientation was comprehensive, but I think I need to process everything in smaller chunks.</span></div>
     <div class="dialogue-cn">谢谢，Michael。终于见到你本人了——我们在招聘过程中一直只通过邮件沟通。说实话，我现在既兴奋又感到轻微的信息过载。入职介绍会很全面，但我觉得需要分小批次消化所有内容。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's completely normal. The first day at any company can feel like drinking from a fire hose. Let me start with the practical essentials. Your <span class="vocab-highlight">line manager</span> will be David Chen, VP of Sales Analytics. He's travelling this week, so he's asked me to get you set up. Your official start date triggers a three-month <span class="vocab-highlight">probationary period</span>, with formal reviews at the 30-day, 60-day, and 90-day marks.</span></div>
     <div class="dialogue-cn">这完全正常。在任何公司第一天都可能感觉信息像消防水管一样涌来。让我从实用要点开始。你的直属上级将是David Chen，销售分析副总裁。他这周出差，所以委托我来帮你完成入职设置。从正式到岗之日起你有三个月的试用期，分别在第30天、60天和90天进行正式评估。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Three reviews in three months — that's quite structured. Could you walk me through what each <span class="vocab-highlight">probation review</span> covers? I'd like to understand the expectations upfront so I can hit the ground running.</span></div>
     <div class="dialogue-cn">三个月三次评估——结构相当紧凑。你能带我了解每次试用期评估包含什么吗？我想提前了解期望，这样就能快速上手。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Great question. The 30-day review is mostly about cultural fit and basic competency — are you settling into the team, do you understand your core responsibilities? The 60-day review assesses whether you're applying your skills independently. The 90-day review is the formal confirmation — that's where your manager signs off on your permanent employment. Each review uses the <span class="vocab-highlight">KPIs</span> outlined in your <span class="vocab-highlight">job description</span>.</span></div>
     <div class="dialogue-cn">问得好。30天评估主要看文化契合度和基本能力——你是否融入了团队，是否理解了核心职责？60天评估是看你能不能独立运用技能。90天评估是正式确认——你的经理会在那时签批你的正式录用。每次评估都依据你工作说明书中列出的KPI。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's very clear. And if I'm struggling with something during the probation period? I'd rather flag issues early than wait for a review to discover I'm off track.</span></div>
     <div class="dialogue-cn">非常清晰。如果我在试用期遇到什么困难呢？我宁愿及早提出问题，而不是等到评估时才发现方向不对。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's exactly the right mindset, and it's why we've assigned you a <span class="vocab-highlight">buddy</span> — Sarah from the analytics team. She's been here for three years and knows the systems inside out. She's not your manager, so think of her as a peer resource you can ask anything without worrying about performance implications. Your <span class="vocab-highlight">induction</span> schedule for this week includes one-on-ones with each team member, starting tomorrow.</span></div>
     <div class="dialogue-cn">这正是正确的心态，也是为什么我们给你安排了一位伙伴——分析团队的Sarah。她在公司三年了，对各个系统了如指掌。她不是你的上司，你把她当成可以问任何问题的同事资源就好，不用担心影响绩效评估。你本周的入职引导日程包括从明天开始与每位团队成员的一对一交流。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A buddy system — that's reassuring. I've been in roles before where you're just expected to figure everything out on your own, and it's... not great for productivity or morale. Speaking of systems, when will I get my IT access sorted? I noticed my email still isn't active.</span></div>
     <div class="dialogue-cn">伙伴制度——这让人放心。我以前待过的岗位就是让你自己摸索一切，这对效率和士气……都不太好。说到系统，我什么时候能搞定IT权限？我发现邮箱还没激活。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">IT should have it provisioned by 2 PM today. I've already chased them twice this morning — apologies for the delay. Your laptop is being imaged with the standard analyst software stack: Tableau, SQL Server Management Studio, and our internal CRM. The IT <span class="vocab-highlight">help desk</span> number is on the back of your temporary badge. Save it — you'll need it in the first week as things get configured.</span></div>
     <div class="dialogue-cn">IT应该今天下午两点前就能配置好。我今天上午已经催过他们两次了——为延迟抱歉。你的笔记本电脑正在安装分析师标配软件套装：Tableau、SQL Server Management Studio和我们的内部CRM。IT服务台的号码在你临时工牌的背面。存好——第一周各种配置调整时你会用得着。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Noted. I'll make sure to test everything before I leave today. One more thing — the <span class="vocab-highlight">employee handbook</span> mentions flexible working. What's the practical reality on the ground? The policy says up to two remote days per week, but I know policies and practice don't always align.</span></div>
     <div class="dialogue-cn">记下了。今天离开前我会全面测试一遍。还有一件事——员工手册提到弹性工作制。实际落地情况是怎样的？政策说是每周最多两天远程，但我知道政策和实操并不总是一致。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Good catch. Officially it's two remote days, but the analytics team has an unwritten norm of being in the office Monday through Wednesday — those are the days David holds his team stand-ups and strategy sessions. Thursday and Friday are genuinely flexible. I'd recommend matching the team's rhythm for the first month, then you can negotiate adjustments at your 30-day review.</span></div>
     <div class="dialogue-cn">好问题。名义上是两天远程，但分析团队有一个不成文的惯例是周一到周三到岗——这几天David会召集团队晨会和策略会议。周四和周五是真正灵活的。我建议第一个月先跟上团队的节奏，然后在30天评估时再协商调整。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's really helpful context. I'll plan accordingly. What about the HR system for logging holidays and expenses? I assume there's an online portal?</span></div>
     <div class="dialogue-cn">这个背景信息非常有用。我会据此安排。那用于请假和报销申请的HR系统呢？应该有在线门户吧？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Yes — it's called WorkDay, and you'll use it for leave requests, expense claims, performance reviews, and updating your personal details. Your login should be ready by end of day. I've included a quick reference guide in your welcome pack — page 12. Any other questions before I hand you over to Sarah for the office tour?</span></div>
     <div class="dialogue-cn">有的——叫WorkDay，你会用它来提交休假申请、报销单、绩效评估和更新个人信息。你的登录权限今天下班前应该能就绪。我在欢迎包里放了一份快速参考指南——第12页。在让Sarah带你去参观办公室之前，还有别的问题吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Just one — what's the one thing you wish new hires knew on day one that they usually don't figure out until month three?</span></div>
     <div class="dialogue-cn">还有一个——新员工通常第三个月才搞清楚、而你希望他们第一天就知道的一件事是什么？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a brilliant question. I'd say: the informal communication channels matter as much as the formal ones. The real decisions at TechBridge often get shaped in the Slack channels and the coffee machine conversations before they ever reach a meeting room. Don't just attend the scheduled meetings — build relationships across the floor. It'll make everything else easier.</span></div>
     <div class="dialogue-cn">这个问题问得太好了。我想说：非正式沟通渠道跟正式的一样重要。TechBridge真正重要的决策往往先在Slack频道和咖啡机对话中成形，之后才进入会议室。不要只参加排定的会议——要在整个楼层建立人际关系。这会让其他一切都变得更容易。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Sound advice. I'll keep that in mind. Thanks for the thorough walkthrough, Michael — I feel much more grounded now.</span></div>
     <div class="dialogue-cn">这个建议很实在。我会记住的。感谢你详尽的讲解，Michael——我现在感觉踏实多了。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">You're welcome, Priya. We're genuinely glad to have you. Let's check in again on Friday to see how your first week went.</span></div>
     <div class="dialogue-cn">不客气，Priya。我们真心欢迎你的加入。周五我们再聊聊，看看你的第一周过得如何。</div>
   </div>

@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 
 /* 标题行：icon + 文字 + 右侧操作 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
@@ -26,8 +26,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -57,7 +57,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>企业重组 Corporate Restructuring</h1>
-<div class="date">📅 2026年6月17日 · 星期三</div>
 
 <div class="roles">
   <strong>A (James Hawthorne)</strong> — CEO, Apex Manufacturing Ltd.<br>
@@ -77,77 +76,77 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Diana, the board has finally greenlit the <span class="vocab-highlight">restructuring</span> plan. I need you to walk me through the implementation timeline — we're looking at a six-month window to complete the operational overhaul.</span></div>
     <div class="dialogue-cn">Diana，董事会终于批准了重组方案。我需要你带我详细了解一下实施时间表——我们有六个月的窗口来完成运营改革。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Congratulations, James. That's a significant milestone. Let me outline the phased approach. Phase One — the first eight weeks — focuses on departmental consolidation. We're merging Sales and Marketing into a unified Commercial division, which eliminates twelve redundant positions but creates a leaner go-to-market engine.</span></div>
     <div class="dialogue-cn">恭喜，James。这是一个重要的里程碑。让我概述一下分阶段的方法。第一阶段——前八周——聚焦于部门整合。我们将销售和市场部合并为一个统一的商务部门，这会裁撤12个冗余岗位，但能打造一个更精简的市场推广引擎。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's the part that keeps me up at night. The <span class="vocab-highlight">headcount reduction</span> — how do we handle the <span class="vocab-highlight">severance packages</span> without triggering a wave of negative press? Our employer brand has taken years to build.</span></div>
     <div class="dialogue-cn">这正是让我夜不能寐的地方。人员缩减——我们如何处理遣散费方案才不会引发负面新闻？我们的雇主品牌可是花了多年才建立起来的。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A valid concern. I'd recommend we frame this as a strategic realignment rather than a cost-cutting exercise. The narrative matters immensely. We'll offer an enhanced <span class="vocab-highlight">severance package</span> — three months' salary plus <span class="vocab-highlight">outplacement services</span> — and position it as investing in our people even as we transition them out. The retained workforce needs to see we're treating departing colleagues with dignity.</span></div>
     <div class="dialogue-cn">这是个合理的担忧。我建议将这定位为战略性调整而非削减成本的举措。叙事方式至关重要。我们将提供增强型遣散方案——三个月薪资加上再就业服务——并将其包装为即便在员工离职时也在投资他们。留任的员工需要看到我们体面地对待即将离开的同事。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text"><span class="vocab-highlight">Outplacement services</span> is a smart touch — it softens the blow and demonstrates good faith. What about the operational side? Phase Two, if I recall, involves the supply chain consolidation.</span></div>
     <div class="dialogue-cn">再就业服务是个聪明的举措——这能缓和冲击并展示善意。运营方面呢？第二阶段，如果我没记错的话，是供应链整合？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Correct. From week nine through sixteen, we're centralising <span class="vocab-highlight">procurement</span> across all three manufacturing sites. Right now, each plant negotiates independently, which fragments our purchasing power. By aggregating spend under a single procurement team, our modelling suggests we can secure <span class="vocab-highlight">volume discounts</span> of 12–15% on raw materials. That alone could offset the severance costs within the first fiscal year.</span></div>
     <div class="dialogue-cn">没错。从第九周到第十六周，我们将在三个制造基地集中采购。目前各工厂独立谈判，这分散了我们的采购议价能力。通过将支出汇总到一个采购团队，我们的模型预测可以在原材料上获得12-15%的批量折扣。仅此一项就能在第一财年内抵消遣散成本。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's compelling on paper, but the plant managers won't be thrilled. They've had autonomy over their supplier relationships for decades. How do we bring them on board without creating resistance that stalls the entire initiative?</span></div>
     <div class="dialogue-cn">纸面上看很有说服力，但工厂经理们不会高兴。几十年来他们一直自主掌控供应商关系。我们如何让他们参与进来，而不引发阻碍整个计划的阻力？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'd suggest a <span class="vocab-highlight">stakeholder engagement</span> roadshow. You and I visit each site, present the consolidated P&L projections, and more importantly, involve the plant managers in shaping the new procurement framework. Give them ownership of the transition rather than imposing it top-down. We can also designate two plant managers to sit on the new central procurement steering committee.</span></div>
     <div class="dialogue-cn">我建议举行利益相关方参与的路演。你和我走访每个基地，展示整合后的损益预测，更重要的是，让工厂经理参与塑造新的采购框架。让他们拥有过渡过程的主导权，而不是自上而下地强加。我们还可以指定两名工厂经理进入新的中央采购指导委员会。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">A steering committee with plant representation — that's clever. It turns potential adversaries into co-architects. What's the timeline look like for Phase Three, the IT systems integration?</span></div>
     <div class="dialogue-cn">包含工厂代表的指导委员会——这个设计很巧妙。这能把潜在的对抗者变成共同的设计者。第三阶段的时间表是怎样的，就是IT系统整合？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Phase Three runs concurrently from week twelve. We're migrating all three sites onto a unified <span class="vocab-highlight">ERP</span> platform. This is the most technically demanding phase, and I'll be frank — we're budgeting a four-week contingency buffer because these migrations rarely go according to plan. The key deliverable is real-time inventory visibility across all locations by month five.</span></div>
     <div class="dialogue-cn">第三阶段从第十二周开始并行推进。我们将三个基地迁移到统一的ERP平台。这是技术上最具挑战性的阶段，坦率地说——我们预留了四周的应急缓冲期，因为这类迁移很少按计划进行。关键交付成果是在第五个月实现所有地点的实时库存可视性。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Real-time inventory visibility has been a pain point for years. If we can actually pull that off, the working capital savings alone could be substantial. What's your honest assessment of the risks here?</span></div>
     <div class="dialogue-cn">实时库存可视性已经是个多年的痛点了。如果真能做到，仅营运资金的节省就相当可观。你对这里的风险有什么诚实的评估？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The primary risk isn't technical — it's cultural. We're asking people who've operated in silos for twenty-plus years to collaborate on a shared platform, with shared KPIs. I'd flag <span class="vocab-highlight">change fatigue</span> as a real threat. My recommendation is we front-load quick wins — announce the procurement savings publicly in month two, celebrate small milestones — to sustain momentum through the harder phases.</span></div>
     <div class="dialogue-cn">主要风险不是技术层面的——是文化层面的。我们要求那些在各自孤岛里工作了二十年以上的人在一个共享平台上协作，使用共享的KPI。我要指出变革疲劳是一个切实的威胁。我的建议是前置快速胜利——在第二个月公开宣布采购节省成效，庆祝小的里程碑——以在更困难的阶段保持动力。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text"><span class="vocab-highlight">Change fatigue</span> — that resonates. I've seen restructurings lose steam because people simply got exhausted. Alright, let's set up the steering committee this week, kick off the stakeholder roadshow next Monday, and aim for the ERP vendor selection by Friday. Diana, I want a detailed <span class="vocab-highlight">Gantt chart</span> on my desk by Thursday end of day.</span></div>
     <div class="dialogue-cn">变革疲劳——这个我很认同。我见过重组因为人们纯粹筋疲力尽而失去动力的案例。好吧，我们本周成立指导委员会，下周一开始利益相关方路演，争取周五前完成ERP供应商选型。Diana，我要在周四下班前看到一份详细的甘特图放在我桌上。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">You'll have it by Wednesday afternoon. I'll also draft a town hall presentation deck for the company-wide announcement. James, one last thought — don't underestimate the power of over-communicating during this process. In the absence of information, people fill the void with rumour.</span></div>
     <div class="dialogue-cn">周三下午前你会拿到。我还会起草一份面向全公司的全员大会演示文稿。James，最后一点——不要低估在这个过程中过度沟通的力量。在信息真空的情况下，人们会用谣言来填补空白。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Sage advice. Over-communication it is. Thank you, Diana — let's make this a restructuring that the business school case studies write about, not the cautionary tales.</span></div>
     <div class="dialogue-cn">睿智的建议。那就过度沟通吧。谢谢你，Diana——让我们把这次重组打造成商学院案例研究中的正面教材，而不是反面警示。</div>
   </div>

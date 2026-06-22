@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 
 /* 标题行：icon + 文字 + 右侧操作 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
@@ -26,8 +26,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -57,7 +57,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>展会参展 Trade Fair</h1>
-<div class="date">📅 2026年6月6日 · 星期六</div>
 
 <div class="roles">
   <strong>A (James Turner) — Export Manager, Heritage Craft Distillery</strong><br>
@@ -77,67 +76,67 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Welcome to the Heritage Craft booth! You've caught us at a good moment — I was just about to do a tasting of our new small-batch gin. Would you care to join?</span></div>
     <div class="dialogue-cn">欢迎来到Heritage Craft的展位！你来得正好——我正准备品鉴我们新款的小批量金酒。要不要一起试试？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I never say no to a gin tasting at 11 AM at a <span class="vocab-highlight">trade fair</span>. I'm Sophie Laurent, International Buyer for Le Marché Fine Foods. We have 42 gourmet stores across France and Belgium. Your <span class="vocab-highlight">booth</span> has been on my must-visit list — I've heard excellent things about your single malt.</span></div>
     <div class="dialogue-cn">展会上午十一点品鉴金酒，我从不拒绝。我是Sophie Laurent，Le Marché Fine Foods的国际采购。我们在法国和比利时有42家精品食品店。你的展位一直在我的必访清单上——我听说过很多关于你们单一麦芽威士忌的好评。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Sophie, what a pleasure. I'm James Turner, Export Manager. The single malt has been our <span class="vocab-highlight">flagship product</span>, but this gin is generating serious buzz. It's distilled with twelve botanicals, seven of which are foraged locally. Here — have a taste, and notice the juniper on the nose.</span></div>
     <div class="dialogue-cn">Sophie，幸会。我是James Turner，出口经理。单一麦芽是我们的旗舰产品，但这款金酒正在引起不小的轰动。它用十二种植物蒸馏，其中七种是本地野生采摘的。来，尝尝看，注意鼻尖的杜松子香。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Hmm, that's remarkably smooth. The citrus finish is elegant — not too aggressive. I can see this performing very well in our <span class="vocab-highlight">premium segment</span>. What's your <span class="vocab-highlight">minimum order quantity</span> for international buyers?</span></div>
     <div class="dialogue-cn">嗯，口感非常顺滑。柑橘回甘很优雅——不会过于强烈。我能预见这在我们的高端市场会表现很好。你们对国际买家的最低起订量是多少？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">For first-time partners, our MOQ is 600 bottles per SKU, with <span class="vocab-highlight">distribution rights</span> typically granted on a country-exclusive basis for the first year. That means no other French retailer would carry Heritage products if we reach an agreement. But let me grab you our full <span class="vocab-highlight">catalogue</span> — we also have a whisky cream liqueur that's been a hit in the UK market.</span></div>
     <div class="dialogue-cn">对首次合作的伙伴，我们的MOQ是每个SKU 600瓶，分销权通常按国家独家授予，首年有效。也就是说，如果我们达成合作，不会有其他法国零售商销售Heritage的产品。对了，让我给你拿我们的完整产品目录——我们还有一款威士忌奶油利口酒，在英国市场很受欢迎。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Country <span class="vocab-highlight">exclusivity</span> is exactly what I'm looking for. The French market is competitive, and without exclusivity, I'm just another stockist. With it, I can build a proper brand story. What kind of <span class="vocab-highlight">marketing support</span> do you offer to new distributors?</span></div>
     <div class="dialogue-cn">国家独家正是我想要的。法国市场竞争激烈，没有独家权，我只是又一个普通经销商。有了独家权，我可以打造完整的品牌故事。你们为新经销商提供什么样的营销支持？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We provide a comprehensive launch package — branded tasting stands, point-of-sale materials, product training for your sales team, and a co-branded launch event budget of up to €5,000. We'd also feature Le Marché on our website and social channels as our exclusive French partner.</span></div>
     <div class="dialogue-cn">我们提供全面的上市套餐——品牌品鉴展台、销售终端物料、为你们销售团队的产品培训，以及高达5000欧元的联合品牌发布活动预算。我们还会在我们的网站和社交媒体上将Le Marché列为我们的法国独家合作伙伴。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's more support than I expected from a craft distillery. Usually the bigger players offer those packages. Can I take a few <span class="vocab-highlight">product samples</span> back with me? I'd like my tasting panel to evaluate all three products before I submit a formal proposal.</span></div>
     <div class="dialogue-cn">这比我预期一家手工酒厂能提供的支持要多。通常只有大品牌才提供这类套餐。我可以带一些产品样品回去吗？我想让我的品鉴小组在提交正式方案前评估所有三款产品。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Of course. I'll prepare a sample kit with the gin, single malt, and whisky cream — plus our detailed spec sheets and pricing tiers. Let me also give you my card. I'd suggest we schedule a <span class="vocab-highlight">follow-up</span> call for two weeks from now, once your panel has had time to evaluate.</span></div>
     <div class="dialogue-cn">当然。我会准备一个样品套装，包含金酒、单一麦芽和威士忌奶油——还有我们详细的产品规格表和价格档位。也请收下我的名片。我建议两周后安排一次跟进电话，届时你的品鉴小组应该已经有时间做出评估。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Two weeks is realistic. I'll be in London next month for another trade show — if the panel feedback is positive, perhaps we could visit your distillery then. It would be valuable to see your production process firsthand.</span></div>
     <div class="dialogue-cn">两周很现实。下个月我会在伦敦参加另一个展会——如果品鉴小组的反馈是积极的，也许届时我们可以去参观你们的酿酒厂。亲眼看一看生产过程会很有价值。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We'd love to host you at the distillery. It's where Heritage truly comes to life — seeing the copper stills and meeting our master distiller makes a world of difference in understanding what sets us apart. I'll send you the follow-up calendar invite today.</span></div>
     <div class="dialogue-cn">我们很乐意在酒厂接待你。那正是Heritage真正鲜活起来的地方——看到铜制蒸馏器，见到我们的首席酿酒师，对于理解我们的独特之处会有天壤之别。我今天就把跟进会议的日历邀请发给你。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Sounds excellent. Enjoy the rest of the fair, James. I have a feeling this is the start of something very promising. Santé!</span></div>
     <div class="dialogue-cn">听起来太棒了。祝你展会接下来的时间顺利，James。我有预感，这是一个很有前景的开始。干杯！</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I think so too, Sophie. Let me get those samples ready for you right away. À la vôtre!</span></div>
     <div class="dialogue-cn">我也这么想，Sophie。我马上给你准备样品。干杯！</div>
   </div>

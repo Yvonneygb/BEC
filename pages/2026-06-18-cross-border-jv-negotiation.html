@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 
 /* 标题行：icon + 文字 + 右侧操作 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
@@ -26,8 +26,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -63,7 +63,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>跨境合资谈判 Cross-Border Joint Venture Negotiation</h1>
-<div class="date">📅 2026年6月18日 · 星期四</div>
 
 <div class="roles">
   <strong>A (Rebecca Tan)</strong> — VP of International Business, NovaMed Devices, Singapore<br>
@@ -83,72 +82,72 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Klaus, it's good to finally sit down face-to-face. Our board has reviewed NovaMed's expansion strategy for the European market, and we believe a <span class="vocab-highlight">joint venture</span> with MedTech Bavaria is the most viable path forward.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
     <div class="dialogue-cn">Klaus，终于能面对面坐下来谈了。我们的董事会已审阅了 NovaMed 对欧洲市场的扩张策略，我们认为与 MedTech Bavaria 成立合资企业是最可行的路径。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I couldn't agree more, Rebecca. Your expertise in the Asian supply chain combined with our regulatory foothold in Europe creates a natural <span class="vocab-highlight">synergy</span>. The question is how we structure the <span class="vocab-highlight">equity split</span> and operational control.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
     <div class="dialogue-cn">完全同意，Rebecca。贵方在亚洲供应链方面的专长，加上我们在欧洲的监管立足点，形成了天然的协同效应。问题在于我们如何构建股权分配和运营控制权。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Our preliminary proposal is a 51-49 split in your favour, given your established distribution network across the EU. However, we would want equal <span class="vocab-highlight">board representation</span> regardless of the equity structure.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
     <div class="dialogue-cn">我们的初步方案是 51-49，对贵方有利，考虑到贵方在欧盟已建立了成熟的分销网络。但无论股权结构如何，我们希望拥有对等的董事会席位。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a reasonable starting point. But I'd push for a 55-45 split. The additional 4% reflects the <span class="vocab-highlight">in-kind contribution</span> of our existing ISO 13485-certified facility in Munich, which would serve as the JV's European headquarters.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
     <div class="dialogue-cn">这是个合理的起点。但我倾向于 55-45。多出的 4% 体现了我方在慕尼黑现有的通过 ISO 13485 认证的厂房的实物出资，该厂房将作为合资企业的欧洲总部。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We've valued that facility at approximately €2.8 million based on the independent appraisal you shared. Our contribution — the patent portfolio for the next-gen respiratory devices — has been appraised at €3.4 million. So on asset value alone, the balance tips in our favour.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
     <div class="dialogue-cn">根据贵方提供的独立评估报告，我们对该厂房的估值为约 280 万欧元。而我方的出资——新一代呼吸设备的专利组合——评估价为 340 万欧元。所以仅凭资产价值，天平就向我们倾斜。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Fair enough on the asset valuation. But consider the <span class="vocab-highlight">intangible assets</span>: MedTech Bavaria holds the CE marking authorisations for 17 product categories. Navigating the new EU MDR framework from scratch would cost you at least 18 months and well over €500,000 in consultancy fees.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
     <div class="dialogue-cn">资产估值上你说的没错。但请考虑无形资产：MedTech Bavaria 持有 17 个产品类别的 CE 标志授权。从零开始应对新的欧盟 MDR 法规框架，至少要花费你们 18 个月和远超 50 万欧元的咨询费用。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's precisely why we're at this table, Klaus. The regulatory pathway is something we respect. Let me propose a compromise: 52-48 in your favour, with a <span class="vocab-highlight">put option</span> for NovaMed after year three — if certain revenue thresholds aren't met, we can exit at pre-agreed terms.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
     <div class="dialogue-cn">这正是我们今天坐在这里的原因，Klaus。我们对监管准入通道心怀敬意。让我提一个折中方案：52-48，对贵方有利，但 NovaMed 在第三年后拥有卖出期权——如果没达到特定营收门槛，我们可以按预先约定条件退出。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A <span class="vocab-highlight">put option</span> introduces complexity, but I understand the need for downside protection. Let's set the revenue threshold at €12 million annually by year three, and I'll accept 52-48. I'll need board approval, but I can live with that.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
     <div class="dialogue-cn">卖出期权确实增加了复杂度，但我理解对下行保护的需求。我们就将营收门槛定为第三年达到年营收 1200 万欧元，我接受 52-48。我需要董事会批准，但这个方案我可以接受。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Good. Now, on the operational side — we propose that the COO be appointed by NovaMed, responsible for supply chain and manufacturing, while MedTech Bavaria appoints the CEO to oversee sales and regulatory affairs.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
     <div class="dialogue-cn">好。接下来关于运营层面——我们建议 COO 由 NovaMed 任命，负责供应链和制造事务，而 MedTech Bavaria 任命 CEO，负责销售和监管事务。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That division of responsibilities makes strategic sense. But I'd add a provision that any <span class="vocab-highlight">capital expenditure</span> above €200,000 requires unanimous board approval. That protects both parties from unilateral spending decisions.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
     <div class="dialogue-cn">这种职责分工具有战略意义。但我要加一条：任何超过 20 万欧元的资本支出，需经董事会全体一致批准。这保护双方免受单方面支出决策的影响。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. And let's include a <span class="vocab-highlight">non-compete clause</span> covering the EU and ASEAN markets for the duration of the JV plus two years post-exit. Without that, the IP sharing becomes very uncomfortable for our side.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
     <div class="dialogue-cn">同意。同时请加入竞业禁止条款，涵盖欧盟和东盟市场，覆盖合资企业存续期间及退出后两年。否则，知识产权共享对我们这方而言将极为不安。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A <span class="vocab-highlight">non-compete</span> is standard in these structures. Two years post-exit is acceptable. I'll have our legal counsel draft the <span class="vocab-highlight">heads of terms</span> by Friday. Rebecca, I think we have a framework both boards can get behind.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
     <div class="dialogue-cn">竞业禁止在这种架构下是标配。退出后两年可以接受。我将让我方法律顾问在本周五前起草条款大纲。Rebecca，我想我们找到了两方董事会都能支持的框架。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I think so too. Let's aim for a signed <span class="vocab-highlight">MoU</span> within two weeks and a definitive agreement by end of quarter. Klaus, this is the beginning of something significant.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
     <div class="dialogue-cn">我也这么认为。我们的目标是两周内签署谅解备忘录，季末前完成最终协议。Klaus，这是一次重要合作的开始。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I share that conviction. Let me walk you through the Munich facility tomorrow morning — it helps to visualise what we're building together.</span><button class="listen-btn" onclick="speak(this)" title="试听">🔊</button></div>
     <div class="dialogue-cn">我对此深信不疑。明早我带你实地看看慕尼黑厂房——身临其境有助于我们构想共同打造的蓝图。</div>
   </div>

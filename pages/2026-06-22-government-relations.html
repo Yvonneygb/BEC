@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>政府关系 Government Relations - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>政府关系 Government Relations</h1>
+
+<div class="roles">
+  <strong>A (James Carter)</strong> — VP of Public Affairs, Horizon Energy<br>
+  <strong>B (Sophie Liang)</strong> — Policy Advisor, Urban Development Commission
+</div>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Sophie, thank you for making room in your schedule. As you know, Horizon Energy is seeking the necessary <span class="vocab-highlight">regulatory approvals</span> to break ground on our district cooling plant, and we'd value the Commission's informal guidance before we submit the formal application.</span></div>
+    <div class="dialogue-cn">Sophie，感谢你抽出时间。如你所知，Horizon Energy正在为我们区域供冷项目寻求必要的监管审批，我们希望在提交正式申请前获得委员会的非正式指导。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">James, happy to provide whatever insight I can, with the usual caveat that nothing I say today constitutes official Commission policy. That said — your project has been on our radar, and I'll be candid: the <span class="vocab-highlight">environmental impact assessment</span> is going to be the <span class="vocab-highlight">gatekeeper</span>.</span></div>
+    <div class="dialogue-cn">James，很乐意提供我力所能及的见解，当然需要说明的是，我今天所说的不代表委员会的官方政策。话虽如此——你们项目一直在我们的关注范围内，我坦率地说：环境影响评估将是决定性的把关环节。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We anticipated that. Our preliminary EIA shows a 28% reduction in carbon emissions compared to the incumbent solution of individual building chillers. We've also commissioned a third-party noise study, given the proximity to residential zones.</span></div>
+    <div class="dialogue-cn">我们早有预料。我们的初步环评显示，相比现有的各建筑独立制冷方案，碳排放降低了28%。考虑到靠近居民区，我们还委托了第三方噪声研究。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That 28% figure — make sure your methodology is bulletproof. The Commission has faced <span class="vocab-highlight">public backlash</span> on the last two energy infrastructure projects, and trust is thin on the ground. If your numbers hold up to scrutiny, you've got a strong case. If they don't, you're dead in the water.</span></div>
+    <div class="dialogue-cn">28%这个数字——确保你们的方法论无懈可击。委员会在前两个能源基础设施项目上遭遇了公众强烈反弹，政府的公信力已经很脆弱。如果数据经得起审查，你们的理由是充分的。如果经不起，就彻底没戏了。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Understood. We're using the ISO 14064 standard and the data has been validated by an accredited auditor. I'm confident it'll stand up. But beyond the EIA, we're also trying to gauge sentiment on community benefits. Is the Commission expecting a formal <span class="vocab-highlight">community benefits agreement</span>?</span></div>
+    <div class="dialogue-cn">理解。我们采用的是ISO 14064标准，数据已通过认证审计机构的验证。我相信经得起审查。但环评之外，我们还希望把握委员会对社区利益的态度。委员会是否期待一份正式的社区利益协议？</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">It's not a <span class="vocab-highlight">statutory requirement</span>, but I can tell you unofficially — any project of this scale that doesn't bring a CBA to the table is going to face an uphill battle. The Commissioners want to see local hiring commitments, apprenticeship programmes, and some form of community energy discount.</span></div>
+    <div class="dialogue-cn">这并非法定要求，但我可以非正式地告诉你——任何如此规模的项目如果不带来社区利益协议，都将面临重重阻力。委员们希望看到本地雇佣承诺、学徒计划以及某种形式的社区能源优惠。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That aligns with what we're planning. We've already started discussions with the local technical college about a green-energy apprenticeship track. And we're prepared to offer a 15% electricity rate reduction for residents within a two-kilometre radius.</span></div>
+    <div class="dialogue-cn">这与我们的规划一致。我们已经开始与本地技术学院讨论绿色能源学徒培训方向。我们也准备为半径两公里范围内的居民提供15%的电价优惠。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A concrete rate reduction — that's the kind of tangible benefit that resonates with both the Commission and the community. I'd recommend framing it not as a discount, but as a community dividend. Language matters in this arena.</span></div>
+    <div class="dialogue-cn">具体的费率优惠——这正是能引起委员会和社区共鸣的实实在在的好处。我建议不要把它表述为"折扣"，而叫"社区红利"。在这个领域，措辞很重要。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Noted — "community dividend." I'll adjust our messaging. On the timeline front, what's your realistic assessment? Our investors are getting anxious, and I need to manage expectations internally.</span></div>
+    <div class="dialogue-cn">记下了——"社区红利"。我会调整我们的表达。关于时间线，你的实际评估是什么？我们的投资者开始焦虑了，我需要在内部做好预期管理。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Realistically? If you submit a complete application by end of quarter, expect the <span class="vocab-highlight">public consultation</span> period to take 60 days minimum. Factor in another 30 for the Commission's technical review. So you're looking at a decision no earlier than four months from submission — and that's the best-case scenario.</span></div>
+    <div class="dialogue-cn">说实话？如果你们在本季度末前提交完整申请，公众咨询期最少需要60天。再加上委员会技术审核的30天。所以从提交到出结果起码四个月——这是最理想的情况。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Four months is workable. I was concerned you might say nine. Is there anything we can do to <span class="vocab-highlight">expedite</span>? Pre-submission meetings with individual Commissioners, perhaps?</span></div>
+    <div class="dialogue-cn">四个月是可以接受的。我本来担心你会说九个月。有什么办法可以加快推进吗？比如与各个委员做提交前单独会面？</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">You can request <span class="vocab-highlight">pre-submission briefings</span>, but tread carefully. Meeting with Commissioners individually can backfire if it looks like you're trying to circumvent the public process. I'd suggest one consolidated briefing with all Commissioners present, fully documented and open to public observers.</span></div>
+    <div class="dialogue-cn">你可以申请提交前简报，但要谨慎行事。单独会面如果看起来像是在绕过公众程序，可能会适得其反。我建议安排一次全体委员的合并简报会，全程记录并向公众观察员开放。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Transparency as strategy — I respect that approach. We'll request a single consolidated briefing. Should we bring our technical team, or keep it to senior leadership?</span></div>
+    <div class="dialogue-cn">以透明作为策略——我尊重这种方法。我们会申请一次合并简报会。应该带技术团队，还是只限于高管层？</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Bring the technical experts. Commissioners respect substance over sales pitches. Have your lead engineer present the EIA methodology, and make sure they can answer questions in plain language. Nothing frustrates a Commissioner more than someone who hides behind jargon.</span></div>
+    <div class="dialogue-cn">带技术专家。委员们看重实质内容而非推销话术。让你们的首席工程师来讲环评方法论，确保他们能用通俗语言回答问题。没有什么比满口术语更让委员反感的了。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Plain language — got it. I'll brief our engineering team accordingly. One more delicate question: there's been some local media coverage that's... less than favourable. Is that something we should address proactively?</span></div>
+    <div class="dialogue-cn">通俗语言——明白了。我会向工程团队传达。还有一个敏感问题：最近一些本地媒体报道对我们……不太友好。我们需要主动应对吗？</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely. Don't let negative narratives go unchallenged. I'd recommend publishing a Q&A on your project website that directly addresses the top five concerns raised in the media — noise, property values, traffic during construction, visual impact, and safety. Get ahead of the story.</span></div>
+    <div class="dialogue-cn">绝对需要。不要让负面叙事不受挑战地传播。我建议在项目网站上发布一份问答，直接回应媒体报道中最受关注的五个方面——噪声、房价、施工期间交通、视觉影响以及安全。掌握叙事主动权。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">A preemptive Q&A — that's a smart play. We'll have our communications team draft it this week. Would you be willing to review it informally before we publish? I want to make sure we're not inadvertently stepping on any landmines.</span></div>
+    <div class="dialogue-cn">先发制人的问答——这招很聪明。我们这周就让公关团队起草。你愿意在发布前非正式地帮我们审阅一下吗？我想确保不会不小心踩到陷阱。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I can give it a read and flag any obvious red flags, but I can't rewrite it — that would cross a line. Send it over and I'll turn around comments within 48 hours.</span></div>
+    <div class="dialogue-cn">我可以看看并指出明显的危险信号，但不能改写——那就越界了。发过来，我在48小时内给你反馈意见。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's more than generous, Sophie. I really appreciate the candour and the guidance. It's rare to get this level of honest input from the public sector, and I want you to know we don't take it for granted.</span></div>
+    <div class="dialogue-cn">这真是太慷慨了，Sophie。我非常感谢你的坦诚和指导。能从公共部门获得如此坦诚的意见非常难得，我想让你知道我们不会视作理所当然。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Horizon has a solid track record, James. The Commission wants good projects — we just need to make sure the process is respected. Keep me posted on your progress, and don't hesitate to reach out if you hit any procedural snags.</span></div>
+    <div class="dialogue-cn">Horizon有着良好的过往记录，James。委员会希望看到好项目——我们只需要确保程序得到尊重。随时向我通报进展，遇到任何程序性障碍也别犹豫联系我。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>regulatory approval</strong> — 监管审批 | 项目开工前必须获得的政府许可和批文</div>
+<div class="vocab-item"><strong>environmental impact assessment (EIA)</strong> — 环境影响评估 | 评估项目对环境影响的法律要求文件</div>
+<div class="vocab-item"><strong>community benefits agreement (CBA)</strong> — 社区利益协议 | 企业与当地社区签订的互利发展承诺</div>
+<div class="vocab-item"><strong>public consultation</strong> — 公众咨询 | 审批前听取社区意见的法定程序</div>
+<div class="vocab-item"><strong>pre-submission briefing</strong> — 提交前简报 | 正式申请前向监管机构做的项目说明</div>
+<div class="vocab-item"><strong>statutory requirement</strong> — 法定要求 | 法律明文规定的义务，不可回避</div>
+<div class="vocab-item"><strong>gatekeeper</strong> — 把关环节 | 决定项目能否推进的关键门槛或核心审批节点</div>
+<div class="vocab-item"><strong>public backlash</strong> — 公众反弹 | 公众对项目的强烈反对或负面舆论</div>
+<div class="vocab-item"><strong>expedite</strong> — 加快/推进 | 在合规范围内加速审批流程</div>
+<div class="vocab-item"><strong>stakeholder engagement</strong> — 利益相关方沟通 | 与所有受项目影响方的系统性沟通</div>
+
+<hr>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>We'd value your informal guidance before...</code> → 我们希望在正式……前获得你的非正式指导 | 向政府官员请求非正式建议时的礼貌表达</div>
+<div class="pattern-item"><code>If your numbers hold up to scrutiny, you've got a strong case. If they don't, you're dead in the water.</code> → 如果经得起审查，你的理由很充分。如果经不起，就彻底没戏了 | 强调数据质量决定项目命运</div>
+<div class="pattern-item"><code>Tread carefully.</code> → 谨慎行事 | 提醒对方注意政治敏感性的简洁忠告</div>
+<div class="pattern-item"><code>Language matters in this arena.</code> → 在这个领域，措辞很重要 | 强调政府关系中的沟通策略</div>
+<div class="pattern-item"><code>Get ahead of the story.</code> → 掌握叙事主动权 | 建议主动应对而非被动回应负面舆论</div>
+<div class="pattern-item"><code>Nothing frustrates... more than...</code> → 没有什么比……更让……感到沮丧了 | 强调某行为的负面效果</div>
+
+<hr>
+
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Sophie，感谢你抽出时间。如你所知，Horizon Energy正在为我们区域供冷项目寻求必要的监管审批，我们希望在提交正式申请前获得委员会的非正式指导。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>James，很乐意提供我力所能及的见解，当然需要说明的是，我今天所说的不代表委员会的官方政策。话虽如此——你们项目一直在我们的关注范围内，我坦率地说：环境影响评估将是决定性的把关环节。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我们早有预料。我们的初步环评显示，相比现有的各建筑独立制冷方案，碳排放降低了28%。考虑到靠近居民区，我们还委托了第三方噪声研究。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>28%这个数字——确保你们的方法论无懈可击。委员会在前两个能源基础设施项目上遭遇了公众强烈反弹，政府的公信力已经很脆弱。如果数据经得起审查，你们的理由是充分的。如果经不起，就彻底没戏了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>理解。我们采用的是ISO 14064标准，数据已通过认证审计机构的验证。我相信经得起审查。但环评之外，我们还希望把握委员会对社区利益的态度。委员会是否期待一份正式的社区利益协议？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这并非法定要求，但我可以非正式地告诉你——任何如此规模的项目如果不带来社区利益协议，都将面临重重阻力。委员们希望看到本地雇佣承诺、学徒计划以及某种形式的社区能源优惠。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这与我们的规划一致。我们已经开始与本地技术学院讨论绿色能源学徒培训方向。我们也准备为半径两公里范围内的居民提供15%的电价优惠。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>具体的费率优惠——这正是能引起委员会和社区共鸣的实实在在的好处。我建议不要把它表述为"折扣"，而叫"社区红利"。在这个领域，措辞很重要。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>记下了——"社区红利"。我会调整我们的表达。关于时间线，你的实际评估是什么？我们的投资者开始焦虑了，我需要在内部做好预期管理。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>说实话？如果你们在本季度末前提交完整申请，公众咨询期最少需要60天。再加上委员会技术审核的30天。所以从提交到出结果起码四个月——这是最理想的情况。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>四个月是可以接受的。我本来担心你会说九个月。有什么办法可以加快推进吗？比如与各个委员做提交前单独会面？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>你可以申请提交前简报，但要谨慎行事。单独会面如果看起来像是在绕过公众程序，可能会适得其反。我建议安排一次全体委员的合并简报会，全程记录并向公众观察员开放。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>以透明作为策略——我尊重这种方法。我们会申请一次合并简报会。应该带技术团队，还是只限于高管层？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>带技术专家。委员们看重实质内容而非推销话术。让你们的首席工程师来讲环评方法论，确保他们能用通俗语言回答问题。没有什么比满口术语更让委员反感的了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>通俗语言——明白了。我会向工程团队传达。还有一个敏感问题：最近一些本地媒体报道对我们……不太友好。我们需要主动应对吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>绝对需要。不要让负面叙事不受挑战地传播。我建议在项目网站上发布一份问答，直接回应媒体报道中最受关注的五个方面——噪声、房价、施工期间交通、视觉影响以及安全。掌握叙事主动权。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>先发制人的问答——这招很聪明。我们这周就让公关团队起草。你愿意在发布前非正式地帮我们审阅一下吗？我想确保不会不小心踩到陷阱。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我可以看看并指出明显的危险信号，但不能改写——那就越界了。发过来，我在48小时内给你反馈意见。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这真是太慷慨了，Sophie。我非常感谢你的坦诚和指导。能从公共部门获得如此坦诚的意见非常难得，我想让你知道我们不会视作理所当然。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>Horizon有着良好的过往记录，James。委员会希望看到好项目——我们只需要确保程序得到尊重。随时向我通报进展，遇到任何程序性障碍也别犹豫联系我。</span></div>
+</div>
+</div>
+
+<hr>
+
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>政府关系是BEC高级阅读Part 3和写作常考的政府/公共事务场景。建议重点掌握审批流程的关键节点词汇（EIA、public consultation、statutory requirement、regulatory approval），以及"软性沟通策略"的表达方式。注意区分"government relations"（企业主动的政府关系管理）和"public affairs"（更广泛的公共事务），在考试写作中涉及到企业对政府的正式沟通时，用词准确度直接影响评分。</p>
+</div>
+
+<script>
+var showChinese = false;
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+</script>
+
+</body>
+</html>

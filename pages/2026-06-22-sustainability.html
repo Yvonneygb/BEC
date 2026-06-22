@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 
 /* 标题行：icon + 文字 + 右侧操作 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
@@ -26,8 +26,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -57,7 +57,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>可持续发展 Sustainability</h1>
-<div class="date">📅 2026年6月22日 · 星期一</div>
 
 <div class="roles">
   <strong>A (Emma Larsson)</strong> — Sustainability Manager, Nordic Green Energy<br>
@@ -77,67 +76,67 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Carlos, I've just finished reviewing your Q1 <span class="vocab-highlight">sustainability report</span>, and I have to say — your reduction in water consumption is impressive. Down 18% year-on-year. But your <span class="vocab-highlight">carbon footprint</span> figures tell a different story. Emissions are up 7%. What's driving that?</span></div>
     <div class="dialogue-cn">Carlos，我刚审阅完你们第一季度的可持续发展报告，不得不说——用水量的下降令人印象深刻。同比下降了18%。但你们的碳足迹数据则是另一番景象。排放量上升了7%。原因是什么？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Thanks for the kind words on water, Emma. The carbon increase is largely due to our expanded production line in Vietnam. We brought two new factories online in January, and they're still running on the local grid, which is predominantly coal-powered. We're aware it's an issue — we've already commissioned a feasibility study for on-site solar.</span></div>
     <div class="dialogue-cn">感谢你对用水量的肯定，Emma。碳排放增加主要是因为我们越南生产线的扩建。一月份我们新投产了两家工厂，它们目前仍在使用当地电网，主要是煤电。我们意识到这是个问题——已经委托进行了现场太阳能的可行性研究。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's encouraging, but the timeline matters. Your public <span class="vocab-highlight">net-zero</span> commitment targets a 45% reduction by 2028. At the current trajectory, you're not going to hit that. Have you considered purchasing <span class="vocab-highlight">carbon offsets</span> as a bridging measure while the solar infrastructure gets built?</span></div>
     <div class="dialogue-cn">这让人鼓舞，但时间很关键。你们的公开净零承诺目标是到2028年减排45%。按目前的趋势，你们无法达成。有没有考虑过在太阳能基础设施建成之前，购买碳抵消作为过渡措施？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We've looked into it. The challenge is that credible offsets are expensive — about $18 per tonne for verified projects — and some of our board members are concerned about <span class="vocab-highlight">greenwashing</span> accusations. They'd rather invest that capital directly into <span class="vocab-highlight">renewable energy</span> infrastructure than buy offsets that might be seen as a PR shortcut.</span></div>
     <div class="dialogue-cn">我们考虑过。挑战在于可信的碳抵消很贵——经验证的项目每吨约18美元——而且董事会部分成员担心漂绿指控。他们宁愿将资金直接投入可再生能源基础设施，也不愿购买可能被视为公关捷径的碳抵消。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I actually agree with that philosophy, but there's a pragmatic middle path. What if you allocated 30% of your sustainability budget to high-quality offsets — specifically nature-based solutions like reforestation — while the remaining 70% goes to on-site solar and energy efficiency upgrades? That way you show immediate progress while the long-term infrastructure comes online.</span></div>
     <div class="dialogue-cn">我其实认同这个理念，但有一条务实的中间路线。如果你们将30%的可持续发展预算分配给高质量的碳抵消——特别是基于自然的解决方案如再造林——剩下的70%用于现场太阳能和能效升级呢？这样在长期基础设施上线的同时可以展示即时进展。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's an interesting proposal. It would also strengthen our <span class="vocab-highlight">ESG</span> rating, which has been flat for two quarters. The institutional investors have been asking pointed questions about our environmental score. Let me take that split back to the board. On a related note — how are you handling <span class="vocab-highlight">supply chain</span> emissions in your own operations?</span></div>
     <div class="dialogue-cn">这是个有趣的提议。这也能提升我们的ESG评级，已经连续两个季度持平了。机构投资者一直在对我们的环境得分提出尖锐问题。让我把这个分配方案带回董事会讨论。说到这——你们自身运营中是如何处理供应链排放的？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We've implemented a supplier code of conduct that requires all Tier 1 suppliers to report their emissions quarterly. If they don't comply within 12 months, we phase them out. It's been effective — we've already transitioned three suppliers to <span class="vocab-highlight">circular economy</span> models, where waste from one process becomes raw material for another. The cost savings have been a pleasant surprise.</span></div>
     <div class="dialogue-cn">我们实施了供应商行为准则，要求所有一级供应商每季度报告排放量。如果他们在12个月内不合规，我们就逐步淘汰。这很有效——我们已经将三家供应商转向了循环经济模式，其中一个环节的废物成为另一个环节的原材料。成本节约也令人惊喜。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's exactly the kind of integrated approach we're missing. Our procurement team still prioritises unit cost above all else. I've been pushing for a <span class="vocab-highlight">total cost of ownership</span> model that factors in environmental impact, but it's been slow going. Could you share your supplier scorecard framework?</span></div>
     <div class="dialogue-cn">这正是我们缺失的那种一体化做法。我们的采购团队仍然将单价放在首位。我一直在推动实施包含环境影响的总拥有成本模型，但进展缓慢。你能分享一下你们的供应商评分框架吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Happy to. I'll send over our evaluation template — it weights environmental compliance at 25% of the total supplier score. The key is to frame it not as a cost but as a risk mitigation strategy. When a supplier fails an environmental audit, the financial fallout from regulatory fines and reputational damage far outweighs any upfront savings.</span></div>
     <div class="dialogue-cn">乐意之至。我会把我们的评估模版发给你——它将环境合规权重设为供应商总分的25%。关键在于将其定位为风险规避策略而非成本。当供应商未能通过环境审计时，监管罚款和声誉损害带来的财务损失远远超过任何前期节省。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a compelling argument. I'll use that framing in my next presentation to the procurement committee. One last thing — your annual <span class="vocab-highlight">stakeholder</span> meeting is coming up, right? How are you positioning the sustainability narrative this year?</span></div>
     <div class="dialogue-cn">这个论点很有说服力。我会在下次向采购委员会汇报时使用这个表述。还有一件事——你们的年度利益相关方大会快到了是吧？今年你们如何定位可持续发展的叙事？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We're leading with tangible metrics rather than vague commitments. Instead of saying "we care about the planet," we're showing a 22% reduction in energy intensity, a 31% increase in recycled content across our product lines, and €4.2 million in efficiency savings directly attributable to sustainability initiatives. Numbers speak louder than slogans.</span></div>
     <div class="dialogue-cn">我们以具体的量化指标来引领，而非模糊的承诺。我们不说"我们关心地球"，而是展示能源强度降低22%、产品线回收材料含量提高31%，以及直接归因于可持续发展项目的420万欧元效率节约。数字比口号更有说服力。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's the approach we need to adopt. I'll draft a revised sustainability communications plan and run it by you next week if you're available.</span></div>
     <div class="dialogue-cn">这正是我们需要采纳的方法。我来起草一份修订后的可持续发展沟通计划，如果你有空的话下周给你看看。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll make time. The business case for sustainability only works when it's backed by data. Let's turn those aspirations into auditable results.</span></div>
     <div class="dialogue-cn">我会安排时间。可持续发展的商业论证只有在有数据支撑时才成立。让我们把这些目标转化为可审计的成果。</div>
   </div>

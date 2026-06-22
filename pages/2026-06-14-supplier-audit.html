@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 
 /* 标题行：icon + 文字 + 右侧操作 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
@@ -26,8 +26,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -57,7 +57,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>供应商审核 Supplier Audit</h1>
-<div class="date">📅 2026年6月14日 · 星期日</div>
 
 <div class="roles">
   <strong>A (Linda Park)</strong> — Quality Assurance Manager, EcoVibe Apparel<br>
@@ -77,72 +76,72 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">David, thank you for hosting us on such short notice. As you know, this is our first <span class="vocab-highlight">on-site audit</span> since signing the framework agreement, and I'm keen to walk through your production floor before we sit down with the documentation.</span></div>
     <div class="dialogue-cn">David，感谢你在这么短的时间内接待我们。如你所知，这是我们签署框架协议后的首次现场审核，我希望能先走一遍生产车间，然后再坐下来看文件资料。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely, Linda. Transparency is central to how we operate. I've arranged a full tour of our cutting, stitching, and finishing sections. Our shift supervisor, Amara, will join us — she's been with WestGate for eleven years and knows every machine on that floor.</span></div>
     <div class="dialogue-cn">完全理解，Linda。透明运营是我们的核心理念。我已经安排好了裁剪、缝制和整理车间的全程参观。我们的班组长Amara会陪同——她在WestGate工作了十一年，对车间里的每台机器都了如指掌。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Excellent. I'll be paying particular attention to your quality control checkpoints. Our last shipment had a <span class="vocab-highlight">defect rate</span> of 1.8%, which, while within the contractual tolerance of 2%, is trending in the wrong direction compared to the 0.9% we saw in the initial trial batch.</span></div>
     <div class="dialogue-cn">太好了。我会特别关注你们的品控检查点。我们上一批货的不良率是1.8%，虽然仍在合同约定的2%容忍范围内，但相比初期试单的0.9%，趋势令人担忧。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I appreciate you flagging that. We've actually retrofitted three inspection stations with automated optical scanners since that shipment. The investment wasn't trivial — about $47,000 — but we're already seeing a 40% reduction in missed defects during <span class="vocab-highlight">inline inspection</span>.</span></div>
     <div class="dialogue-cn">感谢你指出这一点。实际上，自那批货之后，我们已经为三个检验工位加装了自动光学扫描仪。这笔投资不小——大约47000美元——但在线检验的漏检率已经降低了40%。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's the kind of proactive improvement we love to see. While we're on the topic, I'd also like to review your <span class="vocab-highlight">corrective action reports</span> from the past quarter. If there's a pattern, I'd rather we catch it now than discover it in a returned shipment.</span></div>
     <div class="dialogue-cn">这种主动改进正是我们乐见的。说到这个，我还想查看你们过去一个季度的纠正措施报告。如果存在系统性问题，我希望现在发现，而不是等到退货时才发觉。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Of course. All CARs are logged in our quality management system, which I'll give you read-only access to. Off the top of my head, the main recurring issue has been inconsistent stitch tension on the shoulder seams — we traced it to a batch of subpar thread from a new supplier, which we've since dropped.</span></div>
     <div class="dialogue-cn">当然。所有的CAR都记录在我们的质量管理系统中，我会给你只读权限。粗略回忆一下，主要的重复性问题是肩部缝线的张力不均——我们追查到一个新供应商提供了批次不合格的缝纫线，我们已经停止合作了。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That brings me to another point — <span class="vocab-highlight">supplier qualification</span>. Under clause 7.3 of our agreement, any tier-2 supplier that provides materials constituting more than 5% of the finished product's value must be pre-approved by us. Were we notified about this thread supplier?</span></div>
     <div class="dialogue-cn">这让我想到另一点——供应商资质认证。根据我们协议第7.3条，任何占成品价值5%以上的原材料二级供应商，都必须事先获得我们的批准。关于这个缝纫线供应商，我们收到通知了吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Frankly, we missed that. The thread supplier accounted for roughly 3.8% of material cost, so our procurement team classified it as non-critical. But I acknowledge the oversight — I'll have the qualification dossier on your desk by end of day tomorrow.</span></div>
     <div class="dialogue-cn">坦率地说，我们疏忽了。缝纫线供应商的材料成本大约占3.8%，我们的采购团队将其归类为非关键供应商。但我承认这个疏漏——明天下班前我会把资质审查文件放到你桌上。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I appreciate the candour. Let's not treat this as a finding — more of a process alignment. Speaking of which, I'd also like to observe your end-of-line random sampling procedure. The <span class="vocab-highlight">AQL</span> 2.5 standard you committed to requires a specific sample size matrix, and I want to make sure the floor team is applying it consistently.</span></div>
     <div class="dialogue-cn">我欣赏你的坦诚。我们不必把这视为审核发现项——更像是流程对齐。说到流程，我还想观摩一下你们的成品随机抽样程序。你们承诺的AQL 2.5标准有具体的抽样方案矩阵，我想确认车间团队是否一致执行。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Happy to demonstrate. We've actually gone beyond <span class="vocab-highlight">AQL</span> 2.5 — our internal benchmark is 1.5 for all export orders. Amara can walk you through the sampling plan and show you the reject log. One thing I'm particularly proud of is that our rework rate has dropped below 0.5% for the first time this quarter.</span></div>
     <div class="dialogue-cn">很乐意展示。实际上我们的标准已经超越了AQL 2.5——所有出口订单的内部基准是1.5。Amara可以带你过一遍抽样计划并查看拒收记录。有件事我特别自豪——本季度我们的返工率首次降到了0.5%以下。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's impressive. If the numbers hold up, it'll certainly factor positively into our <span class="vocab-highlight">vendor scorecard</span>. On a related note, I'd also like to briefly discuss <span class="vocab-highlight">lead times</span>. Our peak season is coming up in Q3, and we're forecasting a 30% volume increase. Can your current capacity absorb that without compromising quality?</span></div>
     <div class="dialogue-cn">这确实了不起。如果数据经得起验证，这肯定会对我们的供应商评分卡产生积极影响。顺便说一句，我还想简单讨论一下交货周期。我们的旺季在第三季度即将到来，预计订单量会增加30%。你们目前的产能能否在不影响质量的前提下消化这个增量？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We've been preparing for exactly that. We added a second shift in April, and our <span class="vocab-highlight">throughput</span> is already at 85% of the projected Q3 requirement. The bottleneck, honestly, isn't production — it's inbound logistics for raw cotton. We're working with two freight forwarders now instead of one to mitigate delays.</span></div>
     <div class="dialogue-cn">我们正是为此在做准备。四月份我们增加了第二个班次，目前的产量已经达到第三季度预测需求的85%。说实话，瓶颈不在生产——而在原棉的进厂物流。我们现在与两家货运代理合作，而不是一家，以降低延误风险。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Good to hear you're thinking end-to-end. One last thing before we head to the floor — I'll need to speak with two or three line workers privately, without management present. It's standard protocol for our <span class="vocab-highlight">social compliance audit</span>, and I'm sure you understand.</span></div>
     <div class="dialogue-cn">很高兴你们在通盘考虑。去车间之前还有最后一件事——我需要与两到三位一线工人单独交谈，不需要管理人员在场。这是我们社会责任合规审核的标准程序，相信你能理解。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Completely. We've set aside the meeting room near the canteen. I'll let the team know they can speak freely — our worker retention rate is 92%, so I'm confident you'll hear positive feedback.</span></div>
     <div class="dialogue-cn">完全理解。我们已经预留了食堂旁边的会议室。我会告知团队他们可以畅所欲言——我们的员工留任率是92%，所以我很有信心你会听到正面的反馈。</div>
   </div>

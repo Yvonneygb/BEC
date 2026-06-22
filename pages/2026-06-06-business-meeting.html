@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
@@ -24,8 +24,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -54,7 +54,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>商务会议 Business Meeting</h1>
-<div class="date">📅 2026年6月6日 · 星期六</div>
 
 <div class="roles">
   <strong>A (David Lin)</strong> — Project Manager, Horizon Consulting<br>
@@ -74,67 +73,67 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Right, let's get down to business. Thanks everyone for making time. As you can see from the <span class="vocab-highlight">agenda</span>, today we need to lock down the Q3 launch timeline and assign clear ownership of key <span class="vocab-highlight">deliverables</span>.</span></div>
     <div class="dialogue-cn">好，我们开始谈正事。感谢大家抽出时间。如议程所示，今天我们需要锁定Q3发布的时间线并明确关键交付物的负责人。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Before we dive in, David — I'd like to flag that the creative team hasn't received the updated brand guidelines from your side. That's been a <span class="vocab-highlight">sticking point</span> for two weeks now, and it's affecting our <span class="vocab-highlight">milestone</span> progress.</span></div>
     <div class="dialogue-cn">在深入讨论之前，David——我想提一下，创意团队还没有收到你们这边更新后的品牌指南。这个问题已经卡了两周了，正在影响我们的里程碑进度。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Point taken, Emma. I'll chase that up with our design team this afternoon. For now, could we table that and focus on the launch <span class="vocab-highlight">critical path</span>? We're already behind on the landing page wireframes.</span></div>
     <div class="dialogue-cn">收到，Emma。今天下午我去向我们设计团队催一下。现在能否先搁置这个，聚焦在发布的关键路径上？我们的着陆页线框图已经落后了。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Fine, but I want it on the record. Moving on — our team estimates we'll need six working days to finalise the campaign assets once the guidelines land. That pushes us to the 18th, which is cutting it close for a Q3 launch.</span></div>
     <div class="dialogue-cn">好吧，但我希望记录在案。继续——我们团队估计，一旦拿到品牌指南，需要六个工作日来完成活动素材的最终定稿。这样会推到18号，对Q3发布来说时间很紧。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Understood. Let's <span class="vocab-highlight">firm up</span> the following: wireframe approval by Friday the 12th, brand guidelines delivered no later than the 15th, and campaign assets by the 22nd. Does anyone have objections?</span></div>
     <div class="dialogue-cn">明白了。我们来敲定以下节点：线框图12号周五前通过，品牌指南最迟15号前交付，活动素材22号前完成。有人反对吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The 22nd is tight but doable. I'll need a buffer day though — call it the 23rd for final QA. And I'd like Martin from product to be copied in on all email threads going forward. There've been too many siloed conversations.</span></div>
     <div class="dialogue-cn">22号很紧但可行。不过我需要一天缓冲——算是23号做最终质保。另外我希望从今以后所有邮件线程都抄送Martin。之前太多孤立的对话了。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. I'll loop Martin in starting today. Now, regarding budget — Emma, your team's forecast shows a 15% overrun. Can you walk us through the numbers?</span></div>
     <div class="dialogue-cn">同意。从今天起我会把Martin拉进来。现在关于预算——Emma，你们团队的预测显示超出15%。能带我们过一下数据吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Sure. The overrun is largely driven by the A/B testing costs we didn't factor into the original estimate. We're running creative variants across three platforms, which adds about £4,200. I've attached the breakdown in the pre-read.</span></div>
     <div class="dialogue-cn">当然。超支主要是因为最初估算时未计入的A/B测试费用。我们在三个平台上跑创意变体，额外增加了约4200英镑。附件里我已经附上了明细。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Thanks. Let's <span class="vocab-highlight">greenlight</span> the additional spend but cap it at £4,500. I want weekly <span class="vocab-highlight">check-ins</span> with the finance team to monitor this.</span></div>
     <div class="dialogue-cn">谢谢。追加支出批准，但上限控制在4500英镑。我希望每周和财务团队做一次进度检查。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That works. I'll set up a recurring Thursday slot and send out the invite. One last thing — can we confirm the <span class="vocab-highlight">go/no-go</span> criteria for the launch? I don't want us pushing live without a clear decision framework.</span></div>
     <div class="dialogue-cn">没问题。我来设置一个周四的定期时间段并发送邀请。最后一件事——能否确认发布的上线/不通过标准？我不希望没有一个明确的决策框架就推上线。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Good shout. The go/no-go hinges on three things: zero P1 bugs on the staging environment, full UAT sign-off from at least four beta clients, and the campaign assets approved and uploaded. We'll review status at the stand-up on the 25th.</span></div>
     <div class="dialogue-cn">说得好。上线/不通过的判定基于三点：预发布环境零P1级bug，至少四家beta客户的完整UAT签批，以及通过审核并完成上传的活动素材。我们25号站会上检视状态。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Crystal clear. I'll update my <span class="vocab-highlight">action items</span> by end of day. David, great meeting — this is the most productive one we've had in weeks.</span></div>
     <div class="dialogue-cn">完全清楚了。今天下班前我会更新我的行动项。David，这次会议很棒——是这几周来最有成效的一次。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Likewise, Emma. I'll circulate the minutes within the hour. Let's <span class="vocab-highlight">wrap up</span> here. Thanks, everyone.</span></div>
     <div class="dialogue-cn">彼此彼此，Emma。一个小时内我分发会议纪要。会议到此结束。谢谢大家。</div>
   </div>

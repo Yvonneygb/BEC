@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
@@ -21,8 +21,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 .cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -49,7 +49,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>数字化转型 Digital Transformation</h1>
-<div class="date">📅 2026年6月22日 · 星期一</div>
 
 <div class="roles">
   <strong>A (Thomas Wright)</strong> — Chief Digital Officer, Orion Retail Group<br>
@@ -68,67 +67,67 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Sophie, thanks for making time. The board has greenlit the <span class="vocab-highlight">digital transformation</span> budget — €4.2 million over the next 18 months. But before we start spending, I want to get your operational perspective. Where do you see the biggest pain points that technology could actually solve?</span></div>
     <div class="dialogue-cn">Sophie，谢谢你抽出时间。董事会已经批准了数字化转型的预算——未来18个月420万欧元。但在我们开始花钱之前，我想听听你的运营视角。在你看来，技术真正能解决的最大痛点在哪里？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's the right question, Thomas. I'll be blunt — our <span class="vocab-highlight">legacy systems</span> are bleeding us dry in operational costs. The warehouse management software is 14 years old, unsupported by the vendor, and our staff spends nearly 30% of their time on manual data entry because the system can't talk to our e-commerce platform. We're not talking about incremental improvement here — we need a fundamental overhaul.</span></div>
     <div class="dialogue-cn">问得很到位，Thomas。我直说了——我们的遗留系统正在不断吞噬运营成本。仓库管理软件已经用了14年，厂商已停止支持，我们的员工因为系统无法与电商平台对接，将近30%的时间花在手动录入数据上。这里不是在讨论渐进式改善——我们需要根本性的变革。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I completely agree, and that's why <span class="vocab-highlight">cloud migration</span> is phase one of the roadmap. We're proposing to move the entire supply chain stack to a cloud-native ERP — specifically, moving from the on-premise Oracle system to a modern SaaS platform. The projected <span class="vocab-highlight">ROI</span> is 22% in the first year, mainly through reduced manual labour and real-time inventory visibility. But I'm worried about the transition disruption.</span></div>
     <div class="dialogue-cn">我完全同意，这也是为什么云迁移是路线图的第一阶段。我们提议将整个供应链系统迁移到云原生ERP——具体来说，从本地的Oracle系统迁移到现代的SaaS平台。预计第一年的投资回报率是22%，主要通过减少人工操作和实现实时库存可视性。但我担心转换过程中的运营中断。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The disruption is exactly what keeps me up at night. We process 12,000 orders a day during peak season — we can't afford even 48 hours of downtime. If we're going to migrate, we need a phased rollout with a parallel run period where both systems operate simultaneously. What's the vendor's track record on migrations of this scale?</span></div>
     <div class="dialogue-cn">运营中断正是让我夜不能寐的问题。我们在旺季每天处理12000张订单——连48小时的停机我们都承受不起。如果要迁移，必须有分阶段上线，并设置一段双系统并行运行期。供应商在这类规模的迁移方面业绩记录如何？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">They've done similar transitions for two retailers of our size, both with zero business interruption. Their approach is exactly what you described — parallel run for 90 days, then cutover. But here's where I need your honest input: the operations team's <span class="vocab-highlight">change management</span> readiness. A new ERP means retraining 240 warehouse staff and redesigning workflows. Are your people ready for that?</span></div>
     <div class="dialogue-cn">他们为两家与我们同等规模的零售商完成了类似的迁移，都是零业务中断。他们的方案正是你描述的——先并行运行90天，然后切换。但这里我需要你的真实意见：运营团队对变革管理的准备程度如何？新ERP意味着要重新培训240名仓库员工，并重新设计工作流程。你的团队准备好了吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Honestly, there will be resistance. Some of our senior warehouse supervisors have been using the same system for over a decade. The phrase "if it isn't broken" will come up more than once. I need a <span class="vocab-highlight">change management</span> plan that doesn't just train them on new software — it has to sell them on why the change is necessary. Have you factored in a communications campaign?</span></div>
     <div class="dialogue-cn">实话说，会有阻力。有些资深的仓库主管已经用了十多年同样的系统。"没坏就别修"这句话会不止一次出现。我需要一份变革管理计划，不只是教他们用新软件——还必须说服他们为什么变革是必要的。你考虑过沟通宣传方案吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We've budgeted €180,000 for change management, including a dedicated training team of four people for the first six months. But I think you're right — training alone won't cut it. I'd like to identify <span class="vocab-highlight">champions</span> within each warehouse — respected floor staff who can advocate for the change from within. Peer influence is far more effective than top-down mandates. Could you help me identify those people?</span></div>
     <div class="dialogue-cn">我们预算了18万欧元用于变革管理，包括头六个月配置一支四人专职培训团队。但我认为你说得对——光靠培训是不够的。我想在每个仓库里物色一些倡导者——受大家尊重的一线员工，能从内部为变革发声。同事之间的影响力远比自上而下的命令更有效。你能帮我找到这些人吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I can give you at least two names per warehouse by the end of the week. These are the people the floor staff actually listen to. If they're on board, adoption will be exponentially easier. On the topic of <span class="vocab-highlight">automation</span>, though — the board slides mentioned AI-driven demand forecasting. How mature is that technology? I've seen too many "smart" systems make embarrassingly bad predictions.</span></div>
     <div class="dialogue-cn">我周末前可以给你每个仓库至少两个人选。这些人才是仓库员工真正听的人。如果他们认同了，采纳新系统会容易得多。不过说到自动化——董事会演示稿里提到了AI驱动的需求预测。这项技术有多成熟？我见过太多所谓"智能"系统做出令人尴尬的错误预测。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Fair scepticism. The forecasting engine we're evaluating has been trained on retail data sets of over 50 million transactions. In pilot tests, it reduced overstock by 18% and stockouts by 23% compared to our current manual forecasting. It's not a magic wand, but the <span class="vocab-highlight">scalability</span> advantage is real. The key is that it augments your team's judgment rather than replacing it — your planners still make the final call.</span></div>
     <div class="dialogue-cn">这种怀疑是合理的。我们正在评估的预测引擎经过了超过5000万笔交易零售数据集的训练。在试点测试中，与我们目前的人工预测相比，它减少了18%的库存过剩和23%的缺货。它不是魔法棒，但可扩展性优势是实实在在的。关键是它增强而非取代你团队的判断力——最终的决策权仍由你的计划员掌握。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That hybrid approach is much more palatable than a black-box algorithm making unilateral decisions. If we frame it as a decision-support tool rather than a replacement, I can sell it to the ops team. What about the customer-facing side? I know the <span class="vocab-highlight">stakeholder buy-in</span> for the digital transformation partly hinges on revenue growth, not just cost savings.</span></div>
     <div class="dialogue-cn">这种混合模式比一个黑盒算法单方面做决策更容易让人接受。如果我们将其定位为决策支持工具而非替代品，我能向运营团队推销这个方案。那面向客户的一面呢？我知道数字化转型的利益相关方支持度部分取决于收入增长，而不仅仅是成本节省。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Phase two covers exactly that — a unified customer data platform that integrates online, in-store, and mobile behaviours into a single customer view. The business case projects a 12% uplift in cross-sell revenue within six months of deployment. We're also building a personalised recommendation engine that mirrors what Amazon does, but for our niche. That's where the competitive advantage lies.</span></div>
     <div class="dialogue-cn">第二阶段正是覆盖这一块——一个统一的客户数据平台，将线上、门店和移动端的行为整合为单一客户视图。商业论证预计部署后六个月内交叉销售收入提升12%。我们还在构建一个个性化推荐引擎，类似于亚马逊的做法，但针对我们的细分市场。这才是竞争优势所在。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm cautiously optimistic. Let me summarise what I need from you to move this forward: a detailed migration timeline with the parallel run baked in, the change management communications plan, and a risk <span class="vocab-highlight">mitigation</span> matrix for what happens if the ERP migration hits delays. If those three are solid, I'll back this fully at the steering committee.</span></div>
     <div class="dialogue-cn">我持谨慎乐观态度。让我总结一下推进此事我需要你提供的材料：一份包含并行运行期的详细迁移时间表、变革管理沟通方案，以及一份针对ERP迁移延迟风险的缓解矩阵。如果这三项扎实，我会在指导委员会上全力支持。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">You'll have all three by next Friday. I appreciate the rigour, Sophie — it's exactly because you're pushing for operational realism that I'm confident we can execute this. A digital transformation that looks good in PowerPoint but fails on the warehouse floor is worse than no transformation at all.</span></div>
     <div class="dialogue-cn">下周五前你会拿到这三项。我欣赏你的严谨，Sophie——正是因为你坚持运营现实主义的推动，我才有信心我们能成功执行。在PPT上看起来很漂亮但在仓库现场失败的数字化转型，还不如没有变革。</div>
   </div>

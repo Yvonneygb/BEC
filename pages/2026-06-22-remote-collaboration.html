@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
@@ -21,8 +21,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 .cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -49,7 +49,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>远程协作 Remote Collaboration</h1>
-<div class="date">📅 2026年6月22日 · 星期一</div>
 
 <div class="roles">
   <strong>A (Lisa Park)</strong> — Project Manager, Seoul office, GlobalConnect Inc.<br>
@@ -68,57 +67,57 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Thomas, morning your time. Thanks for hopping on this call. We're six weeks from the Q3 platform launch and I'm picking up some friction in the <span class="vocab-highlight">cross-timezone</span> workflow. The Seoul QA team keeps getting <span class="vocab-highlight">handoff</span> files with incomplete test documentation — can we troubleshoot this?</span></div>
     <div class="dialogue-cn">Thomas，你那边早上了。感谢接入这个电话。距离第三季度平台发布还有六周，我注意到跨时区工作流中出现了一些摩擦。首尔QA团队收到的交接文件总是缺少完整的测试文档——我们能一起排查一下吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Morning, Lisa. I've been meaning to raise this actually. The issue stems from our <span class="vocab-highlight">asynchronous communication</span> gap. Your team wraps up at 6 PM KST just as we're starting in GMT, so by the time we push the nightly build, you're offline. We're essentially working with an 8-hour feedback lag.</span></div>
     <div class="dialogue-cn">早上好，Lisa。其实我一直想提这件事。问题根源在于我们的异步沟通存在缺口。你们团队在韩国时间下午6点收工时，我们格林威治时间才刚开始，所以等我们推送每晚构建时，你们已经下线了。我们基本上存在8小时的反馈滞后。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's precisely the <span class="vocab-highlight">bottleneck</span> I'm seeing. What if we establish a daily <span class="vocab-highlight">overlap window</span> — say 3 to 4 PM your time, 11 PM to midnight ours? I know it's late for Seoul, but even 45 minutes of real-time sync could slash the <span class="vocab-highlight">iteration cycle</span> dramatically. I'd rotate who covers it so no one burns out.</span></div>
     <div class="dialogue-cn">这正是我看到的瓶颈。不如我们建立一个每日重叠时间窗口——比如你们时间下午3到4点、我们晚上11点到午夜？我知道对首尔来说很晚，但即使45分钟的实时同步也能大幅缩短迭代周期。我会轮流安排人员覆盖这个时段，避免任何人过劳。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a pragmatic solution. I'll block out 3-4 PM GMT in our shared calendar starting tomorrow. In return, could your team commit to updating the task board with clear pass/fail flags before signing off? Right now we're spending the first hour of our day just deciphering yesterday's test results.</span></div>
     <div class="dialogue-cn">这是个务实的方案。我从明天起就在共享日历中锁定格林威治时间下午3-4点。作为交换，你们团队能否承诺在下班前更新任务看板，标注明确的通过/失败标记？现在我们每天花第一个小时仅仅是解读昨天的测试结果。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Deal. I'll make it a hard requirement in our end-of-day checklist. Speaking of tools — our screen sharing has been choppy on the current platform. Have you tried the new virtual whiteboard integration in Miro? It's been a game-changer for <span class="vocab-highlight">sprint planning</span> on our side.</span></div>
     <div class="dialogue-cn">成交。我会把它作为收工清单中的硬性要求。说到工具——我们当前平台的屏幕共享一直很卡。你们试过Miro新集成的虚拟白板功能吗？它对我们的冲刺计划来说简直是变革性的。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We've been testing it actually! The collaborative features are solid, especially the sticky note clustering for retrospectives. I'd suggest we migrate our Monday stand-ups to Miro and keep Slack strictly for quick pings and decision logging. That way we're not losing context across channels.</span></div>
     <div class="dialogue-cn">我们其实在测试了！协作功能很扎实，尤其是回顾会议用的便利贴聚类功能。我建议我们把周一站会迁移到Miro，Slack严格用于快速消息和决策记录。这样就不会在各个渠道中丢失上下文。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'm on board with that. Let's also set up a shared <span class="vocab-highlight">knowledge base</span> on Notion — a <span class="vocab-highlight">single source of truth</span> for API specs, deployment procedures, and onboarding docs. We've had three instances already where a version mismatch caused rollbacks because someone referenced an outdated Wiki page.</span></div>
     <div class="dialogue-cn">我赞成。我们也在Notion上建一个共享知识库吧——作为API规格、部署流程和入职文档的唯一权威来源。我们已经遇到三次因版本不匹配导致回滚的情况，就是因为有人参考了过时的Wiki页面。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Brilliant. I'll own the Notion migration. On a related note, video fatigue is real — half my team has admitted to tuning out during the Thursday all-hands. Could we switch that to a written digest with an optional Q&A drop-in? That alone would free up 90 minutes of productive time across both teams.</span></div>
     <div class="dialogue-cn">太棒了。我来负责Notion迁移。说到相关的话题，视频疲劳是真实存在的——我团队一半的人承认在周四全员会议中走神。我们能否把它改成书面摘要加上可选问答环节？仅此一项就能为两个团队释放出90分钟的生产时间。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'm all for reducing <span class="vocab-highlight">meeting bloat</span>. Let's trial that for a month and survey the teams. If engagement doesn't drop, we make it permanent. One last thing — the time zone converter I shared last sprint has been a lifesaver. Can we pin it to the top of our team channel so new joiners don't have to ask "what time is that in Seoul" every day?</span></div>
     <div class="dialogue-cn">我完全赞成减少会议臃肿。我们先试行一个月然后调查团队。如果参与度没有下降，就永久化。最后一件事——我上次冲刺分享的时区转换器简直是救命工具。能把它置顶到我们团队频道吗？这样新加入的人就不用每天都问"这在首尔是几点"了。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Done. I'll also add it to the <span class="vocab-highlight">onboarding checklist</span>. Lisa, I've got to say — even with the challenges, this cross-timezone setup has pushed us to be far more disciplined about documentation and communication than we ever were co-located. There's a real upside if we keep refining the process.</span></div>
     <div class="dialogue-cn">搞定。我也会把它加入入职清单。Lisa，我得说——尽管有这些挑战，这种跨时区设置让我们在文档和沟通方面变得比在同一地点办公时更有纪律性。如果我们持续优化流程，确实存在真正的优势。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Couldn't agree more. The silver lining is we're building a <span class="vocab-highlight">remote-first</span> muscle that's going to be a competitive advantage long-term. Let's check in same time next week and track what's improved.</span></div>
     <div class="dialogue-cn">完全同意。好的一面是，我们正在建立一种"远程优先"的能力，这将成为长期的竞争优势。下周同一时间我们再碰头，追踪改进情况。</div>
   </div>

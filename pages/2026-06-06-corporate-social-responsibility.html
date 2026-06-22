@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
@@ -21,8 +21,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 .cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -49,7 +49,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>企业社会责任 Corporate Social Responsibility</h1>
-<div class="date">📅 2026年6月6日 · 星期六</div>
 
 <div class="roles">
   <strong>A (Maria Gonzalez)</strong> — Head of CSR, Verde Retail Group<br>
@@ -68,62 +67,62 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">David, our annual sustainability report is due in eight weeks, and frankly, the draft I've seen reads like a marketing brochure. We need substance — measurable metrics, not feel-good anecdotes.</span></div>
     <div class="dialogue-cn">David，我们的年度可持续发展报告还有八周就要提交了，坦白说，我看到的草案读起来像市场营销手册。我们需要实在内容——可量化的指标，而不是感动人心的轶事。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a common pitfall, Maria. Most CSR reports fail the <span class="vocab-highlight">materiality assessment</span>. Let's start with the basics — have you conducted a <span class="vocab-highlight">double materiality</span> assessment yet? The EU's CSRD will require it from next fiscal year anyway.</span></div>
     <div class="dialogue-cn">这是常见误区，Maria。大多数CSR报告都通不过实质性检验。让我们从基础开始——你们做过双重实质性评估吗？不管怎样，欧盟的CSRD从下一个财年起都会要求这样做。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We haven't, and that's exactly the kind of gap I need you to help us close. Our board has committed to <span class="vocab-highlight">carbon neutrality</span> by 2030, but our <span class="vocab-highlight">Scope 3 emissions</span> — which account for an estimated 78% of our total carbon footprint — are still unaudited.</span></div>
     <div class="dialogue-cn">我们还没做，这正是我需要你帮我们弥补的差距。董事会已承诺在2030年前实现碳中和，但我们的范围三排放——估计占我们总碳足迹的78%——至今未经审计。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Scope 3 is always the elephant in the room. Let me propose a phased approach: month one, we map your entire <span class="vocab-highlight">value chain</span> emissions, starting with Tier-1 suppliers. Month two, we engage your top 20 suppliers by spend to collect primary data — replacing the industry-average estimates you're currently using. That alone could shift your reported footprint by ±15%.</span></div>
     <div class="dialogue-cn">范围三始终是房间里的大象。让我提出一个分阶段方案：第一个月，我们绘制整个价值链排放图，从一级供应商开始。第二个月，我们联系按采购额排名的前20家供应商收集一手数据——替代你们目前使用的行业平均值。仅这一项就可能让你们报告的碳足迹数据浮动±15%。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's ambitious but necessary. On the social side, our supply chain audits in Southeast Asia flagged three factories with systemic overtime violations. Our initial instinct was to terminate the contracts, but our local NGO partner argues that disengagement would punish the workers more than the factory owners.</span></div>
     <div class="dialogue-cn">这很有雄心但确实必要。在社会责任方面，我们在东南亚的供应链审计发现三家工厂存在系统性超时违规。我们的最初反应是终止合同，但合作的本地NGO认为，终止合作对工人的伤害比对工厂老板更大。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's the <span class="vocab-highlight">responsible sourcing</span> dilemma in a nutshell. The UN Guiding Principles on Business and Human Rights are clear — ceasing the business relationship should be a last resort. Have you considered a <span class="vocab-highlight">corrective action plan</span> with a six-month remediation window, tied to contract renewal?</span></div>
     <div class="dialogue-cn">这就是负责任采购困境的缩影。联合国工商业与人权指导原则很明确——终止业务关系应是最后手段。你们是否考虑过六个月的纠正行动计划，与合同续签挂钩？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We've drafted one, but enforcement is the challenge. Our local team is two people covering 47 factories across three countries. Without third-party verification, a CAP is just a piece of paper. What's your recommendation on audit frequency?</span></div>
     <div class="dialogue-cn">我们已经起草了一份，但执行是挑战。我们本地团队只有两人，覆盖三个国家的47家工厂。没有第三方验证，纠正行动计划只是一纸空文。你对审计频率有什么建议？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">For high-risk facilities, I'd recommend unannounced audits quarterly, supplemented by <span class="vocab-highlight">worker voice technology</span> — mobile-based anonymous surveys that bypass management filtering. It's not cheap — roughly €45,000 per facility per annum — but compared to the reputational damage of a exposé, it's a rounding error.</span></div>
     <div class="dialogue-cn">对于高风险工厂，我建议每季度进行不预先通知的审计，辅以工人心声技术——绕过管理层过滤的手机匿名调查。这不便宜——每个工厂每年大约45000欧元——但与媒体曝光的声誉损失相比，这只是个零头。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. I'll build that into next year's CSR budget. Now, the positive story — our community investment programme in Ghana has funded 12 schools over five years. But we've never measured the <span class="vocab-highlight">social return on investment</span>. Can you help us quantify it?</span></div>
     <div class="dialogue-cn">同意。我会把这个纳入明年的CSR预算。现在说说积极的信息——我们在加纳的社区投资计划五年内资助了12所学校。但我们从未衡量过社会投资回报率。你能帮我们量化吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely. We use the SROI framework, which monetises outcomes like improved literacy rates against your input costs. For a programme of your scale, I'd estimate a 12-week engagement to produce a credible SROI ratio. Expect something in the range of 1:3 to 1:5 — meaning every euro invested generates three to five euros of social value.</span></div>
     <div class="dialogue-cn">当然。我们采用社会投资回报率框架，将识字率提升等成果货币化，与你的投入成本做对比。对于你们这个规模的项目，我估计需要12周的调研来得出一个可信的SROI比率。预计在1:3到1:5的范围内——也就是说每投入一欧元，产生三到五欧元的社会价值。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's the kind of data that transforms a CSR report from a cost centre narrative into a value creation story. Let's scope the engagement. I'd like a proposal on my desk by Friday.</span></div>
     <div class="dialogue-cn">这种数据能把CSR报告从成本中心叙事转变为价值创造故事。让我们明确合作范围。我希望周五前看到提案放在我桌上。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">You'll have it by Thursday. Maria, it's refreshing to work with a company that treats CSR as core strategy rather than compliance box-ticking.</span></div>
     <div class="dialogue-cn">周四前你就能拿到。Maria，能和一家把CSR当作核心战略而非合规打勾的公司合作，让人耳目一新。</div>
   </div>

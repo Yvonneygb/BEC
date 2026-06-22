@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工作场所安全 Workplace Safety - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>工作场所安全 Workplace Safety</h1>
+
+<div class="roles">
+  <strong>A (Mike Torres)</strong> — Safety Officer, BuildRight Construction<br>
+  <strong>B (Helen Wu)</strong> — Site Manager, Pacific Tower Project
+</div>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Helen, I've just completed the quarterly safety audit of the Pacific Tower site, and I have to be upfront — we've got three Level 2 <span class="vocab-highlight">non-conformances</span> that need immediate attention before we can sign off on the next phase.</span></div>
+    <div class="dialogue-cn">Helen，我刚刚完成了太平洋大厦项目的季度安全审计，必须坦率地说——我们发现了三个二级不符合项，在下一阶段开工前需要立即处理。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Level 2 — that's serious, Mike. Walk me through what you found. I thought we were in good shape after last month's <span class="vocab-highlight">corrective actions</span>.</span></div>
+    <div class="dialogue-cn">二级——这很严重，Mike。带我详细过一遍你的发现。上个月整改后我以为我们已经处于良好状态了。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">The most pressing issue is the scaffolding on the east elevation. Several guardrails are missing, and the toe boards haven't been installed on levels 12 through 15. That's a <span class="vocab-highlight">fall-from-height</span> risk we simply cannot tolerate.</span></div>
+    <div class="dialogue-cn">最紧急的问题是东侧立面的脚手架。多处护栏缺失，12至15层未安装踢脚板。这是我们不能容忍的高空坠落风险。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That scaffolding was erected by our subcontractor just last week. I'll admit I haven't done a personal walk-through since — that's on me. But can we get a temporary variance while we fix it? We're already two weeks behind schedule.</span></div>
+    <div class="dialogue-cn">那脚手架是分包商上周才搭的。我承认之后没有亲自巡查过——这是我的责任。但能否在我们修复期间申请临时豁免？我们已经落后工期两周了。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Helen, I sympathise with the schedule pressure, but I can't issue a variance on fall protection. The regulations are crystal clear — and frankly, if the HSE inspector shows up unannounced, we'd be looking at a <span class="vocab-highlight">stop-work order</span> and potentially a six-figure fine.</span></div>
+    <div class="dialogue-cn">Helen，我理解工期压力，但我无法对高空坠落防护签发豁免。法规写得非常明确——坦率地说，如果HSE检查员突然到访，我们将面临停工令和可能六位数的罚款。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">You're right. I'm not going to argue with safety. I'll pull the crew off that section immediately and get the scaffolder back on site first thing tomorrow. What are the other two findings?</span></div>
+    <div class="dialogue-cn">你没错。我不和安全问题争辩。我立即把工人从那个区域撤下来，明早第一时间让脚手架公司回到现场。另外两项发现是什么？</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">The second is your <span class="vocab-highlight">confined-space</span> entry protocol. Your team has been entering the basement mechanical room without calibrated <span class="vocab-highlight">gas monitors</span>. I checked the log — last calibration was eight months ago. That's four months past the mandatory interval.</span></div>
+    <div class="dialogue-cn">第二项是你们的密闭空间进入规程。你的团队一直在没有经过校准的气体检测仪的情况下进入地下室设备间。我查了记录——上次校准是八个月前，已经超出强制校准间隔四个月了。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's unacceptable. I'll have the monitors sent for recalibration today, and until they're back, all confined-space work is suspended. I'll also schedule refresher training for the crew on <span class="vocab-highlight">permit-required</span> confined-space procedures.</span></div>
+    <div class="dialogue-cn">这不可接受。我今天就安排检测仪送校，在校准完成前暂停所有密闭空间作业。我还将安排对工人进行许可性密闭空间程序的复习培训。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Good call on the refresher training — that actually addresses my concern beyond just the equipment. The third issue is less critical but still needs action: your incident reporting has a gap. Two <span class="vocab-highlight">near-misses</span> last week weren't documented within the 24-hour window.</span></div>
+    <div class="dialogue-cn">复习培训这个主意很好——这实际上超出了设备问题本身，解决了我的深层担忧。第三项不那么紧急但仍需处理：你们的事故报告存在空档。上周有两起未遂事故未在24小时窗口期内记录。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Near-misses — I know how important those are for prevention. I'm embarrassed to admit I wasn't even aware of them. Clearly there's a communication breakdown between the shift supervisors and my office.</span></div>
+    <div class="dialogue-cn">未遂事故——我知道这对预防有多重要。很尴尬地承认我甚至不知道发生了这些事。显然轮班主管和我办公室之间存在沟通断层。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's exactly why we push for reporting — near-misses are free lessons. If we don't capture them, we're essentially waiting for the accident to happen. I'd recommend implementing a digital reporting tool that lets workers log incidents directly from their phones.</span></div>
+    <div class="dialogue-cn">这正是我们强调报告制度的原因——未遂事故是免费的教训。如果我们不记录它们，就等于在坐等事故真正发生。我建议启用数字化报告工具，让工人可以直接从手机上记录事件。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A mobile reporting app — that's a practical solution. It cuts out the middleman and reduces the barrier to reporting. Can you send me a couple of options your team has vetted?</span></div>
+    <div class="dialogue-cn">移动端报告应用——这是个实用的解决方案，省去了中间环节，降低了报告门槛。能发几个你团队验证过的方案给我吗？</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Absolutely. There are two platforms we've seen work well on similar-scale projects — SiteSafe Pro and BuildReport. Both have offline capability, which matters on a site this size. I'll forward you the comparison sheet this afternoon.</span></div>
+    <div class="dialogue-cn">当然。有两个平台在类似规模的项目上效果很好——SiteSafe Pro和BuildReport。两者都支持离线操作，这在这种规模的工地上很重要。我今天下午把对比表发给你。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Please do. In the meantime, I'll hold a <span class="vocab-highlight">toolbox talk</span> tomorrow morning to reinforce the importance of reporting and make it clear there's zero blame for flagging hazards. A positive safety culture starts with trust.</span></div>
+    <div class="dialogue-cn">请一定发来。同时，我明天早上会召开一次工具箱会议，强调报告的重要性，明确表示报告隐患不会有任何追责。积极的安全文化始于信任。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's music to my ears, Helen. A toolbox talk is the right forum — keep it informal, encourage questions. I'll attend if you'd like, just to show that the safety office is a partner, not a police force.</span></div>
+    <div class="dialogue-cn">这对我来说是天籁之音，Helen。工具箱会议是合适的场景——保持非正式，鼓励提问。如果你愿意，我可以列席，就是让大家明白安全部门是合作伙伴，不是警察。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'd appreciate that. Having you there sends the right message. Now, on the scaffolding — once the scaffolder fixes it, can you do a reinspection the same day? I want to minimise downtime.</span></div>
+    <div class="dialogue-cn">那再好不过。有你到场传递了正确的信号。现在回到脚手架的问题——脚手架公司修复后，你能当天来复查吗？我想尽量缩短停工时间。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll prioritise it. Send me a text the moment they're done and I'll be on site within the hour. If everything checks out, I can issue the <span class="vocab-highlight">clearance certificate</span> on the spot and you can remobilise immediately.</span></div>
+    <div class="dialogue-cn">我会优先处理。他们一完工就发短信给我，我一小时内到现场。如果一切符合要求，我可以当场签发安全放行证明，你们马上就可以重新开工。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's exactly what I needed to hear. I'll coordinate with the scaffolder tonight and have them on site by 7 AM. With any luck, we'll have the scaffolding compliant by noon and you can sign off shortly after.</span></div>
+    <div class="dialogue-cn">这正是我想听到的。今晚我就和脚手架公司协调，让他们明早7点到场。顺利的话，中午前脚手架就能合规，随后你就可以签发放行。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Sounds like a plan. And Helen — I want to acknowledge that you're handling this constructively. A lot of site managers get defensive. You're treating safety as a shared goal, and that's what gets people home safe at the end of the day.</span></div>
+    <div class="dialogue-cn">这计划不错。还有件事，Helen——我想肯定一下，你处理这件事的态度非常积极。很多工地经理会变得防御性很强。你把安全当作共同目标来对待，这才是让大家每天平安回家的关键。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Thanks, Mike. At the end of the day, nothing on this project is worth someone getting hurt. Let's get these issues closed out and make this site a benchmark for safety.</span></div>
+    <div class="dialogue-cn">谢谢，Mike。说到底，这个项目上没有任何事值得让人受伤。让我们把这些问题处理好，把这里打造成安全的标杆工地。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>non-conformance</strong> — 不符合项 | 安全审计中发现的不符合法规或标准的项目</div>
+<div class="vocab-item"><strong>fall-from-height</strong> — 高空坠落 | 建筑工地最常见的严重事故类型之一</div>
+<div class="vocab-item"><strong>stop-work order</strong> — 停工令 | 监管机构签发的强制停止施工的法律文书</div>
+<div class="vocab-item"><strong>confined space</strong> — 密闭空间 | 通风有限、可能存在危险气体的封闭工作区域</div>
+<div class="vocab-item"><strong>gas monitor</strong> — 气体检测仪 | 用于检测密闭空间内有害气体浓度的安全设备</div>
+<div class="vocab-item"><strong>near-miss</strong> — 未遂事故 | 险些发生但未造成实际伤害的事故前兆事件</div>
+<div class="vocab-item"><strong>toolbox talk</strong> — 工具箱会议 | 开工前进行的简短安全培训或提醒会议</div>
+<div class="vocab-item"><strong>permit-required</strong> — 需许可的 | 进入前必须获得书面许可的高风险工作区域</div>
+<div class="vocab-item"><strong>corrective action</strong> — 整改措施 | 针对发现的问题采取的纠正行动</div>
+<div class="vocab-item"><strong>clearance certificate</strong> — 安全放行证明 | 确认整改完成、可以恢复工作的正式文件</div>
+
+<hr>
+
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>I have to be upfront — ...</code> → 我必须坦率地说——…… | 引出严肃或敏感话题时的直接开场白</div>
+<div class="pattern-item"><code>Walk me through what you found.</code> → 带我详细过一遍你的发现 | 要求对方逐一说明检查结果</div>
+<div class="pattern-item"><code>I can't issue a variance on...</code> → 我无法对……签发例外许可 | 在安全问题上表明底线不可动摇</div>
+<div class="pattern-item"><code>That's on me.</code> → 这是我的责任 | 主动承认管理疏忽，展现领导担当</div>
+<div class="pattern-item"><code>Near-misses are free lessons.</code> → 未遂事故是免费的教训 | 说明预防性安全管理的核心哲学</div>
+<div class="pattern-item"><code>A positive safety culture starts with trust.</code> → 积极的安全文化始于信任 | 强调安全管理的软性基础</div>
+
+<hr>
+
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Helen，我刚刚完成了太平洋大厦项目的季度安全审计，必须坦率地说——我们发现了三个二级不符合项，在下一阶段开工前需要立即处理。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>二级——这很严重，Mike。带我详细过一遍你的发现。上个月整改后我以为我们已经处于良好状态了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>最紧急的问题是东侧立面的脚手架。多处护栏缺失，12至15层未安装踢脚板。这是我们不能容忍的高空坠落风险。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>那脚手架是分包商上周才搭的。我承认之后没有亲自巡查过——这是我的责任。但能否在我们修复期间申请临时豁免？我们已经落后工期两周了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>Helen，我理解工期压力，但我无法对高空坠落防护签发豁免。法规写得非常明确——坦率地说，如果HSE检查员突然到访，我们将面临停工令和可能六位数的罚款。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>你没错。我不和安全问题争辩。我立即把工人从那个区域撤下来，明早第一时间让脚手架公司回到现场。另外两项发现是什么？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>第二项是你们的密闭空间进入规程。你的团队一直在没有经过校准的气体检测仪的情况下进入地下室设备间。我查了记录——上次校准是八个月前，已经超出强制校准间隔四个月了。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这不可接受。我今天就安排检测仪送校，在校准完成前暂停所有密闭空间作业。我还将安排对工人进行许可性密闭空间程序的复习培训。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>复习培训这个主意很好——这实际上超出了设备问题本身，解决了我的深层担忧。第三项不那么紧急但仍需处理：你们的事故报告存在空档。上周有两起未遂事故未在24小时窗口期内记录。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>未遂事故——我知道这对预防有多重要。很尴尬地承认我甚至不知道发生了这些事。显然轮班主管和我办公室之间存在沟通断层。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这正是我们强调报告制度的原因——未遂事故是免费的教训。如果我们不记录它们，就等于在坐等事故真正发生。我建议启用数字化报告工具，让工人可以直接从手机上记录事件。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>移动端报告应用——这是个实用的解决方案，省去了中间环节，降低了报告门槛。能发几个你团队验证过的方案给我吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>当然。有两个平台在类似规模的项目上效果很好——SiteSafe Pro和BuildReport。两者都支持离线操作，这在这种规模的工地上很重要。我今天下午把对比表发给你。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>请一定发来。同时，我明天早上会召开一次工具箱会议，强调报告的重要性，明确表示报告隐患不会有任何追责。积极的安全文化始于信任。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这对我来说是天籁之音，Helen。工具箱会议是合适的场景——保持非正式，鼓励提问。如果你愿意，我可以列席，就是让大家明白安全部门是合作伙伴，不是警察。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>那再好不过。有你到场传递了正确的信号。现在回到脚手架的问题——脚手架公司修复后，你能当天来复查吗？我想尽量缩短停工时间。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我会优先处理。他们一完工就发短信给我，我一小时内到现场。如果一切符合要求，我可以当场签发安全放行证明，你们马上就可以重新开工。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这正是我想听到的。今晚我就和脚手架公司协调，让他们明早7点到场。顺利的话，中午前脚手架就能合规，随后你就可以签发放行。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这计划不错。还有件事，Helen——我想肯定一下，你处理这件事的态度非常积极。很多工地经理会变得防御性很强。你把安全当作共同目标来对待，这才是让大家每天平安回家的关键。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>谢谢，Mike。说到底，这个项目上没有任何事值得让人受伤。让我们把这些问题处理好，把这里打造成安全的标杆工地。</span></div>
+</div>
+</div>
+
+<hr>
+
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>工作场所安全是BEC听力Part 2和写作中常见的话题。建议重点掌握安全检查阶梯式语言：从发现不符合项（identify non-conformances）、提出整改措施（propose corrective actions）到签发安全放行（issue clearance）。注意区分"near-miss"（未遂事故）和"accident"（事故）在商务语境下的不同应对方式，这在考试中的阅读理解题里经常作为迷惑选项出现。</p>
+</div>
+
+<script>
+var showChinese = false;
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+</script>
+
+</body>
+</html>

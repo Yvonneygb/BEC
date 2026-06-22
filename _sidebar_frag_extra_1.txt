@@ -1,0 +1,5 @@
+<a class="nav-item" data-page="2026-06-22-intellectual-property.html" onclick="switchPage(this,'2026-06-22-intellectual-property.html')"><span class="nav-item-icon">🛡️</span><span class="nav-item-text">知识产权</span></a>
+<a class="nav-item" data-page="2026-06-22-workplace-safety.html" onclick="switchPage(this,'2026-06-22-workplace-safety.html')"><span class="nav-item-icon">🦺</span><span class="nav-item-text">工作场所安全</span></a>
+<a class="nav-item" data-page="2026-06-22-government-relations.html" onclick="switchPage(this,'2026-06-22-government-relations.html')"><span class="nav-item-icon">🏛️</span><span class="nav-item-text">政府关系</span></a>
+<a class="nav-item" data-page="2026-06-22-social-media-marketing.html" onclick="switchPage(this,'2026-06-22-social-media-marketing.html')"><span class="nav-item-icon">📱</span><span class="nav-item-text">社交媒体营销</span></a>
+<a class="nav-item" data-page="2026-06-22-customer-retention.html" onclick="switchPage(this,'2026-06-22-customer-retention.html')"><span class="nav-item-icon">♻️</span><span class="nav-item-text">客户留存</span></a>

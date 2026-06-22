@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
@@ -21,8 +21,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 .cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -49,7 +49,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>商业提案 Business Proposal</h1>
-<div class="date">📅 2026年6月22日 · 星期一</div>
 
 <div class="roles">
   <strong>A (Sophia Wang)</strong> — Business Development Manager, EcoVibe Packaging<br>
@@ -68,62 +67,62 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Richard, thanks for taking the meeting. As I mentioned in my email, EcoVibe has developed a fully compostable produce packaging line that we believe aligns perfectly with FreshFoods' <span class="vocab-highlight">sustainability</span> targets for 2027. I'd love to walk you through our <span class="vocab-highlight">proposal</span> and get your initial reaction.</span></div>
     <div class="dialogue-cn">Richard，感谢你来参加这次会议。正如我在邮件中提到的，EcoVibe开发了一条完全可堆肥的农产品包装生产线，我们相信它与FreshFoods 2027年的可持续发展目标高度契合。我想为你详细介绍我们的提案，听听你的初步反应。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Sophia, good to see you. I'll be upfront — we've been approached by four packaging suppliers this quarter alone, all making similar sustainability claims. What distinguishes your solution from the competition? Because frankly, our board is suffering from green fatigue.</span></div>
     <div class="dialogue-cn">Sophia，很高兴见到你。我先坦诚说明——仅本季度就有四家包装供应商找到我们，都打着类似的可持续性旗号。你们的方案与竞争对手有何不同？坦白说，我们的董事会对"绿色"宣传已经审美疲劳了。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Fair question, and I appreciate the candour. Two <span class="vocab-highlight">differentiators</span>. First, our material is certified home-compostable within 90 days — not just industrially compostable, which requires facilities most consumers don't have access to. Second, we've conducted a full <span class="vocab-highlight">lifecycle assessment</span> verified by an independent third party, and our production process generates 62% less carbon than conventional PLA alternatives. I've brought the executive summary for your review.</span></div>
     <div class="dialogue-cn">合理的问题，我欣赏你的坦率。两个差异化优势。第一，我们的材料通过了90天内家庭可堆肥认证——不仅仅是需要大多数消费者无法获得的设施的工业可堆肥。第二，我们完成了一份由独立第三方验证的全生命周期评估，我们的生产过程比传统PLA替代品少排放62%的碳。我带来了执行摘要供你审阅。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The third-party verification is compelling — that addresses a real pain point for our <span class="vocab-highlight">due diligence</span> team. What kind of volume commitment are we looking at, and more importantly, what's the cost implication? Our current supplier is at £0.08 per unit. If the premium is too steep, my CFO will kill this before it reaches the boardroom.</span></div>
     <div class="dialogue-cn">第三方验证很有说服力——这正好解决了我们尽职调查团队的一个真实痛点。我们需要什么样的量级承诺，更重要的是，成本影响如何？我们目前的供应商单价是0.08英镑。如果溢价太高，我的CFO会在这事到达董事会之前就毙掉它。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll give you the headline numbers. For an initial rollout across your top 200 stores — approximately 5 million units annually — we can offer £0.11 per unit with a two-year <span class="vocab-highlight">fixed-price agreement</span>. That includes custom branding with your EcoFresh sub-label and a co-marketing package. When you factor in the reduced waste disposal costs and the marketing value of the sustainability story, the <span class="vocab-highlight">total cost of ownership</span> is actually favourable.</span></div>
     <div class="dialogue-cn">我给你关键数据。对于在你们前200家门店的初步推广——每年约500万件——我们可以提供每件0.11英镑的两年固定价格协议。其中包括使用你们的EcoFresh子品牌的定制印刷和联合营销方案。当你把减少的废物处理成本和可持续发展故事带来的营销价值考虑进去时，总拥有成本实际上是有利的。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Eleven pence is higher than I'd hoped, but the fixed-price clause over two years does mitigate the risk of raw material volatility. What does the implementation timeline look like? We have a seasonal peak in October, and I can't afford supply chain disruptions during that window.</span></div>
     <div class="dialogue-cn">11便士比我期望的要高，但两年的固定价格条款确实规避了原材料波动的风险。实施时间表是怎样的？我们在十月有季节性高峰，我不能在此期间承受供应链中断。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We've anticipated that. Our proposal outlines a <span class="vocab-highlight">phased rollout</span> — soft launch in 50 stores by August, full deployment across all 200 stores by mid-September. We'll maintain a 15% <span class="vocab-highlight">buffer stock</span> at our distribution centre in Milton Keynes specifically for FreshFoods. <span class="vocab-highlight">Contingency planning</span> is built into the timeline.</span></div>
     <div class="dialogue-cn">我们已经预料到了。我们的提案概述了分阶段推广——八月在50家门店试运行，九月中旬前在所有200家门店全面铺开。我们将在Milton Keynes的配送中心专门为FreshFoods保留15%的缓冲库存。时间表中已内置了应急预案。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That buffer stock detail is the kind of operational thinking I look for in a partner, not just a vendor. Two more things I need clarity on: the <span class="vocab-highlight">exit clause</span> if the product doesn't meet our degradation benchmarks in-store, and whether you'd be open to a <span class="vocab-highlight">performance-based pricing</span> model — say, a rebate if we exceed 7 million units in year two.</span></div>
     <div class="dialogue-cn">缓冲库存这个细节正是我在合作伙伴而非仅仅是供应商身上寻找的那种运营思维。我还需要明确两点：如果产品在店内不符合我们的降解基准标准，退出条款如何规定；以及你们是否愿意接受基于绩效的定价模式——比如说，如果第二年超过700万件，给予返利。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">On the exit clause, we're proposing a 90-day notice period with no penalty if independent testing confirms non-compliance with the degradation specs. On the rebate — I'd need to take that back to our pricing team, but conceptually, I'm open to a volume-based tier that kicks in above 6.5 million units. I can have revised numbers to you by Thursday.</span></div>
     <div class="dialogue-cn">关于退出条款，我们提议90天通知期，如果独立测试确认降解规格不合规，则无需支付违约金。关于返利——我需要回去和我们的定价团队商议，但从概念上说，我对在650万件以上触发的量级梯度定价持开放态度。我可以在周四前给你修订后的数据。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's the kind of flexibility that gets deals done, Sophia. I'd like to move this to the formal evaluation stage. Could you send over the full proposal document with the technical specifications, the life cycle assessment, and the revised pricing model by end of week? I'll then put it on the agenda for our quarterly sourcing review on the 15th.</span></div>
     <div class="dialogue-cn">正是这种灵活性促成交易，Sophia。我想把这事推进到正式评估阶段。你能否在周末前把包含技术规格、生命周期评估和修订后定价模型的完整提案文件发过来？然后我会把它列入15号季度采购审查会议的议程。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Absolutely. I'll have the complete package in your inbox by Friday noon. Richard, I genuinely believe this partnership could be a showcase for how sustainability and commercial viability go hand in hand. I'm excited about where this could lead.</span></div>
     <div class="dialogue-cn">没问题。完整方案将在周五中午前发到你邮箱。Richard，我由衷相信这次合作可以成为可持续性与商业可行性并行不悖的一个典范。我对未来的可能性充满期待。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm cautiously optimistic as well. The alignment is there — now it's about execution. Let's see those numbers on Thursday and take it from there.</span></div>
     <div class="dialogue-cn">我也审慎乐观。契合度在那里——现在就取决于执行了。让我们周四看看那些数字，再继续推进。</div>
   </div>

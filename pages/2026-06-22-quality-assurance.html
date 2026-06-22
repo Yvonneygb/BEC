@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
@@ -24,8 +24,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -54,7 +54,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>质量保证 Quality Assurance</h1>
-<div class="date">&#x1f4c5; 2026年6月22日 · 星期一</div>
 
 <div class="roles">
   <strong>A (Emily Zhang)</strong> — QA Manager, MedTech Devices<br>
@@ -74,67 +73,67 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Robert, I've just received the preliminary findings from our ISO 13485 <span class="vocab-highlight">surveillance audit</span>, and I need to brief you before the management review meeting. There are three <span class="vocab-highlight">non-conformities</span> — one of them is classified as major.</span></div>
     <div class="dialogue-cn">Robert，我刚收到ISO 13485监督审核的初步报告，需要在管理评审会之前向你汇报。有三项不合格——其中一项被定级为严重不合格。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A major non-conformity? That's the last thing we need ahead of the FDA inspection next month. Walk me through it — which process area triggered it?</span></div>
     <div class="dialogue-cn">严重不合格？在下个月FDA检查之前这绝对是我们最不想看到的事情。给我详细说一遍——是哪个流程区域触发它的？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">The sterile packaging validation for Batch 2407. The auditor found that our process validation records were incomplete — specifically, the bioburden testing data for three production runs was documented but not formally signed off by the quality director. It's a paperwork issue, but under ISO 13485, incomplete validation documentation is an automatic major finding.</span></div>
     <div class="dialogue-cn">批次2407的无菌包装验证。审核员发现我们的过程验证记录不完整——具体来说，三个生产批次的微生物负荷测试数据有记录，但缺少质量总监的正式签批。这属于文件问题，但按ISO 13485标准，验证记录不完整自动构成严重不合格项。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's frustrating. The testing was done — we have the raw data. It's the sign-off workflow that failed. What's the <span class="vocab-highlight">corrective action</span> timeline?</span></div>
     <div class="dialogue-cn">这令人沮丧。测试是完成了的——我们有原始数据。出问题的是签批流程。纠正措施的时间线是怎样的？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We have 30 days to submit a corrective action plan to the certification body. I'm proposing a three-pronged approach: first, immediate retrospective sign-off for the affected batches with full <span class="vocab-highlight">traceability</span> documentation; second, a <span class="vocab-highlight">root cause analysis</span> to understand why the sign-off was missed; third, implementing an <span class="vocab-highlight">electronic quality management system</span> to enforce digital sign-off gates going forward.</span></div>
     <div class="dialogue-cn">我们有30天时间向认证机构提交纠正措施计划。我建议采取三管齐下的方案：第一，对受影响批次进行即时回溯签批，并附完整的可追溯性文件；第二，进行根本原因分析，查明签批遗漏的原因；第三，实施电子质量管理系统，在后续流程中强制执行数字化签批关卡。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The eQMS has been on our wish list for two years. If the major non-conformity gives us the leverage to finally get budget approval, there's a silver lining. What about the other two findings?</span></div>
     <div class="dialogue-cn">eQMS在我们的愿望清单上已经躺了两年了。如果这项严重不合格能成为我们最终获得预算批准的筹码，那倒是一线希望。另外两项不合格呢？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Both are minor. One relates to calibration records for two measurement instruments that were overdue by three weeks. The other is a training gap — two operators on the assembly line hadn't completed their annual <span class="vocab-highlight">GMP</span> refresher course. Both are straightforward to <span class="vocab-highlight">close out</span>.</span></div>
     <div class="dialogue-cn">两项都是轻微不合格。一项涉及两台测量仪器的校准记录逾期三周。另一项是培训缺口——装配线上两名操作员没有完成年度GMP进修课程。两项都很容易结案。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Right. Let's tackle the calibration issue immediately — have maintenance recalibrate the instruments and update the log by end of day. For the training gap, schedule the GMP refresher for early next week and update the training matrix. On the major finding, I want a draft root cause analysis on my desk by Friday.</span></div>
     <div class="dialogue-cn">好。校准问题立即处理——让维护部门今天内重新校准仪器并更新日志。培训缺口方面，安排下周初的GMP进修课并更新培训矩阵。关于严重不合格，我要在周五前拿到根本原因分析的初稿。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. I'll coordinate with the document control team on the retrospective sign-offs and start building the business case for the eQMS. One more thing — the auditor hinted that our <span class="vocab-highlight">continuous improvement</span> metrics could be stronger. He suggested we implement <span class="vocab-highlight">statistical process control</span> on our three most critical production lines.</span></div>
     <div class="dialogue-cn">同意。我会与文件控制团队协调回溯签批，同时开始构建eQMS的商业论证。还有一件事——审核员暗示我们的持续改进指标可以做得更好。他建议我们在三条最关键的产线上实施统计过程控制。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">SPC is a best practice we should have adopted years ago. Let's include it in the quality improvement plan. If we present the entire package — corrective actions plus preventive measures — the management team is more likely to approve the eQMS investment.</span></div>
     <div class="dialogue-cn">SPC是我们早该采用的最佳实践。把它纳入质量改进计划中。如果我们把整套方案——纠正措施加预防措施——一起提报，管理团队更有可能批准eQMS的投资。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a smart framing. I'll prepare a consolidated presentation covering all findings, corrective actions, and the preventive roadmap. Can we schedule a dry run on Monday before the formal management review on Wednesday?</span></div>
     <div class="dialogue-cn">这个包装方式很聪明。我会准备一份整合的演示文稿，涵盖所有不合格项、纠正措施和预防路线图。周三正式管理评审前，周一我们能不能先进行一轮预演？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Let's do it. Monday at 2 PM in the main conference room. And Emily — don't beat yourself up over the major finding. These audits are designed to identify gaps. What matters is how we respond.</span></div>
     <div class="dialogue-cn">就这么办。周一下午2点，主会议室。还有Emily——别为严重不合格太自责。这些审核的本意就是发现差距。关键是我们如何应对。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Thanks, Robert. I'll have the materials ready.</span></div>
     <div class="dialogue-cn">谢谢，Robert。我会把材料准备好。</div>
   </div>

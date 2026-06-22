@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 
 /* 标题行：icon + 文字 + 右侧操作 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
@@ -26,8 +26,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -57,7 +57,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>投诉处理 Complaint Handling</h1>
-<div class="date">📅 2026年6月6日 · 星期六</div>
 
 <div class="roles">
   <strong>A (Karen Walsh)</strong> — Operations Manager, Grand Hotel Group<br>
@@ -77,62 +76,62 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Daniel, I'm going to be direct. I'm raising a formal <span class="vocab-highlight">complaint</span> regarding the last three linen deliveries. The quality has been <span class="vocab-highlight">substandard</span> — we're seeing frayed edges, inconsistent thread counts, and in the most recent batch, what appears to be chemical staining on roughly forty pillowcases. This is unacceptable for a five-star establishment.</span></div>
     <div class="dialogue-cn">Daniel，我就直说了。我就最近三次布草配送提出正式投诉。质量一直不达标——我们看到毛边、线数不一致，最近一批中大约四十个枕套上还有疑似化学污渍。这对一家五星级酒店来说是不可接受的。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Karen, I hear you — and I want to start by sincerely apologising. This is not the standard FineLinens is known for, and I take full responsibility. Let me <span class="vocab-highlight">investigate</span> this immediately. Can you share the batch numbers of the affected deliveries so I can trace them back to the production run?</span></div>
     <div class="dialogue-cn">Karen，我听到了——首先我想真诚道歉。这不是FineLinens一贯的标准，我承担全部责任。我立刻着手调查。能否分享受影响批次的批号，以便我追溯到生产批次？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll send those over right after this call. But Daniel, this isn't an isolated incident — it's a pattern over six weeks. We've had to pull items from our housekeeping inventory mid-week, and our guest satisfaction scores in the "room comfort" category have dipped by twelve points. I need to understand what's going wrong at your end before I can justify continuing this contract.</span></div>
     <div class="dialogue-cn">这通电话后我马上发给你。但Daniel，这不是孤立事件——已是六周的持续问题了。我们不得不在周中从客房库存中撤回用品，客人在"房间舒适度"方面的满意度评分下降了12分。在我能合理延续这份合同之前，我需要了解你们那边到底出了什么问题。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Completely fair. I want to get to the bottom of this as much as you do. My initial hunch — and I'll confirm this — is that one of our finishing lines was recalibrated last month and may be operating below spec. If that's the root cause, we'll <span class="vocab-highlight">rectify</span> it within seventy-two hours and I'll personally <span class="vocab-highlight">oversee</span> the quality check on your next three shipments.</span></div>
     <div class="dialogue-cn">完全合理。我和你一样想彻底查清此事。我的初步推测——我会确认——是我们一条后整理产线上月重新校准后可能在低于标准下运行。如果这是根本原因，我们将在72小时内纠正，并且我将亲自监督接下来三次配送的质量检查。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I appreciate that, but rectification alone isn't enough. We need <span class="vocab-highlight">compensation</span> for the disruption caused. We've incurred extra laundry costs outsourcing emergency replacements, not to mention the reputational risk. I expect FineLinens to credit us for the defective batches and cover the outsourcing expense.</span></div>
     <div class="dialogue-cn">感谢，但仅纠正是不够的。我们需要对造成的影响加以赔偿。我们为应急替换外包了额外洗衣成本，还不说声誉风险。我希望FineLinens对缺陷批次做全额抵扣，并承担外包费用。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm authorised to offer a full credit for the three affected deliveries — that's roughly £4,800 — and I'll <span class="vocab-highlight">absorb</span> the emergency outsourcing costs up to £2,000 upon receipt of your invoices. Does that address your concerns on the financial side?</span></div>
     <div class="dialogue-cn">我有权对受影响的三个批次做全额抵扣——约4800英镑——并且我将在收到贵方发票后承担最高2000英镑的应急外包费用。这在财务方面能解决您的关切吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a reasonable starting point. I'll have our accounts team compile the invoices by tomorrow afternoon. Now, more importantly — what <span class="vocab-highlight">corrective measures</span> are you putting in place to prevent recurrence? I can't keep explaining to my general manager why our pillowcases look like they belong in a two-star motel.</span></div>
     <div class="dialogue-cn">这是合理的起点。明天下午前我会让财务团队整理好发票。现在，更重要的是——你们采取了什么纠正措施来防止问题再次发生？我无法不断向总经理解释为什么我们的枕套看起来像是二星级汽车旅馆的水平。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Here's what I'm committing to: first, an immediate quality audit of the finishing line in question, with results shared transparently with you. Second, we'll assign a dedicated QA inspector to every Grand Hotel consignment for the next three months. Third, I'll schedule bi-weekly quality review calls with your housekeeping manager. I want this fixed as much as you do — your account represents fifteen percent of our hospitality revenue.</span></div>
     <div class="dialogue-cn">以下是我承诺的措施：第一，立即对相关后整理产线进行质量审核，结果透明地与您分享。第二，我们将为未来三个月每一批Grand Hotel的货物指派专职QA检验员。第三，我将与贵方客房经理安排每两周一次的质量回顾通话。我和你一样想解决问题——贵方在我们酒店业务的收入中占比百分之十五。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Those are concrete steps, and I'm willing to give this a chance. But Daniel, I need you to understand this is a <span class="vocab-highlight">last resort</span> conversation. If the next delivery doesn't meet spec, I'll have to trigger the early termination clause and source an alternative supplier.</span></div>
     <div class="dialogue-cn">这些是具体的步骤，我愿意给予机会。但Daniel，我需要你明白这是最后一次机会的谈话。如果下一次配送仍不达标，我将不得不启动提前终止条款并寻求替代供应商。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I fully understand the gravity, Karen. I'll send you a written <span class="vocab-highlight">confirmation</span> of everything we've discussed — the credit, the compensation, the QA measures, and the review schedule — within the hour. If anything falls short, you have my direct line. I'm not going to let this slip.</span></div>
     <div class="dialogue-cn">我完全理解严重性，Karen。一小时内我会将今天讨论的所有内容——抵扣、赔偿、质保措施和审查安排——以书面确认发送给您。如有任何不到位之处，您有我的直线电话。我不会让此事滑过去。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">All right. I'll look out for your email. Let's touch base again on Friday after you've completed the audit. And Daniel — I want this to work. We've had a solid partnership for four years. Let's get it back on track.</span></div>
     <div class="dialogue-cn">好吧。我会留意你的邮件。周五审计完成后我们再碰一下。还有Daniel——我希望这能行。我们已经合作了四年。让我们把它拉回正轨。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We will, Karen. You have my word. I'll speak to you on Friday with good news.</span></div>
     <div class="dialogue-cn">我们会的，Karen。我向你保证。周五我会带来好消息。</div>
   </div>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>职场多元化 Workplace Diversity - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+
+
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>职场多元化 Workplace Diversity</h1>
+
+<div class="roles">
+  <strong>A (Maya Johnson)</strong> — Chief Diversity Officer, Horizon Financial<br>
+  <strong>B (David Chen)</strong> — Head of Talent Acquisition, Horizon Financial
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">David, thanks for sitting down. I've just reviewed the Q2 hiring data, and I have to be candid — our diversity metrics haven't moved meaningfully. Women still represent only 28% of our senior leadership <span class="vocab-highlight">talent pipeline</span>, and ethnic minority representation at VP level is flat at 12%. What's holding us back?</span></div>
+    <div class="dialogue-cn">David，感谢你来谈。我刚审阅了第二季度招聘数据，必须坦诚——我们的多元化指标没有实质性变化。女性在我们高管人才储备中仍仅占28%，VP级别少数族裔代表率停留在12%。是什么在阻碍我们？</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">It's a fair challenge, Maya, and one I've been wrestling with. The core issue isn't the top of the funnel — we're attracting diverse candidates. The drop-off happens at the interview stage. When we analysed the last six months of hiring data, diverse candidates were 34% less likely to make it past the second-round interview compared to their counterparts with identical qualifications.</span></div>
+    <div class="dialogue-cn">这是一个合理的质疑，Maya，也是我一直在头疼的问题。核心问题不在人才漏斗的入口端——我们正在吸引多元化的候选人。流失发生在面试阶段。分析过去六个月的招聘数据时发现，与条件完全相同的其他候选人相比，多元化候选人在第二轮面试环节的通过率低34%。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a red flag. It points squarely to <span class="vocab-highlight">unconscious bias</span> in the selection process. Are our interview panels diverse? And more importantly, have hiring managers been through any structured bias training recently?</span></div>
+    <div class="dialogue-cn">这是一个危险信号。它直接指向了选人流程中的无意识偏见。我们的面试小组是否多元化？更重要的是，招聘经理最近是否接受过系统的偏见培训？</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's where we're falling short. Only 40% of hiring managers completed the unconscious bias module last year, and our interview panels are still predominantly <span class="vocab-highlight">homogeneous</span> — typically three white men for senior roles. I've been pushing for mandatory training and panel diversity requirements, but some department heads push back citing time constraints.</span></div>
+    <div class="dialogue-cn">这正是我们的短板。去年只有40%的招聘经理完成了无意识偏见模块，而我们高级职位的面试小组仍然高度同质化——通常是三位白人男性。我一直在推动强制性培训和面试小组多元化的要求，但一些部门负责人以时间紧张为由推脱。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Then let's make the business case crystal clear. Companies in the top quartile for gender diversity are 25% more likely to achieve above-average profitability — the McKinsey data is on our side. I'd like to propose a phased approach: mandatory unconscious bias training for all people managers by end of Q3, and a requirement that all senior-level interview panels include at least two diverse members.</span></div>
+    <div class="dialogue-cn">那么让我们把商业理由讲得清清楚楚。在性别多元化方面排名前25%的公司，获得高于平均利润率的机会高出25%——麦肯锡的数据是支持我们的。我建议采取分阶段方案：第三季度末前所有带团队的经理必须完成无意识偏见培训，所有高级职位的面试小组必须至少包含两位多元化成员。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm fully on board. I'd add one more dimension — mentorship. Our <span class="vocab-highlight">retention rate</span> data shows minority employees who have a formal mentor are twice as likely to stay beyond two years. We should pair this with a structured <span class="vocab-highlight">mentorship programme</span> targeting high-potential diverse talent.</span></div>
+    <div class="dialogue-cn">我完全赞同。再增加一个维度——导师制。我们的留任数据显示，拥有正式导师的少数族裔员工留任两年以上的可能性高出一倍。我们应该配合推出针对高潜力多元化人才的系统性导师项目。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Excellent point. <span class="vocab-highlight">Employee Resource Groups</span> have been asking for exactly that. Let's also look at our job descriptions — I've noticed some use language that unconsciously signals exclusion. Words like "aggressive," "dominant," and "ninja" tend to deter female applicants. A quick audit and rewrite could widen the talent pipeline significantly.</span></div>
+    <div class="dialogue-cn">说得好。员工资源小组一直在要求这一项。同时也检查一下我们的职位描述——我注意到有些措辞无意识地传递了排斥信号。像"aggressive"、"dominant"和"ninja"这类词汇往往会劝退女性求职者。一次快速的审核和重写就能显著拓宽人才储备渠道。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'll own that. We can run all new job postings through a text analysis tool that flags exclusionary language. On the internal side, I'd also like to launch an <span class="vocab-highlight">inclusive leadership</span> development programme for our existing diverse mid-level talent — groom them for those senior roles rather than always looking externally.</span></div>
+    <div class="dialogue-cn">我来负责这块。我们可以用文本分析工具对所有新职位发布进行排查，标记那些有排斥倾向的措辞。在内部方面，我还想为现有的多元化中级人才推出包容型领导力发展计划——为他们晋升到高级职位做准备，而不是总依赖外部招聘。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's the shift in mindset we need — build the pipeline from within rather than just fishing in the same external pond. Let me consolidate all this into a comprehensive <span class="vocab-highlight">DEI</span> strategy document: bias training, panel diversity, inclusive job descriptions, mentoring, and internal leadership development. Can you pull together the implementation timeline and budget by next Friday?</span></div>
+    <div class="dialogue-cn">这正是我们需要的思维转变——从内部建设人才管道，而不是总在同一个外部人才池塘中捕捞。让我把所有这些整合到一份全面的DEI战略文件中：偏见培训、面试小组多元化、包容性职位描述、导师制以及内部领导力发展。你下周五前能整理出实施时间表和预算吗？</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely. I'll quantify the cost per initiative and project the expected impact on our diversity metrics over the next 18 months. One request though — can we present this to the executive team jointly? A united front from Talent Acquisition and the CDO sends a stronger message.</span></div>
+    <div class="dialogue-cn">没问题。我会量化每项举措的成本，并预测未来18个月对我们多元化指标的预期影响。不过有一个请求——我们能否一起将这个方案提交给高管团队？人才招聘和首席多元官联合上阵，传递的信息更有力量。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. Let's target the executive committee meeting on the 15th. And David — I appreciate you not being defensive about this. Self-awareness at the leadership level is the first step to meaningful change.</span></div>
+    <div class="dialogue-cn">同意。我们瞄准15号的高管委员会会议。另外 David——我欣赏你没有对这个话题产生防御心态。领导层的自我意识是实质性改变的第一步。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">It's overdue, Maya. The business case is there, the moral case is there — now it's about execution. Let's make this the year we actually <span class="vocab-highlight">move the needle</span>.</span></div>
+    <div class="dialogue-cn">早就该行动了，Maya。商业理由存在，道德理由也存在——现在关键在执行。让我们把今年变成真正产生改变的一年。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>unconscious bias</strong> — 无意识偏见 | 人们在无意识状态下基于刻板印象对他人的判断偏差</div>
+<div class="vocab-item"><strong>DEI (Diversity, Equity, Inclusion)</strong> — 多元化、公平与包容 | 组织管理中的核心框架，涵盖员工构成的多样性、资源分配的公平性和文化的包容性</div>
+<div class="vocab-item"><strong>talent pipeline</strong> — 人才储备管道 | 组织持续培育和储备未来各级人才的体系</div>
+<div class="vocab-item"><strong>employee resource group (ERG)</strong> — 员工资源小组 | 由具有共同特征或经历的员工组成的内部社群组织</div>
+<div class="vocab-item"><strong>mentorship programme</strong> — 导师制项目 | 为员工（尤其是新人或少数群体）匹配资深导师的结构化培养计划</div>
+<div class="vocab-item"><strong>retention rate</strong> — 留任率 | 在一定时期内留在公司的员工比例，衡量组织吸引力的关键指标</div>
+<div class="vocab-item"><strong>inclusive leadership</strong> — 包容型领导力 | 尊重多元视角、让不同背景的团队成员都能贡献和成长的领导风格</div>
+<div class="vocab-item"><strong>move the needle</strong> — 产生显著改变 | 商务场景中表示对指标或现状产生实质性推动的表达</div>
+<div class="vocab-item"><strong>homogeneous</strong> — 同质化的 | 由同类人或事物构成的，多元化的反义词</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>I have to be candid — ...</code> → 我必须坦诚地说——…… | 引入敏感话题的标准商务表达，比"to be honest"更正式</div>
+<div class="pattern-item"><code>It points squarely to...</code> → 这直接指向了…… | 强调某个问题或原因时的有力表达</div>
+<div class="pattern-item"><code>Then let's make the business case crystal clear.</code> → 那么让我们把这个商业理由讲得清清楚楚 | 用数据和逻辑而非情感说服反对者</div>
+<div class="pattern-item"><code>I'll own that.</code> → 我来负责这件事 | 主动承担责任的专业表达，比"I'll do it"更有担当感</div>
+<div class="pattern-item"><code>That's the shift in mindset we need.</code> → 这正是我们需要的思维转变 | 肯定对方建议并表明这是根本性的方向改变</div>
+<div class="pattern-item"><code>A united front sends a stronger message.</code> → 统一战线传递出更有力的信息 | 强调团队或跨部门协作的重要性</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>David，感谢你来谈。我刚审阅了第二季度招聘数据，必须坦诚——我们的多元化指标没有实质性变化。女性在我们高管人才储备中仍仅占28%，VP级别少数族裔代表率停留在12%。是什么在阻碍我们？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是一个合理的质疑，Maya，也是我一直在头疼的问题。核心问题不在人才漏斗的入口端——我们正在吸引多元化的候选人。流失发生在面试阶段。分析过去六个月的招聘数据时发现，与条件完全相同的其他候选人相比，多元化候选人在第二轮面试环节的通过率低34%。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这是一个危险信号。它直接指向了选人流程中的无意识偏见。我们的面试小组是否多元化？更重要的是，招聘经理最近是否接受过系统的偏见培训？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这正是我们的短板。去年只有40%的招聘经理完成了无意识偏见模块，而我们高级职位的面试小组仍然高度同质化——通常是三位白人男性。我一直在推动强制性培训和面试小组多元化的要求，但一些部门负责人以时间紧张为由推脱。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>那么让我们把商业理由讲得清清楚楚。在性别多元化方面排名前25%的公司，获得高于平均利润率的机会高出25%——麦肯锡的数据是支持我们的。我建议采取分阶段方案：第三季度末前所有带团队的经理必须完成无意识偏见培训，所有高级职位的面试小组必须至少包含两位多元化成员。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我完全赞同。再增加一个维度——导师制。我们的留任数据显示，拥有正式导师的少数族裔员工留任两年以上的可能性高出一倍。我们应该配合推出针对高潜力多元化人才的系统性导师项目。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>说得好。员工资源小组一直在要求这一项。同时也检查一下我们的职位描述——我注意到有些措辞无意识地传递了排斥信号。像"aggressive"、"dominant"和"ninja"这类词汇往往会劝退女性求职者。一次快速的审核和重写就能显著拓宽人才储备渠道。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>我来负责这块。我们可以用文本分析工具对所有新职位发布进行排查，标记那些有排斥倾向的措辞。在内部方面，我还想为现有的多元化中级人才推出包容型领导力发展计划——为他们晋升到高级职位做准备，而不是总依赖外部招聘。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这正是我们需要的思维转变——从内部建设人才管道，而不是总在同一个外部人才池塘中捕捞。让我把所有这些整合到一份全面的DEI战略文件中：偏见培训、面试小组多元化、包容性职位描述、导师制以及内部领导力发展。你下周五前能整理出实施时间表和预算吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>没问题。我会量化每项举措的成本，并预测未来18个月对我们多元化指标的预期影响。不过有一个请求——我们能否一起将这个方案提交给高管团队？人才招聘和首席多元官联合上阵，传递的信息更有力量。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>同意。我们瞄准15号的高管委员会会议。另外 David——我欣赏你没有对这个话题产生防御心态。领导层的自我意识是实质性改变的第一步。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>早就该行动了，Maya。商业理由存在，道德理由也存在——现在关键在执行。让我们把今年变成真正产生改变的一年。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>在BEC考试中，职场多元化（Workplace Diversity）是近年来出现在阅读Part 3和写作Part 2中的趋势性话题。建议重点掌握DEI框架的核心术语及其在商务报告中的应用。写作部分若涉及"提出改进建议"，注意使用"phased approach""structured programme""quantify the impact"等表达来增强说服力。此外，阅读中涉及公司政策类文章时，注意区分"equality"（形式平等）和"equity"（实质公平）的语境差异——这在BEC高级阅读中可能是出题陷阱。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

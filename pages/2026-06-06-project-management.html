@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
@@ -21,8 +21,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 .cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -49,7 +49,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>项目管理 Project Management</h1>
-<div class="date">📅 2026年6月6日 · 星期六</div>
 
 <div class="roles">
   <strong>A (David Lin)</strong> — Project Manager, NovaTech Solutions<br>
@@ -68,51 +67,51 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 </div>
 
 <div class="dialogue">
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Grace, thanks for staying late. I've been going through the Q3 <span class="vocab-highlight">deliverables</span> and I'm concerned — we're three weeks behind on the Phoenix module. What's your read on the current status?</span></div>
     <div class="dialogue-cn">Grace，谢谢你留下来加班。我一直在看第三季度的交付物，有点担心——Phoenix模块我们已经落后三周了。你目前怎么看？</div>
   </div>
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">David, I won't sugarcoat it. The original timeline was aggressive from the start. The integration testing alone has uncovered 14 critical bugs, and our team has been putting in 60-hour weeks just to keep pace. We're hitting a <span class="vocab-highlight">bottleneck</span> on the API layer.</span></div>
     <div class="dialogue-cn">David，我不想粉饰太平。最初的时间表从一开始就定得太紧了。仅集成测试就发现了14个严重Bug，我们团队已经每周工作60小时才能勉强跟上。我们在API层遇到了瓶颈。</div>
   </div>
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I appreciate the candour. Let's do a quick <span class="vocab-highlight">root cause analysis</span>. Is this a resource issue, a <span class="vocab-highlight">scope creep</span> problem, or are we dealing with <span class="vocab-highlight">technical debt</span> from the legacy codebase?</span></div>
     <div class="dialogue-cn">我欣赏你的坦诚。我们快速做个根因分析吧。是资源问题、范围蔓延问题，还是我们在处理遗留代码的技术债？</div>
   </div>
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Honestly, a combination of all three. The legacy codebase is more fragile than we estimated — every new feature triggers a cascade of regressions. Plus, the client added three change requests last month without any adjustment to the deadline. I'd recommend we escalate this to the <span class="vocab-highlight">steering committee</span>.</span></div>
     <div class="dialogue-cn">老实说，三者兼有。遗留代码比我们预估的更脆弱——每个新功能都会引发一连串的回归问题。另外，客户上个月新增了三项变更请求，却没有调整截止日期。我建议将此问题升级到指导委员会。</div>
   </div>
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. Before we escalate, let's put together a <span class="vocab-highlight">mitigation plan</span>. I'm thinking we could reassign two developers from the Atlas project — that's ahead of schedule — and bring in an external QA contractor to clear the testing backlog. Can you draft a revised project charter by Friday?</span></div>
     <div class="dialogue-cn">同意。在升级之前，我们先制定一个缓解方案。我在考虑从Atlas项目抽调两名开发人员——那个项目进度超前——并引入外部QA承包商来清理测试积压。你能在周五前起草一份修订后的项目章程吗？</div>
   </div>
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That could work. But shifting resources from Atlas carries risk — we need a <span class="vocab-highlight">contingency plan</span>. I'd suggest we also set up daily stand-ups for the Phoenix team starting Monday, and introduce a <span class="vocab-highlight">burn-down chart</span> so we can track progress against the revised milestones transparently.</span></div>
     <div class="dialogue-cn">这或许可行。但从Atlas调拨资源有风险——我们需要应急方案。我建议从周一开始为Phoenix团队设立每日站会，并引入燃尽图，这样我们可以透明地追踪修订后里程碑的进度。</div>
   </div>
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Good call on the <span class="vocab-highlight">burn-down chart</span>. Let's also define clear <span class="vocab-highlight">acceptance criteria</span> for each sprint. I don't want us falling into the trap of '90% done' for weeks on end. By the way, have you briefed the <span class="vocab-highlight">stakeholders</span> on the likely delay?</span></div>
     <div class="dialogue-cn">燃尽图这个建议不错。我们也要为每个冲刺明确验收标准。我不希望陷入几周都处于"完成90%"状态的困境。对了，你有没有向利益相关者通报可能的延期？</div>
   </div>
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I sent a preliminary heads-up to the product owner, but I held off on a formal communication pending our discussion today. I'll draft a stakeholder update with the revised timeline and <span class="vocab-highlight">risk register</span> once we agree on the mitigation approach.</span></div>
     <div class="dialogue-cn">我给产品负责人发了初步预警，但正式沟通还在等我们今天讨论的结果。一旦商定好缓解方案，我会起草一份利益相关者更新，附上修订后的时间表和风险登记册。</div>
   </div>
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Perfect. Let's also schedule a lessons-learned session for the end of this sprint. This pattern of overpromising and underdelivering has happened twice this year — we need to address it systemically, not just patch things up each time.</span></div>
     <div class="dialogue-cn">很好。我们也安排一次本冲刺末的经验教训复盘会吧。这种过度承诺、交付不足的模式今年已经出现了两次——我们需要系统性地解决，而不是每次都打补丁。</div>
   </div>
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Couldn't agree more. I'll add that to the sprint retrospective agenda. Let's aim to have the <span class="vocab-highlight">mitigation plan</span> on your desk by Thursday EOD, and we can review it together before the <span class="vocab-highlight">steering committee</span> meeting next Monday.</span></div>
     <div class="dialogue-cn">完全同意。我把它加到冲刺回顾的议程里。我们争取周四下班前把缓解方案放到你桌上，下周一指导委员会开会前我们一起过一遍。</div>
   </div>
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That works. I'll secure the budget approval for the external QA contractor by Wednesday. One last thing — keep the team's morale in mind. They've been burning the candle at both ends, and I want to make sure we acknowledge that effort.</span></div>
     <div class="dialogue-cn">可以。我周三前搞定外部QA承包商的预算审批。最后一点——留意团队的士气。他们一直在拼命工作，我们要确保肯定他们的付出。</div>
   </div>
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Will do, David. I'll schedule a team lunch for Friday as a small gesture. Thanks for taking this seriously — I know the team will appreciate the support.</span></div>
     <div class="dialogue-cn">会的，David。我安排周五的团队午餐，算是一点小心意。谢谢你对这事这么上心——团队会感受到支持的。</div>
   </div>

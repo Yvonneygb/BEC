@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 
 /* 标题行：icon + 文字 + 右侧操作 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
@@ -26,8 +26,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -57,7 +57,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>供应链管理 Supply Chain Management</h1>
-<div class="date">📅 2026年6月6日 · 星期六</div>
 
 <div class="roles">
   <strong>A (David Liu) — Supply Chain Director, AsiaTech Manufacturing</strong><br>
@@ -77,52 +76,52 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Rachel, I'm glad we could connect on short notice. The situation at Port Rotterdam is getting worse — our latest shipment has been sitting there for eleven days now. What's your assessment?</span></div>
     <div class="dialogue-cn">Rachel，很高兴我们能临时约上通话。鹿特丹港的情况越来越糟——我们最新一批货已经在那里滞留了11天。你的评估是什么？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Unfortunately, David, it's not looking promising. The <span class="vocab-highlight">backlog</span> at Rotterdam has piled up to over 40 vessels. We're anticipating at least another five to seven days before your containers can clear customs.</span></div>
     <div class="dialogue-cn">很不幸，David，情况不容乐观。鹿特丹港的积压已经堆积了超过40艘船。我们预计你的集装箱至少还需要五到七天才能通关。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Five to seven more days? That puts our production line at serious risk. Our <span class="vocab-highlight">just-in-time</span> model means we keep only a three-day <span class="vocab-highlight">inventory buffer</span>. Any longer and we'll face a complete line stoppage.</span></div>
     <div class="dialogue-cn">还要五到七天？这让我们的生产线面临严重风险。我们的准时制生产模式只保留三天的库存缓冲。再拖下去，我们将面临全面停产。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I understand the urgency. Let me propose a workaround — we can reroute the next three shipments through the Port of Antwerp. The <span class="vocab-highlight">lead time</span> extends by roughly two days, but it avoids the Rotterdam <span class="vocab-highlight">bottleneck</span> entirely. Your <span class="vocab-highlight">freight forwarder</span> can handle the documentation switch.</span></div>
     <div class="dialogue-cn">我理解这个紧急情况。让我提出一个变通方案——我们可以将接下来三批货物改道经安特卫普港。交货周期大约延长两天，但完全避开了鹿特丹港的瓶颈。你们的货运代理可以处理单证变更。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Antwerp could work as a short-term fix, but what about the cost? Rerouting always comes with additional <span class="vocab-highlight">surcharges</span>, and our quarterly logistics budget is already stretched thin.</span></div>
     <div class="dialogue-cn">安特卫普作为短期方案可能可行，但成本呢？改道总是伴随附加费，而我们季度的物流预算已经很紧张了。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">You're right — there's a €1,850 rerouting fee per container. But weigh that against the cost of a production shutdown. I'd estimate the surcharge is roughly 3% of what you'd lose in a two-day stoppage. It's the lesser of two evils.</span></div>
     <div class="dialogue-cn">你说得对——每个集装箱有1850欧元的改道费。但要权衡一下停产的损失。我估计附加费大约只有两天停产损失的3%。两害相权取其轻。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Fair analysis. Let's activate the Antwerp reroute for the next three shipments. While we're at it, I think we need to seriously discuss <span class="vocab-highlight">supplier diversification</span>. Relying on a single European port route has proven far too vulnerable.</span></div>
     <div class="dialogue-cn">分析得有道理。那就启动接下来三批货的安特卫普改道方案。顺便说一下，我觉得我们需要认真讨论供应商多元化的问题。依赖单一的欧洲港口路线已经证明太脆弱了。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a strategic conversation worth having. I can put together a <span class="vocab-highlight">risk assessment</span> report comparing alternative routes through Southern Europe and even direct rail from China. Would next Tuesday work for a deeper dive?</span></div>
     <div class="dialogue-cn">这是一个值得深入探讨的战略话题。我可以准备一份风险评估报告，比较经南欧甚至中国直达铁路的替代路线。下周二做一次深入讨论怎么样？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Next Tuesday at 10 AM works. In the meantime, please expedite the Antwerp paperwork. I'll brief our production team so they can adjust their scheduling accordingly.</span></div>
     <div class="dialogue-cn">下周二上午10点可以。同时，请加快安特卫普的单证手续。我会向生产团队做简报，让他们相应调整排产。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Consider it done. I'll send you the revised shipping schedule and the reroute confirmation by end of business today. And David — these disruptions are likely to persist through Q3, so building a more resilient supply chain now will pay dividends later.</span></div>
     <div class="dialogue-cn">放心吧，交给我了。今天下班前我会发给你修订后的船期表和改道确认书。还有，David——这些中断很可能持续到第三季度，所以现在建立一个更具韧性的供应链，将来会带来回报。</div>
   </div>

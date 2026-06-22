@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 
 /* 标题行：icon + 文字 + 右侧操作 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
@@ -26,8 +26,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -57,7 +57,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>商务社交 Networking Skills</h1>
-<div class="date">📅 2026年6月22日 · 星期一</div>
 
 <div class="roles">
   <strong>A (Emily Wang)</strong> — Marketing Manager, EastBridge Consulting<br>
@@ -77,102 +76,102 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">So, you're with Pacific Partners? I've been following your expansion into Southeast Asia — quite impressive. I don't believe we've been <span class="vocab-highlight">formally introduced</span>. I'm Emily Wang, Marketing Manager at EastBridge Consulting.</span></div>
     <div class="dialogue-cn">你是Pacific Partners的吗？我一直在关注你们向东南亚的扩张——印象非常深刻。我们好像还没有正式介绍过。我是Emily Wang，EastBridge Consulting的市场经理。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Guilty as charged! James Carter. Pleased to meet you, Emily. EastBridge — you handled the market entry for that German medtech firm last year, didn't you? That case study made the rounds in our office.</span></div>
     <div class="dialogue-cn">正是我！James Carter。很高兴认识你，Emily。EastBridge——你们去年帮那家德国医疗科技公司做市场准入的案子，对吧？那个案例研究在我们办公室传阅了很久。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's right — our team spent the better part of six months on it. It's great to meet someone who actually reads those case studies! So what brings you to this conference? Are you speaking on any panels?</span></div>
     <div class="dialogue-cn">没错——我们团队花了差不多六个月时间做这个项目。能遇到真正读过那些案例研究的人真好！那么你来参加这次会议是为了什么？你有在哪个分论坛发言吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm moderating a panel on <span class="vocab-highlight">cross-border partnerships</span> tomorrow morning at 10. Actually, we're still looking for a third panellist with hands-on market-entry experience. Would that be something you might consider?</span></div>
     <div class="dialogue-cn">我明天上午10点主持一个关于跨境合作的分论坛。实际上，我们还在找第三个小组成员，需要有市场准入的实际操作经验。你考虑参与吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a generous invitation, James. I'd need to check my schedule, but I'm certainly interested. Let me give you my <span class="vocab-highlight">business card</span> — my direct line is on there. Could we <span class="vocab-highlight">touch base</span> after the keynote this afternoon?</span></div>
     <div class="dialogue-cn">这邀请太慷慨了，James。我得确认一下日程，但我确实很感兴趣。容我给你我的名片——上面有我的直拨号码。主题演讲后我们碰个头聊？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Perfect. Here's mine as well. Actually, a few of us are grabbing coffee during the break in about twenty minutes — it's an informal gathering of the Asia-Pacific working group. You should join us. It'd be a great chance to expand your network.</span></div>
     <div class="dialogue-cn">太好了。这是我的名片。其实，二十分钟后的茶歇时间有几个人要来喝咖啡——是亚太工作组的非正式聚会。你应该来参加。这将是拓展人脉的好机会。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'd love to. Who else will be there? I'm particularly keen to connect with anyone in logistics or regulatory compliance — those are our <span class="vocab-highlight">pain points</span> for the Q3 expansion.</span></div>
     <div class="dialogue-cn">我很乐意。还有谁会来？我特别想和在物流或合规领域的人建立联系——这些是我们Q3扩张的痛点。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">As it happens, Sandra Lim from TransGlobal Logistics will be there, and I believe Kenji Tanaka from the ASEAN compliance desk is joining too. I'd be happy to make the introductions — Sandra and I have worked together for years.</span></div>
     <div class="dialogue-cn">正好，TransGlobal Logistics的Sandra Lim会来，而且我觉得ASEAN合规部门的Kenji Tanaka也会来。我很乐意帮忙引荐——Sandra和我合作多年了。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That would be incredibly helpful. I've been meaning to reach out to TransGlobal but didn't have a <span class="vocab-highlight">warm introduction</span>. By the way, are you on LinkedIn? I find it's much easier to keep in touch and share industry updates there.</span></div>
     <div class="dialogue-cn">那会非常有帮助。我一直想联系TransGlobal但苦于没有熟人介绍。对了，你用LinkedIn吗？我觉得在上面保持联系和分享行业动态更方便。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely — let's connect right now. I post a weekly roundup of regulatory changes in the region; it might be useful for your planning. Just search James Carter, Pacific Partners. And I'll send you the panel briefing doc this evening if you're game.</span></div>
     <div class="dialogue-cn">当然——我们现在就互加吧。我每周会发一份该地区监管变化的汇总；对你做规划可能有用。直接搜James Carter, Pacific Partners就行。如果你有兴趣，我今晚把分论坛简报发给你。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll look it up now. And yes, please do send the briefing. I should mention — I'm not just here as an attendee; our firm is actually scouting for a <span class="vocab-highlight">strategic partner</span> with established distribution channels in Vietnam and Indonesia.</span></div>
     <div class="dialogue-cn">我现在就搜。是的，请一定把简报发给我。我得提一下——我不只是来参会的；我们公司其实正在寻找在越南和印尼有成熟分销渠道的战略合作伙伴。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Now that's interesting. We've got a mature <span class="vocab-highlight">distribution network</span> across both markets — we've been there since 2018. I won't pitch you in the middle of a conference hallway, but let's schedule a proper sit-down. How does dinner tomorrow sound? I know a quiet place five minutes from here.</span></div>
     <div class="dialogue-cn">这就很有意思了。我们在这两个市场都有成熟的分销网络——我们从2018年就在那边了。我不会在会议走廊里就开始推销，但我们可以约个正式面谈。明天晚上一起吃饭怎么样？我知道离这儿五分钟有个安静的地方。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Dinner tomorrow works. I'll block out 7 PM. But I should be transparent — we're in <span class="vocab-highlight">preliminary discussions</span> with two other firms. I don't want to mislead you about where things stand.</span></div>
     <div class="dialogue-cn">明天晚餐没问题。我预留晚上7点。但我得坦诚地说——我们正在和另外两家公司进行初步洽谈。我不想让你对现状产生误解。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Understood and appreciated. That's how business should be done — no surprises. Let's keep tomorrow <span class="vocab-highlight">exploratory</span>, no pressure. If there's a fit, great; if not, the networking alone is worth the time.</span></div>
     <div class="dialogue-cn">明白，也很欣赏你的坦诚。做生意就该这样——没有意外。明天就算是探索性的，没有压力。如果匹配，那很好；如果不匹配，光是社交本身就值得这顿晚餐。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Exactly my thinking. One thing I've learned in this industry — relationships built on trust outlast any single deal. Speaking of which, I noticed you mentioned sustainability initiatives in your LinkedIn profile. We're launching a green supply chain initiative next quarter.</span></div>
     <div class="dialogue-cn">正是我的想法。我在这个行业学到的一点就是——建立在信任之上的人际关系比任何单次交易都长久。说到这个，我注意到你在LinkedIn资料上提到了可持续发展项目。我们下个季度要启动一个绿色供应链项目。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">You've done your homework! Sustainability is actually a personal passion — I sit on the advisory board of the ASEAN Green Business Council. We should definitely talk about that green initiative of yours; there might be some grant funding available through the council.</span></div>
     <div class="dialogue-cn">你做了功课呀！可持续发展其实是我个人的热情所在——我是ASEAN绿色商业委员会的顾问委员会成员。我们一定要聊聊你们的绿色项目；委员会那边可能有一些拨款资助。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I had no idea you were on the advisory board — that's a fantastic connection. Let's add that to the dinner agenda. I'll bring our preliminary proposal. In the meantime, I'll see you at the coffee break?</span></div>
     <div class="dialogue-cn">我完全不知道你是顾问委员会成员——这是一个绝佳的连接。让我们把这个加到晚餐议程中。我会带上我们的初步方案。那期间，茶歇时见？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Looking forward to it. I'll introduce you to Sandra and Kenji first thing. And Emily — one piece of advice? Don't try to cover everything in the first coffee chat. Pick one meaningful connection and go deep. Quality over quantity.</span></div>
     <div class="dialogue-cn">期待见到你。我会第一时间给你介绍Sandra和Kenji。对了Emily——给你一个建议？不要试图在第一次咖啡聊天中覆盖所有事情。专注于一个有意义的关系，深入下去。质量胜于数量。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Wise words. I'll focus on Sandra since logistics is our immediate priority. Thanks for taking the time, James — I have a feeling this conference just got a lot more productive.</span></div>
     <div class="dialogue-cn">明智的建议。我会专注于Sandra，因为物流是我们当前的首要任务。谢谢你抽出时间，James——我感觉这次会议一下子变得更有价值了。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">My pleasure, Emily. See you in twenty minutes. And don't forget to send me a LinkedIn request — I'll accept it right away so you can see the regulatory updates before our dinner.</span></div>
     <div class="dialogue-cn">我的荣幸，Emily。二十分钟后见。别忘了给我发LinkedIn请求——我会马上通过，这样你在晚餐前就能看到那些监管更新了。</div>
   </div>

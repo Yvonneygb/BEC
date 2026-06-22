@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
@@ -21,8 +21,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 .cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -49,7 +49,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>企业伦理 Corporate Ethics</h1>
-<div class="date">📅 2026年6月22日 · 星期一</div>
 
 <div class="roles">
   <strong>A (Karen Mitchell)</strong> — Compliance Officer, BrightPath Financial<br>
@@ -68,52 +67,52 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Jason, thanks for making time. I need to discuss something that came across my desk from the quarterly audit. One of your regional managers, Daniel Park, has been entering client entertainment expenses that are well above our policy threshold — dinners exceeding £300 per head. Have you been aware of this?</span></div>
     <div class="dialogue-cn">Jason，感谢你抽出时间。我需要讨论一下季度审计中提交到我这里的一项事情。你的一位区域经理Daniel Park一直在录入远超我们政策上限的客户招待费用——每人超过300英镑的晚宴。你之前知道这个情况吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Karen, I appreciate the heads-up. I was aware Daniel has been aggressive with client hospitality, but I wasn't tracking the specifics. In his defence, the Southeast Asia market operates on a relationship-first model — what looks excessive in London can be standard practice in Kuala Lumpur. That said, if he's breaching policy, we need to address it.</span></div>
     <div class="dialogue-cn">Karen，感谢你提前告知。我知道Daniel在客户款待方面比较激进，但我没有追踪具体情况。为他辩护一下，东南亚市场遵循的是关系优先的模式——在伦敦看起来过分的款待可能在吉隆坡是标准做法。话虽如此，如果他违反了政策，我们必须处理。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I understand the cultural nuance, and I'm not suggesting we eliminate relationship-building. The issue is twofold: first, these expenses weren't pre-approved as our <span class="vocab-highlight">compliance</span> handbook requires; second, three of the eight flagged dinners were with a client whose procurement manager is Daniel's brother-in-law. That crosses into <span class="vocab-highlight">conflict of interest</span> territory, whether intentional or not.</span></div>
     <div class="dialogue-cn">我理解文化差异，也并非建议取消关系建设。问题有两方面：第一，这些费用没有按我们合规手册的要求进行事前审批；第二，被标记的八场晚宴中有三场是与一位客户进行的，而该客户的采购经理是Daniel的姐夫。这已经越界进入了利益冲突的领域，无论是否有意。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's... not something I was aware of. The family connection certainly changes the optics. I should have been more diligent in reviewing his submissions. What's the recommended course of action from your side?</span></div>
     <div class="dialogue-cn">这……我之前确实不知道。亲属关系确实改变了事情的性质。我本应在审查他提交的材料时更加审慎。你这边建议的下一步行动方案是什么？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">The company's <span class="vocab-highlight">code of conduct</span> is clear on this. We need to launch a formal investigation — nothing punitive yet, but we have a <span class="vocab-highlight">fiduciary duty</span> to our shareholders to ensure every client relationship is <span class="vocab-highlight">at arm's length</span>. I'd recommend we suspend the expense privileges for Daniel's team pending review and conduct a refresher workshop on our <span class="vocab-highlight">anti-bribery policy</span> for the entire sales division.</span></div>
     <div class="dialogue-cn">公司的行为准则对此有明确规定。我们需要启动正式调查——目前不是惩罚性质的，但我们对股东负有受托责任，要确保每一个客户关系都是公平交易。我建议在审查期间暂停Daniel团队的招待费用权限，并为整个销售部门举办关于反贿赂政策的复训工作坊。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'll support that fully. The last thing we need is a <span class="vocab-highlight">regulatory breach</span> showing up in an external audit. Let me be upfront — I should have caught this earlier, and I take accountability for that. What's our communication plan? We don't want this to spiral into office gossip before we've established the facts.</span></div>
     <div class="dialogue-cn">我全力支持。我们最不需要的就是外部审计中发现违规行为。让我坦诚以对——我本应更早发现这个问题，我为此承担责任。我们的沟通计划是什么？我们不希望这在我们查明事实之前演变成办公室流言。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. We'll keep it contained — you, me, HR, and legal. No broader announcement until the investigation concludes. In parallel, I want to propose we implement a mandatory quarterly <span class="vocab-highlight">ethics</span> training module for all client-facing staff. It's not just about compliance — it's about embedding a <span class="vocab-highlight">speak-up culture</span> where people feel safe flagging concerns before they escalate.</span></div>
     <div class="dialogue-cn">同意。我们会控制范围——你、我、人力资源和法务。调查结束前不做更广泛的公告。与此同时，我想提议我们对所有面向客户的员工实施每季度一次的强制性伦理培训模块。这不仅关乎合规——更关乎建立一种畅所欲言的文化，让人们在问题升级之前敢于提出。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm fully on board. In fact, I'd like to go a step further — let's establish an <span class="vocab-highlight">ethics committee</span> with representatives from sales, compliance, and an external advisor. If we're going to rebuild trust, we need it to be visible and structural, not just procedural. Can I count on you to co-chair it with me?</span></div>
     <div class="dialogue-cn">我完全赞成。事实上，我想更进一步——我们建立一个伦理委员会，由销售、合规代表和一位外部顾问组成。如果我们要重建信任，就需要它是可见的、结构性的，而不仅仅是程序性的。你能和我共同主持吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'd be honoured, Jason. That kind of top-down commitment is exactly what turns a compliance exercise into genuine cultural change. Let's draft the charter this week. And for what it's worth — the fact that you're leaning into this rather than deflecting makes all the difference.</span></div>
     <div class="dialogue-cn">我很荣幸，Jason。这种自上而下的承诺正是将合规流程转化为真正的文化变革的关键。我们本周起草章程。而且说实话——你选择正面面对而不是回避，这一点至关重要。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Appreciate that, Karen. At the end of the day, our reputation is our most valuable asset. Short-term revenue gains aren't worth compromising on <span class="vocab-highlight">integrity</span>. Let's get this right and make BrightPath stronger for it.</span></div>
     <div class="dialogue-cn">感谢你，Karen。归根结底，声誉是我们最宝贵的资产。短期收入增长不值得以牺牲诚信为代价。让我们把这件事做好，让BrightPath因此变得更强大。</div>
   </div>

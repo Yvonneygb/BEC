@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
@@ -21,8 +21,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 .cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -49,7 +49,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>预算规划 Budget Planning</h1>
-<div class="date">📅 2026年6月6日 · 星期六</div>
 
 <div class="roles">
   <strong>A (Rachel Tan)</strong> — Finance Manager, Apex Media Group<br>
@@ -68,62 +67,62 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">James, I've pulled together your department's preliminary budget for the next <span class="vocab-highlight">fiscal year</span>. Before we go to the CFO, I want to flag a few <span class="vocab-highlight">line items</span>. Your proposed marketing spend is up twenty-two percent year-on-year — that's going to raise eyebrows.</span></div>
     <div class="dialogue-cn">James，我把你部门下一财年的初步预算整理出来了。在提交CFO之前，我想先指出几个条目。你的营销支出提案同比上涨了百分之二十二——这会引起质疑的。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I expected that reaction, Rachel. But here's the rationale: we're entering two new markets — Vietnam and Indonesia — and brand-building in those territories requires a <span class="vocab-highlight">front-loaded</span> investment. We've allocated €340,000 for awareness campaigns in Q1 alone. Without it, the market entry is dead on arrival.</span></div>
     <div class="dialogue-cn">我预料到了这个反应，Rachel。但这是有依据的：我们要进入两个新市场——越南和印度尼西亚——在这些地区建立品牌需要前期集中投入。光第一季度就在品牌认知活动上分配了34万欧元。没有这块投入，市场进入还没开始就失败了。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I get the need for investment, but a twenty-two percent uplift means we'll have to trim somewhere else to hit the corporate margin target. What's your forecast <span class="vocab-highlight">ROI</span> on the SEA expansion? The board will want hard numbers, not just ambition.</span></div>
     <div class="dialogue-cn">我理解需要投资，但百分之二十二的增长意味着我们必须从其他地方削减以达成公司利润目标。你对东南亚扩张的预测投资回报率是多少？董事会要的是硬数据，不只是愿景。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Fair enough. Based on our pilot campaign in Thailand last year, we saw a 3.7x return on ad spend within eight months. We're projecting a more conservative 2.5x for Vietnam and 2.1x for Indonesia in year one, given the steeper learning curve. After year two, both markets should be self-sustaining.</span></div>
     <div class="dialogue-cn">说得对。基于去年在泰国的试点投放，我们在八个月内实现了广告支出回报率3.7倍。对于越南我们做了更保守的2.5倍预测，印度尼西亚2.1倍，因为学习曲线更陡峭。到第二年，两个市场应该都能实现自我维持。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That helps. I can model those projections into the <span class="vocab-highlight">bottom line</span>. Now, I noticed your travel and entertainment line has a budget allocation of €78,000 — nearly double last year's actuals. With the <span class="vocab-highlight">cost-cutting directive</span> from the CEO, that's going to be a sticking point.</span></div>
     <div class="dialogue-cn">这有帮助。我可以把这些预测纳入净利润模型。另外，我注意到你的差旅招待线预算分配了7.8万欧元——几乎是去年实际支出的两倍。在CEO发出的削减成本指令下，这会是一个难点。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">The travel bump is tied directly to the new markets — site visits, partner meetings, trade shows. I can trim it to €62,000 if we consolidate trips and have one person cover multiple meetings per trip. That's a sixteen thousand saving right there. Would that get it past the board?</span></div>
     <div class="dialogue-cn">差旅增加与新市场直接相关——现场考察、合作方会议、行业展会。如果合并行程，一个人一趟搞定多场会议，我可以把这项压缩到6.2万欧元。这就省下了1.6万。这样能通过董事会吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">€62,000 keeps it within the acceptable variance. Now, the <span class="vocab-highlight">capex</span> request — you've got €115,000 earmarked for a new analytics platform. Can that be deferred, or is it mission-critical?</span></div>
     <div class="dialogue-cn">6.2万在可接受的偏差范围内。接下来，你的资本性支出申请——预留了11.5万欧元用于新的分析平台。这个可以推迟吗，还是必须做？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">It's non-negotiable, unfortunately. Our current analytics stack can't track cross-border attribution properly — we're flying blind on half our digital spend. Deferring it means wasting roughly forty thousand a quarter on unmeasurable campaigns. The platform pays for itself inside three quarters.</span></div>
     <div class="dialogue-cn">很遗憾，这个没得商量。我们现在的分析工具无法正确追踪跨境归因——一半数字投放都是蒙着眼睛花钱。推迟意味着每季度浪费大约四万欧元在无法衡量的广告上。这个平台三个季度内就能收回成本。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll note that justification in the budget memo. That brings your total to €1.78 million, which is fifteen percent up. Between the travel cuts and the <span class="vocab-highlight">ROI</span> projections, I think we have a defensible case. I'll prep the <span class="vocab-highlight">variance analysis</span> and have it ready for the budget committee meeting on Thursday.</span></div>
     <div class="dialogue-cn">我会把这段理由记入预算备忘录。这样你的总预算来到178万欧元，涨幅百分之十五。在差旅削减和投资回报率预测的加持下，我认为我们有可辩护的方案了。我会准备好差异分析，赶上周四的预算委员会会议。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">One more thought — if the board pushes back, I'm willing to phase the SEA rollout across three quarters instead of two. That spreads the investment and reduces the Q1 spike. I'd rather secure approval for a gradual rollout than get a blanket rejection.</span></div>
     <div class="dialogue-cn">还有一个想法——如果董事会反对，我愿意把东南亚推进从两个季度分散到三个季度。这样可以分摊投资，缓解第一季度的支出高峰。我宁愿争取渐进式推进的批准，也不要被全盘驳回。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Smart. I'll include that as a <span class="vocab-highlight">contingency scenario</span> in the appendix. It shows you've thought through alternatives, which always plays well with the CFO. Let's touch base on Wednesday to do a dry run of your presentation.</span></div>
     <div class="dialogue-cn">聪明。我会把这个作为应急预案附在附录里。这表明你考虑过替代方案，CFO一向吃这一套。周三碰一下，做一次你汇报的预演？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Wednesday works. I'll have the updated <span class="vocab-highlight">ROI</span> model and the trimmed T&E figures on your desk by Tuesday evening. Thanks for batting for us, Rachel.</span></div>
     <div class="dialogue-cn">周三可以。周二晚上之前我会把更新好的投资回报率模型和削减后的差旅招待数据放你桌上。Rachel，谢谢你为我们争取。</div>
   </div>

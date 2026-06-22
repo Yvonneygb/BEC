@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 
 /* 标题行：icon + 文字 + 右侧操作 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
@@ -26,8 +26,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -57,7 +57,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>并购尽职调查 M&A Due Diligence</h1>
-<div class="date">📅 2026年6月15日 · 星期一</div>
 
 <div class="roles">
   <strong>A (David Chen)</strong> — CFO, Apex Biotech<br>
@@ -77,62 +76,62 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Emma, we've narrowed down our shortlist to two targets. Before we proceed any further, I'd like to align on the scope of the <span class="vocab-highlight">due diligence</span> exercise — particularly around financial and legal exposure.</span></div>
     <div class="dialogue-cn">Emma，我们已将目标公司名单缩短到两家。在进一步推进之前，我想先就<span class="vocab-highlight">尽职调查</span>的范围达成共识——尤其关注财务和法律风险敞口。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely, David. Given the deal size — roughly £85 million — I'd recommend a full-scope <span class="vocab-highlight">due diligence</span> covering financial, legal, operational, and IT. The last thing we want is a post-acquisition surprise buried in their <span class="vocab-highlight">contingent liabilities</span>.</span></div>
     <div class="dialogue-cn">完全同意，David。考虑到交易规模——约8500万英镑——我建议进行涵盖财务、法律、运营和IT的全面<span class="vocab-highlight">尽职调查</span>。我们最不想看到的就是收购完成后发现有隐藏的<span class="vocab-highlight">或有负债</span>。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Agreed. Our external auditors have flagged that Target A has a complex capital structure with multiple classes of preference shares and outstanding <span class="vocab-highlight">convertible notes</span>. Have you had a chance to review their filings?</span></div>
     <div class="dialogue-cn">同意。我们的外部审计师已指出目标公司A具有复杂的资本结构，涉及多类优先股和未偿<span class="vocab-highlight">可转换票据</span>。你看过他们的备案文件了吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I have. The <span class="vocab-highlight">convertible notes</span> mature in 14 months and could dilute existing shareholders by roughly 12% if triggered. That's a <span class="vocab-highlight">material risk</span> that needs to be factored into the valuation model. We should also scrutinise their <span class="vocab-highlight">related-party transactions</span> — there's a consulting agreement with a firm owned by the founder's brother-in-law that looks questionable.</span></div>
     <div class="dialogue-cn">看过了。<span class="vocab-highlight">可转换票据</span>将在14个月后到期，如果触发转股，现有股东的股份可能被稀释约12%。这是一个需要计入估值模型的<span class="vocab-highlight">重大风险</span>。我们还应仔细审查他们的<span class="vocab-highlight">关联方交易</span>——有一份与创始人姐夫/妹夫拥有的公司签订的咨询协议，看起来很可疑。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's precisely the kind of <span class="vocab-highlight">red flag</span> I was worried about. On the operational side, we'll need to verify their intellectual property portfolio — patents, trademarks, and in-licensing agreements. Biotech is all about the IP pipeline.</span></div>
     <div class="dialogue-cn">这正是我担心的<span class="vocab-highlight">警示信号</span>。在运营方面，我们需要核实他们的知识产权组合——专利、商标和授权引进协议。生物科技行业，核心竞争力全在IP管线。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Precisely. We've engaged a patent attorney to conduct a <span class="vocab-highlight">freedom-to-operate</span> analysis and check for any pending litigation. Separately, we should run an environmental compliance audit on their manufacturing facility in Cork — there's a legacy contamination issue from the previous site owner.</span></div>
     <div class="dialogue-cn">没错。我们已委托一位专利律师进行<span class="vocab-highlight">自由实施分析</span>，并核查是否存在未决诉讼。另外，我们还应对他们位于科克市的生产设施进行环境合规审计——该场地存在前业主遗留的污染问题。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Good catch. Let's also bring in an independent firm to assess their IT infrastructure and cybersecurity posture. I don't want to inherit a <span class="vocab-highlight">data</span> breach six months post-acquisition.</span></div>
     <div class="dialogue-cn">发现得好。再请一家独立公司评估他们的IT基础设施和网络安全态势。我可不想收购六个月后还继承一起<span class="vocab-highlight">数据</span>泄露事件。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's prudent. I'll circulate a request for proposal to three cybersecurity firms by end of day. One more thing — we need to review their employee contracts and pension obligations. In Ireland, <span class="vocab-highlight">defined-benefit</span> pension liabilities can be substantial and often don't show up clearly on the balance sheet.</span></div>
     <div class="dialogue-cn">这是明智的做法。我今晚之前会向三家网络安全公司发出招标邀请。还有一件事——我们需要审查他们的员工合同和养老金义务。在爱尔兰，<span class="vocab-highlight">固定收益</span>型养老金负债可能相当大，而且通常不会在资产负债表上明确体现。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Point taken. Let's set up a <span class="vocab-highlight">data room</span> with tiered access — financials for us and the auditors, legal documents for the law firm, and operational data for the consultancy team. I want tight version control and a full audit trail.</span></div>
     <div class="dialogue-cn">说得对。我们建立一个分层权限的<span class="vocab-highlight">数据室</span>——财务报表供我们和审计师查看，法律文件供律所查看，运营数据供咨询团队查看。我需要严格的版本控制和完整的审计追踪。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'll coordinate with the virtual <span class="vocab-highlight">data room</span> provider this afternoon. We'll use Q&A logs to track all information requests and responses — that discipline pays dividends if anything goes sideways later.</span></div>
     <div class="dialogue-cn">我今天下午和虚拟<span class="vocab-highlight">数据室</span>供应商协调。我们将使用问答日志追踪所有信息请求和回复——这种规范的做法以后万一出了岔子会非常有价值。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Sounds like a plan. Let's reconvene on Friday to review the preliminary findings and decide whether we issue a <span class="vocab-highlight">letter of intent</span> or walk away.</span></div>
     <div class="dialogue-cn">听起来是个好方案。我们周五再碰头，审阅初步调查结果，然后决定是发出<span class="vocab-highlight">意向书</span>还是放弃交易。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'll have the initial diligence report on your desk by Thursday evening. Fingers crossed there are no skeletons in the closet.</span></div>
     <div class="dialogue-cn">我会在周四晚上前将初步尽职调查报告放在你的桌上。希望他们没有藏着什么见不得人的秘密。</div>
   </div>

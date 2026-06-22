@@ -1,0 +1,4 @@
+<a class="nav-item" data-page="2026-06-22-franchise-negotiation.html" onclick="switchPage(this,'2026-06-22-franchise-negotiation.html')"><span class="nav-item-icon">🏪</span><span class="nav-item-text">加盟谈判</span></a>
+<a class="nav-item" data-page="2026-06-22-international-expansion.html" onclick="switchPage(this,'2026-06-22-international-expansion.html')"><span class="nav-item-icon">🌐</span><span class="nav-item-text">国际扩张</span></a>
+<a class="nav-item" data-page="2026-06-22-workplace-diversity.html" onclick="switchPage(this,'2026-06-22-workplace-diversity.html')"><span class="nav-item-icon">🌈</span><span class="nav-item-text">职场多元化</span></a>
+<a class="nav-item" data-page="2026-06-22-executive-compensation.html" onclick="switchPage(this,'2026-06-22-executive-compensation.html')"><span class="nav-item-icon">💎</span><span class="nav-item-text">高管薪酬</span></a>

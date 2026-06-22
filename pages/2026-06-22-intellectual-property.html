@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>知识产权 Intellectual Property - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+
+
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>知识产权 Intellectual Property</h1>
+
+<div class="roles">
+  <strong>A (Linda Zhao)</strong> — IP Counsel, NovaTech Innovations<br>
+  <strong>B (David Park)</strong> — R&D Director, Apex Manufacturing
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">David, thanks for sitting down with us. Our legal team has reviewed the <span class="vocab-highlight">patent landscape</span> around your new battery cooling system, and we've identified three areas where your design potentially overlaps with our existing <span class="vocab-highlight">patent portfolio</span>.</span></div>
+    <div class="dialogue-cn">David，感谢你坐下来谈。我们法务团队已梳理了贵方新型电池冷却系统相关的专利格局，发现贵方设计有三处可能与我们现有专利组合重叠。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Linda, I appreciate the heads-up, but I should point out that our R&D team developed this independently. We conducted our own <span class="vocab-highlight">freedom-to-operate</span> search before filing, and our external counsel didn't flag any conflicts.</span></div>
+    <div class="dialogue-cn">Linda，感谢你的提醒，但我需要指出，我们的研发团队是独立开发出这项技术的。我们在提交专利申请前做了自由实施检索，外聘律师并未发现任何冲突。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I understand, and I'm not suggesting bad faith here. But independent development isn't necessarily a defence against <span class="vocab-highlight">patent infringement</span>. Our US patent 10,234,567 covers a substantially similar thermal management architecture. I'd like to explore a <span class="vocab-highlight">cross-licensing</span> arrangement rather than go down the litigation route.</span></div>
+    <div class="dialogue-cn">我理解，我并不是在暗示恶意侵权。但独立开发并不一定能作为专利侵权的抗辩理由。我们的美国专利10,234,567涵盖了实质上相似的热管理架构。我想探讨交叉许可方案，而不是走诉讼这条路。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">A cross-licensing arrangement — that's an interesting proposition. What exactly are you proposing? We're a manufacturing firm; we don't have a massive patent portfolio to trade.</span></div>
+    <div class="dialogue-cn">交叉许可——这是个有趣的提议。你具体在提议什么？我们是制造型企业，没有庞大的专利组合可供交换。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Fair observation. But you do have three pending applications in solid-state cooling that we find valuable. We could structure this as a <span class="vocab-highlight">royalty-bearing</span> licence with a reduced rate in exchange for access to those pending patents once granted.</span></div>
+    <div class="dialogue-cn">观察得很准确。但贵方在固态冷却领域有三项待审批的专利申请，我们认为很有价值。我们可以设计为收取许可费的模式，在获得贵方固态冷却IP交叉许可的前提下，提供优惠费率。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Royalty-bearing — what sort of percentage are we looking at? Our margins on this product line are already tight, and adding a per-unit royalty could make the entire project unviable.</span></div>
+    <div class="dialogue-cn">收取许可费——费率大概是多少？我们这条产品线的利润空间已经很紧张了，每件加收许可费可能让整个项目失去可行性。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">We typically seek 3% of net sales, but given the volume you're projecting — 50,000 units annually — I can recommend 1.8% to our board, provided we get the cross-licence on your solid-state IP.</span></div>
+    <div class="dialogue-cn">我们通常收取净销售额的3%，但考虑到贵方预计年产50000件的量，我可以向董事会推荐1.8%，前提是获得贵方固态冷却IP的交叉许可。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">1.8% is still significant when you compound it across our projected five-year product cycle. Would you consider a <span class="vocab-highlight">lump-sum settlement</span> instead? Say, a one-time payment of $120,000 for a perpetual, non-exclusive licence?</span></div>
+    <div class="dialogue-cn">1.8%在五年产品周期中累积起来还是很大一笔。你能否考虑改为一次性付款？比如12万美元买断永久非独占许可权？</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">A lump sum simplifies things, but it undervalues the technology. Split the difference: $90,000 upfront plus 0.9% ongoing royalty, with the cross-licence baked in. That gives both sides long-term skin in the game.</span></div>
+    <div class="dialogue-cn">一次性付款简化了流程，但这低估了技术的价值。各让一步：9万美元首付加0.9%持续许可费，附带交叉许可。这样双方都有长期利益。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">$90,000 plus 0.9% — I'll need to run this past our CFO, but conceptually that framework works. My bigger concern is the scope. Are we talking global rights, or can we limit the territory to North America?</span></div>
+    <div class="dialogue-cn">9万美元加0.9%——我需要请示CFO，但在框架上是可以接受的。我更大的担忧是适用范围。是全球授权，还是可以限定在北美地区？</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Our patents are enforced globally, David. But for manufacturing purposes, I'm willing to limit the <span class="vocab-highlight">field of use</span> to automotive applications only. Consumer electronics would remain exclusively ours.</span></div>
+    <div class="dialogue-cn">我们的专利在全球受保护，David。但出于制造目的，我愿意将使用领域限定为汽车应用。消费电子仍归我们独家所有。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Automotive-only works for us — that's our primary market anyway. Can you draft a term sheet with those parameters? I'd also like a <span class="vocab-highlight">non-assertion clause</span> for our existing products already in the pipeline.</span></div>
+    <div class="dialogue-cn">限定汽车领域对我们没问题——那本就是我们的主要市场。你能起草一份包含这些条款的条款清单吗？我还希望对已在推进的现有产品加入不主张条款。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Absolutely. A non-assertion covenant for products already in commercial production is standard in these agreements. I'll have our outside counsel prepare a draft within ten business days.</span></div>
+    <div class="dialogue-cn">当然。对已进入商业生产阶段的产品提供不主张承诺，在这类协议中是标准做法。我会让外聘律师在十个工作日内准备草案。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Ten business days is reasonable. While we're at it — your team mentioned three overlap areas, but you only detailed one patent. Can you share the full list so our engineers can do a proper technical assessment?</span></div>
+    <div class="dialogue-cn">十个工作日是合理的。顺便问一下——你的团队提到了三处重叠，但只详述了一项专利。能分享完整清单吗？方便我们工程师做全面的技术评估。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Of course. I'll send over a <span class="vocab-highlight">claim chart</span> mapping our relevant patents to your product specifications by tomorrow. Full transparency is the best foundation for a constructive licensing relationship.</span></div>
+    <div class="dialogue-cn">当然。我明天会把我们相关专利对应贵方产品规格的权利要求对照表发给你。充分透明是建立建设性许可关系的最佳基础。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I appreciate that. It's refreshing to deal with a company that prefers negotiation over litigation. Once we have the claim chart, our engineers can validate the overlaps and we can move to final terms.</span></div>
+    <div class="dialogue-cn">很感谢。与一家宁可谈判也不诉讼的公司打交道令人耳目一新。收到权利要求对照表后，我们的工程师可以验证重叠部分，然后推进到最终条款。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's the approach we prefer as well. Litigation burns time and money for everyone involved. I'll get you the claim chart by 3 PM tomorrow, and let's aim to have a signed agreement within 45 days.</span></div>
+    <div class="dialogue-cn">这也是我们首选的合作方式。诉讼对所有人来说都是时间和金钱的消耗。我会在明天下午3点前把权利要求对照表发给你，争取45天内签署协议。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">45 days sounds ambitious but achievable. I'll brief our legal team this afternoon. One last thing — can we include a <span class="vocab-highlight">most-favoured-nation clause</span>? If you grant a better rate to another licensee, we'd want the same terms.</span></div>
+    <div class="dialogue-cn">45天听起来雄心勃勃但可以实现。我今天下午就向法务团队通报。最后一件事——能否加入最惠国条款？如果贵方给其他被许可方更优惠的费率，我们希望享有同等条件。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's a reasonable request. We can include an MFN clause, but I'll need it to be reciprocal — if you acquire patents in this space and license them to others, we get the same benefit. Fair's fair.</span></div>
+    <div class="dialogue-cn">这是合理的要求。我们可以加入最惠国条款，但我需要它是对等的——如果贵方在该领域获得专利并授权给他人，我们也应享有同等利益。公平起见。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Fair enough. Let's move forward on that basis. Linda, this has been a remarkably productive first meeting. I'm optimistic we can get this across the finish line.</span></div>
+    <div class="dialogue-cn">很公平。我们就此推进吧。Linda，这真是一次卓有成效的首次会谈。我对双方顺利达成协议充满信心。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Likewise, David. I'll have the draft agreement and the claim chart in your inbox by tomorrow afternoon. Looking forward to building a partnership that works for both sides.</span></div>
+    <div class="dialogue-cn">彼此彼此，David。明天下午前我会把协议草案和权利要求对照表发到你邮箱。期待建立对双方都有利的合作关系。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>patent portfolio</strong> — 专利组合 | 企业拥有的全部专利集合，知识产权谈判的核心资产</div>
+<div class="vocab-item"><strong>freedom-to-operate (FTO)</strong> — 自由实施分析 | 评估产品商业化是否侵犯他人专利的法律分析</div>
+<div class="vocab-item"><strong>cross-licensing</strong> — 交叉许可 | 双方互相授权使用对方专利的合作协议</div>
+<div class="vocab-item"><strong>royalty-bearing</strong> — 收取许可费的 | 按销售额或单位数量支付许可费用的模式</div>
+<div class="vocab-item"><strong>lump-sum settlement</strong> — 一次性付款和解 | 以固定金额买断权利而非持续支付许可费</div>
+<div class="vocab-item"><strong>non-assertion clause</strong> — 不主张条款 | 承诺不对特定产品或行为主张专利权的合同条款</div>
+<div class="vocab-item"><strong>claim chart</strong> — 权利要求对照表 | 将专利权利要求逐项映射到被控侵权产品的分析文件</div>
+<div class="vocab-item"><strong>most-favoured-nation clause</strong> — 最惠国条款 | 确保被许可方享有与其他被许可方同等优惠条件的条款</div>
+<div class="vocab-item"><strong>patent infringement</strong> — 专利侵权 | 未经授权使用他人专利技术的行为</div>
+<div class="vocab-item"><strong>field of use</strong> — 使用领域 | 对专利许可的应用范围进行行业或市场的限定</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>I'd like to explore a... arrangement rather than go down the litigation route.</code> → 我想探讨……方案，而不是走上诉讼之路 | 在冲突初期提出合作替代方案时使用</div>
+<div class="pattern-item"><code>What exactly are you proposing?</code> → 你具体在提议什么？ | 要求对方明确方案细节的商务句式</div>
+<div class="pattern-item"><code>Would you consider a... instead?</code> → 你能否考虑改用……？ | 提出替代方案时的礼貌商务表达</div>
+<div class="pattern-item"><code>Split the difference:...</code> → 各让一步：…… | 谈判中"折中"的经典表达，常用于金额妥协</div>
+<div class="pattern-item"><code>Full transparency is the best foundation for...</code> → 充分透明是……的最佳基础 | 建立长期合作信任关系时的高情商表达</div>
+<div class="pattern-item"><code>Fair's fair.</code> → 公平起见 | 表达平等互惠原则的简洁商务口语</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>David，感谢你坐下来谈。我们法务团队已梳理了贵方新型电池冷却系统相关的专利格局，发现贵方设计有三处可能与我们现有专利组合重叠。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>Linda，感谢你的提醒，但我需要指出，我们的研发团队是独立开发出这项技术的。我们在提交专利申请前做了自由实施检索，外聘律师并未发现任何冲突。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我理解，我并不是在暗示恶意侵权。但独立开发并不一定能作为专利侵权的抗辩理由。我们的美国专利10,234,567涵盖了实质上相似的热管理架构。我想探讨交叉许可方案，而不是走诉讼这条路。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>交叉许可——这是个有趣的提议。你具体在提议什么？我们是制造型企业，没有庞大的专利组合可供交换。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>观察得很准确。但贵方在固态冷却领域有三项待审批的专利申请，我们认为很有价值。我们可以设计为收取许可费的模式，在获得贵方固态冷却IP交叉许可的前提下，提供优惠费率。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>收取许可费——费率大概是多少？我们这条产品线的利润空间已经很紧张了，每件加收许可费可能让整个项目失去可行性。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我们通常收取净销售额的3%，但考虑到贵方预计年产50000件的量，我可以向董事会推荐1.8%，前提是获得贵方固态冷却IP的交叉许可。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>1.8%在五年产品周期中累积起来还是很大一笔。你能否考虑改为一次性付款？比如12万美元买断永久非独占许可权？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>一次性付款简化了流程，但这低估了技术的价值。各让一步：9万美元首付加0.9%持续许可费，附带交叉许可。这样双方都有长期利益。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>9万美元加0.9%——我需要请示CFO，但在框架上是可以接受的。我更大的担忧是适用范围。是全球授权，还是可以限定在北美地区？</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我们的专利在全球受保护，David。但出于制造目的，我愿意将使用领域限定为汽车应用。消费电子仍归我们独家所有。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>限定汽车领域对我们没问题——那本就是我们的主要市场。你能起草一份包含这些条款的条款清单吗？我还希望对已在推进的现有产品加入不主张条款。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>当然。对已进入商业生产阶段的产品提供不主张承诺，在这类协议中是标准做法。我会让外聘律师在十个工作日内准备草案。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>十个工作日是合理的。顺便问一下——你的团队提到了三处重叠，但只详述了一项专利。能分享完整清单吗？方便我们工程师做全面的技术评估。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>当然。我明天会把我们相关专利对应贵方产品规格的权利要求对照表发给你。充分透明是建立建设性许可关系的最佳基础。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>很感谢。与一家宁可谈判也不诉讼的公司打交道令人耳目一新。收到权利要求对照表后，我们的工程师可以验证重叠部分，然后推进到最终条款。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这也是我们首选的合作方式。诉讼对所有人来说都是时间和金钱的消耗。我会在明天下午3点前把权利要求对照表发给你，争取45天内签署协议。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>45天听起来雄心勃勃但可以实现。我今天下午就向法务团队通报。最后一件事——能否加入最惠国条款？如果贵方给其他被许可方更优惠的费率，我们希望享有同等条件。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这是合理的要求。我们可以加入最惠国条款，但我需要它是对等的——如果贵方在该领域获得专利并授权给他人，我们也应享有同等利益。公平起见。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>很公平。我们就此推进吧。Linda，这真是一次卓有成效的首次会谈。我对双方顺利达成协议充满信心。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>彼此彼此，David。明天下午前我会把协议草案和权利要求对照表发到你邮箱。期待建立对双方都有利的合作关系。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>知识产权谈判是BEC阅读Part 5和法律英语场景的高频话题。建议重点掌握专利许可中的三种付费模式（royalty-bearing、lump-sum、hybrid），以及交叉许可（cross-licensing）和自由实施（FTO）这两个核心概念。在听力考试中，注意数字和百分比的快速辨识——知识产权对话中常常涉及费率、销量和金额的复杂计算，这是BEC听力的关键得分点。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>

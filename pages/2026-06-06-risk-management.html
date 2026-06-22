@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
 .section-head-icon svg{width:28px;height:28px;display:block}
@@ -21,8 +21,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 .cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -49,7 +49,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>风险管理 Risk Management</h1>
-<div class="date">📅 2026年6月6日 · 星期六</div>
 
 <div class="roles">
   <strong>A (Elena Rossi)</strong> — Chief Risk Officer, Meridian Bank<br>
@@ -68,67 +67,67 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">James, your quarterly <span class="vocab-highlight">risk register</span> shows the South China Sea route contingency has been upgraded from amber to red. Walk me through the trigger event.</span></div>
     <div class="dialogue-cn">James，你们的季度风险登记册显示南海航线应急方案已从黄色升级为红色。带我了解一下触发事件。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Last Tuesday we received intelligence from our maritime security consultant that piracy incidents in the Malacca Strait are up 47% quarter-on-quarter. Three of our vessels pass through that corridor weekly. We had to escalate the risk rating.</span></div>
     <div class="dialogue-cn">上周二我们从海事安全顾问那里得到情报，马六甲海峡的海盗事件同比增长了47%。我们每周有三艘船经过那条走廊。我们不得不升级风险评级。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Understood. What <span class="vocab-highlight">mitigation measures</span> have you activated so far? The board will want to see a proactive response, not just a flag on a dashboard.</span></div>
     <div class="dialogue-cn">理解。目前你们启动了哪些缓释措施？董事会希望看到主动应对，而不只是仪表盘上的一面旗。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We've rerouted two vessels to the Lombok Strait, which adds 2.3 days of sailing time but eliminates the exposure. For the remaining vessel — the Pacific Star — we've contracted an armed security detail at €18,000 per transit. The cost is significant, but it's within the <span class="vocab-highlight">risk appetite</span> threshold we agreed on in Q1.</span></div>
     <div class="dialogue-cn">我们将两艘船改道龙目海峡，这增加了2.3天的航行时间，但消除了风险暴露。对于剩下那艘——太平洋之星号——我们以每次航行18000欧元的价格请了武装安保。成本不低，但在我们Q1约定的风险偏好阈值之内。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">The Lombok reroute is sensible. On the armed security, I'd like to see a cost-benefit analysis against the alternative — what's the premium for war-risk insurance on that route versus the €18,000 per transit fee?</span></div>
     <div class="dialogue-cn">龙目海峡改道是合理的。关于武装安保，我想看看与替代方案的成本收益对比——那条航线的战争险保费与每次18000欧元的安保费相比如何？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Good question. Our broker quoted an additional war-risk premium of €142,000 annually for that specific corridor coverage, which amortises to roughly €2,730 per transit across 52 sailings. The insurance route is cheaper on paper, but — and this is the catch — the policy excludes loss of hire if the vessel is detained. A single six-day detention would cost us €420,000 in lost charter revenue.</span></div>
     <div class="dialogue-cn">好问题。我们的经纪人报价是全年额外战争险保费142000欧元，按52次航行摊销大约每次2730欧元。走保险在账面上更便宜，但——问题在这里——保单不覆盖船舶被扣押时的租金损失。一次六天的扣押将造成420000欧元的租金收入损失。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That tilts the equation decisively. Document this analysis in the risk register as the justification. Now, shifting gears — your supply chain concentration risk with that <span class="vocab-highlight">single-source</span> semiconductor supplier in Hsinchu. The earthquake exposure needs quantification. What's the business continuity plan?</span></div>
     <div class="dialogue-cn">这使权衡结果明确倾斜了。把这个分析记录在风险登记册中作为依据。现在换个话题——你们在新竹那家单一来源半导体供应商的供应链集中风险。地震风险需要量化。业务连续性计划是什么？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We've been working on <span class="vocab-highlight">dual-sourcing</span>. We qualified a secondary supplier in Penang last month, and we've pre-positioned eight weeks of <span class="vocab-highlight">buffer inventory</span> at our Rotterdam hub. The total risk transfer cost — including the buffer stock carrying cost — is about €340,000. But it reduces our <span class="vocab-highlight">single-point-of-failure</span> exposure by an estimated 82%.</span></div>
     <div class="dialogue-cn">我们一直在推进双重采购。上个月我们在槟城认证了一家二级供应商，并在鹿特丹枢纽预置了八周的缓冲库存。总风险转移成本——包括缓冲库存的持有成本——大约340000欧元。但这将我们的单点故障风险估计降低了82%。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Those metrics are exactly what the audit committee needs. One more item — have you stress-tested the cyber risk scenario since the Maersk-type ransomware incident hit the industry?</span></div>
     <div class="dialogue-cn">这些指标正是审计委员会需要的。还有一件事——自Maersk类型的勒索软件事件冲击行业以来，你们对网络风险进行了压力测试吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">We ran a full <span class="vocab-highlight">penetration test</span> last month. The good news: our OT systems are <span class="vocab-highlight">air-gapped</span>. The bad news: our back-office ERP has three medium-severity vulnerabilities. Our CISO has a remediation timeline of six weeks. I've flagged it in the risk register as amber — controlled but requiring monitoring.</span></div>
     <div class="dialogue-cn">我们上个月做了一次全面渗透测试。好消息：我们的OT系统是物理隔离的。坏消息：我们后台的ERP系统有三个中等严重程度的漏洞。我们的CISO给出的修复时间表是六周。我已经在风险登记册中将其标为黄色——可控但需要监控。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Keep that timeline tight. I'll present the consolidated risk dashboard to the board on Thursday. Your shipping and supply chain risks are well-documented. Just ensure the cyber remediation doesn't slip past that six-week mark — regulators are showing zero tolerance on disclosures now.</span></div>
     <div class="dialogue-cn">严格把控这个时间表。周四我将向董事会呈报综合风险仪表盘。你们的航运和供应链风险记录得很好。只要确保网络修复不要超过六周这个期限——监管机构现在对信息披露持零容忍态度。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Understood. I'll have the CISO provide weekly progress updates copied to your office. We're also scheduling a <span class="vocab-highlight">tabletop exercise</span> for a simulated ransomware attack in three weeks — you're welcome to observe.</span></div>
     <div class="dialogue-cn">明白。我会让CISO每周提供进展更新，抄送你的办公室。我们也计划在三周后进行一场模拟勒索软件攻击的桌面演练——欢迎你来观摩。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'll be there. That's exactly the kind of proactive governance we need to demonstrate.</span></div>
     <div class="dialogue-cn">我一定来。这正是我们需要展现的主动治理。</div>
   </div>

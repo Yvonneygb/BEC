@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 
 /* 标题行：icon + 文字 + 右侧操作 */
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
@@ -26,8 +26,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -62,7 +62,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>ESG可持续发展报告 ESG & Sustainability Reporting</h1>
-<div class="date">&#x1F4C5; 2026年6月12日 · 星期五</div>
 
 <div class="roles">
   <strong>A (Olivia Grant)</strong> — Chief Sustainability Officer, Nexus Manufacturing Group<br>
@@ -82,72 +81,72 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Daniel, thanks for coming in at such short notice. The board has just approved our first ESG report initiative, and to be honest, I'm not entirely sure where to start. We're a mid-sized manufacturer — navigating this reporting landscape feels overwhelming.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
     <div class="dialogue-cn">Daniel，非常感谢你紧急赶来。董事会刚刚批准了我们的首个ESG报告项目，说实话，我不知道从哪里开始。作为一家中型制造企业，面对这个报告领域我感到相当无从下手。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's completely understandable, Olivia. Most companies feel the same way before their first disclosure. The good news is that Nexus already has solid operational data. The challenge is structuring it into a coherent narrative that meets <span class="vocab-highlight">GRI standards</span> while avoiding any perception of <span class="vocab-highlight">greenwashing</span>.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
     <div class="dialogue-cn">这完全能理解，Olivia。大多数公司在首次信息披露前都有同样的感受。好消息是Nexus已经拥有扎实的运营数据。真正的挑战在于将这些数据构建成一个连贯的叙述，既符合GRI标准又能避免任何漂绿的嫌疑。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's precisely my concern — <span class="vocab-highlight">greenwashing</span>. We've made genuine progress on energy efficiency over the past three years, but I don't want to overstate our achievements. The board is also pushing for a <span class="vocab-highlight">net-zero commitment</span> by 2040, and I'm not convinced we can substantiate that with our current <span class="vocab-highlight">carbon footprint</span> data.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
     <div class="dialogue-cn">这正是我担心的——漂绿。过去三年我们在能源效率方面确实取得了实际进步，但我不想夸大这些成绩。董事会还在推动2040年前的净零承诺，而我并不确定以我们目前的碳足迹数据能否支撑这个承诺。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Let's break this down systematically. First, we need a robust <span class="vocab-highlight">materiality assessment</span> to identify what ESG topics matter most to your stakeholders. Without that, you're essentially reporting into a void. Have you conducted any formal <span class="vocab-highlight">stakeholder engagement</span> beyond investor calls?</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
     <div class="dialogue-cn">让我们系统性地拆解这个问题。首先，我们需要一个扎实的实质性评估来识别对利益相关方最重要的ESG议题。没有这个评估，你基本上是在无的放矢地做报告。你们在投资者电话会之外做过任何正式的利益相关方参与吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Honestly, no. We've been so heads-down on day-to-day operations that <span class="vocab-highlight">stakeholder engagement</span> has been ad hoc at best. Our <span class="vocab-highlight">board oversight</span> on ESG matters has been minimal until now — the recent shareholder resolution fundamentally changed that dynamic.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
     <div class="dialogue-cn">老实说，没有。我们一直在埋头于日常运营，利益相关方参与充其量是临时性的。直到这次股东决议案之前，董事会对ESG事务的监督一直微乎其微——最近的股东决议从根本上改变了这个局面。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Then that's where we begin. We'll design a structured consultation survey targeting your investors, employees, key customers and community representatives. In parallel, we need to map your <span class="vocab-highlight">scope 3 emissions</span> — that's where the bulk of a manufacturer's <span class="vocab-highlight">carbon footprint</span> typically hides, and it's also the most challenging data to collect.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
     <div class="dialogue-cn">那么我们就从这里开始。我们会设计一份面向投资者、员工、核心客户和社区代表的结构化咨询问卷。与此同时，我们需要梳理你们范围三的排放数据——这通常是一家制造企业碳足迹的大头所在，也是数据采集最具挑战的部分。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text"><span class="vocab-highlight">Scope 3 emissions</span> will be a major undertaking — our supply chain spans six countries across three continents. But I understand the necessity: if we're making a <span class="vocab-highlight">net-zero commitment</span>, we can't just account for our factory emissions and ignore the rest of the value chain.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
     <div class="dialogue-cn">范围三排放将是一个大工程——我们的供应链横跨三大洲六个国家。但我理解其必要性：如果我们在做净零承诺，就不能只计算工厂排放而忽略价值链的其他部分。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Exactly. And this is precisely where a <span class="vocab-highlight">KPI dashboard</span> becomes indispensable. Rather than scrambling for data every reporting cycle, a live dashboard gives you real-time visibility across all emission scopes, and it makes the annual reporting workflow dramatically smoother.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
     <div class="dialogue-cn">正是如此。而这恰恰是KPI仪表盘变得不可或缺的原因。与其在每个报告周期手忙脚乱地搜集数据，一个实时仪表盘能让你对所有排放范围开启实时可见性，也使得年度报告工作流大大顺畅。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">A <span class="vocab-highlight">KPI dashboard</span> would certainly help — the CFO has been asking for more robust ESG metrics for months. Now, regarding the reporting framework: <span class="vocab-highlight">GRI standards</span> seem to be the industry benchmark, but several of our European clients are increasingly asking about CSRD compliance. How do we reconcile the two?</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
     <div class="dialogue-cn">KPI仪表盘肯定会很有帮助——CFO已经连续好几个月在要求更健全的ESG指标了。现在关于报告框架：GRI标准似乎是行业基准，但我们几家欧洲客户越来越多地询问CSRD合规问题。我们该如何调和两者？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Smart thinking. <span class="vocab-highlight">GRI standards</span> are globally recognised and offer considerable flexibility. We can structure the core report around GRI while including a CSRD bridging appendix. That approach satisfies both your Asian supply chain partners and your European customer base. The critical factor is presenting data that's independently auditable — that's your strongest defence against any <span class="vocab-highlight">greenwashing</span> allegations.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
     <div class="dialogue-cn">思路很好。GRI标准是全球公认的，且提供了相当程度的灵活性。我们可以围绕GRI构建核心报告，同时加入一个CSRD过渡性附录。这种方式能同时满足你们的亚洲供应链合作伙伴和欧洲客户群。最关键的是要呈现可独立审计的数据——这是抵御任何漂绿指控的最强防线。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That makes sense. What's your assessment on the timeline? The board wants something published by Q4, and I'm concerned that's cutting it close given where we are now.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
     <div class="dialogue-cn">说得有道理。你对时间表怎么看？董事会希望在第四季度前发布，考虑到我们目前的进展，我担心时间很紧。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Q4 is ambitious but entirely achievable if we move decisively on the <span class="vocab-highlight">materiality assessment</span>. I'd propose: complete the <span class="vocab-highlight">stakeholder engagement</span> within four weeks, finalise your <span class="vocab-highlight">scope 3 emissions</span> data by mid-Q3, and have a draft report ready for <span class="vocab-highlight">board oversight</span> and review by early Q4. Final publication by November. Approached correctly, this ESG report could genuinely become a competitive advantage rather than a mere compliance exercise.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
     <div class="dialogue-cn">第四季度是有挑战的，但如果我们果断推进实质性评估，这完全能够实现。我的建议是：四周内完成利益相关方参与，第三季度中期前确定范围三排放数据，第四季度初期将报告草稿提交董事监督和审查。十一月最终发布。如果处理得当，这份ESG报告完全可以成为真正的竞争优势，而不仅仅是合规任务。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's precisely the kind of strategic framing I need to sell this internally. Alright, let's move forward. I'll brief my team this afternoon on launching the <span class="vocab-highlight">materiality assessment</span> and formalising our <span class="vocab-highlight">stakeholder engagement</span> process. Can you send me a detailed project plan by tomorrow?</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
     <div class="dialogue-cn">这正是我在内部推销这个项目所需要的战略表述。好，我们推进吧。我今天下午召集团队通报启动实质性评估和规范利益相关方参与流程的情况。你明天能发给我一份详细项目计划吗？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Absolutely. I'll have a comprehensive scope of work in your inbox by noon, covering the survey design, <span class="vocab-highlight">KPI dashboard</span> architecture, and a phased <span class="vocab-highlight">GRI standards</span> reporting roadmap. Nexus is in a genuinely strong position — you're not starting from zero. With the right framework and honest, transparent storytelling, you can produce a sustainability report that builds real stakeholder trust.</span><button class="listen-btn" onclick="speak(this)" title="试听">&#x25B6;</button></div>
     <div class="dialogue-cn">当然。明天中午之前你会收到一份详细的工作范围文档，涵盖问卷设计、KPI仪表盘架构和分阶段的GRI报告路线图。Nexus目前处于一个相当有利的位置——你们并不是从零开始。有了正确的框架和诚实透明的叙事，你们完全可以出品一份能够建立真正利益相关方信任的可持续发展报告。</div>
   </div>

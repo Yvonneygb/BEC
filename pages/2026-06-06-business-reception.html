@@ -9,7 +9,7 @@
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
 .badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
 h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
-.date{font-size:.8rem;color:#9ca3af;margin-bottom:2rem}
+
 
 .section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
 .section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
@@ -24,8 +24,8 @@ h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
 
 h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
 .dialogue{margin:1.5rem 0}
-.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;background:rgba(109,74,255,0.03)}
-.dialogue-line:nth-child(even){background:rgba(109,74,255,0.06)}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
 .dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
 .dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
 .dialogue-text{flex:1;line-height:1.8}
@@ -54,7 +54,6 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <span class="badge">BEC Daily</span>
 <h1>商务接待 Business Reception</h1>
-<div class="date">📅 2026年6月6日 · 星期六</div>
 
 <div class="roles">
   <strong>A (Rachel Wong)</strong> — Business Development Manager, Pacific Ventures<br>
@@ -74,62 +73,62 @@ hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
 
 <div class="dialogue">
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Alex, welcome to Shanghai! I hope you had a pleasant journey. How was the flight from London?</span></div>
     <div class="dialogue-cn">Alex，欢迎来到上海！希望您旅途愉快。从伦敦飞过来怎么样？</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Thank you, Rachel. It's wonderful to be here at last. The flight was smooth — I managed to get some shut-eye, which is rare for a twelve-hour haul. I must say, the <span class="vocab-highlight">hospitality</span> at the airport pickup was first-class. Your driver was already waiting with a name board.</span></div>
     <div class="dialogue-cn">谢谢，Rachel。终于来到这里真是太棒了。航程很顺利——我还小睡了一会儿，这对十二小时的航程来说很难得。不得不说，机场接机的款待是一流的。贵方司机已举着名牌在等候了。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I'm glad to hear that. We've put together a fairly packed <span class="vocab-highlight">itinerary</span> for your three-day visit. Your hotel is about twenty minutes from here — the Peninsula, as you requested. We've arranged a <span class="vocab-highlight">courtesy</span> car at your disposal for the duration of the stay, so you won't need to worry about transport.</span></div>
     <div class="dialogue-cn">很高兴听你这么说。我们为您三天的访问安排了相当紧凑的行程。酒店离这里约二十分钟——按照您的要求，安排的是半岛酒店。入住期间我们安排了一辆礼宾车供您使用，所以您不用担心交通问题。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Much appreciated. Before we dive into the schedule, I should mention that our CEO has asked me to sit in on a video call with the London office at 4 PM tomorrow. It shouldn't take more than forty minutes. I hope that doesn't throw a spanner in the works.</span></div>
     <div class="dialogue-cn">非常感谢。在深入讨论日程之前，我要提一下，我们CEO要求我明天下午4点参加与伦敦办公室的视频通话。应该不超过四十分钟。希望这不会打乱计划。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Not at all — I'll factor that in and shift tomorrow's factory tour a little later. We'll push it from 2 PM to 3 PM, which still gives us ample time. Speaking of which, would you like to <span class="vocab-highlight">freshen up</span> at the hotel first, or shall we head straight to the office? The team is eager to meet you.</span></div>
     <div class="dialogue-cn">完全不会——我会把这点考虑进去，把明天的工厂参观往后推一些。从下午2点调整到3点，时间仍然充裕。说到这个，您想先到酒店梳洗休整一下，还是我们直接去办公室？团队非常期待见到您。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Let's head to the office directly — I can drop my bags at the hotel later. I'd rather make the most of the morning. I've brought the <span class="vocab-highlight">presentation deck</span> on a USB as well as in the cloud, just to be safe.</span></div>
     <div class="dialogue-cn">我们直接去办公室吧——行李稍后再放酒店。我更想充分利上午的时间。我带了演示文稿，既在U盘里也在云端，以防万一。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Wise move — technology has a habit of failing at the worst possible moment. Now, a quick <span class="vocab-highlight">heads-up</span>: we've invited a few key stakeholders from our Shanghai subsidiary for lunch at noon. It'll be at a local restaurant renowned for its Shanghainese cuisine — we thought you'd appreciate an authentic taste of the city.</span></div>
     <div class="dialogue-cn">明智之举——科技总在最糟的时候出问题。对了，提前告知一下：我们邀请了上海子公司的几位关键利益相关人中午一起午餐。地点在一家以本帮菜闻名的本地餐厅——我们想您会喜欢这座城市的正宗味道。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That sounds delightful. I'm a keen foodie, so you've hit the right note. On that topic — are there any particular <span class="vocab-highlight">protocol</span> or dining customs I should be aware of? I don't want to put a foot wrong on my first visit.</span></div>
     <div class="dialogue-cn">听起来很美妙。我是个热衷美食的人，你们正中红心。说到这个——有没有什么特别的餐桌礼仪或习俗我需要注意的？我不想第一次来访就失礼。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Not to worry — the setting is semi-formal, so no strict rules. The only thing worth mentioning: if someone toasts you, it's polite to return the gesture later in the meal. Oh, and your hosts will likely keep refilling your tea — it's a sign of <span class="vocab-highlight">attentiveness</span>, not a hint to leave.</span></div>
     <div class="dialogue-cn">不用担心——场合是半正式的，没什么严格的规矩。唯一值得一提的是：如果有人向您敬酒，在餐席后面回敬是礼貌的。另外，您的东道主们可能会不断给您续茶——这是周到细致的表现，不是暗示您该走了。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Duly noted. I'll brush up on my toast in Mandarin on the drive over. One more thing, Rachel — my flight back on Wednesday is at 6 PM. Would it be possible to schedule in a brief <span class="vocab-highlight">handover</span> session before I head to the airport? I'd like to leave a clear record of the action points we agree on.</span></div>
     <div class="dialogue-cn">记下了。我会在车上临时抱佛脚练一下普通话的敬酒词。还有一件事，Rachel——我周三返程航班是下午6点。在去机场之前能否安排一个简短的交接会？我想把商定的行动要点做一个清晰的记录。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-a">
     <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">Absolutely. I've already pencilled that in for 2:30 PM on Wednesday. We'll do a thirty-minute <span class="vocab-highlight">wrap-up</span> in the boardroom, then the car will take you to Pudong. Now, shall we get going? I'll give you a tour of the office on the way in.</span></div>
     <div class="dialogue-cn">当然可以。我已经暂定在周三下午2:30。我们在会议室做个30分钟的总结，然后安排车送您去浦东。现在，我们可以出发了吗？沿途我带您参观一下办公室。</div>
   </div>
 
-  <div class="dialogue-line">
+  <div class="dialogue-line dialogue-line-b">
     <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Lead the way. And once again — thank you for the meticulous preparation. It makes all the difference when you're six thousand miles from home.</span></div>
     <div class="dialogue-cn">带路吧。再次感谢你们周密的准备。当你远离家乡六千英里时，这一切让人倍感温暖。</div>
   </div>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>加盟谈判 Franchise Negotiation - BEC Daily</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#fff;color:#1a1a2e;line-height:1.8;padding:2rem 2.5rem;max-width:900px;margin:0 auto}
+.badge{display:inline-block;padding:.25rem .75rem;border-radius:1rem;font-size:.75rem;font-weight:600;background:rgba(109,74,255,0.1);color:#6D4AFF;margin-bottom:1rem}
+h1{font-size:1.8rem;font-weight:800;margin-bottom:.5rem;color:#1a1a2e}
+
+
+.section-head{display:flex;align-items:center;margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid rgba(109,74,255,0.15)}
+.section-head-icon{width:28px;height:28px;margin-right:.6rem;flex-shrink:0;color:#6D4AFF}
+.section-head-icon svg{width:28px;height:28px;display:block}
+.section-head h2{font-size:1.3rem;font-weight:700;color:#6D4AFF;margin:0;padding:0;border:none;flex:1}
+.section-head-right{margin-left:auto;flex-shrink:0}
+
+.cn-toggle-btn{display:inline-flex;align-items:center;gap:.3rem;padding:.3rem .75rem;border-radius:1rem;border:1.5px solid rgba(109,74,255,0.25);background:#fff;color:#6D4AFF;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .2s;user-select:none;white-space:nowrap}
+.cn-toggle-btn:hover{background:rgba(109,74,255,0.06)}
+.cn-toggle-btn.showing{background:var(--accent);color:#fff;border-color:var(--accent);--accent:#6D4AFF}
+.cn-toggle-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+
+h3{font-size:1.1rem;font-weight:700;margin:1.5rem 0 .75rem;color:#374151}
+.dialogue{margin:1.5rem 0}
+.dialogue-line{display:flex;flex-direction:column;margin-bottom:.75rem;padding:.75rem 1rem;border-radius:.5rem;border-left:3px solid transparent}.dialogue-line-a{background:rgba(59,130,246,0.05);border-left-color:rgba(59,130,246,0.35)}.dialogue-line-b{background:rgba(139,92,246,0.05);border-left-color:rgba(139,92,246,0.35)}
+
+.dialogue-row{display:flex;align-items:flex-start;gap:.75rem}
+.dialogue-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0;line-height:1.8}
+.dialogue-text{flex:1;line-height:1.8}
+.dialogue-cn{display:none;padding-top:.4rem;padding-left:2.75rem;color:#6b7280;font-size:.9em;line-height:1.7;border-top:1px dashed rgba(109,74,255,0.1);margin-top:.3rem}
+body.show-cn .dialogue-cn{display:block}
+
+.vocab-highlight{font-weight:700;color:#6D4AFF}
+
+.roles{margin-bottom:1.5rem;padding:1rem;background:#f9fafb;border-radius:.5rem;font-size:.9rem}
+.roles strong{color:#6D4AFF}
+.vocab-item{margin-bottom:.75rem;padding-left:1rem;border-left:3px solid rgba(109,74,255,0.2)}
+.vocab-item strong{color:#6D4AFF}
+.pattern-item{margin-bottom:.75rem;padding:.75rem 1rem;background:#f9fafb;border-radius:.5rem}
+.pattern-item code{background:rgba(109,74,255,0.08);padding:.15rem .4rem;border-radius:.25rem;font-size:.85rem;color:#6D4AFF}
+.translation-section{display:block}
+body.show-cn .translation-section{display:none}
+.translation{margin:1.5rem 0}
+.translation-line{display:flex;gap:.75rem;margin-bottom:.5rem;padding:.5rem 0;border-bottom:1px dashed rgba(0,0,0,0.05)}
+.translation-speaker{font-weight:700;color:#6D4AFF;min-width:2rem;flex-shrink:0}
+.tip{background:linear-gradient(135deg,rgba(109,74,255,0.06),rgba(109,74,255,0.02));padding:1.25rem 1.5rem;border-radius:.75rem;margin-top:2rem;border:1px solid rgba(109,74,255,0.1)}
+.tip .section-head{border:none;margin-top:0;padding-bottom:0}
+hr{margin:2rem 0;border:none;border-top:1px solid rgba(0,0,0,0.06)}
+</style>
+</head>
+<body>
+
+<span class="badge">BEC Daily</span>
+<h1>加盟谈判 Franchise Negotiation</h1>
+
+<div class="roles">
+  <strong>A (Linda Wang)</strong> — Franchisee Candidate, Spark Education Group<br>
+  <strong>B (James Hart)</strong> — Franchise Development Director, BrightStar Learning
+</div>
+
+<!-- Dialogue -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="18" height="14" rx="3" fill="currentColor" opacity=".15"/><rect x="2" y="3" width="18" height="14" rx="3" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="8" y="12" width="14" height="12" rx="3" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M8 16l-5 5V9" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg></span>
+  <h2>Dialogue</h2>
+  <div class="section-head-right">
+    <button class="cn-toggle-btn" id="cnToggle" onclick="toggleChinese()">
+      <span class="cn-toggle-dot"></span> 展示中文
+    </button>
+  </div>
+</div>
+
+<div class="dialogue">
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">James, thank you for walking me through the <span class="vocab-highlight">franchise disclosure document</span>. I'm genuinely excited about the BrightStar brand, but I need to dig into the numbers before I can commit. Your <span class="vocab-highlight">initial franchise fee</span> of £35,000 — is there any room for negotiation there?</span></div>
+    <div class="dialogue-cn">James，感谢你带我走了一遍特许经营披露文件。我对 BrightStar 品牌真的很感兴趣，但在承诺之前需要深入了解数据。35000英镑的初始加盟费——这个还有协商空间吗？</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">I'm glad you're doing your due diligence, Linda. The initial franchise fee is standardised across all our territories — it covers site selection support, two weeks of intensive training at our headquarters, and the full launch marketing package. That said, we do offer a <span class="vocab-highlight">phased payment</span> option: 60% upfront and 40% within the first six months of operation.</span></div>
+    <div class="dialogue-cn">很高兴看到你在做尽职调查，Linda。初始加盟费在所有区域都是标准化的——它涵盖了选址支持、总部两周强化培训以及全套开业营销方案。不过，我们确实提供分期付款的选择：60%预付，40%在运营的前六个月付清。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That payment structure definitely eases the upfront burden. But let's talk about the ongoing <span class="vocab-highlight">royalty</span> — 8% of <span class="vocab-highlight">gross revenue</span> feels steep, especially in the first two years when we're still building the customer base. Most education franchises I've benchmarked sit at 5% to 6%.</span></div>
+    <div class="dialogue-cn">那个付款结构确实减轻了前期负担。但让我们谈谈持续的特许权使用费——8%的总收入提成，尤其是在前两年我们还在建立客户基础的阶段，感觉偏高。我对比过的大多数教育类特许经营都在5%到6%之间。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Fair observation, but those benchmarks rarely include the level of ongoing support we provide. Our 8% royalty covers curriculum updates every quarter, a dedicated business development manager who visits monthly, and access to our proprietary learning management system. If you break it down, you're getting a full operational backbone — not just a brand name.</span></div>
+    <div class="dialogue-cn">合理的观察，但那些行业基准很少包含我们提供的持续支持力度。我们的8%提成涵盖了每季度更新的课程体系、每月到访的专属业务发展经理，还有我们自研的学习管理系统的使用权限。如果拆分来看，你得到的是一个完整的运营后台——而不仅仅是一个品牌名。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I do see the value in the support infrastructure. Here's what I'd like to propose: a reduced royalty of 6% for the first 24 months, stepping up to 8% once we hit £250,000 in annual revenue. That gives us the breathing room to reach <span class="vocab-highlight">break-even</span> while protecting your long-term revenue stream.</span></div>
+    <div class="dialogue-cn">我确实看到了支持体系的价值。我这样提议：前24个月的特许权使用费降低到6%，当年收入达到25万英镑后再升至8%。这样给了我们达到盈亏平衡的缓冲空间，同时保护了你们长期的收入流。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That's a creative structure, Linda. I've seen similar arrangements work well. I can't go as low as 6% — our cost to serve a franchisee, including the support team allocation, is around 5.5%. But I can offer 7% for the first 18 months with a <span class="vocab-highlight">revenue trigger</span> at £200,000. That's a compromise that keeps both sides viable.</span></div>
+    <div class="dialogue-cn">这是一个有创意的方案，Linda。我见过类似的安排行得通。我不能降到6%——我们服务每个加盟商的成本（包括支持团队的分摊）大约是5.5%。但我可以提供前18个月7%，收入触发点为20万英镑。这是一个兼顾双方持续经营的折中方案。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">7% for 18 months with a £200,000 trigger — I can work with that. One more thing, though. The <span class="vocab-highlight">territory rights</span> in the draft only cover a three-mile radius. Given that we're targeting suburban areas with spread-out populations, I'd feel more confident with a five-mile exclusivity zone.</span></div>
+    <div class="dialogue-cn">前18个月7%，20万英镑触发点——我可以接受。不过还有一件事。草稿中的区域经营权只覆盖三英里半径。考虑到我们瞄准的是人口分散的郊区市场，五英里的排他区域会让我更有信心。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">Territory is always a delicate balance. If I expand your radius to five miles, that potentially cannibalises an adjacent territory we've earmarked for a future franchisee. What if I grant you the five miles but with a <span class="vocab-highlight">first right of refusal</span> clause — if we develop the adjacent area within three years, you get priority to take it on?</span></div>
+    <div class="dialogue-cn">区域划分总是需要微妙的平衡。如果把半径扩大到五英里，可能会侵蚀我们为未来加盟商预留的相邻区域。这样如何：我给你五英里，但附带优先购买权条款——如果三年内我们开发相邻区域，你拥有优先经营权。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">That's actually an elegant solution — it protects your growth pipeline while giving me the coverage I need. I'd accept that. So to summarise: £35,000 franchise fee on a 60/40 split, 7% royalty for 18 months stepping to 8% after £200,000 revenue, and a five-mile territory with first right of refusal.</span></div>
+    <div class="dialogue-cn">这其实是一个很优雅的解决方案——既保护了你们的增长规划，又给了我所需的覆盖范围。我接受。总结一下：35000英镑加盟费按60/40分期支付，前18个月7%特许权使用费，年收入达20万英镑后升至8%，五英里经营区域附带优先购买权。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-b">
+    <div class="dialogue-row"><span class="dialogue-speaker">B:</span><span class="dialogue-text">That captures everything. I'll have the revised franchise agreement drafted by Friday. I appreciate the collaborative approach, Linda — franchise relationships that start with this kind of open negotiation tend to be the most successful ones long-term.</span></div>
+    <div class="dialogue-cn">全部总结到位。我会在周五前准备好修订后的特许经营协议。感谢你的合作方式，Linda——以这种开放式谈判开始的特许经营关系，长期来看往往是最成功的。</div>
+  </div>
+
+  <div class="dialogue-line dialogue-line-a">
+    <div class="dialogue-row"><span class="dialogue-speaker">A:</span><span class="dialogue-text">I couldn't agree more. A franchise is a partnership, not just a transaction. I'm looking forward to reviewing the updated agreement and hopefully signing by the end of the month.</span></div>
+    <div class="dialogue-cn">完全同意。特许经营是合作关系，而不仅仅是一笔交易。期待审阅更新后的协议，希望能在月底前签约。</div>
+  </div>
+
+</div>
+
+<hr>
+
+<!-- Key Vocabulary -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="14" height="22" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><rect x="5" y="5" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="9" width="10" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="5" y="13" width="7" height="2" rx="1" fill="currentColor" opacity=".3"/><rect x="19" y="3" width="6" height="20" rx="1.5" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="19" y1="7" x2="25" y2="7" stroke="currentColor" stroke-width="1.2" opacity=".4"/><line x1="19" y1="10" x2="25" y2="10" stroke="currentColor" stroke-width="1.2" opacity=".3"/></svg></span>
+  <h2>Key Vocabulary</h2>
+</div>
+
+<div class="vocab-item"><strong>franchise disclosure document (FDD)</strong> — 特许经营披露文件 | 法律要求的核心文件，列出特许经营的所有关键信息</div>
+<div class="vocab-item"><strong>initial franchise fee</strong> — 初始加盟费 | 获得品牌使用权和初始支持的一次性费用</div>
+<div class="vocab-item"><strong>royalty</strong> — 特许权使用费/提成 | 加盟商定期支付给特许方的收入分成</div>
+<div class="vocab-item"><strong>phased payment</strong> — 分期付款 | 将大额费用分阶段支付的灵活安排</div>
+<div class="vocab-item"><strong>gross revenue</strong> — 总收入/毛收入 | 未扣减任何成本之前的全部营收</div>
+<div class="vocab-item"><strong>break-even</strong> — 盈亏平衡点 | 收入刚好覆盖所有成本的节点</div>
+<div class="vocab-item"><strong>territory rights</strong> — 区域经营权 | 加盟商享有排他性经营的地理范围</div>
+<div class="vocab-item"><strong>first right of refusal</strong> — 优先购买权/优先权 | 法律条款，给予现有加盟商优先获取相邻区域的权利</div>
+<div class="vocab-item"><strong>revenue trigger</strong> — 收入触发点 | 业绩达到某一标准后自动调整条款的机制</div>
+
+<hr>
+
+<!-- Sentence Patterns -->
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6l-7 8 7 8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 22l7-8-7-8" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="14" y1="4" x2="16" y2="24" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4"/></svg></span>
+  <h2>Sentence Patterns</h2>
+</div>
+
+<div class="pattern-item"><code>I need to dig into the numbers before I can commit.</code> → 在我做出承诺之前，我需要深入研究数据 | 表达审慎态度，购买/投资决策前的标准商务表达</div>
+<div class="pattern-item"><code>That said, we do offer...</code> → 话虽如此，我们确实提供…… | 在对对方观点表示认同后提出替代方案或让步</div>
+<div class="pattern-item"><code>Fair observation, but those benchmarks rarely include...</code> → 合理的观察，但那些行业基准很少包含…… | 承认对方观点的同时提供新的视角信息</div>
+<div class="pattern-item"><code>That gives us the breathing room to reach break-even.</code> → 这给了我们足够的缓冲空间以达到盈亏平衡 | 表达需要发展空间和时间弹性</div>
+<div class="pattern-item"><code>If I expand your radius to five miles, that potentially cannibalises...</code> → 如果扩大半径到五英里，可能会侵蚀…… | 委婉指出对方请求可能带来的负面影响</div>
+<div class="pattern-item"><code>A franchise is a partnership, not just a transaction.</code> → 特许经营是一种合作关系，而不仅仅是一笔交易 | 建立长期合作关系的愿景表达</div>
+
+<hr>
+
+<!-- Chinese Translation -->
+<div class="translation-section">
+<div class="section-head">
+  <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 14h22" stroke="currentColor" stroke-width="1.2" opacity=".35"/><path d="M14 3a15 15 0 010 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/><path d="M14 3a15 15 0 000 22" stroke="currentColor" stroke-width="1.2" opacity=".35" fill="none"/></svg></span>
+  <h2>Chinese Translation</h2>
+</div>
+
+<div class="translation">
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>James，感谢你带我走了一遍特许经营披露文件。我对 BrightStar 品牌真的很感兴趣，但在承诺之前需要深入了解数据。35000英镑的初始加盟费——这个还有协商空间吗？</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>很高兴看到你在做尽职调查，Linda。初始加盟费在所有区域都是标准化的——它涵盖了选址支持、总部两周强化培训以及全套开业营销方案。不过，我们确实提供分期付款的选择：60%预付，40%在运营的前六个月付清。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>那个付款结构确实减轻了前期负担。但让我们谈谈持续的特许权使用费——8%的总收入提成，尤其是在前两年我们还在建立客户基础的阶段，感觉偏高。我对比过的大多数教育类特许经营都在5%到6%之间。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>合理的观察，但那些行业基准很少包含我们提供的持续支持力度。我们的8%提成涵盖了每季度更新的课程体系、每月到访的专属业务发展经理，还有我们自研的学习管理系统的使用权限。如果拆分来看，你得到的是一个完整的运营后台——而不仅仅是一个品牌名。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>我确实看到了支持体系的价值。我这样提议：前24个月的特许权使用费降低到6%，当年收入达到25万英镑后再升至8%。这样给了我们达到盈亏平衡的缓冲空间，同时保护了你们长期的收入流。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>这是一个有创意的方案，Linda。我见过类似的安排行得通。我不能降到6%——我们服务每个加盟商的成本（包括支持团队的分摊）大约是5.5%。但我可以提供前18个月7%，收入触发点为20万英镑。这是一个兼顾双方持续经营的折中方案。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>前18个月7%，20万英镑触发点——我可以接受。不过还有一件事。草稿中的区域经营权只覆盖三英里半径。考虑到我们瞄准的是人口分散的郊区市场，五英里的排他区域会让我更有信心。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>区域划分总是需要微妙的平衡。如果把半径扩大到五英里，可能会侵蚀我们为未来加盟商预留的相邻区域。这样如何：我给你五英里，但附带优先购买权条款——如果三年内我们开发相邻区域，你拥有优先经营权。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>这其实是一个很优雅的解决方案——既保护了你们的增长规划，又给了我所需的覆盖范围。我接受。总结一下：35000英镑加盟费按60/40分期支付，前18个月7%特许权使用费，年收入达20万英镑后升至8%，五英里经营区域附带优先购买权。</span></div>
+  <div class="translation-line"><span class="translation-speaker">B:</span><span>全部总结到位。我会在周五前准备好修订后的特许经营协议。感谢你的合作方式，Linda——以这种开放式谈判开始的特许经营关系，长期来看往往是最成功的。</span></div>
+  <div class="translation-line"><span class="translation-speaker">A:</span><span>完全同意。特许经营是合作关系，而不仅仅是一笔交易。期待审阅更新后的协议，希望能在月底前签约。</span></div>
+</div>
+</div>
+
+<hr>
+
+<!-- Learning Tip -->
+<div class="tip">
+  <div class="section-head">
+    <span class="section-head-icon"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="2" fill="currentColor"/><path d="M14 7v4M14 18v2M7 12l2 2M19 14l2-2M9 19l2-2M17 11l2-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M6 21l-2 3M22 21l2 3M13 23h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".5"/></svg></span>
+    <h2>Learning Tip</h2>
+  </div>
+  <p>在BEC考试中，特许经营（Franchise）是商务阅读和听力的常见话题。重点掌握"数字谈判"的表达——如分期付款、收入触发点、阶梯式费率等。建议练习时先熟悉FDD（特许经营披露文件）中的标准条款英文名称，因为这部分词汇专业性强，但在考试中经常作为背景材料出现。口语Part 3中涉及"达成协议"的讨论时，可以运用"phased payment""compromise"等进阶词汇代替简单的"agree"。</p>
+</div>
+
+<script>
+var showChinese = false;
+
+function toggleChinese() {
+  showChinese = !showChinese;
+  var btn = document.getElementById('cnToggle');
+  btn.classList.toggle('showing', showChinese);
+  btn.innerHTML = showChinese
+    ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+    : '<span class="cn-toggle-dot"></span> 展示中文';
+  document.body.classList.toggle('show-cn', showChinese);
+}
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.action === 'toggleChinese') {
+    showChinese = e.data.show;
+    var btn = document.getElementById('cnToggle');
+    btn.classList.toggle('showing', showChinese);
+    btn.innerHTML = showChinese
+      ? '<span class="cn-toggle-dot"></span> 隐藏中文'
+      : '<span class="cn-toggle-dot"></span> 展示中文';
+    document.body.classList.toggle('show-cn', showChinese);
+  }
+});
+
+</script>
+
+</body>
+</html>
