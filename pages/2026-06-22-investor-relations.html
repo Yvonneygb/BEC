@@ -13,6 +13,7 @@
         <meta http-equiv="pragma" content="no-cache" />
 
         
+        
         <style>
             .staticrypt-hr { display: none; }
             .staticrypt-page {
@@ -30,13 +31,13 @@
                 padding: 40px 36px;
                 text-align: center;
                 border-radius: 16px;
-                box-shadow: 0 2px 16px rgba(0,0,0,0.06), 0 8px 32px rgba(0,0,0,0.04);
-                border: 1px solid #E8EDF2;
+                box-shadow: 0 2px 16px rgba(109,74,255,0.06), 0 8px 32px rgba(109,74,255,0.04);
+                border: 1px solid #E8E4F2;
             }
             .staticrypt-form input[type="password"],
             input[type="text"] {
-                background: #F5F7FA;
-                border: 2px solid #E0E5EA;
+                background: #F8F7FC;
+                border: 2px solid #E0DCF0;
                 border-radius: 10px;
                 box-sizing: border-box;
                 font-size: 15px;
@@ -49,7 +50,7 @@
             }
             .staticrypt-form input[type="password"]:focus,
             input[type="text"]:focus {
-                border-color: #0499FD;
+                border-color: #6D4AFF;
             }
             .staticrypt-password-container {
                 position: relative;
@@ -78,7 +79,7 @@
             .staticrypt-form .staticrypt-decrypt-button {
                 text-transform: none;
                 outline: 0;
-                background: linear-gradient(135deg, #0499FD, #0277CC);
+                background: linear-gradient(135deg, #6D4AFF, #5B3AE8);
                 width: 100%;
                 border: 0;
                 border-radius: 10px;
@@ -92,8 +93,8 @@
                 transition: all 0.2s;
             }
             .staticrypt-form .staticrypt-decrypt-button:hover {
-                background: linear-gradient(135deg, #0288E0, #01579B);
-                box-shadow: 0 4px 12px rgba(4,153,253,0.3);
+                background: linear-gradient(135deg, #5B3AE8, #4A28D4);
+                box-shadow: 0 4px 16px rgba(109,74,255,0.35);
             }
             .staticrypt-html { height: 100%; }
             .staticrypt-body {
@@ -107,7 +108,7 @@
             .staticrypt-content {
                 height: auto;
                 margin-bottom: 0;
-                background: linear-gradient(180deg, #F0F4F8 0%, #E8EDF2 100%);
+                background: linear-gradient(180deg, #F8F7FC 0%, #EDE8FA 100%);
                 font-family: "DengXian", "等线", -apple-system, "Microsoft YaHei", sans-serif;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
@@ -122,36 +123,21 @@
                 margin-bottom: 20px;
             }
             .staticrypt-title {
-                font-size: 1.25em;
+                font-size: 1.15em;
                 font-weight: 700;
                 color: #1A1A2E;
                 margin: 0 0 6px 0;
+                line-height: 1.4;
             }
             .staticrypt-subtitle {
                 font-size: 0.85em;
-                color: #8E99A4;
+                color: #8E8AA4;
                 margin: 0;
             }
             .staticrypt-logo {
                 font-size: 36px;
                 margin-bottom: 12px;
                 display: block;
-            }
-            label.staticrypt-remember {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 16px;
-                font-size: 13px;
-                color: #6B7B8D;
-                font-family: "DengXian", "等线", -apple-system, "Microsoft YaHei", sans-serif;
-                cursor: pointer;
-            }
-            .staticrypt-remember input[type="checkbox"] {
-                transform: scale(1.2);
-                margin-right: 8px;
-                accent-color: #0499FD;
-                cursor: pointer;
             }
             .hidden { display: none !important; }
             .staticrypt-spinner-container {
@@ -165,8 +151,8 @@
                 width: 2rem;
                 height: 2rem;
                 vertical-align: text-bottom;
-                border: 0.25em solid #E0E5EA;
-                border-right-color: #0499FD;
+                border: 0.25em solid #E0DCF0;
+                border-right-color: #6D4AFF;
                 border-radius: 50%;
                 animation: spinner-border 0.75s linear infinite;
             }
@@ -185,6 +171,7 @@
     </head>
 
     
+    
     <body class="staticrypt-body">
         <div id="staticrypt_loading" class="staticrypt-spinner-container">
             <div class="staticrypt-spinner"></div>
@@ -195,7 +182,7 @@
                 <div class="staticrypt-form">
                     <div class="staticrypt-instructions">
                         <span class="staticrypt-logo">📖</span>
-                        <p class="staticrypt-title">BEC 每日晨读</p>
+                        <p class="staticrypt-title">BEC商务英语中级<br>对话必背模板</p>
                         <p class="staticrypt-subtitle">请输入密码以继续学习</p>
                     </div>
 
@@ -218,11 +205,6 @@
                                 src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NDAgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNS4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTM4LjggNS4xQzI4LjQtMy4xIDEzLjMtMS4yIDUuMSA5LjJTLTEuMiAzNC43IDkuMiA0Mi45bDU5MiA0NjRjMTAuNCA4LjIgMjUuNSA2LjMgMzMuNy00LjFzNi4zLTI1LjUtNC4xLTMzLjdMNTI1LjYgMzg2LjdjMzkuNi00MC42IDY2LjQtODYuMSA3OS45LTExOC40YzMuMy03LjkgMy4zLTE2LjcgMC0yNC42Yy0xNC45LTM1LjctNDYuMi04Ny43LTkzLTEzMS4xQzQ2NS41IDY4LjggNDAwLjggMzIgMzIwIDMyYy02OC4yIDAtMTI1IDI2LjMtMTY5LjMgNjAuOEwzOC44IDUuMXpNMjIzLjEgMTQ5LjVDMjQ4LjYgMTI2LjIgMjgyLjcgMTEyIDMyMCAxMTJjNzkuNSAwIDE0NCA2NC41IDE0NCAxNDRjMCAyNC45LTYuMyA0OC4zLTE3LjQgNjguN0w0MDggMjk0LjVjOC40LTE5LjMgMTAuNi00MS40IDQuOC02My4zYy0xMS4xLTQxLjUtNDcuOC02OS40LTg4LjYtNzEuMWMtNS44LS4yLTkuMiA2LjEtNy40IDExLjdjMi4xIDYuNCAzLjMgMTMuMiAzLjMgMjAuM2MwIDEwLjItMi40IDE5LjgtNi42IDI4LjNsLTkwLjMtNzAuOHpNMzczIDM4OS45Yy0xNi40IDYuNS0zNC4zIDEwLjEtNTMgMTAuMWMtNzkuNSAwLTE0NC02NC41LTE0NC0xNDRjMC02LjkuNS0xMy42IDEuNC0yMC4yTDgzLjEgMTYxLjVDNjAuMyAxOTEuMiA0NCAyMjAuOCAzNC41IDI0My43Yy0zLjMgNy45LTMuMyAxNi43IDAgMjQuNmMxNC45IDM1LjcgNDYuMiA4Ny43IDkzIDEzMS4xQzE3NC41IDQ0My4yIDIzOS4yIDQ4MCAzMjAgNDgwYzQ3LjggMCA4OS45LTEyLjkgMTI2LjItMzIuNUwzNzMgMzg5Ljl6Ii8+PC9zdmc+"
                             />
                         </div>
-
-                        <label id="staticrypt-remember-label" class="staticrypt-remember hidden">
-                            <input id="staticrypt-remember" type="checkbox" name="remember" checked />
-                            30天内记住密码
-                        </label>
 
                         <input type="submit" class="staticrypt-decrypt-button" value="进入学习" />
                     </form>
@@ -683,11 +665,11 @@ function init(staticryptConfig, templateConfig) {
 
         // remember the hashedPassword and set its expiration if necessary
         if (isRememberEnabled && isRememberChecked) {
-            window.localStorage.setItem(rememberPassphraseKey, hashedPassword);
+            window.sessionStorage.setItem(rememberPassphraseKey, hashedPassword);
 
             // set the expiration if the duration isn't 0 (meaning no expiration)
             if (rememberDurationInDays > 0) {
-                window.localStorage.setItem(
+                window.sessionStorage.setItem(
                     rememberExpirationKey,
                     (new Date().getTime() + rememberDurationInDays * 24 * 60 * 60 * 1000).toString()
                 );
@@ -710,8 +692,8 @@ function init(staticryptConfig, templateConfig) {
         if (typeof clearLocalStorageCallback === "function") {
             clearLocalStorageCallback();
         } else {
-            localStorage.removeItem(rememberPassphraseKey);
-            localStorage.removeItem(rememberExpirationKey);
+            sessionStorage.removeItem(rememberPassphraseKey);
+            sessionStorage.removeItem(rememberExpirationKey);
         }
     }
 
@@ -767,17 +749,10 @@ function init(staticryptConfig, templateConfig) {
         }
 
         // if there is expiration configured, check if we're not beyond the expiration
-        if (rememberDurationInDays && rememberDurationInDays > 0) {
-            const expiration = localStorage.getItem(rememberExpirationKey),
-                isExpired = expiration && new Date().getTime() > parseInt(expiration);
-
-            if (isExpired) {
-                clearLocalStorage();
-                return false;
-            }
+        if (rememberDurationInDays && rememberDurationInDays > 0) { /* sessionStorage: no expiration needed */ }
         }
 
-        const hashedPassword = localStorage.getItem(rememberPassphraseKey);
+        const hashedPassword = sessionStorage.getItem(rememberPassphraseKey);
 
         if (hashedPassword) {
             // try to decrypt
@@ -858,9 +833,7 @@ exports.init = init;
                     document.getElementById("staticrypt-password").focus();
 
                     // show the remember me checkbox
-                    if (isRememberEnabled) {
-                        document.getElementById("staticrypt-remember-label").classList.remove("hidden");
-                    }
+                    // remember-me removed - session-based auth
                 }
             };
 
@@ -891,7 +864,7 @@ exports.init = init;
                 e.preventDefault();
 
                 const password = document.getElementById("staticrypt-password").value,
-                    isRememberChecked = document.getElementById("staticrypt-remember").checked;
+                    isRememberChecked = true; // auto-save to sessionStorage
 
                 const { isSuccessful } = await staticrypt.handleDecryptionOfPage(password, isRememberChecked);
 
