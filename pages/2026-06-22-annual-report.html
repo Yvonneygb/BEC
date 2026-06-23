@@ -750,7 +750,6 @@ function init(staticryptConfig, templateConfig) {
 
         // if there is expiration configured, check if we're not beyond the expiration
         if (rememberDurationInDays && rememberDurationInDays > 0) { /* sessionStorage: no expiration needed */ }
-        }
 
         const hashedPassword = sessionStorage.getItem(rememberPassphraseKey);
 
